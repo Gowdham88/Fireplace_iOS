@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3FD33E5F1E2FB06100B6FFEA /* popVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD33E5E1E2FB06100B6FFEA /* popVC.swift */; };
 		3FE88CCD1E2F34CE0044F19A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE88CCC1E2F34CE0044F19A /* AppDelegate.swift */; };
 		3FE88CCF1E2F34CE0044F19A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE88CCE1E2F34CE0044F19A /* ViewController.swift */; };
 		3FE88CD21E2F34CE0044F19A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FE88CD01E2F34CE0044F19A /* Main.storyboard */; };
@@ -34,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3FD33DE51E2F4EB200B6FFEA /* firecrack.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = firecrack.entitlements; sourceTree = "<group>"; };
+		3FD33E5E1E2FB06100B6FFEA /* popVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = popVC.swift; sourceTree = "<group>"; };
 		3FE88CC91E2F34CE0044F19A /* firecrack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = firecrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FE88CCC1E2F34CE0044F19A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FE88CCE1E2F34CE0044F19A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +77,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3FD33DE21E2F4EB200B6FFEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3FE88CC01E2F34CE0044F19A = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +91,7 @@
 				3FE88CE01E2F34CE0044F19A /* firecrackTests */,
 				3FE88CEB1E2F34CE0044F19A /* firecrackUITests */,
 				3FE88CCA1E2F34CE0044F19A /* Products */,
+				3FD33DE21E2F4EB200B6FFEA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,10 +108,12 @@
 		3FE88CCB1E2F34CE0044F19A /* firecrack */ = {
 			isa = PBXGroup;
 			children = (
+				3FD33DE51E2F4EB200B6FFEA /* firecrack.entitlements */,
 				3FE88CCC1E2F34CE0044F19A /* AppDelegate.swift */,
 				3FE88CCE1E2F34CE0044F19A /* ViewController.swift */,
 				3FE88CD01E2F34CE0044F19A /* Main.storyboard */,
 				3FE88CD31E2F34CE0044F19A /* Assets.xcassets */,
+				3FD33E5E1E2FB06100B6FFEA /* popVC.swift */,
 				3FE88CD51E2F34CE0044F19A /* LaunchScreen.storyboard */,
 				3FE88CD81E2F34CE0044F19A /* Info.plist */,
 			);
@@ -195,6 +208,14 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = XSJRRDKMW9;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.InterAppAudio = {
+								enabled = 0;
+							};
+						};
 					};
 					3FE88CDC1E2F34CE0044F19A = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -262,6 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FD33E5F1E2FB06100B6FFEA /* popVC.swift in Sources */,
 				3FE88CCF1E2F34CE0044F19A /* ViewController.swift in Sources */,
 				3FE88CCD1E2F34CE0044F19A /* AppDelegate.swift in Sources */,
 			);
@@ -514,6 +536,7 @@
 				3FE88CF31E2F34CE0044F19A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3FE88CF41E2F34CE0044F19A /* Build configuration list for PBXNativeTarget "firecrackTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +545,7 @@
 				3FE88CF61E2F34CE0044F19A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3FE88CF71E2F34CE0044F19A /* Build configuration list for PBXNativeTarget "firecrackUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +554,7 @@
 				3FE88CF91E2F34CE0044F19A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
