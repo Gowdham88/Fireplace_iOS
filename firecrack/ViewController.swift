@@ -59,7 +59,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate  {
         popView.isHidden = true
         popView1.isHidden = true
         
-        UIScreen.main.brightness = CGFloat(1.5)
+        
 
         
         /******************** Gif image *************/
