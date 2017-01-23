@@ -18,6 +18,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate  {
   
     var player:AVAudioPlayer = AVAudioPlayer()
    
+    @IBOutlet weak var brightness: UILabel!
    
     @IBOutlet weak var popView: UIView!
     
@@ -28,6 +29,11 @@ class ViewController: UIViewController, UINavigationControllerDelegate  {
    
     @IBOutlet weak var slidervalue: UILabel!
 
+//    fileprivate var colorControlsFilter : CIFilter!
+//    fileprivate var ciImageContext: CIContext!
+//      fileprivate var colorControl = ColorControl()
+    
+    
     var item = 0
 
     func startTimer() {
@@ -47,15 +53,19 @@ class ViewController: UIViewController, UINavigationControllerDelegate  {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+  
+        
+//        colorControl.input(myImages.image!)
+        
       
-
-      
+//        self.brightness.text = "Brightness \(uiSlider.value)"
         
-        
-        
-        
-        
+//        let openGLContext = EAGLContext(api: .openGLES3)!
+//        ciImageContext = CIContext(eaglContext: openGLContext)
+//        colorControlsFilter = CIFilter(name: "CIColorControls")!
+//        UIScreen.main.brightness = CGFloat(0.5)
+//
+//        self.setDefaultValueOfSliders()
         popView.isHidden = true
         popView1.isHidden = true
         
@@ -88,7 +98,16 @@ class ViewController: UIViewController, UINavigationControllerDelegate  {
         
     }
 
-  
+    
+//    fileprivate func setUISLidersValues() {
+//        
+//        
+//        uiSlider.value = colorControl.currentBrightnessValue
+//        uiSlider.maximumValue = colorControl.maxBrightnessValue
+//        uiSlider.minimumValue = colorControl.minBrightnessValue
+//        
+//        
+//    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -120,7 +139,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate  {
         
     }
   
-    
+   
 
     @IBAction func slider(_ sender: UISlider) {
         
@@ -139,18 +158,83 @@ class ViewController: UIViewController, UINavigationControllerDelegate  {
             popView1.isHidden = true
             
         }
-
-        }
+    }
     
     
 
+
+    @IBAction func sliderBrht(_ sender: UISlider) {
+        
+
+        UIScreen.main.brightness = CGFloat(0.5)
+     
+        
+//        self.brightness.text = "Brightness \(sender.value)"
+//        self.colorControl.brightness(sender.value)
+//        self.myImages.image = self.colorControl.outputUIImage()
+//        UIScreen.main.brightness = CGFloat(0.5)
+//
+//
+//        
+//            if let outputImage = self.colorControlsFilter.outputImage {
+//               if let cgImageNew = self.ciImageContext.createCGImage(outputImage, from: outputImage.extent) {
+//                    let newImg = UIImage(cgImage: cgImageNew)
+//                   myImages.image = newImg
+//                }
+//          }
+//        
+
+       
+        
+    }
+    
 }
 
 
 
+//extension ViewController {
+//    @IBAction func sliderBrht(_ sender: UISlider) {
+//
+//        self.brightness.text = "Brightness \(sender.value)"
+//        self.colorControl.brightness(sender.value)
+//        self.myImages.image = self.colorControl.outputUIImage()
+//        UIScreen.main.brightness = CGFloat(0.5)
+//
+//
+//
+//            if let outputImage = self.colorControlsFilter.outputImage {
+//               if let cgImageNew = self.ciImageContext.createCGImage(outputImage, from: outputImage.extent) {
+//                    let newImg = UIImage(cgImage: cgImageNew)
+//                   myImages.image = newImg
+//                }
+//          }
+//
+//
+//
+//
+//    }
+//
+//
+//}
 
-
-
+//
+//extension ViewController {
+//    
+//    func setDefaultValueOfSliders() {
+//        colorControlsFilter.setDefaults()
+//        let brightnessValue = self.colorControlsFilter.value(forKey: kCIInputBrightnessKey) as? Float
+//        
+//        
+//        print((brightnessValue));
+//        
+//        uiSlider.value = brightnessValue ?? 0.0
+//        uiSlider.maximumValue = 1.00
+//        uiSlider.minimumValue = -1.00
+//        
+//       
+//    }
+//}
+//
 
 
 
