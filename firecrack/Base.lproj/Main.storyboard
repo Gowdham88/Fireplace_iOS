@@ -87,14 +87,15 @@
                                 <rect key="frame" x="16" y="202" width="288" height="163"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="-7" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="yap-8b-0Bg">
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="yap-8b-0Bg">
                                         <rect key="frame" x="6" y="66" width="276" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="minimumTrackTintColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="maximumTrackTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="thumbTintColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
-                                            <action selector="slider1:" destination="BYZ-38-t0r" eventType="valueChanged" id="f2f-VI-qbx"/>
+                                            <action selector="brightnessUISliderPressed:" destination="BYZ-38-t0r" eventType="valueChanged" id="bmM-PD-f6Y"/>
+                                            <action selector="uiSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="hOh-bb-HcQ"/>
                                         </connections>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sad-GB-ZZV">
@@ -115,6 +116,7 @@
                         <outlet property="popView" destination="oq1-6H-qpQ" id="6zw-fi-yhB"/>
                         <outlet property="popView1" destination="wTW-vo-7Bm" id="poL-Kb-tsM"/>
                         <outlet property="slidervalue" destination="m7n-7Z-Hih" id="5WH-5Y-NzI"/>
+                        <outlet property="uiSlider" destination="yap-8b-0Bg" id="3kA-bT-Q1r"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

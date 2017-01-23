@@ -8,17 +8,24 @@
 
 import UIKit
 import AVFoundation
+import CoreImage
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UINavigationControllerDelegate  {
 
+    
+ 
+    
   
     var player:AVAudioPlayer = AVAudioPlayer()
+   
    
     @IBOutlet weak var popView: UIView!
     
     @IBOutlet weak var popView1: UIView!
     @IBOutlet weak var myImages: UIImageView!
+    @IBOutlet weak var uiSlider: UISlider!
 
+   
     @IBOutlet weak var slidervalue: UILabel!
 
     var item = 0
@@ -40,6 +47,14 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+       
+      
+
+      
+        
+        
+        
+        
         
         popView.isHidden = true
         popView1.isHidden = true
@@ -125,21 +140,9 @@ class ViewController: UIViewController {
             
         }
 
-        
-        
-    }
-
-    @IBAction func slider1(_ sender: UISlider) {
-        
-        let selectedValue1 = Float(sender.value)
-        print(selectedValue1)
-        
-        UIScreen.main.brightness = CGFloat(selectedValue1)
-        
-        
-        
-        
-    }
+        }
+    
+    
 
 }
 
