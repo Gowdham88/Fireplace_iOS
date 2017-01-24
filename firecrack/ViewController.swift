@@ -10,10 +10,10 @@ import UIKit
 import AVFoundation
 import CoreImage
 
-class ViewController: UIViewController, UINavigationControllerDelegate  {
-
+class ViewController: UIViewController, UINavigationControllerDelegate {
+//UITableViewDelegate, UITableViewDataSource
     
- 
+//var playlistURL = ""
     
   
     var player:AVAudioPlayer = AVAudioPlayer()
@@ -23,6 +23,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate  {
     @IBOutlet weak var popView: UIView!
     
     @IBOutlet weak var popView1: UIView!
+   
     @IBOutlet weak var myImages: UIImageView!
     @IBOutlet weak var uiSlider: UISlider!
 
@@ -68,6 +69,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate  {
 //        self.setDefaultValueOfSliders()
         popView.isHidden = true
         popView1.isHidden = true
+        
         
         
 
@@ -139,7 +141,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate  {
         
     }
   
-   
+       
 
     @IBAction func slider(_ sender: UISlider) {
         
