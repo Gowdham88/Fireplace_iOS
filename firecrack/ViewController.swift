@@ -31,13 +31,9 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
     
     var mygif = [UIImage]()
     
-    fileprivate var colorControlsFilter : CIFilter!
-    fileprivate var ciImageContext: CIContext!
-    fileprivate var colorControl = ColorControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        colorControl.input(myImages.image!)
         
         
         
