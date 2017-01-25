@@ -7,10 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1181AFC29D85FFBD300E8CC8 /* Pods_Fireplay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EE0FED1B02EF26E5A318A41 /* Pods_Fireplay.framework */; };
 		3F62EB901E306CD600B2D659 /* firecrack.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3F62EB8F1E306CD600B2D659 /* firecrack.mp3 */; };
 		3FD33E5F1E2FB06100B6FFEA /* popVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD33E5E1E2FB06100B6FFEA /* popVC.swift */; };
-		3FD3A59E1E37911900A37F82 /* Spotify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FD3A59D1E37911900A37F82 /* Spotify.framework */; };
 		3FD3F28F1E35D1FB00B74A84 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FD3F28D1E35D1FB00B74A84 /* Crashlytics.framework */; };
 		3FD3F2901E35D1FB00B74A84 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FD3F28E1E35D1FB00B74A84 /* Fabric.framework */; };
 		3FD3F2A51E35FFA700B74A84 /* Processable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD3F2A41E35FFA700B74A84 /* Processable.swift */; };
@@ -47,7 +45,6 @@
 		3F62EB8F1E306CD600B2D659 /* firecrack.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = firecrack.mp3; sourceTree = "<group>"; };
 		3FD33DE51E2F4EB200B6FFEA /* firecrack.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = firecrack.entitlements; sourceTree = "<group>"; };
 		3FD33E5E1E2FB06100B6FFEA /* popVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = popVC.swift; sourceTree = "<group>"; };
-		3FD3A59D1E37911900A37F82 /* Spotify.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Spotify.framework; sourceTree = "<group>"; };
 		3FD3F28D1E35D1FB00B74A84 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		3FD3F28E1E35D1FB00B74A84 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		3FD3F2A41E35FFA700B74A84 /* Processable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Processable.swift; path = "../../Desktop/ColorControl-master/ColorControl/Helper/Processable.swift"; sourceTree = "<group>"; };
@@ -67,9 +64,6 @@
 		3FE88CEE1E2F34CE0044F19A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FF03CE51E3721630023F01C /* Brightnessable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Brightnessable.swift; path = "../../Desktop/ColorControl-master 2/ColorControl/Helper/Brightnessable.swift"; sourceTree = "<group>"; };
 		3FF03CE71E3721730023F01C /* ColorControlManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorControlManager.swift; path = "../../Desktop/ColorControl-master 2/ColorControl/Helper/ColorControlManager.swift"; sourceTree = "<group>"; };
-		4EE0FED1B02EF26E5A318A41 /* Pods_Fireplay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fireplay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8AEC455218391F973DBCFA5D /* Pods-Fireplay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fireplay.release.xcconfig"; path = "Pods/Target Support Files/Pods-Fireplay/Pods-Fireplay.release.xcconfig"; sourceTree = "<group>"; };
-		A5A2FA9C009833EA6710DFF7 /* Pods-Fireplay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fireplay.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Fireplay/Pods-Fireplay.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,8 +73,6 @@
 			files = (
 				3FD3F28F1E35D1FB00B74A84 /* Crashlytics.framework in Frameworks */,
 				3FD3F2901E35D1FB00B74A84 /* Fabric.framework in Frameworks */,
-				1181AFC29D85FFBD300E8CC8 /* Pods_Fireplay.framework in Frameworks */,
-				3FD3A59E1E37911900A37F82 /* Spotify.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,26 +93,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3FD33DE21E2F4EB200B6FFEA /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				4EE0FED1B02EF26E5A318A41 /* Pods_Fireplay.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		3FE88CC01E2F34CE0044F19A = {
 			isa = PBXGroup;
 			children = (
-				3FD3A59D1E37911900A37F82 /* Spotify.framework */,
 				3FD3F28D1E35D1FB00B74A84 /* Crashlytics.framework */,
 				3FD3F28E1E35D1FB00B74A84 /* Fabric.framework */,
 				3FE88CCB1E2F34CE0044F19A /* firecrack */,
 				3FE88CE01E2F34CE0044F19A /* firecrackTests */,
 				3FE88CEB1E2F34CE0044F19A /* firecrackUITests */,
 				3FE88CCA1E2F34CE0044F19A /* Products */,
-				3FD33DE21E2F4EB200B6FFEA /* Frameworks */,
-				F4C89FE6896686BA4B0FD413 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -172,15 +153,6 @@
 			path = firecrackUITests;
 			sourceTree = "<group>";
 		};
-		F4C89FE6896686BA4B0FD413 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				A5A2FA9C009833EA6710DFF7 /* Pods-Fireplay.debug.xcconfig */,
-				8AEC455218391F973DBCFA5D /* Pods-Fireplay.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -188,13 +160,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3FE88CF11E2F34CE0044F19A /* Build configuration list for PBXNativeTarget "Fireplay" */;
 			buildPhases = (
-				E75E3E4BF3F02A93B3C704D7 /* [CP] Check Pods Manifest.lock */,
 				3FE88CC51E2F34CE0044F19A /* Sources */,
 				3FE88CC61E2F34CE0044F19A /* Frameworks */,
 				3FE88CC71E2F34CE0044F19A /* Resources */,
 				3FD3F2911E35D21B00B74A84 /* ShellScript */,
-				62912688FFD1E6D532D9385B /* [CP] Embed Pods Frameworks */,
-				7F68FFF0CD695C2A9B1ACD36 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -339,51 +308,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "./Fabric.framework/run 096d2916c1c968ecde8fe18920f0457e72de4897 66174dd29c08b8a43cd6044975f51b8aa530aac7a068373c562f75e5884c0c98";
-		};
-		62912688FFD1E6D532D9385B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Fireplay/Pods-Fireplay-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7F68FFF0CD695C2A9B1ACD36 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Fireplay/Pods-Fireplay-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E75E3E4BF3F02A93B3C704D7 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -548,7 +472,6 @@
 		};
 		3FE88CF21E2F34CE0044F19A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A5A2FA9C009833EA6710DFF7 /* Pods-Fireplay.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = XSJRRDKMW9;
@@ -566,7 +489,6 @@
 		};
 		3FE88CF31E2F34CE0044F19A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8AEC455218391F973DBCFA5D /* Pods-Fireplay.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = XSJRRDKMW9;

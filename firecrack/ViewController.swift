@@ -11,9 +11,7 @@ import AVFoundation
 import CoreImage
 
 class ViewController: UIViewController, UINavigationControllerDelegate {
-//UITableViewDelegate, UITableViewDataSource
-    
-//var playlistURL = ""
+
     
   
     var player:AVAudioPlayer = AVAudioPlayer()
@@ -29,59 +27,42 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
 
    
     @IBOutlet weak var slidervalue: UILabel!
-
-//    fileprivate var colorControlsFilter : CIFilter!
-//    fileprivate var ciImageContext: CIContext!
-//      fileprivate var colorControl = ColorControl()
+    var mygifNames = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60"]
     
+    var mygif = [UIImage]()
     
-    var item = 0
-
-    func startTimer() {
-
-        if item == 60 {
-
-            item = 0
-
-        }
-        myImages.image = UIImage(named: "\(item)")
-
-        item += 1
-
-    }
-
-    var mytimer = Timer()
+    fileprivate var colorControlsFilter : CIFilter!
+    fileprivate var ciImageContext: CIContext!
+    fileprivate var colorControl = ColorControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-  
+        colorControl.input(myImages.image!)
         
-//        colorControl.input(myImages.image!)
         
-      
-//        self.brightness.text = "Brightness \(uiSlider.value)"
         
-//        let openGLContext = EAGLContext(api: .openGLES3)!
-//        ciImageContext = CIContext(eaglContext: openGLContext)
-//        colorControlsFilter = CIFilter(name: "CIColorControls")!
-//        UIScreen.main.brightness = CGFloat(0.5)
-//
-//        self.setDefaultValueOfSliders()
+        UIScreen.main.brightness = CGFloat(0.5)
+        
+        
+        
         popView.isHidden = true
         popView1.isHidden = true
-        
-        
-        
-
-        
         /******************** Gif image *************/
-
-
-        mytimer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(self.startTimer), userInfo: nil, repeats: true)
         
-
+        
+        for i in 0..<mygifNames.count{
+            
+            
+            mygif.append(UIImage(named: mygifNames[i])!)
+            
+        }
+        
+        myImages.animationImages = mygif
+        myImages.animationDuration = 2.20
+        self.myImages.startAnimating()
+        
         /******************** Background music *************/
-       
+        
         do{
             
             player = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: "firecrack", ofType: "mp3")!))
@@ -89,31 +70,24 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
             player.prepareToPlay()
         }
         catch{
-
+            
             print(error)
         }
+        player.numberOfLoops = -1
         player.play()
-
+        
         
         
         
         
     }
-
     
-//    fileprivate func setUISLidersValues() {
-//        
-//        
-//        uiSlider.value = colorControl.currentBrightnessValue
-//        uiSlider.maximumValue = colorControl.maxBrightnessValue
-//        uiSlider.minimumValue = colorControl.minBrightnessValue
-//        
-//        
-//    }
-    override func didReceiveMemoryWarning() {
+      override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
     @IBAction func Pause(_ sender: Any) {
         
         if player.isPlaying {
@@ -132,6 +106,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
         
         if popView.isHidden{
             popView.isHidden = false
+            popView1.isHidden = true
         }
             else{
             popView.isHidden = true
@@ -145,16 +120,19 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
 
     @IBAction func slider(_ sender: UISlider) {
         
-        let selectedValue = Float(sender.value)
-        print(selectedValue)
+        let selectedValue = Float(10.0 - sender.value)
         
-        mytimer = Timer.scheduledTimer(timeInterval: TimeInterval(selectedValue), target: self, selector: #selector(self.startTimer), userInfo: nil, repeats: true)
+        myImages.animationDuration = TimeInterval(selectedValue)
+        self.myImages.startAnimating()
         
         
     }
+    
+    
     @IBAction func bright(_ sender: UIButton) {
         if popView1.isHidden{
             popView1.isHidden = false
+            popView.isHidden = true
         }
         else{
             popView1.isHidden = true
@@ -170,21 +148,6 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
 
         UIScreen.main.brightness = CGFloat(0.5)
      
-        
-//        self.brightness.text = "Brightness \(sender.value)"
-//        self.colorControl.brightness(sender.value)
-//        self.myImages.image = self.colorControl.outputUIImage()
-//        UIScreen.main.brightness = CGFloat(0.5)
-//
-//
-//        
-//            if let outputImage = self.colorControlsFilter.outputImage {
-//               if let cgImageNew = self.ciImageContext.createCGImage(outputImage, from: outputImage.extent) {
-//                    let newImg = UIImage(cgImage: cgImageNew)
-//                   myImages.image = newImg
-//                }
-//          }
-//        
 
        
         
@@ -193,50 +156,6 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
 }
 
 
-
-//extension ViewController {
-//    @IBAction func sliderBrht(_ sender: UISlider) {
-//
-//        self.brightness.text = "Brightness \(sender.value)"
-//        self.colorControl.brightness(sender.value)
-//        self.myImages.image = self.colorControl.outputUIImage()
-//        UIScreen.main.brightness = CGFloat(0.5)
-//
-//
-//
-//            if let outputImage = self.colorControlsFilter.outputImage {
-//               if let cgImageNew = self.ciImageContext.createCGImage(outputImage, from: outputImage.extent) {
-//                    let newImg = UIImage(cgImage: cgImageNew)
-//                   myImages.image = newImg
-//                }
-//          }
-//
-//
-//
-//
-//    }
-//
-//
-//}
-
-//
-//extension ViewController {
-//    
-//    func setDefaultValueOfSliders() {
-//        colorControlsFilter.setDefaults()
-//        let brightnessValue = self.colorControlsFilter.value(forKey: kCIInputBrightnessKey) as? Float
-//        
-//        
-//        print((brightnessValue));
-//        
-//        uiSlider.value = brightnessValue ?? 0.0
-//        uiSlider.maximumValue = 1.00
-//        uiSlider.minimumValue = -1.00
-//        
-//       
-//    }
-//}
-//
 
 
 
