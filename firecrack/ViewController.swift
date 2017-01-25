@@ -37,7 +37,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
         
         
         
-        UIScreen.main.brightness = CGFloat(0.5)
+//        UIScreen.main.brightness = CGFloat(0.5)
         
         
         
@@ -77,6 +77,10 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
         
         
     }
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+
     
       override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
