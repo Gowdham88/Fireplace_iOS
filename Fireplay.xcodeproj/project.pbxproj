@@ -10,8 +10,6 @@
 		3F62EB901E306CD600B2D659 /* firecrack.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3F62EB8F1E306CD600B2D659 /* firecrack.mp3 */; };
 		3FD3F28F1E35D1FB00B74A84 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FD3F28D1E35D1FB00B74A84 /* Crashlytics.framework */; };
 		3FD3F2901E35D1FB00B74A84 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FD3F28E1E35D1FB00B74A84 /* Fabric.framework */; };
-		3FD3F2A51E35FFA700B74A84 /* Processable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD3F2A41E35FFA700B74A84 /* Processable.swift */; };
-		3FD3F2AB1E36069800B74A84 /* Foundation Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD3F2AA1E36069800B74A84 /* Foundation Extensions.swift */; };
 		3FE88CCD1E2F34CE0044F19A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE88CCC1E2F34CE0044F19A /* AppDelegate.swift */; };
 		3FE88CCF1E2F34CE0044F19A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE88CCE1E2F34CE0044F19A /* ViewController.swift */; };
 		3FE88CD21E2F34CE0044F19A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FE88CD01E2F34CE0044F19A /* Main.storyboard */; };
@@ -19,8 +17,6 @@
 		3FE88CD71E2F34CE0044F19A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FE88CD51E2F34CE0044F19A /* LaunchScreen.storyboard */; };
 		3FE88CE21E2F34CE0044F19A /* firecrackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE88CE11E2F34CE0044F19A /* firecrackTests.swift */; };
 		3FE88CED1E2F34CE0044F19A /* firecrackUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE88CEC1E2F34CE0044F19A /* firecrackUITests.swift */; };
-		3FF03CE61E3721630023F01C /* Brightnessable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF03CE51E3721630023F01C /* Brightnessable.swift */; };
-		3FF03CE81E3721730023F01C /* ColorControlManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF03CE71E3721730023F01C /* ColorControlManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,8 +41,6 @@
 		3FD33DE51E2F4EB200B6FFEA /* firecrack.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = firecrack.entitlements; sourceTree = "<group>"; };
 		3FD3F28D1E35D1FB00B74A84 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		3FD3F28E1E35D1FB00B74A84 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
-		3FD3F2A41E35FFA700B74A84 /* Processable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Processable.swift; path = "../../Desktop/ColorControl-master/ColorControl/Helper/Processable.swift"; sourceTree = "<group>"; };
-		3FD3F2AA1E36069800B74A84 /* Foundation Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Foundation Extensions.swift"; path = "../../Desktop/ColorControl-master/ColorControl/Foundation Extensions.swift"; sourceTree = "<group>"; };
 		3FE88CC91E2F34CE0044F19A /* Fireplay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fireplay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FE88CCC1E2F34CE0044F19A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FE88CCE1E2F34CE0044F19A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,8 +54,6 @@
 		3FE88CE81E2F34CE0044F19A /* firecrackUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = firecrackUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FE88CEC1E2F34CE0044F19A /* firecrackUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firecrackUITests.swift; sourceTree = "<group>"; };
 		3FE88CEE1E2F34CE0044F19A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3FF03CE51E3721630023F01C /* Brightnessable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Brightnessable.swift; path = "../../Desktop/ColorControl-master 2/ColorControl/Helper/Brightnessable.swift"; sourceTree = "<group>"; };
-		3FF03CE71E3721730023F01C /* ColorControlManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorControlManager.swift; path = "../../Desktop/ColorControl-master 2/ColorControl/Helper/ColorControlManager.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,11 +108,7 @@
 		3FE88CCB1E2F34CE0044F19A /* firecrack */ = {
 			isa = PBXGroup;
 			children = (
-				3FD3F2AA1E36069800B74A84 /* Foundation Extensions.swift */,
 				3FD33DE51E2F4EB200B6FFEA /* firecrack.entitlements */,
-				3FD3F2A41E35FFA700B74A84 /* Processable.swift */,
-				3FF03CE51E3721630023F01C /* Brightnessable.swift */,
-				3FF03CE71E3721730023F01C /* ColorControlManager.swift */,
 				3FE88CCC1E2F34CE0044F19A /* AppDelegate.swift */,
 				3FE88CCE1E2F34CE0044F19A /* ViewController.swift */,
 				3FE88CD01E2F34CE0044F19A /* Main.storyboard */,
@@ -313,12 +301,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FD3F2AB1E36069800B74A84 /* Foundation Extensions.swift in Sources */,
 				3FE88CCF1E2F34CE0044F19A /* ViewController.swift in Sources */,
-				3FF03CE61E3721630023F01C /* Brightnessable.swift in Sources */,
 				3FE88CCD1E2F34CE0044F19A /* AppDelegate.swift in Sources */,
-				3FD3F2A51E35FFA700B74A84 /* Processable.swift in Sources */,
-				3FF03CE81E3721730023F01C /* ColorControlManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
