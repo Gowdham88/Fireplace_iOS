@@ -159,6 +159,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
             
         }
         
+
         self.popView1.layer.borderWidth = 1.0
         self.popView1.layer.borderColor = UIColor(red:216/255.0, green:216/255.0, blue:216/255.0, alpha: 1.0).cgColor
    
