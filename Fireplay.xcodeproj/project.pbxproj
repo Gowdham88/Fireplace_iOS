@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3F62EB901E306CD600B2D659 /* firecrack.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3F62EB8F1E306CD600B2D659 /* firecrack.mp3 */; };
-		3FD33E5F1E2FB06100B6FFEA /* popVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD33E5E1E2FB06100B6FFEA /* popVC.swift */; };
 		3FD3F28F1E35D1FB00B74A84 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FD3F28D1E35D1FB00B74A84 /* Crashlytics.framework */; };
 		3FD3F2901E35D1FB00B74A84 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FD3F28E1E35D1FB00B74A84 /* Fabric.framework */; };
 		3FD3F2A51E35FFA700B74A84 /* Processable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD3F2A41E35FFA700B74A84 /* Processable.swift */; };
@@ -44,7 +43,6 @@
 /* Begin PBXFileReference section */
 		3F62EB8F1E306CD600B2D659 /* firecrack.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = firecrack.mp3; sourceTree = "<group>"; };
 		3FD33DE51E2F4EB200B6FFEA /* firecrack.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = firecrack.entitlements; sourceTree = "<group>"; };
-		3FD33E5E1E2FB06100B6FFEA /* popVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = popVC.swift; sourceTree = "<group>"; };
 		3FD3F28D1E35D1FB00B74A84 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		3FD3F28E1E35D1FB00B74A84 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		3FD3F2A41E35FFA700B74A84 /* Processable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Processable.swift; path = "../../Desktop/ColorControl-master/ColorControl/Helper/Processable.swift"; sourceTree = "<group>"; };
@@ -128,7 +126,6 @@
 				3FE88CD01E2F34CE0044F19A /* Main.storyboard */,
 				3FE88CD31E2F34CE0044F19A /* Assets.xcassets */,
 				3F62EB8F1E306CD600B2D659 /* firecrack.mp3 */,
-				3FD33E5E1E2FB06100B6FFEA /* popVC.swift */,
 				3FE88CD51E2F34CE0044F19A /* LaunchScreen.storyboard */,
 				3FE88CD81E2F34CE0044F19A /* Info.plist */,
 			);
@@ -317,7 +314,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FD3F2AB1E36069800B74A84 /* Foundation Extensions.swift in Sources */,
-				3FD33E5F1E2FB06100B6FFEA /* popVC.swift in Sources */,
 				3FE88CCF1E2F34CE0044F19A /* ViewController.swift in Sources */,
 				3FF03CE61E3721630023F01C /* Brightnessable.swift in Sources */,
 				3FE88CCD1E2F34CE0044F19A /* AppDelegate.swift in Sources */,
