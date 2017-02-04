@@ -17,22 +17,15 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
     var player:AVAudioPlayer = AVAudioPlayer()
    
     @IBOutlet weak var viewUpdown: UIView!
-    
-    
     @IBOutlet weak var brightness: UILabel!
-   
     @IBOutlet weak var popView: UIView!
-    
     @IBOutlet weak var popView1: UIView!
-   
     @IBOutlet weak var myImages: UIImageView!
     @IBOutlet weak var uiSlider: UISlider!
-
-   
     @IBOutlet weak var slidervalue: UILabel!
     
     
-   var mygifNames = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30"]
+   var mygifNames = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "33", "33", "34", "35", "36", "37", "38", "39", "40", "41", "44", "43", "44", "45", "46", "47", "48", "49", "50", "51", "55", "53", "54", "55", "56", "57", "58", "59", "60"]
     
     var mygifNames1 = ["image36", "image37", "image38", "image39", "image40", "image41", "image42", "image43", "image44", "image45", "image46", "image47", "image48", "image49", "image50", "image51", "image52", "image53", "image54", "image55", "image56", "image57", "image58", "image59", "image60", "image61", "image62", "image63", "image64", "image65", "image66", "image67", "image68", "image69", "image70"]
     
@@ -91,7 +84,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
 //        player.play()
         
         
-         UIScreen.main.brightness = CGFloat(0.0)
+         UIScreen.main.brightness = CGFloat(0.5)
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(sender:)))
         myImages.addGestureRecognizer(tapGesture)
@@ -104,20 +97,21 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
     }
     
     func handleTap(sender: UITapGestureRecognizer) {
-        if self.viewUpdown.isHidden{
+        if self.viewUpdown.isHidden {
+
           self.viewUpdown.isHidden = false
             
-        }
-        else{
+        } else {
+
             self.viewUpdown.isHidden = true
             
         }
-        
-        
+
     }
     
     
     override var prefersStatusBarHidden: Bool {
+
         return true
     }
 
@@ -133,36 +127,45 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
         if player.isPlaying {
             player.pause()
         }
-        else{
+        else {
         player.numberOfLoops = -1
         player.play()
             
         }
-        
-        
     }
    
     @IBAction func fastForward(_ sender: Any) {
         
-        if popView.isHidden{
+        if popView.isHidden {
+
             popView.isHidden = false
             popView1.isHidden = true
-        }
-            else{
+
+        } else {
+
             popView.isHidden = true
                 
-            }
+        }
+
         self.popView.layer.borderWidth = 1.0
         self.popView.layer.borderColor = UIColor(red:216/255.0, green:216/255.0, blue:216/255.0, alpha: 1.0).cgColor
        popView.layer.cornerRadius = 15
+
     }
   
        
 
     @IBAction func slider(_ sender: UISlider) {
+
+        /*let step: Float = 10
+         let roundedValue = round(sender.value / step) * step
+         sender.value = roundedValue
+         label.text = "\(Int(roundedValue))"
+         }*/
         
+        print("sender.value: \(sender.value)")
         
-        if sender.value > -4 && sender.value < 0 {
+        if sender.value > 2 && sender.value < 4 {
             
             mygif.removeAll()
             
@@ -171,6 +174,12 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
                 
                 
                 mygif.append(UIImage(named: mygifNames[i])!)
+
+                //let jeremyGif = UIImage.gifWithName("fireslow")
+
+                // Use the UIImage in your UIImageView
+                //let imageView = UIImageView(image: jeremyGif)
+
                 
             }
          
@@ -179,9 +188,10 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
             myImages.animationDuration = TimeInterval(selectValue)
             self.myImages.startAnimating()
             
-        } else if sender.value > 0 && sender.value < 10 {
+        } else if sender.value > 4 && sender.value < 7 {
             
             mygif.removeAll()
+
             for i in 0..<mygifNames1.count{
                 
                 
@@ -228,7 +238,9 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
     }
     
     @IBAction func bright(_ sender: UIButton) {
-        if popView1.isHidden{
+
+
+        if popView1.isHidden {
             popView1.isHidden = false
             popView.isHidden = true
         }
