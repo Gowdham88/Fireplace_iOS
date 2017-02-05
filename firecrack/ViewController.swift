@@ -15,8 +15,6 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
 
   
     var player:AVAudioPlayer = AVAudioPlayer()
-    //var player1: AVPlayer?
-
     var avPlayer: AVPlayer!
     var avPlayerLayer: AVPlayerLayer!
     var paused: Bool = false
@@ -24,18 +22,45 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
     @IBOutlet weak var viewUpdown: UIView!
     @IBOutlet weak var brightness: UILabel!
     @IBOutlet weak var popView1: UIView!
+    @IBOutlet weak var sliderStep: G8SliderStep!
+    @IBOutlet weak var brightnessSlider: UISlider!
 
-    @IBOutlet weak var uiSlider: UISlider!
-
+    var appBrightness = CGFloat()
+    let prefs = UserDefaults.standard
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let deviceBrightness = UIScreen.main.brightness
+
+        prefs.set(deviceBrightness, forKey: "DeviceBrightness")
+
+        //prefs.set(appBrightness, forKey: "appBrightness")
+        if let appBrightness1 = prefs.value(forKey: "appBrightness") {
+
+            UIScreen.main.brightness = appBrightness1 as! CGFloat
+
+            brightnessSlider.value = Float(UIScreen.main.brightness)
+        }
+
         self.viewUpdown.isHidden = true
-
         popView1.isHidden = true
-        uiSlider.isHidden = true
+        sliderStep.isHidden = true
+        brightnessSlider.isHidden = true
 
+        sliderStep.stepImages = [UIImage(named:"forward")!, UIImage(named:"forward")!, UIImage(named:"forward")!]
+
+        sliderStep.tickTitles = ["SLOW", "NORMAL", "FAST"]
+
+        sliderStep.minimumValue = 2
+        sliderStep.maximumValue = Float(sliderStep.stepImages!.count) + sliderStep.minimumValue - 1.0
+        sliderStep.trackColor = UIColor.darkGray
+        sliderStep.stepTickColor = UIColor.orange
+        sliderStep.stepTickWidth = 30
+        sliderStep.stepTickHeight = 30
+        sliderStep.trackHeight = 10
+        sliderStep.value = 3
+        
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(sender:)))
 
         self.view.addGestureRecognizer(tapGesture)
@@ -43,10 +68,10 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
         self.SetUpSound()
 
         flamespeed(speed: "normal")
-
     }
 
     func flamespeed(speed: String) {
+
 
         let theURL: URL = Bundle.main.url(forResource: speed, withExtension: "mp4")!
 
@@ -74,51 +99,60 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
     }
 
     override func viewDidAppear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
+
+        player.play()
         avPlayer.play()
         paused = false
+
+    }
+    @IBAction func flamesspeedSlider(_ sender: UISlider) {
+
+        print("Flames slider sender.value\(sender.value)")
+
+        
+        if sender.value < 2.5 {
+
+            flamespeed(speed: "slow00")
+
+        } else if sender.value > 2.5 && sender.value < 3.5 {
+
+            flamespeed(speed: "normal")
+
+        } else if sender.value > 3.5 {
+
+            flamespeed(speed: "fast")
+
+        }
     }
 
+
     override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
+
         avPlayer.pause()
         player.pause()
         paused = true
-    }
-//
-//    func restartVideoFromBeginning()  {
-//
-//        //create a CMTime for zero seconds so we can go back to the beginning
-//        let seconds : Int64 = 0
-//        let preferredTimeScale : Int32 = 1
-//        let seekTime : CMTime = CMTimeMake(seconds, preferredTimeScale)
-//
-//        player1!.seek(to: seekTime)
-//
-//        player1!.play()
-//
-//    }
-//
-//    func loopVideo() {
-//        player1?.seek(to: kCMTimeZero)
-//        player1?.play()
-//    }
 
+        if let brightvalue = prefs.value(forKey: "DeviceBrightness") {
+
+           UIScreen.main.brightness = brightvalue as! CGFloat
+
+        }
+
+    }
 
     func handleTap(sender: UITapGestureRecognizer) {
 
         if self.viewUpdown.isHidden {
 
-          self.viewUpdown.isHidden = false
-            self.popView1.isHidden = false
-            self.uiSlider.isHidden = false
-            
+            self.viewUpdown.isHidden = false
+
         } else {
 
             self.viewUpdown.isHidden = true
-            self.popView1.isHidden = true
-            self.uiSlider.isHidden = true
-            
+            popView1.isHidden = true
+            sliderStep.isHidden = true
+            brightnessSlider.isHidden = true
+
         }
 
     }
@@ -150,128 +184,96 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
         }
     }
 
-    @IBAction func slider(_ sender: UISlider) {
+    //UIScreen.mainScreen().setBrightness(0.5)
 
-        /*let step: Float = 10
-         let roundedValue = round(sender.value / step) * step
-         sender.value = roundedValue
-         label.text = "\(Int(roundedValue))"
-         }*/
-      /*
-        print("sender.value: \(sender.value)")
-        
-        if sender.value > 2 && sender.value < 4 {
-            
-            mygif.removeAll()
-            
-            
-            for i in 0..<mygifNames1.count{
-                
-                
-                mygif.append(UIImage(named: mygifNames1[i])!)
+    @IBAction func brightnessSlider(_ sender: UISlider) {
 
-                //let jeremyGif = UIImage.gifWithName("fireslow")
+        UIScreen.main.brightness = CGFloat(sender.value)
 
-                // Use the UIImage in your UIImageView
-                //let imageView = UIImageView(image: jeremyGif)
+        appBrightness = UIScreen.main.brightness
 
-                
-            }
-         
-            myImages.animationImages = mygif
-            let selectValue = Float(10.0 - sender.value)
-            myImages.animationDuration = TimeInterval(selectValue)
-            self.myImages.startAnimating()
-            
-        } else if sender.value > 4 && sender.value < 7 {
-            
-            mygif.removeAll()
+        print("appBrightness: \(appBrightness)")
 
-            for i in 0..<mygifNames.count{
-                
-                
-                mygif.append(UIImage(named: mygifNames[i])!)
-                
-            }
-            
-            myImages.animationImages = mygif
-            let selectValue = Float(10.0 - sender.value)
-            myImages.animationDuration = TimeInterval(selectValue)
-            self.myImages.startAnimating()
-            
-            
-            
-     }
-//        else if sender.value > 5 && sender.value < 10 {
-//
-//            mygif.removeAll()
-//            for i in 0..<mygifNames2.count{
-//                
-//                
-//                mygif.append(UIImage(named: mygifNames2[i])!)
-//                
-//            }
-//            
-//            myImages.animationImages = mygif
-//            let selectValue = Float(10.0 - sender.value)
-//            myImages.animationDuration = TimeInterval(selectValue)
-//            self.myImages.startAnimating()
-//
-//    
-//            
-//            
-//            
-//        }
-        
-//        let selectedValue = Float(10.0 - sender.value)
-//        
-//        myImages.animationDuration = TimeInterval(selectedValue)
-//        self.myImages.startAnimating()
-        
-        
-    */
+        prefs.set(appBrightness, forKey: "appBrightness")
+
+        /*var filter = CIFilter(name: "CIColorControls");
+         filter.setValue(NSNumber(float: sender.value), forKey: "inputBrightness")
+         var image = self.imageView.image
+         var rawimgData = CIImage(image: image)
+         filter.setValue(rawimgData, forKey: "inputImage")
+         var outpuImage = filter.valueForKey("outputImage")
+         imageView.image = UIImage(CIImage: outpuImage as CIImage)*/
     }
-    
-    @IBAction func bright(_ sender: UIButton) {
+
+    @IBAction func brightnessPressed(_ sender: UIButton) {
 
         brightness.text = "Brightness"
-
-
         
-
         self.popView1.layer.borderWidth = 1.0
         self.popView1.layer.borderColor = UIColor(red:216/255.0, green:216/255.0, blue:216/255.0, alpha: 1.0).cgColor
    
      popView1.layer.cornerRadius = 15
 
-        if popView1.isHidden {
+        if popView1.isHidden == true {
 
             popView1.isHidden = false
+            brightnessSlider.isHidden = false
+            sliderStep.isHidden = true
 
         } else {
-            popView1.isHidden = true
-            
+
+            //pop view not hidden
+
+            if sliderStep.isHidden == false {
+
+                //fast forward slider not hidden
+                sliderStep.isHidden = true
+                brightnessSlider.isHidden = false
+
+            } else {
+
+                popView1.isHidden = true
+                brightnessSlider.isHidden = true
+                sliderStep.isHidden = true
+                
+            }
+
         }
     }
     
 
     @IBAction func fastForward(_ sender: Any) {
 
-
-        brightness.text = "Adjust Speed"
-
+        brightness.text = "Flame Speed"
+        brightness.textColor = UIColor.white
 
         self.popView1.layer.borderWidth = 1.0
         self.popView1.layer.borderColor = UIColor(red:216/255.0, green:216/255.0, blue:216/255.0, alpha: 1.0).cgColor
         popView1.layer.cornerRadius = 15
 
-        if popView1.isHidden {
+        if popView1.isHidden == true {
 
             popView1.isHidden = false
+            brightnessSlider.isHidden = true
+            sliderStep.isHidden = false
 
         } else {
-            popView1.isHidden = true
-            
+
+            //pop view not hidden
+
+            if brightnessSlider.isHidden == false {
+
+                brightnessSlider.isHidden = true
+                sliderStep.isHidden = false
+
+            } else {
+
+                popView1.isHidden = true
+                sliderStep.isHidden = true
+                brightnessSlider.isHidden = true
+
+            }
+
         }
 
     }
