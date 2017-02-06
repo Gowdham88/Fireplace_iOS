@@ -11,9 +11,10 @@ import AVKit
 import AVFoundation
 import CoreImage
 
-class ViewController: UIViewController, UINavigationControllerDelegate {
+class ViewController: UIViewController, UINavigationControllerDelegate, VideoPlayerDelegate {
 
-  
+    @IBOutlet weak var dummyView: UIView!
+  var videoPlayer : VideoPlayer?
     var player:AVAudioPlayer = AVAudioPlayer()
     var avPlayer: AVPlayer!
     var avPlayerLayer: AVPlayerLayer!
@@ -44,7 +45,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
         }
 
         self.viewUpdown.isHidden = true
-        popView1.isHidden = true
+        //popView1.isHidden = true
         sliderStep.isHidden = true
         brightnessSlider.isHidden = true
 
@@ -63,17 +64,64 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(sender:)))
 
-        self.view.addGestureRecognizer(tapGesture)
+        //self.view.addGestureRecognizer(tapGesture)
+        self.dummyView.addGestureRecognizer(tapGesture)
 
         self.SetUpSound()
 
-        flamespeed(speed: "normal")
+        playmyVideo(myString: "normal")
+        //flamespeed(speed: "normal")
+
+
     }
 
-    func flamespeed(speed: String) {
+    func playmyVideo(myString: String) {
 
 
-        let theURL: URL = Bundle.main.url(forResource: speed, withExtension: "mp4")!
+        var videoPlayer = VideoPlayer(frame: .zero)
+        self.view!.addSubview(videoPlayer)
+        self.videoPlayer = videoPlayer
+
+        videoPlayer.URL = Bundle.main.url(forResource: myString, withExtension: "mp4")!
+
+        //NSURL(string: "http://uploadingit.com/file/pkgz6mplwtodlzl6/Mac%20OS%20X%20Snow%20Leopard%20Intro%20Movie%20HD.mp4") as URL?
+
+        videoPlayer.endAction = VideoPlayerEndAction.loop
+        
+        videoPlayer.play()
+
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(playerItemDidReachEnd(notification:)),
+                                               name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,
+                                               object: videoPlayer)
+
+        
+        
+    }
+
+
+
+
+    func videoPlayer(_ videoPlayer: VideoPlayer, changedState: VideoPlayerState) {
+
+
+
+    }
+
+    func videoPlayer(_ videoPlayer: VideoPlayer, encounteredError: NSError) {
+
+        UIAlertView(title: "Error", message: encounteredError.localizedDescription, delegate: nil, cancelButtonTitle: "Dismiss").show()
+        
+    }
+
+
+    /*func flamespeed(speed: String) {
+
+        avPlayer = AVPlayer()
+        avPlayerLayer = AVPlayerLayer()
+        print("speed: \(speed)")
+
+        var theURL: URL = Bundle.main.url(forResource: speed, withExtension: "mp4")!
 
         avPlayer = AVPlayer(url: theURL)
         avPlayerLayer = AVPlayerLayer(player: avPlayer)
@@ -93,37 +141,83 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
 
     }
 
+    */
+
     func playerItemDidReachEnd(notification: NSNotification) {
-        let p: AVPlayerItem = notification.object as! AVPlayerItem
-        p.seek(to: kCMTimeZero)
+        let p: VideoPlayer = notification.object as! VideoPlayer
+        //p.seek(to: kCMTimeZero)
+        p.play()
     }
 
     override func viewDidAppear(_ animated: Bool) {
 
-        player.play()
-        avPlayer.play()
-        paused = false
+//        player.play()
+//        avPlayer.play()
+//        paused = false
 
     }
     @IBAction func flamesspeedSlider(_ sender: UISlider) {
 
         print("Flames slider sender.value\(sender.value)")
 
-        
         if sender.value < 2.5 {
 
-            flamespeed(speed: "slow00")
+            // flamespeed(speed: "slow00")
+            playmyVideo(myString: "slow00")
 
         } else if sender.value > 2.5 && sender.value < 3.5 {
 
-            flamespeed(speed: "normal")
+            //flamespeed(speed: "normal")
+            playmyVideo(myString: "normal")
 
         } else if sender.value > 3.5 {
 
-            flamespeed(speed: "fast")
+            //flamespeed(speed: "fast")
+            playmyVideo(myString: "fast")
 
         }
     }
+
+    override func viewDidLayoutSubviews()  {
+        super.viewDidLayoutSubviews()
+
+        //self.videoPlayer!.frame = CGRect(x: (self.view!.bounds.width - 280) / 2.0, y: (self.view!.bounds.height - 280) / 2.0, width: 280, height: 280)
+
+        //self.videoPlayer!.frame = CGRect(x: 0.0, y: 0.0, width: self.view.bounds.width, height:self.view.bounds.height)
+
+        self.videoPlayer!.frame = view.layer.bounds
+        view.backgroundColor = .clear
+
+        view.insertSubview(videoPlayer!, at: 0)
+
+        view.insertSubview(dummyView, at: 1)
+
+        //videoPlayer?.layer.zPosition = 1
+
+        //view.insertSubview(videoPlayer!, belowSubview: view)
+        //videoPlayer?.sendSubview(toBack: videoPlayer!)
+
+
+
+
+        /*  avPlayer = AVPlayer()
+         avPlayerLayer = AVPlayerLayer()
+         print("speed: \(speed)")
+
+         var theURL: URL = Bundle.main.url(forResource: speed, withExtension: "mp4")!
+
+         avPlayer = AVPlayer(url: theURL)
+         avPlayerLayer = AVPlayerLayer(player: avPlayer)
+         avPlayerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
+         avPlayer.volume = 0
+         avPlayer.actionAtItemEnd = .none
+
+         avPlayerLayer.frame = view.layer.bounds
+         view.backgroundColor = .clear
+         view.layer.insertSublayer(avPlayerLayer, at: 0)
+*/
+    }
+
 
 
     override func viewDidDisappear(_ animated: Bool) {
