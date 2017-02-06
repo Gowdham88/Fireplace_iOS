@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Fireplay" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Fireplay" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -21,6 +21,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7aj-6E-Bw7">
+                                <rect key="frame" x="0.0" y="0.0" width="568" height="321"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wTW-vo-7Bm" userLabel="popView1">
                                 <rect key="frame" x="17" y="80" width="533" height="160"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
@@ -104,6 +108,7 @@
                     <connections>
                         <outlet property="brightness" destination="Iec-Ot-dvH" id="2RC-ep-j04"/>
                         <outlet property="brightnessSlider" destination="8Ao-r4-ad1" id="JVK-Ft-FIE"/>
+                        <outlet property="dummyView" destination="7aj-6E-Bw7" id="niD-VJ-fRL"/>
                         <outlet property="popView1" destination="wTW-vo-7Bm" id="poL-Kb-tsM"/>
                         <outlet property="sliderStep" destination="yap-8b-0Bg" id="8tU-YA-hiB"/>
                         <outlet property="viewUpdown" destination="4tG-YP-oP6" id="lVk-es-83k"/>
