@@ -11,15 +11,16 @@ import AVKit
 import AVFoundation
 import CoreImage
 
-class ViewController: UIViewController, UINavigationControllerDelegate, VideoPlayerDelegate {
+class ViewController: UIViewController {
 
+    @IBOutlet var videoView: VideoPlay!
     @IBOutlet weak var dummyView: UIView!
-  var videoPlayer : VideoPlayer?
+//    var videoPlayer : VideoPlayer?
     var player:AVAudioPlayer = AVAudioPlayer()
     var avPlayer: AVPlayer!
     var avPlayerLayer: AVPlayerLayer!
     var paused: Bool = false
-
+   
     @IBOutlet weak var viewUpdown: UIView!
     @IBOutlet weak var brightness: UILabel!
     @IBOutlet weak var popView1: UIView!
@@ -45,7 +46,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, VideoPla
         }
 
         self.viewUpdown.isHidden = true
-        //popView1.isHidden = true
+        popView1.isHidden = true
         sliderStep.isHidden = true
         brightnessSlider.isHidden = true
 
@@ -65,89 +66,43 @@ class ViewController: UIViewController, UINavigationControllerDelegate, VideoPla
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(sender:)))
 
         //self.view.addGestureRecognizer(tapGesture)
-        self.dummyView.addGestureRecognizer(tapGesture)
+        self.videoView.addGestureRecognizer(tapGesture)
 
         self.SetUpSound()
 
         playmyVideo(myString: "normal")
         //flamespeed(speed: "normal")
-
+        
+      
 
     }
 
     func playmyVideo(myString: String) {
 
 
-        var videoPlayer = VideoPlayer(frame: .zero)
-        self.view!.addSubview(videoPlayer)
-        self.videoPlayer = videoPlayer
 
-        videoPlayer.URL = Bundle.main.url(forResource: myString, withExtension: "mp4")!
+//        videoPlayer.URL = Bundle.main.url(forResource: myString, withExtension: "mp4")!
 
         //NSURL(string: "http://uploadingit.com/file/pkgz6mplwtodlzl6/Mac%20OS%20X%20Snow%20Leopard%20Intro%20Movie%20HD.mp4") as URL?
 
-        videoPlayer.endAction = VideoPlayerEndAction.loop
+        let bundle: Bundle = Bundle.main
+        let videoPlayer: String = bundle.path(forResource: myString, ofType: "mp4")!
+        let movieUrl : NSURL = NSURL.fileURL(withPath: videoPlayer) as NSURL
         
-        videoPlayer.play()
-
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(playerItemDidReachEnd(notification:)),
-                                               name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,
-                                               object: videoPlayer)
+        videoView.playVideoWithURL(url: movieUrl)
 
         
-        
-    }
+  
 
-
-
-
-    func videoPlayer(_ videoPlayer: VideoPlayer, changedState: VideoPlayerState) {
-
-
-
-    }
-
-    func videoPlayer(_ videoPlayer: VideoPlayer, encounteredError: NSError) {
-
-        UIAlertView(title: "Error", message: encounteredError.localizedDescription, delegate: nil, cancelButtonTitle: "Dismiss").show()
         
     }
 
 
-    /*func flamespeed(speed: String) {
-
-        avPlayer = AVPlayer()
-        avPlayerLayer = AVPlayerLayer()
-        print("speed: \(speed)")
-
-        var theURL: URL = Bundle.main.url(forResource: speed, withExtension: "mp4")!
-
-        avPlayer = AVPlayer(url: theURL)
-        avPlayerLayer = AVPlayerLayer(player: avPlayer)
-        avPlayerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
-        avPlayer.volume = 0
-        avPlayer.actionAtItemEnd = .none
-
-        avPlayerLayer.frame = view.layer.bounds
-        view.backgroundColor = .clear
-        view.layer.insertSublayer(avPlayerLayer, at: 0)
-
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(playerItemDidReachEnd(notification:)),
-                                               name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,
-                                               object: avPlayer.currentItem)
 
 
-    }
+   
 
-    */
-
-    func playerItemDidReachEnd(notification: NSNotification) {
-        let p: VideoPlayer = notification.object as! VideoPlayer
-        //p.seek(to: kCMTimeZero)
-        p.play()
-    }
+   
 
     override func viewDidAppear(_ animated: Bool) {
 
@@ -164,16 +119,21 @@ class ViewController: UIViewController, UINavigationControllerDelegate, VideoPla
 
             // flamespeed(speed: "slow00")
             playmyVideo(myString: "slow00")
+            
+           
 
         } else if sender.value > 2.5 && sender.value < 3.5 {
 
             //flamespeed(speed: "normal")
             playmyVideo(myString: "normal")
-
+            
+           
         } else if sender.value > 3.5 {
 
             //flamespeed(speed: "fast")
             playmyVideo(myString: "fast")
+            
+           
 
         }
     }
@@ -185,12 +145,12 @@ class ViewController: UIViewController, UINavigationControllerDelegate, VideoPla
 
         //self.videoPlayer!.frame = CGRect(x: 0.0, y: 0.0, width: self.view.bounds.width, height:self.view.bounds.height)
 
-        self.videoPlayer!.frame = view.layer.bounds
+//        self.videoPlayer!.frame = view.layer.bounds
         view.backgroundColor = .clear
 
-        view.insertSubview(videoPlayer!, at: 0)
+//        view.insertSubview(videoPlayer!, at: 0)
 
-        view.insertSubview(dummyView, at: 1)
+//        view.insertSubview(dummyView, at: 1)
 
         //videoPlayer?.layer.zPosition = 1
 
@@ -200,23 +160,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, VideoPla
 
 
 
-        /*  avPlayer = AVPlayer()
-         avPlayerLayer = AVPlayerLayer()
-         print("speed: \(speed)")
-
-         var theURL: URL = Bundle.main.url(forResource: speed, withExtension: "mp4")!
-
-         avPlayer = AVPlayer(url: theURL)
-         avPlayerLayer = AVPlayerLayer(player: avPlayer)
-         avPlayerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
-         avPlayer.volume = 0
-         avPlayer.actionAtItemEnd = .none
-
-         avPlayerLayer.frame = view.layer.bounds
-         view.backgroundColor = .clear
-         view.layer.insertSublayer(avPlayerLayer, at: 0)
-*/
-    }
+           }
 
 
 
