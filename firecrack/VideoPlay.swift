@@ -9,7 +9,10 @@
 import UIKit
 import AVFoundation
 
+
+
 class VideoPlay: UIView {
+    
     
     private var player : AVPlayer!
     
@@ -35,14 +38,30 @@ class VideoPlay: UIView {
     }
     
     
+    
     private func initializePlayerLayer() {
         
         playerLayer = AVPlayerLayer()
-        playerLayer.backgroundColor = UIColor.white.cgColor
+        playerLayer.backgroundColor = UIColor.clear.cgColor
+
+      
+
         playerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
         
+//        self.playerLayer.frame =  VideoPlay.bounds;
+//        self.VideoPlay.layer.addSublayer(playerLayer);
+//        self.VideoPlay.playerLayer = playerLayer;
+//        player.play();
+     
+
         self.layer.addSublayer(playerLayer)
-        playerLayer.frame = self.bounds
+      
+        playerLayer.frame = UIScreen.main.bounds
+        
+
+        
+        
+        
     }
     
     func playVideoWithURL(url: NSURL) {
