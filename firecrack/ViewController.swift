@@ -14,7 +14,7 @@ import CoreImage
 class ViewController: UIViewController {
 
     @IBOutlet var videoView: VideoPlay!
-    @IBOutlet weak var dummyView: UIView!
+    
 //    var videoPlayer : VideoPlayer?
     var player:AVAudioPlayer = AVAudioPlayer()
     var avPlayer: AVPlayer!
@@ -72,7 +72,7 @@ class ViewController: UIViewController {
 
         playmyVideo(myString: "normal")
         //flamespeed(speed: "normal")
-        
+
       
 
     }
@@ -143,22 +143,22 @@ class ViewController: UIViewController {
 
         //self.videoPlayer!.frame = CGRect(x: (self.view!.bounds.width - 280) / 2.0, y: (self.view!.bounds.height - 280) / 2.0, width: 280, height: 280)
 
-        //self.videoPlayer!.frame = CGRect(x: 0.0, y: 0.0, width: self.view.bounds.width, height:self.view.bounds.height)
+//        self.videoView!.frame = CGRect(x: 0.0, y: 0.0, width: self.view.bounds.width, height:self.view.bounds.height)
 
-//        self.videoPlayer!.frame = view.layer.bounds
+//        self.videoView!.frame = view.layer.bounds
         view.backgroundColor = .clear
 
-//        view.insertSubview(videoPlayer!, at: 0)
+//        view.insertSubview(videoView!, at: 0)
 
 //        view.insertSubview(dummyView, at: 1)
 
-        //videoPlayer?.layer.zPosition = 1
+//        videoView?.layer.zPosition = 1
 
-        //view.insertSubview(videoPlayer!, belowSubview: view)
-        //videoPlayer?.sendSubview(toBack: videoPlayer!)
+//        view.insertSubview(videoView!, belowSubview: view)
+//        videoView?.sendSubview(toBack: videoView!)
 
 
-
+        
 
            }
 
