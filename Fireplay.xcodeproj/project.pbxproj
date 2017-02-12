@@ -12,6 +12,10 @@
 		04A5F4DE1E478C580003AFC9 /* slow00.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 04A5F4D91E478C580003AFC9 /* slow00.mp4 */; };
 		04A5F4E01E4795EA0003AFC9 /* G8SliderStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A5F4DF1E4795EA0003AFC9 /* G8SliderStep.swift */; };
 		04A5F4E81E48C7580003AFC9 /* VideoPlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A5F4E71E48C7580003AFC9 /* VideoPlay.swift */; };
+		04E3ED041E50389600DFDB61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E3ED031E50389600DFDB61 /* AppDelegate.swift */; };
+		04E3ED061E50389600DFDB61 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E3ED051E50389600DFDB61 /* ViewController.swift */; };
+		04E3ED091E50389600DFDB61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04E3ED071E50389600DFDB61 /* Main.storyboard */; };
+		04E3ED0B1E50389600DFDB61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04E3ED0A1E50389600DFDB61 /* Assets.xcassets */; };
 		3F62EB901E306CD600B2D659 /* firecrack.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3F62EB8F1E306CD600B2D659 /* firecrack.mp3 */; };
 		3FD3F28F1E35D1FB00B74A84 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FD3F28D1E35D1FB00B74A84 /* Crashlytics.framework */; };
 		3FD3F2901E35D1FB00B74A84 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FD3F28E1E35D1FB00B74A84 /* Fabric.framework */; };
@@ -47,6 +51,12 @@
 		04A5F4D91E478C580003AFC9 /* slow00.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = slow00.mp4; sourceTree = "<group>"; };
 		04A5F4DF1E4795EA0003AFC9 /* G8SliderStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = G8SliderStep.swift; sourceTree = "<group>"; };
 		04A5F4E71E48C7580003AFC9 /* VideoPlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPlay.swift; sourceTree = "<group>"; };
+		04E3ED011E50389500DFDB61 /* FireplayTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FireplayTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		04E3ED031E50389600DFDB61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		04E3ED051E50389600DFDB61 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		04E3ED081E50389600DFDB61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		04E3ED0A1E50389600DFDB61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		04E3ED0C1E50389600DFDB61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F62EB8F1E306CD600B2D659 /* firecrack.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = firecrack.mp3; sourceTree = "<group>"; };
 		3FD33DE51E2F4EB200B6FFEA /* firecrack.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = firecrack.entitlements; sourceTree = "<group>"; };
 		3FD3F28D1E35D1FB00B74A84 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
@@ -67,6 +77,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		04E3ECFE1E50389500DFDB61 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3FE88CC61E2F34CE0044F19A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -93,6 +110,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04E3ED021E50389600DFDB61 /* FireplayTV */ = {
+			isa = PBXGroup;
+			children = (
+				04E3ED031E50389600DFDB61 /* AppDelegate.swift */,
+				04E3ED051E50389600DFDB61 /* ViewController.swift */,
+				04E3ED071E50389600DFDB61 /* Main.storyboard */,
+				04E3ED0A1E50389600DFDB61 /* Assets.xcassets */,
+				04E3ED0C1E50389600DFDB61 /* Info.plist */,
+			);
+			path = FireplayTV;
+			sourceTree = "<group>";
+		};
 		3FE88CC01E2F34CE0044F19A = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +130,7 @@
 				3FE88CCB1E2F34CE0044F19A /* firecrack */,
 				3FE88CE01E2F34CE0044F19A /* firecrackTests */,
 				3FE88CEB1E2F34CE0044F19A /* firecrackUITests */,
+				04E3ED021E50389600DFDB61 /* FireplayTV */,
 				3FE88CCA1E2F34CE0044F19A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -111,6 +141,7 @@
 				3FE88CC91E2F34CE0044F19A /* Fireplay.app */,
 				3FE88CDD1E2F34CE0044F19A /* firecrackTests.xctest */,
 				3FE88CE81E2F34CE0044F19A /* firecrackUITests.xctest */,
+				04E3ED011E50389500DFDB61 /* FireplayTV.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -156,6 +187,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		04E3ED001E50389500DFDB61 /* FireplayTV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04E3ED0F1E50389600DFDB61 /* Build configuration list for PBXNativeTarget "FireplayTV" */;
+			buildPhases = (
+				04E3ECFD1E50389500DFDB61 /* Sources */,
+				04E3ECFE1E50389500DFDB61 /* Frameworks */,
+				04E3ECFF1E50389500DFDB61 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FireplayTV;
+			productName = FireplayTV;
+			productReference = 04E3ED011E50389500DFDB61 /* FireplayTV.app */;
+			productType = "com.apple.product-type.application";
+		};
 		3FE88CC81E2F34CE0044F19A /* Fireplay */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3FE88CF11E2F34CE0044F19A /* Build configuration list for PBXNativeTarget "Fireplay" */;
@@ -220,6 +268,11 @@
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = Paramesh;
 				TargetAttributes = {
+					04E3ED001E50389500DFDB61 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = XSJRRDKMW9;
+						ProvisioningStyle = Automatic;
+					};
 					3FE88CC81E2F34CE0044F19A = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = XSJRRDKMW9;
@@ -263,11 +316,21 @@
 				3FE88CC81E2F34CE0044F19A /* Fireplay */,
 				3FE88CDC1E2F34CE0044F19A /* firecrackTests */,
 				3FE88CE71E2F34CE0044F19A /* firecrackUITests */,
+				04E3ED001E50389500DFDB61 /* FireplayTV */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		04E3ECFF1E50389500DFDB61 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04E3ED0B1E50389600DFDB61 /* Assets.xcassets in Resources */,
+				04E3ED091E50389600DFDB61 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3FE88CC71E2F34CE0044F19A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -315,6 +378,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		04E3ECFD1E50389500DFDB61 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04E3ED061E50389600DFDB61 /* ViewController.swift in Sources */,
+				04E3ED041E50389600DFDB61 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3FE88CC51E2F34CE0044F19A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -358,6 +430,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		04E3ED071E50389600DFDB61 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04E3ED081E50389600DFDB61 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		3FE88CD01E2F34CE0044F19A /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -377,6 +457,40 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		04E3ED0D1E50389600DFDB61 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = XSJRRDKMW9;
+				INFOPLIST_FILE = FireplayTV/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.CZ.FireplayTV;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.1;
+			};
+			name = Debug;
+		};
+		04E3ED0E1E50389600DFDB61 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = XSJRRDKMW9;
+				INFOPLIST_FILE = FireplayTV/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.CZ.FireplayTV;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.1;
+			};
+			name = Release;
+		};
 		3FE88CEF1E2F34CE0044F19A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -565,6 +679,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		04E3ED0F1E50389600DFDB61 /* Build configuration list for PBXNativeTarget "FireplayTV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04E3ED0D1E50389600DFDB61 /* Debug */,
+				04E3ED0E1E50389600DFDB61 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		3FE88CC41E2F34CE0044F19A /* Build configuration list for PBXProject "Fireplay" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
