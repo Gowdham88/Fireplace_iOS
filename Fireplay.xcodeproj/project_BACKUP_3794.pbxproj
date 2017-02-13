@@ -8,14 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		04A5F4DA1E478C580003AFC9 /* fast.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 04A5F4D51E478C580003AFC9 /* fast.mp4 */; };
-		04A5F4DC1E478C580003AFC9 /* normal.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 04A5F4D71E478C580003AFC9 /* normal.mp4 */; };
-		04A5F4DE1E478C580003AFC9 /* slow00.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 04A5F4D91E478C580003AFC9 /* slow00.mp4 */; };
 		04A5F4E01E4795EA0003AFC9 /* G8SliderStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A5F4DF1E4795EA0003AFC9 /* G8SliderStep.swift */; };
 		04A5F4E81E48C7580003AFC9 /* VideoPlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A5F4E71E48C7580003AFC9 /* VideoPlay.swift */; };
+<<<<<<< HEAD
+		3F0F8B3B1E4CD8C20071276A /* slow00.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3F0F8B3A1E4CD8BD0071276A /* slow00.mp4 */; };
+		3F0F8B3D1E4CD98B0071276A /* normal.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3F0F8B3C1E4CD9830071276A /* normal.mp4 */; };
+=======
 		04E3ED041E50389600DFDB61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E3ED031E50389600DFDB61 /* AppDelegate.swift */; };
 		04E3ED061E50389600DFDB61 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E3ED051E50389600DFDB61 /* ViewController.swift */; };
 		04E3ED091E50389600DFDB61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04E3ED071E50389600DFDB61 /* Main.storyboard */; };
 		04E3ED0B1E50389600DFDB61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04E3ED0A1E50389600DFDB61 /* Assets.xcassets */; };
+>>>>>>> 4d264fb23f30e65319eb9c401ee30a36bbc3b6c3
 		3F62EB901E306CD600B2D659 /* firecrack.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3F62EB8F1E306CD600B2D659 /* firecrack.mp3 */; };
 		3FD3F28F1E35D1FB00B74A84 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FD3F28D1E35D1FB00B74A84 /* Crashlytics.framework */; };
 		3FD3F2901E35D1FB00B74A84 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FD3F28E1E35D1FB00B74A84 /* Fabric.framework */; };
@@ -49,12 +52,17 @@
 		04A5F4D51E478C580003AFC9 /* fast.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = fast.mp4; sourceTree = "<group>"; };
 		04A5F4DF1E4795EA0003AFC9 /* G8SliderStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = G8SliderStep.swift; sourceTree = "<group>"; };
 		04A5F4E71E48C7580003AFC9 /* VideoPlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPlay.swift; sourceTree = "<group>"; };
+<<<<<<< HEAD
+		3F0F8B3A1E4CD8BD0071276A /* slow00.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = slow00.mp4; sourceTree = "<group>"; };
+		3F0F8B3C1E4CD9830071276A /* normal.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = normal.mp4; sourceTree = "<group>"; };
+=======
 		04E3ED011E50389500DFDB61 /* FireplayTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FireplayTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04E3ED031E50389600DFDB61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04E3ED051E50389600DFDB61 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		04E3ED081E50389600DFDB61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		04E3ED0A1E50389600DFDB61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04E3ED0C1E50389600DFDB61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+>>>>>>> 4d264fb23f30e65319eb9c401ee30a36bbc3b6c3
 		3F62EB8F1E306CD600B2D659 /* firecrack.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = firecrack.mp3; sourceTree = "<group>"; };
 		3FD33DE51E2F4EB200B6FFEA /* firecrack.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = firecrack.entitlements; sourceTree = "<group>"; };
 		3FD3F28D1E35D1FB00B74A84 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };

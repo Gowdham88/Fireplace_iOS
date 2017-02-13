@@ -47,6 +47,8 @@
 
 /* Begin PBXFileReference section */
 		04A5F4D51E478C580003AFC9 /* fast.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = fast.mp4; sourceTree = "<group>"; };
+		04A5F4D71E478C580003AFC9 /* normal.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = normal.mp4; sourceTree = "<group>"; };
+		04A5F4D91E478C580003AFC9 /* slow00.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = slow00.mp4; sourceTree = "<group>"; };
 		04A5F4DF1E4795EA0003AFC9 /* G8SliderStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = G8SliderStep.swift; sourceTree = "<group>"; };
 		04A5F4E71E48C7580003AFC9 /* VideoPlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPlay.swift; sourceTree = "<group>"; };
 		04E3ED011E50389500DFDB61 /* FireplayTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FireplayTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,8 +150,8 @@
 			isa = PBXGroup;
 			children = (
 				04A5F4D51E478C580003AFC9 /* fast.mp4 */,
-				3F0F8B3C1E4CD9830071276A /* normal.mp4 */,
-				3F0F8B3A1E4CD8BD0071276A /* slow00.mp4 */,
+				04A5F4D71E478C580003AFC9 /* normal.mp4 */,
+				04A5F4D91E478C580003AFC9 /* slow00.mp4 */,
 				3FD33DE51E2F4EB200B6FFEA /* firecrack.entitlements */,
 				3FE88CCC1E2F34CE0044F19A /* AppDelegate.swift */,
 				3FE88CCE1E2F34CE0044F19A /* ViewController.swift */,
@@ -334,9 +336,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FE88CD71E2F34CE0044F19A /* LaunchScreen.storyboard in Resources */,
-				3F0F8B3B1E4CD8C20071276A /* slow00.mp4 in Resources */,
-				3F0F8B3D1E4CD98B0071276A /* normal.mp4 in Resources */,
+				04A5F4DC1E478C580003AFC9 /* normal.mp4 in Resources */,
 				04A5F4DA1E478C580003AFC9 /* fast.mp4 in Resources */,
+				04A5F4DE1E478C580003AFC9 /* slow00.mp4 in Resources */,
 				3F62EB901E306CD600B2D659 /* firecrack.mp3 in Resources */,
 				3FE88CD41E2F34CE0044F19A /* Assets.xcassets in Resources */,
 				3FE88CD21E2F34CE0044F19A /* Main.storyboard in Resources */,
