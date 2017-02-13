@@ -10,7 +10,7 @@
 		04A5F4E01E4795EA0003AFC9 /* G8SliderStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A5F4DF1E4795EA0003AFC9 /* G8SliderStep.swift */; };
 		04A5F4E81E48C7580003AFC9 /* VideoPlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A5F4E71E48C7580003AFC9 /* VideoPlay.swift */; };
 		04E3ED041E50389600DFDB61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E3ED031E50389600DFDB61 /* AppDelegate.swift */; };
-		04E3ED061E50389600DFDB61 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E3ED051E50389600DFDB61 /* ViewController.swift */; };
+		04E3ED061E50389600DFDB61 /* tvOsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E3ED051E50389600DFDB61 /* tvOsViewController.swift */; };
 		04E3ED091E50389600DFDB61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04E3ED071E50389600DFDB61 /* Main.storyboard */; };
 		3F62EB901E306CD600B2D659 /* firecrack.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3F62EB8F1E306CD600B2D659 /* firecrack.mp3 */; };
 		3F734D0E1E5199EB00D1B52E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F734D0D1E5199EB00D1B52E /* Assets.xcassets */; };
@@ -55,7 +55,7 @@
 		04A5F4E71E48C7580003AFC9 /* VideoPlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPlay.swift; sourceTree = "<group>"; };
 		04E3ED011E50389500DFDB61 /* FireplayTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FireplayTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04E3ED031E50389600DFDB61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		04E3ED051E50389600DFDB61 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		04E3ED051E50389600DFDB61 /* tvOsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tvOsViewController.swift; sourceTree = "<group>"; };
 		04E3ED081E50389600DFDB61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		04E3ED0C1E50389600DFDB61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F62EB8F1E306CD600B2D659 /* firecrack.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = firecrack.mp3; sourceTree = "<group>"; };
@@ -129,7 +129,7 @@
 				3FA745FB1E516BEF0066C976 /* fire.mp3 */,
 				04E3ED031E50389600DFDB61 /* AppDelegate.swift */,
 				3F734D0D1E5199EB00D1B52E /* Assets.xcassets */,
-				04E3ED051E50389600DFDB61 /* ViewController.swift */,
+				04E3ED051E50389600DFDB61 /* tvOsViewController.swift */,
 				04E3ED071E50389600DFDB61 /* Main.storyboard */,
 				3FA745EC1E51695F0066C976 /* VideoPlay.swift */,
 				04E3ED0C1E50389600DFDB61 /* Info.plist */,
@@ -406,7 +406,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04E3ED061E50389600DFDB61 /* ViewController.swift in Sources */,
+				04E3ED061E50389600DFDB61 /* tvOsViewController.swift in Sources */,
 				3FA745ED1E51695F0066C976 /* VideoPlay.swift in Sources */,
 				04E3ED041E50389600DFDB61 /* AppDelegate.swift in Sources */,
 			);

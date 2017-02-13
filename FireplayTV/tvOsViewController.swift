@@ -12,7 +12,7 @@ import AVKit
 import AVFoundation
 import CoreImage
 
-class ViewController: UIViewController {
+class tvOsViewController: UIViewController {
 
    
     @IBOutlet var forwardSlider: UIView!
@@ -24,7 +24,12 @@ class ViewController: UIViewController {
     @IBOutlet var slowlabel: UILabel!
     @IBOutlet var normallabel: UILabel!
     @IBOutlet var fastlabel: UILabel!
+    @IBOutlet var oneHour: UIButton!
+    @IBOutlet var timerMin: UIButton!
+    @IBOutlet var fiveHour: UIButton!
+    @IBOutlet var threeHour: UIButton!
     
+    @IBOutlet var viewUpdownn: UIView!
 
    
     
@@ -37,8 +42,8 @@ class ViewController: UIViewController {
     var avPlayerLayer: AVPlayerLayer!
     var paused: Bool = false
     private var brightness: CGFloat?
-    var scale: Double = 0
-    let maxScale: Double = 1
+    var scale: Float = 0
+    let maxScale: Float = 1
 //    var brightness = CGFloat()
 //    var appBrightness = CGFloat()
 //    let prefs = UserDefaults.standard
@@ -52,13 +57,14 @@ class ViewController: UIViewController {
         self.videoView.addGestureRecognizer(tapGesture)
         
         self.SetUpSound()
-       popView1.isHidden = true
+        popView1.isHidden = true
+        viewUpdownn.isHidden = true
          playmyVideo(myString: "normal")
 //        slowLabel.text = "Slow"
 //        fastLabel.text = "Fast"
 //        normalLabel.text = "Normal"
         
-         uiscreenbrightness(UInt(scale))
+         uiscreenbrightness(Float(scale))
     
     }
    
@@ -83,7 +89,13 @@ class ViewController: UIViewController {
         self.popView1.layer.borderColor = UIColor(red:216/255.0, green:216/255.0, blue:216/255.0, alpha: 1.0).cgColor
         popView1.layer.cornerRadius = 15
        
+        timerMin.isHidden = true
+        oneHour.isHidden = true
+        threeHour.isHidden = true
+        fiveHour.isHidden = true
+        
         if popView1.isHidden == true {
+            
             flamespeedLabel.isHidden = false
             forwardSlider.isHidden = false
             popView1.isHidden = false
@@ -101,6 +113,30 @@ class ViewController: UIViewController {
         
     }
     @IBAction func timerBtn(_ sender: Any) {
+        
+        self.popView1.layer.borderWidth = 1.0
+        
+        self.popView1.layer.borderColor = UIColor(red:216/255.0, green:216/255.0, blue:216/255.0, alpha: 1.0).cgColor
+        
+        popView1.layer.cornerRadius = 15
+        if popView1.isHidden == true {
+
+            timerMin.isHidden = false
+            oneHour.isHidden = false
+            threeHour.isHidden = false
+            fiveHour.isHidden = false
+             popView1.isHidden = false
+            
+        } else {
+            
+            timerMin.isHidden = true
+            oneHour.isHidden = true
+            threeHour.isHidden = true
+            fiveHour.isHidden = true
+            popView1.isHidden = true
+        }
+        
+        
     }
     @IBAction func brightBtn(_ sender: Any) {
     
@@ -112,12 +148,19 @@ class ViewController: UIViewController {
         
         popView1.layer.cornerRadius = 15
         forwardSlider.isHidden = true
+        timerMin.isHidden = true
+        oneHour.isHidden = true
+        threeHour.isHidden = true
+        fiveHour.isHidden = true
+        
         if popView1.isHidden == true {
+            
            brightLabel.isHidden = false
             flamespeedLabel.isHidden = true
             downBtn.isHidden = false
             upBtnn.isHidden = false
             popView1.isHidden = false
+            
         } else {
             
             popView1.isHidden = true
@@ -147,13 +190,14 @@ class ViewController: UIViewController {
 
     func handleTap(sender: UITapGestureRecognizer) {
         
-        if self.popView1.isHidden {
+        if self.viewUpdownn.isHidden {
             
-            popView1.isHidden = false
-            
+            viewUpdownn.isHidden = true
+             popView1.isHidden = true
         }else{
             
-            popView1.isHidden = true
+            viewUpdownn.isHidden = false
+           
         }
         
     }
@@ -221,7 +265,7 @@ class ViewController: UIViewController {
         }
         
         scale += 0.10
-        uiscreenbrightness(UInt(scale))
+        uiscreenbrightness(Float(scale))
         
     }
 
@@ -233,16 +277,19 @@ class ViewController: UIViewController {
         }
         
         scale -= 0.10
-        uiscreenbrightness(UInt(scale))
+        uiscreenbrightness(Float(scale))
         
     }
     
-    func uiscreenbrightness(_ scale: UInt) {
+    func uiscreenbrightness(_ scale: Float) {
         
 //        UIScreen.main.brightness = CGFloat(scale)
 
         
     }
+    
+    
+    
 
 }
 

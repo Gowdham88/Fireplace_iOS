@@ -19,15 +19,22 @@ class ViewController: UIViewController {
 //    @IBOutlet var brightnesslabel: UILabel!
   
     
+    
+   
+   
     @IBOutlet var videoView: VideoPlay!
     
     
 //    var videoPlayer : VideoPlayer?
     var player:AVAudioPlayer = AVAudioPlayer()
     var avPlayer: AVPlayer!
+   
+   
+       
     var avPlayerLayer: AVPlayerLayer!
     var paused: Bool = false
-   
+    
+     
     @IBOutlet weak var viewUpdown: UIView!
     @IBOutlet weak var brightness: UILabel!
     @IBOutlet weak var popView1: UIView!
