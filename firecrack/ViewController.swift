@@ -141,23 +141,7 @@ class ViewController: UIViewController {
     override func viewDidLayoutSubviews()  {
         super.viewDidLayoutSubviews()
 
-        //self.videoPlayer!.frame = CGRect(x: (self.view!.bounds.width - 280) / 2.0, y: (self.view!.bounds.height - 280) / 2.0, width: 280, height: 280)
-
-//        self.videoView!.frame = CGRect(x: 0.0, y: 0.0, width: self.view.bounds.width, height:self.view.bounds.height)
-
-//        self.videoView!.frame = view.layer.bounds
         view.backgroundColor = .clear
-
-//        view.insertSubview(videoView!, at: 0)
-
-//        view.insertSubview(dummyView, at: 1)
-
-//        videoView?.layer.zPosition = 1
-
-//        view.insertSubview(videoView!, belowSubview: view)
-//        videoView?.sendSubview(toBack: videoView!)
-
-
         
 
            }
@@ -233,21 +217,16 @@ class ViewController: UIViewController {
         print("appBrightness: \(appBrightness)")
 
         prefs.set(appBrightness, forKey: "appBrightness")
+        
 
-        /*var filter = CIFilter(name: "CIColorControls");
-         filter.setValue(NSNumber(float: sender.value), forKey: "inputBrightness")
-         var image = self.imageView.image
-         var rawimgData = CIImage(image: image)
-         filter.setValue(rawimgData, forKey: "inputImage")
-         var outpuImage = filter.valueForKey("outputImage")
-         imageView.image = UIImage(CIImage: outpuImage as CIImage)*/
-    }
+}
 
     @IBAction func brightnessPressed(_ sender: UIButton) {
 
         brightness.text = "Brightness"
         
         self.popView1.layer.borderWidth = 1.0
+        
         self.popView1.layer.borderColor = UIColor(red:216/255.0, green:216/255.0, blue:216/255.0, alpha: 1.0).cgColor
    
      popView1.layer.cornerRadius = 15

@@ -48,18 +48,10 @@ class VideoPlay: UIView {
 
         playerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
         
-//        self.playerLayer.frame =  VideoPlay.bounds;
-//        self.VideoPlay.layer.addSublayer(playerLayer);
-//        self.VideoPlay.playerLayer = playerLayer;
-//        player.play();
-     
 
         self.layer.addSublayer(playerLayer)
       
         playerLayer.frame = UIScreen.main.bounds
-        
-
-        
         
         
     }
