@@ -11,9 +11,16 @@ import AVKit
 import AVFoundation
 import CoreImage
 
+
 class ViewController: UIViewController {
 
+   
+    @IBOutlet var forwardSlider: UIView!
+//    @IBOutlet var brightnesslabel: UILabel!
+  
+    
     @IBOutlet var videoView: VideoPlay!
+    
     
 //    var videoPlayer : VideoPlayer?
     var player:AVAudioPlayer = AVAudioPlayer()
@@ -41,7 +48,7 @@ class ViewController: UIViewController {
         if let appBrightness1 = prefs.value(forKey: "appBrightness") {
 
             UIScreen.main.brightness = appBrightness1 as! CGFloat
-
+            
             brightnessSlider.value = Float(UIScreen.main.brightness)
         }
 
@@ -56,6 +63,7 @@ class ViewController: UIViewController {
 
         sliderStep.minimumValue = 2
         sliderStep.maximumValue = Float(sliderStep.stepImages!.count) + sliderStep.minimumValue - 1.0
+        
         sliderStep.trackColor = UIColor.darkGray
         sliderStep.stepTickColor = UIColor.orange
         sliderStep.stepTickWidth = 30
@@ -156,7 +164,7 @@ class ViewController: UIViewController {
 
         if let brightvalue = prefs.value(forKey: "DeviceBrightness") {
 
-           UIScreen.main.brightness = brightvalue as! CGFloat
+                       UIScreen.main.brightness = brightvalue as! CGFloat
 
         }
 
