@@ -84,46 +84,28 @@ class ViewController: UIViewController {
         self.videoView.addGestureRecognizer(tapGesture)
 
         self.SetUpSound()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(willEnterForeground), name: NSNotification.Name.UIApplicationWillEnterForeground, object: nil)
 
         playmyVideo(myString: "normal")
-        //flamespeed(speed: "normal")
-
+        
       
-
     }
 
     func playmyVideo(myString: String) {
-
-
-
-//        videoPlayer.URL = Bundle.main.url(forResource: myString, withExtension: "mp4")!
-
-        //NSURL(string: "http://uploadingit.com/file/pkgz6mplwtodlzl6/Mac%20OS%20X%20Snow%20Leopard%20Intro%20Movie%20HD.mp4") as URL?
 
         let bundle: Bundle = Bundle.main
         let videoPlayer: String = bundle.path(forResource: myString, ofType: "mp4")!
         let movieUrl : NSURL = NSURL.fileURL(withPath: videoPlayer) as NSURL
         
         videoView.playVideoWithURL(url: movieUrl)
-
-        
-  
-
-        
+        videoView.toggleMute()
+            
     }
-
-
-
-
-   
-
-   
 
     override func viewDidAppear(_ animated: Bool) {
 
-//        player.play()
-//        avPlayer.play()
-//        paused = false
+        
 
     }
     @IBAction func flamesspeedSlider(_ sender: UISlider) {
@@ -148,7 +130,7 @@ class ViewController: UIViewController {
             //flamespeed(speed: "fast")
             playmyVideo(myString: "fast")
             
-           
+
 
         }
     }
@@ -161,17 +143,25 @@ class ViewController: UIViewController {
 
            }
 
+    func willEnterForeground() {
+        // do stuff
+        
+         playmyVideo(myString: "normal")
+    }
+   
 
 
     override func viewDidDisappear(_ animated: Bool) {
-
+        
+       
         avPlayer.pause()
         player.pause()
         paused = true
-
+//        videoView.isMuted()
+//        playmyVideo(myString: "normal")
         if let brightvalue = prefs.value(forKey: "DeviceBrightness") {
 
-                       UIScreen.main.brightness = brightvalue as! CGFloat
+        UIScreen.main.brightness = brightvalue as! CGFloat
 
         }
 
