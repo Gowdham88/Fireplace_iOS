@@ -64,18 +64,20 @@ class ViewController: UIViewController {
         sliderStep.isHidden = true
         brightnessSlider.isHidden = true
 
-        sliderStep.stepImages = [UIImage(named:"forward")!, UIImage(named:"forward")!, UIImage(named:"forward")!]
+        sliderStep.stepImages = [UIImage(named:"forward1")!, UIImage(named:"forward2")!, UIImage(named:"forward3")!]
 
         sliderStep.tickTitles = ["SLOW", "NORMAL", "FAST"]
-
+        let shape = UIImage(named:"Oval")!
+        
+//        sliderStep.tickImages = [shape, shape, shape]
         sliderStep.minimumValue = 2
         sliderStep.maximumValue = Float(sliderStep.stepImages!.count) + sliderStep.minimumValue - 1.0
         
-        sliderStep.trackColor = UIColor.darkGray
-        sliderStep.stepTickColor = UIColor.orange
-        sliderStep.stepTickWidth = 30
-        sliderStep.stepTickHeight = 30
-        sliderStep.trackHeight = 10
+        sliderStep.trackColor = UIColor.white
+        sliderStep.stepTickColor = UIColor.white
+        sliderStep.stepTickWidth = 27
+        sliderStep.stepTickHeight = 27
+        sliderStep.trackHeight = 2
         sliderStep.value = 3
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(sender:)))
@@ -100,7 +102,7 @@ class ViewController: UIViewController {
         
         videoView.playVideoWithURL(url: movieUrl)
         videoView.toggleMute()
-            
+        
     }
 
     override func viewDidAppear(_ animated: Bool) {
