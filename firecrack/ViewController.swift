@@ -48,6 +48,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         let deviceBrightness = UIScreen.main.brightness
+        
+        print(deviceBrightness)
 
         prefs.set(deviceBrightness, forKey: "DeviceBrightness")
 
@@ -59,6 +61,7 @@ class ViewController: UIViewController {
             brightnessSlider.value = Float(UIScreen.main.brightness)
         }
 
+        
         self.viewUpdown.isHidden = true
         popView1.isHidden = true
         sliderStep.isHidden = true
@@ -67,7 +70,7 @@ class ViewController: UIViewController {
         sliderStep.stepImages = [UIImage(named:"forward1")!, UIImage(named:"forward2")!, UIImage(named:"forward3")!]
 
         sliderStep.tickTitles = ["SLOW", "NORMAL", "FAST"]
-        let shape = UIImage(named:"Oval")!
+//        let shape = UIImage(named:"Oval")!
         
 //        sliderStep.tickImages = [shape, shape, shape]
         sliderStep.minimumValue = 2
@@ -101,7 +104,7 @@ class ViewController: UIViewController {
         let movieUrl : NSURL = NSURL.fileURL(withPath: videoPlayer) as NSURL
         
         videoView.playVideoWithURL(url: movieUrl)
-        videoView.toggleMute()
+       
         
     }
 
@@ -167,6 +170,7 @@ class ViewController: UIViewController {
 
         }
 
+        
     }
 
     func handleTap(sender: UITapGestureRecognizer) {
