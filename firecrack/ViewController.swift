@@ -164,7 +164,7 @@ class ViewController: UIViewController {
         paused = true
 //        videoView.isMuted()
 //        playmyVideo(myString: "normal")
-        if let brightvalue = prefs.value(forKey: "DeviceBrightness") {
+        if let brightvalue = prefs.value(forKey: "appBrightness") {
 
         UIScreen.main.brightness = brightvalue as! CGFloat
 
