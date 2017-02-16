@@ -77,34 +77,36 @@
                                             <action selector="brightnessSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="lDE-yu-QB9"/>
                                         </connections>
                                     </slider>
-                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="4" translatesAutoresizingMaskIntoConstraints="NO" id="yap-8b-0Bg" customClass="G8SliderStep" customModule="Fireplay" customModuleProvider="target">
-                                        <rect key="frame" x="26" y="68" width="490" height="27"/>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qBC-93-8TZ">
+                                        <rect key="frame" x="60" y="81" width="416" height="2"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="drawTicks" value="YES"/>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="stepTickColor">
-                                                <color key="value" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="stepTitlesOffset">
-                                                <real key="value" value="14"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="stepTickWidth">
-                                                <real key="value" value="4"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="stepTickHeight">
-                                                <real key="value" value="4"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="trackHeight">
-                                                <real key="value" value="3"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="trackColor">
-                                                <color key="value" red="0.50196081400000003" green="0.0" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="8" right="8"/>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bq7-DC-JcZ">
+                                        <rect key="frame" x="46" y="67" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="slow1"/>
                                         <connections>
-                                            <action selector="flamesspeedSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="gd8-uX-FHS"/>
+                                            <action selector="slowBtn:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="NE9-j9-tiX"/>
                                         </connections>
-                                    </slider>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K5K-wc-rhd">
+                                        <rect key="frame" x="226" y="66" width="84" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="noraml1"/>
+                                        <connections>
+                                            <action selector="normalBtn:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="C56-2A-5OO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xPX-BK-bhO">
+                                        <rect key="frame" x="460" y="67" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="fast1"/>
+                                        <connections>
+                                            <action selector="fastBtn:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="MKa-QF-UAs"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
                             </view>
@@ -116,8 +118,11 @@
                     <connections>
                         <outlet property="brightness" destination="Iec-Ot-dvH" id="2RC-ep-j04"/>
                         <outlet property="brightnessSlider" destination="8Ao-r4-ad1" id="JVK-Ft-FIE"/>
+                        <outlet property="fasttBtn" destination="xPX-BK-bhO" id="2wD-IN-ZdT"/>
+                        <outlet property="normallBtn" destination="K5K-wc-rhd" id="hSG-ep-6Kw"/>
                         <outlet property="popView1" destination="wTW-vo-7Bm" id="poL-Kb-tsM"/>
-                        <outlet property="sliderStep" destination="yap-8b-0Bg" id="8tU-YA-hiB"/>
+                        <outlet property="slideView" destination="qBC-93-8TZ" id="osT-te-t9n"/>
+                        <outlet property="slowwBtn" destination="bq7-DC-JcZ" id="gMq-Pi-zMZ"/>
                         <outlet property="videoView" destination="7aj-6E-Bw7" id="Vh1-yX-46f"/>
                         <outlet property="viewUpdown" destination="4tG-YP-oP6" id="lVk-es-83k"/>
                     </connections>
@@ -130,7 +135,10 @@
     </scenes>
     <resources>
         <image name="brightness" width="36" height="36"/>
+        <image name="fast1" width="30" height="30"/>
         <image name="fire" width="45" height="45"/>
         <image name="forward" width="40" height="40"/>
+        <image name="noraml1" width="30" height="30"/>
+        <image name="slow1" width="30" height="30"/>
     </resources>
 </document>
