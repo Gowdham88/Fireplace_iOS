@@ -32,11 +32,11 @@ class G8SliderStep: UISlider {
     
     @IBInspectable var enableTap: Bool = true
     @IBInspectable var trackHeight: Float = 4
-    @IBInspectable var trackColor: UIColor = UIColor.lightGray
+    @IBInspectable var trackColor: UIColor = UIColor.white
     @IBInspectable var drawTicks: Bool = true
     @IBInspectable var stepTickWidth: Float = 15
     @IBInspectable var stepTickHeight: Float = 15
-    @IBInspectable var stepTickColor: UIColor = UIColor.lightGray
+    @IBInspectable var stepTickColor: UIColor = UIColor.blue
     @IBInspectable var stepTickRounded: Bool = true
     @IBInspectable var unselectedFont: UIFont = UIFont.systemFont(ofSize: 13)
     @IBInspectable var selectedFont: UIFont = UIFont.systemFont(ofSize: 13)
