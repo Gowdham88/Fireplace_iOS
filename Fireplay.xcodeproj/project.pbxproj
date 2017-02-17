@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		04A5F4E01E4795EA0003AFC9 /* G8SliderStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A5F4DF1E4795EA0003AFC9 /* G8SliderStep.swift */; };
 		04A5F4E81E48C7580003AFC9 /* VideoPlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A5F4E71E48C7580003AFC9 /* VideoPlay.swift */; };
 		04E3ED041E50389600DFDB61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E3ED031E50389600DFDB61 /* AppDelegate.swift */; };
 		04E3ED061E50389600DFDB61 /* tvOsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E3ED051E50389600DFDB61 /* tvOsViewController.swift */; };
@@ -25,12 +24,13 @@
 		3FD3F28F1E35D1FB00B74A84 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FD3F28D1E35D1FB00B74A84 /* Crashlytics.framework */; };
 		3FD3F2901E35D1FB00B74A84 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FD3F28E1E35D1FB00B74A84 /* Fabric.framework */; };
 		3FE88CCD1E2F34CE0044F19A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE88CCC1E2F34CE0044F19A /* AppDelegate.swift */; };
-		3FE88CCF1E2F34CE0044F19A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE88CCE1E2F34CE0044F19A /* ViewController.swift */; };
 		3FE88CD21E2F34CE0044F19A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FE88CD01E2F34CE0044F19A /* Main.storyboard */; };
 		3FE88CD41E2F34CE0044F19A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FE88CD31E2F34CE0044F19A /* Assets.xcassets */; };
 		3FE88CD71E2F34CE0044F19A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FE88CD51E2F34CE0044F19A /* LaunchScreen.storyboard */; };
 		3FE88CE21E2F34CE0044F19A /* firecrackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE88CE11E2F34CE0044F19A /* firecrackTests.swift */; };
 		3FE88CED1E2F34CE0044F19A /* firecrackUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE88CEC1E2F34CE0044F19A /* firecrackUITests.swift */; };
+		3FF397221E56CA7900746811 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF397211E56CA7900746811 /* MenuViewController.swift */; };
+		3FF397241E5701D900746811 /* sliderDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF397231E5701D900746811 /* sliderDesign.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +51,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		04A5F4DF1E4795EA0003AFC9 /* G8SliderStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = G8SliderStep.swift; sourceTree = "<group>"; };
 		04A5F4E71E48C7580003AFC9 /* VideoPlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPlay.swift; sourceTree = "<group>"; };
 		04E3ED011E50389500DFDB61 /* FireplayTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FireplayTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04E3ED031E50389600DFDB61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -73,7 +72,6 @@
 		3FD3F28E1E35D1FB00B74A84 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		3FE88CC91E2F34CE0044F19A /* Fireplay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fireplay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FE88CCC1E2F34CE0044F19A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3FE88CCE1E2F34CE0044F19A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3FE88CD11E2F34CE0044F19A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3FE88CD31E2F34CE0044F19A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3FE88CD61E2F34CE0044F19A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -84,6 +82,8 @@
 		3FE88CE81E2F34CE0044F19A /* firecrackUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = firecrackUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FE88CEC1E2F34CE0044F19A /* firecrackUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firecrackUITests.swift; sourceTree = "<group>"; };
 		3FE88CEE1E2F34CE0044F19A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FF397211E56CA7900746811 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		3FF397231E5701D900746811 /* sliderDesign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sliderDesign.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,9 +169,9 @@
 				3FA745F71E516BD30066C976 /* normal.mp4 */,
 				3FD33DE51E2F4EB200B6FFEA /* firecrack.entitlements */,
 				3FE88CCC1E2F34CE0044F19A /* AppDelegate.swift */,
-				3FE88CCE1E2F34CE0044F19A /* ViewController.swift */,
 				04A5F4E71E48C7580003AFC9 /* VideoPlay.swift */,
-				04A5F4DF1E4795EA0003AFC9 /* G8SliderStep.swift */,
+				3FF397231E5701D900746811 /* sliderDesign.swift */,
+				3FF397211E56CA7900746811 /* MenuViewController.swift */,
 				3FE88CD01E2F34CE0044F19A /* Main.storyboard */,
 				3FE88CD31E2F34CE0044F19A /* Assets.xcassets */,
 				3F62EB8F1E306CD600B2D659 /* firecrack.mp3 */,
@@ -417,8 +417,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				04A5F4E81E48C7580003AFC9 /* VideoPlay.swift in Sources */,
-				3FE88CCF1E2F34CE0044F19A /* ViewController.swift in Sources */,
-				04A5F4E01E4795EA0003AFC9 /* G8SliderStep.swift in Sources */,
+				3FF397221E56CA7900746811 /* MenuViewController.swift in Sources */,
+				3FF397241E5701D900746811 /* sliderDesign.swift in Sources */,
 				3FE88CCD1E2F34CE0044F19A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
