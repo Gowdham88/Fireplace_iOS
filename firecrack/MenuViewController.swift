@@ -30,6 +30,8 @@ class MenuViewController: UIViewController {
     @IBOutlet var slowBtn: UIButton!
     @IBOutlet var normalBtn: UIButton!
     @IBOutlet var forwardBtn: UIButton!
+    @IBOutlet var infoPopup: UIView!
+    @IBOutlet var infoLabel: UILabel!
     
     
     
@@ -70,6 +72,7 @@ class MenuViewController: UIViewController {
         self.viewupDown.isHidden = true
         popViewslider.isHidden = true
         videoContolpopup.isHidden = true
+        infoPopup.isHidden = true
         
         
         let deviceBrightness = UIScreen.main.brightness
@@ -93,9 +96,7 @@ class MenuViewController: UIViewController {
         self.viewVideo.addGestureRecognizer(tapGesture)
     
         NotificationCenter.default.addObserver(self, selector: #selector(willEnterForeground), name: NSNotification.Name.UIApplicationWillEnterForeground, object: nil)
-        
-        
-
+       
         
     }
 
@@ -154,6 +155,7 @@ class MenuViewController: UIViewController {
             
             videoContolpopup.isHidden = true
             popViewslider.isHidden = true
+            infoPopup.isHidden = true
             
         }
    toggleButton(button: sender, onImage: #imageLiteral(resourceName: "line"), offImage: #imageLiteral(resourceName: "unline"))
@@ -169,11 +171,12 @@ class MenuViewController: UIViewController {
             
             videoContolpopup.isHidden = false
             popViewslider.isHidden = true
+            infoPopup.isHidden = true
         } else {
             
             videoContolpopup.isHidden = true
              popViewslider.isHidden = true
-            
+            infoPopup.isHidden = true
         }
         
         
@@ -199,6 +202,19 @@ class MenuViewController: UIViewController {
     
    
     @IBAction func infoPressed(_ sender: UIButton) {
+        
+        if infoPopup.isHidden == true {
+            
+            infoPopup.isHidden = false
+            popViewslider.isHidden = true
+            videoContolpopup.isHidden = true
+            
+        } else {
+            
+            infoPopup.isHidden = true
+            
+            
+        }
         
         
         toggleButton(button: sender, onImage: #imageLiteral(resourceName: "info"), offImage: #imageLiteral(resourceName: "uninfo"))
@@ -228,6 +244,7 @@ class MenuViewController: UIViewController {
             
             popViewslider.isHidden = false
             videoContolpopup.isHidden = true
+            infoPopup.isHidden = true
         } else {
             
             popViewslider.isHidden = true
