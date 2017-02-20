@@ -11,15 +11,15 @@
 		04E3ED041E50389600DFDB61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E3ED031E50389600DFDB61 /* AppDelegate.swift */; };
 		04E3ED061E50389600DFDB61 /* tvOsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E3ED051E50389600DFDB61 /* tvOsViewController.swift */; };
 		04E3ED091E50389600DFDB61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04E3ED071E50389600DFDB61 /* Main.storyboard */; };
+		3F3424E21E5B1D2300738AC0 /* fast.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3F3424DF1E5B1CCC00738AC0 /* fast.mp4 */; };
+		3F3424E31E5B1D2500738AC0 /* normal.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3F3424E01E5B1CCC00738AC0 /* normal.mp4 */; };
+		3F3424E41E5B1D2800738AC0 /* slow00.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3F3424E11E5B1CCC00738AC0 /* slow00.mp4 */; };
 		3F62EB901E306CD600B2D659 /* firecrack.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3F62EB8F1E306CD600B2D659 /* firecrack.mp3 */; };
 		3F734D0E1E5199EB00D1B52E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F734D0D1E5199EB00D1B52E /* Assets.xcassets */; };
 		3FA745ED1E51695F0066C976 /* VideoPlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA745EC1E51695F0066C976 /* VideoPlay.swift */; };
 		3FA745FC1E516BEF0066C976 /* fire.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3FA745FB1E516BEF0066C976 /* fire.mp3 */; };
 		3FA745FD1E516C000066C976 /* fast.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3FA745FA1E516BE60066C976 /* fast.mp4 */; };
 		3FA745FE1E516C030066C976 /* slow00.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3FA745F91E516BE00066C976 /* slow00.mp4 */; };
-		3FA746001E516C0B0066C976 /* fast.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3FA745F61E516BCC0066C976 /* fast.mp4 */; };
-		3FA746011E516C0D0066C976 /* slow00.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3FA745F41E516BAF0066C976 /* slow00.mp4 */; };
-		3FA746021E516C100066C976 /* normal.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3FA745F71E516BD30066C976 /* normal.mp4 */; };
 		3FA746031E516F7E0066C976 /* normal.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3FA745F81E516BDA0066C976 /* normal.mp4 */; };
 		3FD3F28F1E35D1FB00B74A84 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FD3F28D1E35D1FB00B74A84 /* Crashlytics.framework */; };
 		3FD3F2901E35D1FB00B74A84 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FD3F28E1E35D1FB00B74A84 /* Fabric.framework */; };
@@ -57,12 +57,12 @@
 		04E3ED051E50389600DFDB61 /* tvOsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tvOsViewController.swift; sourceTree = "<group>"; };
 		04E3ED081E50389600DFDB61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		04E3ED0C1E50389600DFDB61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F3424DF1E5B1CCC00738AC0 /* fast.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = fast.mp4; sourceTree = "<group>"; };
+		3F3424E01E5B1CCC00738AC0 /* normal.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = normal.mp4; sourceTree = "<group>"; };
+		3F3424E11E5B1CCC00738AC0 /* slow00.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = slow00.mp4; sourceTree = "<group>"; };
 		3F62EB8F1E306CD600B2D659 /* firecrack.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = firecrack.mp3; sourceTree = "<group>"; };
 		3F734D0D1E5199EB00D1B52E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3FA745EC1E51695F0066C976 /* VideoPlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPlay.swift; sourceTree = "<group>"; };
-		3FA745F41E516BAF0066C976 /* slow00.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = slow00.mp4; sourceTree = "<group>"; };
-		3FA745F61E516BCC0066C976 /* fast.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = fast.mp4; sourceTree = "<group>"; };
-		3FA745F71E516BD30066C976 /* normal.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = normal.mp4; sourceTree = "<group>"; };
 		3FA745F81E516BDA0066C976 /* normal.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = normal.mp4; sourceTree = "<group>"; };
 		3FA745F91E516BE00066C976 /* slow00.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = slow00.mp4; sourceTree = "<group>"; };
 		3FA745FA1E516BE60066C976 /* fast.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = fast.mp4; sourceTree = "<group>"; };
@@ -70,7 +70,7 @@
 		3FD33DE51E2F4EB200B6FFEA /* firecrack.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = firecrack.entitlements; sourceTree = "<group>"; };
 		3FD3F28D1E35D1FB00B74A84 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		3FD3F28E1E35D1FB00B74A84 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
-		3FE88CC91E2F34CE0044F19A /* Fireplay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fireplay.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FE88CC91E2F34CE0044F19A /* Common room.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Common room.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FE88CCC1E2F34CE0044F19A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FE88CD11E2F34CE0044F19A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3FE88CD31E2F34CE0044F19A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -153,7 +153,7 @@
 		3FE88CCA1E2F34CE0044F19A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3FE88CC91E2F34CE0044F19A /* Fireplay.app */,
+				3FE88CC91E2F34CE0044F19A /* Common room.app */,
 				3FE88CDD1E2F34CE0044F19A /* firecrackTests.xctest */,
 				3FE88CE81E2F34CE0044F19A /* firecrackUITests.xctest */,
 				04E3ED011E50389500DFDB61 /* FireplayTV.app */,
@@ -164,10 +164,10 @@
 		3FE88CCB1E2F34CE0044F19A /* firecrack */ = {
 			isa = PBXGroup;
 			children = (
-				3FA745F41E516BAF0066C976 /* slow00.mp4 */,
-				3FA745F61E516BCC0066C976 /* fast.mp4 */,
-				3FA745F71E516BD30066C976 /* normal.mp4 */,
 				3FD33DE51E2F4EB200B6FFEA /* firecrack.entitlements */,
+				3F3424DF1E5B1CCC00738AC0 /* fast.mp4 */,
+				3F3424E01E5B1CCC00738AC0 /* normal.mp4 */,
+				3F3424E11E5B1CCC00738AC0 /* slow00.mp4 */,
 				3FE88CCC1E2F34CE0044F19A /* AppDelegate.swift */,
 				04A5F4E71E48C7580003AFC9 /* VideoPlay.swift */,
 				3FF397231E5701D900746811 /* sliderDesign.swift */,
@@ -219,9 +219,9 @@
 			productReference = 04E3ED011E50389500DFDB61 /* FireplayTV.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3FE88CC81E2F34CE0044F19A /* Fireplay */ = {
+		3FE88CC81E2F34CE0044F19A /* Common room */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3FE88CF11E2F34CE0044F19A /* Build configuration list for PBXNativeTarget "Fireplay" */;
+			buildConfigurationList = 3FE88CF11E2F34CE0044F19A /* Build configuration list for PBXNativeTarget "Common room" */;
 			buildPhases = (
 				3FE88CC51E2F34CE0044F19A /* Sources */,
 				3FE88CC61E2F34CE0044F19A /* Frameworks */,
@@ -232,9 +232,9 @@
 			);
 			dependencies = (
 			);
-			name = Fireplay;
+			name = "Common room";
 			productName = firecrack;
-			productReference = 3FE88CC91E2F34CE0044F19A /* Fireplay.app */;
+			productReference = 3FE88CC91E2F34CE0044F19A /* Common room.app */;
 			productType = "com.apple.product-type.application";
 		};
 		3FE88CDC1E2F34CE0044F19A /* firecrackTests */ = {
@@ -333,7 +333,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3FE88CC81E2F34CE0044F19A /* Fireplay */,
+				3FE88CC81E2F34CE0044F19A /* Common room */,
 				3FE88CDC1E2F34CE0044F19A /* firecrackTests */,
 				3FE88CE71E2F34CE0044F19A /* firecrackUITests */,
 				04E3ED001E50389500DFDB61 /* FireplayTV */,
@@ -359,11 +359,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F3424E21E5B1D2300738AC0 /* fast.mp4 in Resources */,
+				3F3424E31E5B1D2500738AC0 /* normal.mp4 in Resources */,
+				3F3424E41E5B1D2800738AC0 /* slow00.mp4 in Resources */,
 				3FE88CD71E2F34CE0044F19A /* LaunchScreen.storyboard in Resources */,
-				3FA746001E516C0B0066C976 /* fast.mp4 in Resources */,
-				3FA746011E516C0D0066C976 /* slow00.mp4 in Resources */,
 				3F62EB901E306CD600B2D659 /* firecrack.mp3 in Resources */,
-				3FA746021E516C100066C976 /* normal.mp4 in Resources */,
 				3FE88CD41E2F34CE0044F19A /* Assets.xcassets in Resources */,
 				3FE88CD21E2F34CE0044F19A /* Main.storyboard in Resources */,
 			);
@@ -444,12 +444,12 @@
 /* Begin PBXTargetDependency section */
 		3FE88CDF1E2F34CE0044F19A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3FE88CC81E2F34CE0044F19A /* Fireplay */;
+			target = 3FE88CC81E2F34CE0044F19A /* Common room */;
 			targetProxy = 3FE88CDE1E2F34CE0044F19A /* PBXContainerItemProxy */;
 		};
 		3FE88CEA1E2F34CE0044F19A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3FE88CC81E2F34CE0044F19A /* Fireplay */;
+			target = 3FE88CC81E2F34CE0044F19A /* Common room */;
 			targetProxy = 3FE88CE91E2F34CE0044F19A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -722,7 +722,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3FE88CF11E2F34CE0044F19A /* Build configuration list for PBXNativeTarget "Fireplay" */ = {
+		3FE88CF11E2F34CE0044F19A /* Build configuration list for PBXNativeTarget "Common room" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3FE88CF21E2F34CE0044F19A /* Debug */,

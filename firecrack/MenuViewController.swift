@@ -13,7 +13,7 @@ import CoreImage
 
 
 
-class MenuViewController: UIViewController {
+class MenuViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet var viewVideo: VideoPlay!
     @IBOutlet var viewupDown: UIView!
@@ -31,7 +31,7 @@ class MenuViewController: UIViewController {
     @IBOutlet var normalBtn: UIButton!
     @IBOutlet var forwardBtn: UIButton!
     @IBOutlet var infoPopup: UIView!
-    @IBOutlet var infoLabel: UILabel!
+    @IBOutlet var infoTextview: UITextView!
     
     
     
@@ -52,13 +52,39 @@ class MenuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let paragraph = NSMutableParagraphStyle()
+        
+        paragraph.alignment = .justified
+        
+        let attributedString = NSMutableAttributedString(string: "The Common Room Virtual Fireplace App was designed with love by 5x entrepreneur, Arjun Rai. The goal of this is to create the ultimate mobile and relaxing ambience anywhere and anytime. Rai’s passion for fireplaces along with minimalism in art has led him to build several apps and startups over the years since he was a teenager. Common Room is yet another effort to bringing beautiful experiences to everyone...just a bit more relaxing this time around. :) Follow him at twitter.com/arjunraime")
+       
+        attributedString.addAttribute(NSLinkAttributeName, value: "http://arjunrai.me/", range: NSRange(location: 81, length: 9))
+        
+        attributedString.addAttribute(NSLinkAttributeName, value: "https://itunes.apple.com/in/genre/ios/id36?mt=8", range: NSRange(location: 4, length: 33))
+       
+        attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "Helvetica Neue", size: 15.0)!, range: NSRange(location: 0, length: 495))
+        
+        attributedString.addAttribute(NSForegroundColorAttributeName, value: UIColor.white, range: NSRange(location: 0, length: 494))
+        
+        
+        attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "HelveticaNeue-Bold",size: 15.0)!, range:NSRange(location: 4, length: 33))
+        
+        attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "HelveticaNeue-Bold",size: 15.0)!, range:NSRange(location: 81, length: 9))
+        
+        attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "HelveticaNeue-Bold",size: 15.0)!, range:NSRange(location: 473, length: 21))
+        
+        attributedString.addAttribute(NSParagraphStyleAttributeName, value: paragraph, range: NSRange(location: 0, length: 494))
+                
+        infoTextview.attributedText = attributedString
+      
+        
         playmyVideo(myString: "normal")
     
         brightnessBtncenter = brightnessBtn.center
         fastBtncenter = fastBtn.center
         fireBtncenter = fireBtn.center
         infoBtncenter = infoBtn.center
-       
+//        infoTextview.delegate = self;
 
         
         brightnessBtn.center = menuBtn.center
@@ -99,6 +125,13 @@ class MenuViewController: UIViewController {
        
         
     }
+
+
+func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {
+    UIApplication.shared.open(URL, options: [:])
+    return false
+}
+
 
     func playmyVideo(myString: String) {
         
@@ -202,7 +235,8 @@ class MenuViewController: UIViewController {
     
    
     @IBAction func infoPressed(_ sender: UIButton) {
-        
+        infoPopup.layer.cornerRadius = 10.0
+
         if infoPopup.isHidden == true {
             
             infoPopup.isHidden = false
