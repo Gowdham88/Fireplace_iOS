@@ -189,7 +189,7 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
             videoContolpopup.isHidden = true
             popViewslider.isHidden = true
             infoPopup.isHidden = true
-            
+                       
         }
    toggleButton(button: sender, onImage: #imageLiteral(resourceName: "line"), offImage: #imageLiteral(resourceName: "unline"))
     
@@ -343,6 +343,7 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
             self.viewupDown.isHidden = true
             self.popViewslider.isHidden = true
              self.videoContolpopup.isHidden = true
+           self.infoPopup.isHidden = true
             
             
         }
