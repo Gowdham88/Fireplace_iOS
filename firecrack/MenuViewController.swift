@@ -288,22 +288,19 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
         
     }
  
-   
-    @IBAction func brightnessSlider(_ sender: Any) {
+    @IBAction func brightSlider(_ sender: UISlider) {
         
-//        UIScreen.main.brightness = CGFloat(sender.value)
+        
+        UIScreen.main.brightness = CGFloat(sender.value)
         
         appBrightness = UIScreen.main.brightness
         
         print("appBrightness: \(appBrightness)")
         
         prefs.set(appBrightness, forKey: "appBrightness")
-
-        
-        
     }
-    
-    
+   
+     
     @IBAction func slowPressed(_ sender: Any) {
         
         playmyVideo(myString: "slow00")
@@ -345,6 +342,7 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
             
             self.viewupDown.isHidden = true
             self.popViewslider.isHidden = true
+             self.videoContolpopup.isHidden = true
             
             
         }
