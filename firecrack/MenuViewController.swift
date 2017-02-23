@@ -32,6 +32,9 @@ class MenuViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var forwardBtn: UIButton!
     @IBOutlet var infoPopup: UIView!
     @IBOutlet var infoTextview: UITextView!
+    @IBOutlet var volumeBtn: UIButton!
+    @IBOutlet var volumePopup: UIView!
+    @IBOutlet var volumeSlider: UISlider!
     
     
     
@@ -39,6 +42,7 @@ class MenuViewController: UIViewController, UITextFieldDelegate {
     var fastBtncenter: CGPoint!
     var fireBtncenter: CGPoint!
     var infoBtncenter: CGPoint!
+    var volumeBtncenter: CGPoint!
     
     var appBrightness = CGFloat()
     let prefs = UserDefaults.standard
@@ -52,6 +56,8 @@ class MenuViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        /***************** info popup link detection***********/
+        
         let paragraph = NSMutableParagraphStyle()
         
         paragraph.alignment = .justified
@@ -77,28 +83,34 @@ class MenuViewController: UIViewController, UITextFieldDelegate {
                 
         infoTextview.attributedText = attributedString
       
+       /*******************************************/
         
         playmyVideo(myString: "normal")
+        
+       
+        
     
         brightnessBtncenter = brightnessBtn.center
         fastBtncenter = fastBtn.center
         fireBtncenter = fireBtn.center
         infoBtncenter = infoBtn.center
-//        infoTextview.delegate = self;
+        volumeBtncenter = volumeBtn.center
 
-        
+       
         brightnessBtn.center = menuBtn.center
         fastBtn.center = menuBtn.center
         fireBtn.center = menuBtn.center
         infoBtn.center = menuBtn.center
+        volumeBtn.center = menuBtn.center
         
-        
-        
+     
         
         self.viewupDown.isHidden = true
         popViewslider.isHidden = true
         videoContolpopup.isHidden = true
         infoPopup.isHidden = true
+        volumePopup.isHidden = true
+        
         
         
         let deviceBrightness = UIScreen.main.brightness
@@ -145,6 +157,8 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
         
         
     }
+  
+     /***************menu animation***************/
     
     @IBAction func menupressed(_ sender: UIButton) {
         
@@ -154,11 +168,14 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
                 self.fastBtn.alpha = 1
                 self.fireBtn.alpha = 1
                 self.infoBtn.alpha = 1
+                self.volumeBtn.alpha = 1
+                
                 
                 self.brightnessBtn.center = self.brightnessBtncenter
                 self.fastBtn.center = self.fastBtncenter
                 self.fireBtn.center = self.fireBtncenter
                 self.infoBtn.center = self.infoBtncenter
+                self.volumeBtn.center = self.volumeBtncenter
                 
                 
             })
@@ -170,12 +187,15 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
                 self.fastBtn.alpha = 0
                 self.fireBtn.alpha = 0
                 self.infoBtn.alpha = 0
+                self.volumeBtn.alpha = 0
+                
                 
                 
                 self.brightnessBtn.center = self.menuBtn.center
                 self.fastBtn.center = self.menuBtn.center
                 self.fireBtn.center = self.menuBtn.center
-               self.infoBtn.center = self.menuBtn.center
+                self.infoBtn.center = self.menuBtn.center
+                self.volumeBtn.center = self.menuBtn.center
 
             })
             
@@ -189,13 +209,13 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
             videoContolpopup.isHidden = true
             popViewslider.isHidden = true
             infoPopup.isHidden = true
-                       
+            volumePopup.isHidden = true
         }
    toggleButton(button: sender, onImage: #imageLiteral(resourceName: "line"), offImage: #imageLiteral(resourceName: "unline"))
     
     }
     
-    
+   /**************************************/
     
     @IBAction func fastPressed(_ sender: UIButton) {
         
@@ -205,11 +225,13 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
             videoContolpopup.isHidden = false
             popViewslider.isHidden = true
             infoPopup.isHidden = true
+            volumePopup.isHidden = true
         } else {
             
             videoContolpopup.isHidden = true
              popViewslider.isHidden = true
             infoPopup.isHidden = true
+            volumePopup.isHidden = true
         }
         
         
@@ -242,7 +264,7 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
             infoPopup.isHidden = false
             popViewslider.isHidden = true
             videoContolpopup.isHidden = true
-            
+            volumePopup.isHidden = true
         } else {
             
             infoPopup.isHidden = true
@@ -279,6 +301,7 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
             popViewslider.isHidden = false
             videoContolpopup.isHidden = true
             infoPopup.isHidden = true
+            volumePopup.isHidden = true
         } else {
             
             popViewslider.isHidden = true
@@ -331,7 +354,30 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
         return true
     }
 
+    @IBAction func volumeControl(_ sender: UIButton) {
+        
+        if self.volumePopup.isHidden == true {
+            
+            volumePopup.isHidden = false
+            popViewslider.isHidden = true
+            videoContolpopup.isHidden = true
+            infoPopup.isHidden = true
+            
+            
+        } else {
+            
+            volumePopup.isHidden = true
+            
+        }
+        
+        
+    }
     
+    @IBAction func volumeSlidercontroller(_ sender: UISlider) {
+        
+        player.volume = volumeSlider.value;
+        
+    }
     func handleTap(sender: UITapGestureRecognizer) {
         
         if self.viewupDown.isHidden {
@@ -343,7 +389,9 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
             self.viewupDown.isHidden = true
             self.popViewslider.isHidden = true
              self.videoContolpopup.isHidden = true
-           self.infoPopup.isHidden = true
+            self.infoPopup.isHidden = true
+            self.volumePopup.isHidden = true
+            
             
             
         }
@@ -380,6 +428,8 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
         
     }
 
+    /**************** sound setup for playing background music ***********/
+    
     func SetUpSound() {
         
         if let path = Bundle.main.path(forResource: "firecrack", ofType: "mp3") {
