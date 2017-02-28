@@ -11,6 +11,8 @@
 		04E3ED041E50389600DFDB61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E3ED031E50389600DFDB61 /* AppDelegate.swift */; };
 		04E3ED061E50389600DFDB61 /* tvOsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E3ED051E50389600DFDB61 /* tvOsViewController.swift */; };
 		04E3ED091E50389600DFDB61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04E3ED071E50389600DFDB61 /* Main.storyboard */; };
+		3F1438D61E65324C0006A7C2 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F1438D41E65324C0006A7C2 /* Crashlytics.framework */; };
+		3F1438D71E65324C0006A7C2 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F1438D51E65324C0006A7C2 /* Fabric.framework */; };
 		3F3424E21E5B1D2300738AC0 /* fast.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3F3424DF1E5B1CCC00738AC0 /* fast.mp4 */; };
 		3F3424E31E5B1D2500738AC0 /* normal.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3F3424E01E5B1CCC00738AC0 /* normal.mp4 */; };
 		3F3424E41E5B1D2800738AC0 /* slow00.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3F3424E11E5B1CCC00738AC0 /* slow00.mp4 */; };
@@ -57,6 +59,8 @@
 		04E3ED051E50389600DFDB61 /* tvOsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tvOsViewController.swift; sourceTree = "<group>"; };
 		04E3ED081E50389600DFDB61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		04E3ED0C1E50389600DFDB61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F1438D41E65324C0006A7C2 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		3F1438D51E65324C0006A7C2 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		3F3424DF1E5B1CCC00738AC0 /* fast.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = fast.mp4; sourceTree = "<group>"; };
 		3F3424E01E5B1CCC00738AC0 /* normal.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = normal.mp4; sourceTree = "<group>"; };
 		3F3424E11E5B1CCC00738AC0 /* slow00.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = slow00.mp4; sourceTree = "<group>"; };
@@ -91,6 +95,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F1438D61E65324C0006A7C2 /* Crashlytics.framework in Frameworks */,
+				3F1438D71E65324C0006A7C2 /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,6 +129,8 @@
 		04E3ED021E50389600DFDB61 /* FireplayTV */ = {
 			isa = PBXGroup;
 			children = (
+				3F1438D41E65324C0006A7C2 /* Crashlytics.framework */,
+				3F1438D51E65324C0006A7C2 /* Fabric.framework */,
 				3FA745FA1E516BE60066C976 /* fast.mp4 */,
 				3FA745F91E516BE00066C976 /* slow00.mp4 */,
 				3FA745F81E516BDA0066C976 /* normal.mp4 */,
@@ -209,6 +217,7 @@
 				04E3ECFD1E50389500DFDB61 /* Sources */,
 				04E3ECFE1E50389500DFDB61 /* Frameworks */,
 				04E3ECFF1E50389500DFDB61 /* Resources */,
+				3F1438D31E6530A70006A7C2 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -285,7 +294,7 @@
 				TargetAttributes = {
 					04E3ED001E50389500DFDB61 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = XSJRRDKMW9;
+						DevelopmentTeam = 7NT378UGZ7;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes.appletvos = {
@@ -386,6 +395,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3F1438D31E6530A70006A7C2 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PROJECT_DIR}/Fabric.framework/run\" 096d2916c1c968ecde8fe18920f0457e72de4897 66174dd29c08b8a43cd6044975f51b8aa530aac7a068373c562f75e5884c0c98";
+		};
 		3FD3F2911E35D21B00B74A84 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -487,10 +509,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = XSJRRDKMW9;
+				DEVELOPMENT_TEAM = 7NT378UGZ7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FireplayTV",
+				);
 				INFOPLIST_FILE = FireplayTV/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.CZ.FireplayTV;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CZ.CommonroomTV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				SWIFT_VERSION = 3.0;
@@ -504,10 +530,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = XSJRRDKMW9;
+				DEVELOPMENT_TEAM = 7NT378UGZ7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FireplayTV",
+				);
 				INFOPLIST_FILE = FireplayTV/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.CZ.FireplayTV;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CZ.CommonroomTV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				SWIFT_VERSION = 3.0;

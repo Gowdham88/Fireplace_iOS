@@ -378,6 +378,11 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
         player.volume = volumeSlider.value;
         
     }
+    
+    
+    
+    
+    
     func handleTap(sender: UITapGestureRecognizer) {
         
         if self.viewupDown.isHidden {
