@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3FE88CC81E2F34CE0044F19A"
-               BuildableName = "Fireplay.app"
-               BlueprintName = "Fireplay"
+               BuildableName = "Common Room.app"
+               BlueprintName = "Common Room"
                ReferencedContainer = "container:Fireplay.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -53,8 +53,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3FE88CC81E2F34CE0044F19A"
-            BuildableName = "Fireplay.app"
-            BlueprintName = "Fireplay"
+            BuildableName = "Common Room.app"
+            BlueprintName = "Common Room"
             ReferencedContainer = "container:Fireplay.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -76,8 +76,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3FE88CC81E2F34CE0044F19A"
-            BuildableName = "Fireplay.app"
-            BlueprintName = "Fireplay"
+            BuildableName = "Common Room.app"
+            BlueprintName = "Common Room"
             ReferencedContainer = "container:Fireplay.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -95,8 +95,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3FE88CC81E2F34CE0044F19A"
-            BuildableName = "Fireplay.app"
-            BlueprintName = "Fireplay"
+            BuildableName = "Common Room.app"
+            BlueprintName = "Common Room"
             ReferencedContainer = "container:Fireplay.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

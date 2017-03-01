@@ -1,8 +1,9 @@
 {
   "images" : [
     {
-      "idiom" : "iphone",
       "size" : "20x20",
+      "idiom" : "iphone",
+      "filename" : "1024x1024-20@2x.png",
       "scale" : "2x"
     },
     {
@@ -12,8 +13,9 @@
       "scale" : "3x"
     },
     {
-      "idiom" : "iphone",
       "size" : "29x29",
+      "idiom" : "iphone",
+      "filename" : "1024x1024-29.png",
       "scale" : "1x"
     },
     {
@@ -29,8 +31,9 @@
       "scale" : "3x"
     },
     {
-      "idiom" : "iphone",
       "size" : "40x40",
+      "idiom" : "iphone",
+      "filename" : "1024x1024-40@2x.png",
       "scale" : "2x"
     },
     {
@@ -82,8 +85,9 @@
       "scale" : "1x"
     },
     {
-      "idiom" : "ipad",
       "size" : "29x29",
+      "idiom" : "ipad",
+      "filename" : "1024x1024-29@2x.png",
       "scale" : "2x"
     },
     {
@@ -186,14 +190,6 @@
       "scale" : "2x",
       "role" : "quickLook",
       "subtype" : "42mm"
-    },
-    {
-      "filename" : "Icon-App-60x60@1x.png",
-      "unassigned" : true
-    },
-    {
-      "filename" : "Icon-App-76x76@3x.png",
-      "unassigned" : true
     }
   ],
   "info" : {

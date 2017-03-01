@@ -139,8 +139,11 @@ class MenuViewController: UIViewController, UITextFieldDelegate {
     }
 
 
+    @available(iOS 10.0, *)
 func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {
-    UIApplication.shared.open(URL, options: [:])
+
+            UIApplication.shared.open(URL, options: [:])
+        
     return false
 }
 
