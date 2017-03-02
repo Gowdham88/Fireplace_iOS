@@ -12,7 +12,7 @@
         <!--Menu View Controller-->
         <scene sceneID="vXM-hr-j6c">
             <objects>
-                <viewController id="ROd-Xh-s8q" customClass="MenuViewController" customModule="Common_room" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ROd-Xh-s8q" customClass="MenuViewController" customModule="Common_Room" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cyn-XD-XGb"/>
                         <viewControllerLayoutGuide type="bottom" id="vvz-jK-RXW"/>
@@ -21,7 +21,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rrl-ym-k9c" customClass="VideoPlay" customModule="Common_room" customModuleProvider="target">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rrl-ym-k9c" customClass="VideoPlay" customModule="Common_Room" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="570" height="320"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -31,11 +31,11 @@
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zey-jx-nsY">
-                                <rect key="frame" x="25" y="33" width="50" height="260"/>
+                                <rect key="frame" x="25" y="19" width="50" height="262"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gmH-eu-YEE">
-                                        <rect key="frame" x="0.0" y="-4" width="50" height="50"/>
+                                        <rect key="frame" x="0.0" y="4" width="50" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.16862745098039217" green="0.16862745098039217" blue="0.16862745098039217" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" image="unline"/>
@@ -44,7 +44,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Okl-WT-N3M">
-                                        <rect key="frame" x="0.0" y="51" width="50" height="50"/>
+                                        <rect key="frame" x="0.0" y="51" width="50" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.16862745098039217" green="0.16862745098039217" blue="0.16862745098039217" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" image="unbright"/>
@@ -53,7 +53,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u8y-lR-I0n">
-                                        <rect key="frame" x="0.0" y="99" width="50" height="50"/>
+                                        <rect key="frame" x="0.0" y="91" width="50" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.16862745098039217" green="0.16862745098039217" blue="0.16862745098039217" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" image="unselectedfire"/>
@@ -62,7 +62,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZvD-Dw-86u">
-                                        <rect key="frame" x="0.0" y="149" width="50" height="50"/>
+                                        <rect key="frame" x="0.0" y="131" width="50" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.16862745098039217" green="0.16862745098039217" blue="0.16862745098039217" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" image="unspeed"/>
@@ -71,7 +71,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JRB-Ds-kox">
-                                        <rect key="frame" x="0.0" y="198" width="50" height="50"/>
+                                        <rect key="frame" x="0.0" y="171" width="50" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.16862745098039217" green="0.16862745098039217" blue="0.16862745098039217" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" image="uninfo"/>
@@ -79,14 +79,23 @@
                                             <action selector="infoPressed:" destination="ROd-Xh-s8q" eventType="touchUpInside" id="8kd-Ez-G97"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nqg-Jz-iue">
+                                        <rect key="frame" x="0.0" y="210" width="50" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.16862745100000001" green="0.16862745100000001" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="volume"/>
+                                        <connections>
+                                            <action selector="volumeControl:" destination="ROd-Xh-s8q" eventType="touchUpInside" id="JwO-dl-Rgc"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GGS-dr-e7t">
-                                <rect key="frame" x="87" y="86" width="350" height="48"/>
+                                <rect key="frame" x="87" y="70" width="350" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="PVy-hk-ArH" customClass="sliderDesign" customModule="Common_room" customModuleProvider="target">
-                                        <rect key="frame" x="14" y="9" width="319" height="31"/>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="PVy-hk-ArH" customClass="sliderDesign" customModule="Common_Room" customModuleProvider="target">
+                                        <rect key="frame" x="14" y="4" width="319" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="minimumTrackTintColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="maximumTrackTintColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -95,18 +104,18 @@
                                             <userDefinedRuntimeAttribute type="image" keyPath="thumbImage" value="slidercir"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="brightnessSlider:" destination="ROd-Xh-s8q" eventType="valueChanged" id="EKc-ZV-Jhs"/>
+                                            <action selector="brightSlider:" destination="ROd-Xh-s8q" eventType="valueChanged" id="2nR-x8-gl7"/>
                                         </connections>
                                     </slider>
                                 </subviews>
                                 <color key="backgroundColor" red="0.16860893368721008" green="0.16863927245140076" blue="0.16860231757164001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fwk-Kk-aqa">
-                                <rect key="frame" x="87" y="185" width="350" height="48"/>
+                                <rect key="frame" x="87" y="150" width="350" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VOA-Vh-sA8">
-                                        <rect key="frame" x="26" y="11" width="27" height="27"/>
+                                        <rect key="frame" x="26" y="7" width="27" height="27"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                         <state key="normal" image="slownew"/>
                                         <connections>
@@ -114,17 +123,17 @@
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PWX-iR-FIg">
-                                        <rect key="frame" x="51" y="23" width="112" height="2"/>
+                                        <rect key="frame" x="51" y="18" width="112" height="2"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.36074990034103394" green="0.36080628633499146" blue="0.36073756217956543" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="64V-SH-eKb">
-                                        <rect key="frame" x="187" y="23" width="112" height="2"/>
+                                        <rect key="frame" x="187" y="19" width="112" height="2"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.36074990029999998" green="0.3608062863" blue="0.36073756219999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9vb-ib-v9m">
-                                        <rect key="frame" x="162" y="11" width="27" height="27"/>
+                                        <rect key="frame" x="162" y="6" width="27" height="27"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="normalnew"/>
                                         <connections>
@@ -132,13 +141,33 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7rx-Bh-GWg">
-                                        <rect key="frame" x="290" y="11" width="41" height="27"/>
+                                        <rect key="frame" x="290" y="6" width="41" height="27"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="fastnew"/>
                                         <connections>
                                             <action selector="forwardPressed:" destination="ROd-Xh-s8q" eventType="touchUpInside" id="uuj-Th-XPg"/>
                                         </connections>
                                     </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.16860893369999999" green="0.16863927249999999" blue="0.1686023176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WdS-Rn-cXQ">
+                                <rect key="frame" x="87" y="226" width="350" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Va1-Aa-VSv" customClass="sliderDesign" customModule="Common_Room" customModuleProvider="target">
+                                        <rect key="frame" x="14" y="4" width="319" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="minimumTrackTintColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="maximumTrackTintColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="currentThumbImage" value="slidercir"/>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="thumbImage" value="slidercir"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="volumeSlidercontroller:" destination="ROd-Xh-s8q" eventType="valueChanged" id="1ag-wQ-RMv"/>
+                                        </connections>
+                                    </slider>
                                 </subviews>
                                 <color key="backgroundColor" red="0.16860893369999999" green="0.16863927249999999" blue="0.1686023176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
@@ -179,6 +208,9 @@
                         <outlet property="videoContolpopup" destination="fwk-Kk-aqa" id="DhZ-BW-6VP"/>
                         <outlet property="viewVideo" destination="rrl-ym-k9c" id="ufW-kV-y5g"/>
                         <outlet property="viewupDown" destination="zey-jx-nsY" id="CVR-NB-9J0"/>
+                        <outlet property="volumeBtn" destination="Nqg-Jz-iue" id="vr7-kV-KLA"/>
+                        <outlet property="volumePopup" destination="WdS-Rn-cXQ" id="raH-pR-faK"/>
+                        <outlet property="volumeSlider" destination="Va1-Aa-VSv" id="LpD-6Q-bxD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RAW-E6-gJE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -197,5 +229,6 @@
         <image name="unline" width="28" height="9"/>
         <image name="unselectedfire" width="37" height="32"/>
         <image name="unspeed" width="34" height="32"/>
+        <image name="volume" width="35" height="32"/>
     </resources>
 </document>
