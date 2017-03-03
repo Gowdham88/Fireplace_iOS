@@ -651,7 +651,7 @@
 				INFOPLIST_FILE = firecrack/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.commonroom.fireplay;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CZ.CommonroomTV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -669,7 +669,7 @@
 				INFOPLIST_FILE = firecrack/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.commonroom.fireplay;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CZ.CommonroomTV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
