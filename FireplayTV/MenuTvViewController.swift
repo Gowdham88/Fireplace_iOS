@@ -16,21 +16,23 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet var videoView: VideoPlay!
     @IBOutlet var viewupDown: UIView!
-    @IBOutlet var menuBtn: UIButton!
-    @IBOutlet var fastBtn: UIButton!
-    @IBOutlet var fireBtn: UIButton!
-    @IBOutlet var infoBtn: UIButton!
+
+    @IBOutlet var menuBtn: CustomFocusButton!
+    @IBOutlet var fireBtn: CustomFocusButton!
+    @IBOutlet var fastBtn: CustomFocusButton!
+    @IBOutlet var infoBtn: CustomFocusButton!
+    @IBOutlet var volumeBtn: CustomFocusButton!
   
     
     @IBOutlet var videoControlpopup: UIView!
-    @IBOutlet var slowBtn: UIButton!
+    
     
     @IBOutlet var normalBtn: UIButton!
     @IBOutlet var forwardBtn: UIButton!
     
     
     @IBOutlet var volumePopup: UIView!
-    @IBOutlet var volumeBtn: UIButton!
+
     
     
     @IBOutlet var infoPopupview: UIView!
@@ -93,6 +95,8 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
         infoBtn.center = menuBtn.center
         volumeBtn.center = menuBtn.center
         
+        self.viewupDown.isHidden = true
+
         infoPopupview.isHidden = true
         videoControlpopup.isHidden = true
         volumePopup.isHidden = true
@@ -100,7 +104,15 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
         self.SetUpSound()
         player.volume = 0.5
         
+        let tapRecognizer = UITapGestureRecognizer(target: self, action: Selector(("handleTap:")))
         
+//        tapRecognizer.allowedPressTypes = [NSNumber(value: UIPressType.selector.rawValue)]
+
+        self.view.addGestureRecognizer(tapRecognizer)
+        self.videoView.addGestureRecognizer(tapRecognizer)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(willEnterForeground), name:NSNotification.Name.UIApplicationWillEnterForeground, object: nil)
+   
     }
     
     
@@ -121,7 +133,7 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func menuPressed(_ sender: UIButton) {
         
-        if menuBtn.currentImage == #imageLiteral(resourceName: "unmenu"){
+        if menuBtn.currentImage == #imageLiteral(resourceName: "unmenu@1x"){
             
             UIView.animate(withDuration: 0.3, animations: {
                 self.fastBtn.alpha = 1
@@ -166,7 +178,7 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
         }
         
         
-        toggleButton(button: sender, onImage: #imageLiteral(resourceName: "menu"), offImage: #imageLiteral(resourceName: "unmenu") )
+        toggleButton(button: sender, onImage: #imageLiteral(resourceName: "menu"), offImage: #imageLiteral(resourceName: "unmenu@1x"))
 
         
     }
@@ -282,10 +294,6 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
     }
 
     
-    @IBAction func slowPressed(_ sender: Any) {
-        
-        playmyVideo(myString: "slow00")
-    }
     
     @IBAction func normalPressed(_ sender: Any) {
         
@@ -323,7 +331,29 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
         }
         
     }
-    /**************** sound setup for playing background music ***********/
+    
+    
+    func handleTap(sender: UITapGestureRecognizer) {
+        
+        if self.viewupDown.isHidden {
+            
+            self.viewupDown.isHidden = false
+            
+        } else {
+            
+            self.viewupDown.isHidden = true
+           
+            self.videoControlpopup.isHidden = true
+            self.infoPopupview.isHidden = true
+            self.volumePopup.isHidden = true
+            
+            
+            
+        }
+        
+    }
+
+       /**************** sound setup for playing background music ***********/
     
     func SetUpSound() {
         

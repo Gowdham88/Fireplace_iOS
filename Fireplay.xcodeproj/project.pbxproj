@@ -31,6 +31,7 @@
 		3FE88CED1E2F34CE0044F19A /* firecrackUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE88CEC1E2F34CE0044F19A /* firecrackUITests.swift */; };
 		3FF397221E56CA7900746811 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF397211E56CA7900746811 /* MenuViewController.swift */; };
 		3FF397241E5701D900746811 /* sliderDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF397231E5701D900746811 /* sliderDesign.swift */; };
+		6041643C1E6EE07300773DCF /* CustomFocusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6041643B1E6EE07200773DCF /* CustomFocusButton.swift */; };
 		609D1C531E6B03040009A59F /* MenuTvViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609D1C521E6B03040009A59F /* MenuTvViewController.swift */; };
 		609D1C551E6B0C7A0009A59F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 609D1C541E6B0C7A0009A59F /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -86,6 +87,7 @@
 		3FE88CEE1E2F34CE0044F19A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FF397211E56CA7900746811 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		3FF397231E5701D900746811 /* sliderDesign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sliderDesign.swift; sourceTree = "<group>"; };
+		6041643B1E6EE07200773DCF /* CustomFocusButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomFocusButton.swift; sourceTree = "<group>"; };
 		609D1C521E6B03040009A59F /* MenuTvViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTvViewController.swift; sourceTree = "<group>"; };
 		609D1C541E6B0C7A0009A59F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -139,6 +141,7 @@
 				609D1C521E6B03040009A59F /* MenuTvViewController.swift */,
 				609D1C541E6B0C7A0009A59F /* Assets.xcassets */,
 				04E3ED071E50389600DFDB61 /* Main.storyboard */,
+				6041643B1E6EE07200773DCF /* CustomFocusButton.swift */,
 				3FA745EC1E51695F0066C976 /* VideoPlay.swift */,
 				04E3ED0C1E50389600DFDB61 /* Info.plist */,
 			);
@@ -429,6 +432,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FA745ED1E51695F0066C976 /* VideoPlay.swift in Sources */,
+				6041643C1E6EE07300773DCF /* CustomFocusButton.swift in Sources */,
 				04E3ED041E50389600DFDB61 /* AppDelegate.swift in Sources */,
 				609D1C531E6B03040009A59F /* MenuTvViewController.swift in Sources */,
 			);
