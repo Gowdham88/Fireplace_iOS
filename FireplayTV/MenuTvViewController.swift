@@ -95,7 +95,7 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
         infoBtn.center = menuBtn.center
         volumeBtn.center = menuBtn.center
         
-        self.viewupDown.isHidden = true
+//        self.viewupDown.isHidden = true
 
         infoPopupview.isHidden = true
         videoControlpopup.isHidden = true
@@ -106,7 +106,7 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
         
         let tapRecognizer = UITapGestureRecognizer(target: self, action: Selector(("handleTap:")))
         
-//        tapRecognizer.allowedPressTypes = [NSNumber(value: UIPressType.selector.rawValue)]
+        //tapRecognizer.allowedPressTypes = [NSNumber(value: UIPressType.selector.rawValue)]
 
         self.view.addGestureRecognizer(tapRecognizer)
         self.videoView.addGestureRecognizer(tapRecognizer)
