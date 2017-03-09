@@ -22,13 +22,17 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var fastBtn: CustomFocusButton!
     @IBOutlet var infoBtn: CustomFocusButton!
     @IBOutlet var volumeBtn: CustomFocusButton!
-  
+    @IBOutlet var volumeupBtn: CustomFocusButton!
+    @IBOutlet var volumedownBtn: CustomFocusButton!
+    @IBOutlet var normalBtn: CustomFocusButton!
+    @IBOutlet var forwardBtn: CustomFocusButton!
+    
     
     @IBOutlet var videoControlpopup: UIView!
     
     
-    @IBOutlet var normalBtn: UIButton!
-    @IBOutlet var forwardBtn: UIButton!
+//    @IBOutlet var normalBtn: UIButton!
+//    @IBOutlet var forwardBtn: UIButton!
     
     
     @IBOutlet var volumePopup: UIView!
@@ -221,6 +225,8 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
     }
 
     @IBAction func infoPressed(_ sender: UIButton) {
+        
+        infoPopupview.layer.cornerRadius = 30
         
         if infoPopupview.isHidden == true {
             
