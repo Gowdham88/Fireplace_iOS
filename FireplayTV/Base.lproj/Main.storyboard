@@ -30,6 +30,10 @@
                                     <outletCollection property="gestureRecognizers" destination="FL7-Xt-HI4" appends="YES" id="M6T-zR-ZsH"/>
                                 </connections>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="new 400x240" translatesAutoresizingMaskIntoConstraints="NO" id="i4C-bt-NRi">
+                                <rect key="frame" x="1500" y="50" width="341" height="246"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gr3-JI-Xav">
                                 <rect key="frame" x="65" y="62" width="169" height="640"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -167,6 +171,7 @@
                         <outlet property="fastBtn" destination="WH1-sb-ZmB" id="iox-5X-9dG"/>
                         <outlet property="fireBtn" destination="jJx-Ez-hLy" id="R6R-mV-JB9"/>
                         <outlet property="forwardBtn" destination="T63-hx-pLn" id="mAq-CB-Xy9"/>
+                        <outlet property="imageFade" destination="i4C-bt-NRi" id="hAd-LF-Gr0"/>
                         <outlet property="infoBtn" destination="1FO-V6-miI" id="3nF-iZ-ezi"/>
                         <outlet property="infoPopupview" destination="X2M-Gf-i1t" id="0E5-bJ-s6k"/>
                         <outlet property="infoTextview" destination="l36-zR-1Cf" id="KMZ-KG-NxH"/>
@@ -193,6 +198,7 @@
         <image name="firecrack" width="145" height="145"/>
         <image name="forwardpl" width="100" height="80"/>
         <image name="info" width="32" height="32"/>
+        <image name="new 400x240" width="400" height="240"/>
         <image name="normalplay" width="50" height="67"/>
         <image name="speed" width="34" height="32"/>
         <image name="unmenu@1x" width="145" height="49"/>

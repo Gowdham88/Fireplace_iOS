@@ -26,6 +26,7 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var volumedownBtn: CustomFocusButton!
     @IBOutlet var normalBtn: CustomFocusButton!
     @IBOutlet var forwardBtn: CustomFocusButton!
+    @IBOutlet var imageFade: UIImageView!
     
     
     @IBOutlet var videoControlpopup: UIView!
@@ -83,6 +84,16 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
         attributedString.addAttribute(NSParagraphStyleAttributeName, value: paragraph, range: NSRange(location: 0, length: 495))
         
         infoTextview.attributedText = attributedString
+      
+        /******************** Image fade ***********************/
+       
+        self.imageFade.isHidden = false
+        UIView.animate(withDuration: 4, delay:1, options:UIViewAnimationOptions.transitionFlipFromTop, animations: {
+            self.imageFade.alpha = 0
+        }, completion: { finished in
+            self.imageFade.isHidden = true
+        })
+
         
         /*******************************************/
 
@@ -106,6 +117,7 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
         volumePopup.isHidden = true
      
         self.SetUpSound()
+//        self.setImageView()
         player.volume = 0.5
         
         let tapRecognizer = UITapGestureRecognizer(target: self, action: Selector(("handleTap:")))
@@ -358,6 +370,13 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
         }
         
     }
+    
+    
+//    func setImageView(view: UIImageView, hidden: Bool) {
+//        UIImageView.transition(with: view, duration: 0.5, options: .transitionCrossDissolve, animations: {() -> Void in
+//            self.imageFade.isHidden = hidden
+//        }, completion: { _ in })
+//    }
 
        /**************** sound setup for playing background music ***********/
     
