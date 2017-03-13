@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dM2-Lp-xGz">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dM2-Lp-xGz">
     <device id="appleTV" orientation="landscape">
         <adaptation id="light"/>
     </device>
@@ -30,26 +30,22 @@
                                     <outletCollection property="gestureRecognizers" destination="FL7-Xt-HI4" appends="YES" id="M6T-zR-ZsH"/>
                                 </connections>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="new 400x240" translatesAutoresizingMaskIntoConstraints="NO" id="i4C-bt-NRi">
-                                <rect key="frame" x="1500" y="50" width="341" height="246"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gr3-JI-Xav">
-                                <rect key="frame" x="65" y="62" width="169" height="640"/>
+                                <rect key="frame" x="65" y="62" width="169" height="597"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zLx-BT-kHz" customClass="CustomFocusButton" customModule="FireplayTV" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="3" width="153" height="104"/>
+                                        <rect key="frame" x="8" y="3" width="161" height="82"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="0.4745851293103448" colorSpace="calibratedRGB"/>
                                         <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                        <state key="normal" image="unmenu@1x"/>
+                                        <state key="normal" image="unmenu"/>
                                         <connections>
                                             <action selector="menuPressed:" destination="dM2-Lp-xGz" eventType="primaryActionTriggered" id="k1A-65-Qik"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJx-Ez-hLy" customClass="CustomFocusButton" customModule="FireplayTV" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="120" width="156" height="130"/>
+                                        <rect key="frame" x="8" y="103" width="156" height="130"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
                                         <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
@@ -59,45 +55,57 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WH1-sb-ZmB" customClass="CustomFocusButton" customModule="FireplayTV" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="252" width="156" height="115"/>
+                                        <rect key="frame" x="8" y="233" width="156" height="115"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
                                         <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                        <state key="normal" image="speed"/>
+                                        <state key="normal" image="speed-1"/>
                                         <connections>
                                             <action selector="fastPressed:" destination="dM2-Lp-xGz" eventType="primaryActionTriggered" id="zj2-0h-8QT"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1FO-V6-miI" customClass="CustomFocusButton" customModule="FireplayTV" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="368" width="156" height="120"/>
+                                        <rect key="frame" x="8" y="347" width="156" height="115"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
                                         <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                        <state key="normal" image="info"/>
+                                        <state key="normal" image="information"/>
                                         <connections>
                                             <action selector="infoPressed:" destination="dM2-Lp-xGz" eventType="primaryActionTriggered" id="xxT-LS-Fz4"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGh-5r-761" userLabel="volume Btn" customClass="CustomFocusButton" customModule="FireplayTV" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="489" width="156" height="115"/>
+                                        <rect key="frame" x="8" y="462" width="156" height="115"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
                                         <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                        <state key="normal" image="volumeTV"/>
+                                        <state key="normal" image="volumee"/>
                                         <connections>
                                             <action selector="volumePressed:" destination="dM2-Lp-xGz" eventType="primaryActionTriggered" id="Wec-bs-3nK"/>
                                         </connections>
                                     </button>
                                 </subviews>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image text" translatesAutoresizingMaskIntoConstraints="NO" id="i4C-bt-NRi">
+                                <rect key="frame" x="1370" y="30" width="505" height="130"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X2M-Gf-i1t" userLabel="Info popup">
-                                <rect key="frame" x="350" y="250" width="1350" height="400"/>
+                                <rect key="frame" x="269" y="215" width="1482" height="650"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l36-zR-1Cf">
-                                        <rect key="frame" x="50" y="48" width="1250" height="350"/>
+                                        <rect key="frame" x="8" y="18" width="1445" height="322"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="0.0" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="laP-pt-ck3">
+                                        <rect key="frame" x="0.0" y="355" width="1445" height="274"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
@@ -105,12 +113,13 @@
                                 <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="0.69291487068965518" colorSpace="calibratedRGB"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zuC-X7-qPt" userLabel="controlView">
-                                <rect key="frame" x="250" y="310" width="600" height="120"/>
+                                <rect key="frame" x="250" y="297" width="600" height="120"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IzN-AZ-G4H" userLabel="normal Btn" customClass="CustomFocusButton" customModule="FireplayTV" customModuleProvider="target">
                                         <rect key="frame" x="55" y="7" width="130" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="38"/>
                                         <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                         <state key="normal" image="normalplay"/>
                                         <connections>
@@ -135,7 +144,7 @@
                                 <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lUI-SH-jvG" userLabel="volumeControl">
-                                <rect key="frame" x="250" y="549" width="600" height="120"/>
+                                <rect key="frame" x="250" y="517" width="600" height="120"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BWb-Pj-7ou" userLabel="volumeUp" customClass="CustomFocusButton" customModule="FireplayTV" customModuleProvider="target">
@@ -175,6 +184,7 @@
                         <outlet property="infoBtn" destination="1FO-V6-miI" id="3nF-iZ-ezi"/>
                         <outlet property="infoPopupview" destination="X2M-Gf-i1t" id="0E5-bJ-s6k"/>
                         <outlet property="infoTextview" destination="l36-zR-1Cf" id="KMZ-KG-NxH"/>
+                        <outlet property="infoTextview1" destination="laP-pt-ck3" id="GW6-C6-Gyt"/>
                         <outlet property="menuBtn" destination="zLx-BT-kHz" id="np6-c5-2xl"/>
                         <outlet property="normalBtn" destination="IzN-AZ-G4H" id="NOf-u1-tgw"/>
                         <outlet property="videoControlpopup" destination="zuC-X7-qPt" id="del-Nd-lpq"/>
@@ -197,13 +207,13 @@
     <resources>
         <image name="firecrack" width="145" height="145"/>
         <image name="forwardpl" width="100" height="80"/>
-        <image name="info" width="32" height="32"/>
-        <image name="new 400x240" width="400" height="240"/>
+        <image name="image text" width="1255" height="283"/>
+        <image name="information" width="356" height="356"/>
         <image name="normalplay" width="50" height="67"/>
-        <image name="speed" width="34" height="32"/>
-        <image name="unmenu@1x" width="145" height="49"/>
+        <image name="speed-1" width="253" height="201"/>
+        <image name="unmenu" width="204" height="104"/>
         <image name="volumeDown" width="148" height="55"/>
-        <image name="volumeTV" width="122" height="94"/>
         <image name="volumeUp" width="148" height="55"/>
+        <image name="volumee" width="306" height="248"/>
     </resources>
 </document>
