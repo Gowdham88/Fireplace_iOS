@@ -171,7 +171,9 @@ class MenuViewController: UIViewController, UITextFieldDelegate {
         self.viewVideo.addGestureRecognizer(tapGesture)
     
         NotificationCenter.default.addObserver(self, selector: #selector(willEnterForeground), name: NSNotification.Name.UIApplicationWillEnterForeground, object: nil)
-       
+        
+        
+
         
     }
 
@@ -185,7 +187,7 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
     func playmyVideo(myString: String) {
         
         let bundle: Bundle = Bundle.main
-        let videoPlayer: String = bundle.path(forResource: myString, ofType: "mp4")!
+        let videoPlayer: String = bundle.path(forResource: myString, ofType: "mov")!
         let movieUrl : NSURL = NSURL.fileURL(withPath: videoPlayer) as NSURL
         
         print(movieUrl)
@@ -219,6 +221,7 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
             
         }
         else {
+            
             UIView.animate(withDuration: 0.3, animations: {
                 self.brightnessBtn.alpha = 0
                 self.fastBtn.alpha = 0
@@ -389,7 +392,10 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
     override var prefersStatusBarHidden: Bool {
         
         return true
+   
     }
+    
+    
 
     @IBAction func volumeControl(_ sender: UIButton) {
         
@@ -478,7 +484,7 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
             let filePath = NSURL(fileURLWithPath:path)
             player = try! AVAudioPlayer.init(contentsOf: filePath as URL)
             player.numberOfLoops = -1 //logic for infinite loop
-            player.prepareToPlay()
+            player.prepareToPlay() 
             player.play()
         }
         

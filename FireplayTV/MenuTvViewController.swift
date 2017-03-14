@@ -32,10 +32,6 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var videoControlpopup: UIView!
     
     
-//    @IBOutlet var normalBtn: UIButton!
-//    @IBOutlet var forwardBtn: UIButton!
-    
-    
     @IBOutlet var volumePopup: UIView!
 
     
@@ -174,6 +170,8 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func menuPressed(_ sender: UIButton) {
+        
+/*************************menu button animation*********************/
         
         if menuBtn.currentImage == #imageLiteral(resourceName: "unmenu"){
             
