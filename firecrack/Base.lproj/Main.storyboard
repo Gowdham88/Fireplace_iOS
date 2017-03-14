@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ROd-Xh-s8q">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ROd-Xh-s8q">
     <device id="retina4_0" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
@@ -38,13 +38,13 @@
                                         <rect key="frame" x="0.0" y="4" width="50" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.16862745098039217" green="0.16862745098039217" blue="0.16862745098039217" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" image="unline"/>
+                                        <state key="normal" image="unline-1"/>
                                         <connections>
                                             <action selector="menupressed:" destination="ROd-Xh-s8q" eventType="touchUpInside" id="B57-ac-t4h"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Okl-WT-N3M">
-                                        <rect key="frame" x="0.0" y="51" width="50" height="40"/>
+                                        <rect key="frame" x="0.0" y="91" width="50" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.16862745098039217" green="0.16862745098039217" blue="0.16862745098039217" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" image="unbright"/>
@@ -53,7 +53,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u8y-lR-I0n">
-                                        <rect key="frame" x="0.0" y="91" width="50" height="40"/>
+                                        <rect key="frame" x="0.0" y="51" width="50" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.16862745098039217" green="0.16862745098039217" blue="0.16862745098039217" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" image="unselectedfire"/>
@@ -83,7 +83,7 @@
                                         <rect key="frame" x="0.0" y="210" width="50" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.16862745100000001" green="0.16862745100000001" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" image="volume"/>
+                                        <state key="normal" image="volumee1"/>
                                         <connections>
                                             <action selector="volumeControl:" destination="ROd-Xh-s8q" eventType="touchUpInside" id="JwO-dl-Rgc"/>
                                         </connections>
@@ -171,13 +171,28 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.16860893369999999" green="0.16863927249999999" blue="0.1686023176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imagefade1" translatesAutoresizingMaskIntoConstraints="NO" id="qVc-1k-Nzp">
+                                <rect key="frame" x="411" y="14" width="145" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="au8-Cy-LtG">
                                 <rect key="frame" x="90" y="56" width="441" height="195"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="BPM-g7-G8f">
-                                        <rect key="frame" x="6" y="8" width="433" height="179"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <rect key="frame" x="6" y="0.0" width="433" height="117"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="0.0" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" lookupSuggestion="YES"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="t5K-w1-gnp">
+                                        <rect key="frame" x="6" y="111" width="433" height="82"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="0.0" colorSpace="calibratedRGB"/>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -196,9 +211,11 @@
                         <outlet property="fastBtn" destination="ZvD-Dw-86u" id="Etc-bu-4Fq"/>
                         <outlet property="fireBtn" destination="u8y-lR-I0n" id="lVI-GV-UAz"/>
                         <outlet property="forwardBtn" destination="7rx-Bh-GWg" id="hVA-1u-QFT"/>
+                        <outlet property="imgaefade1" destination="qVc-1k-Nzp" id="Cqr-Ps-KUu"/>
                         <outlet property="infoBtn" destination="JRB-Ds-kox" id="YaR-H8-zhK"/>
                         <outlet property="infoPopup" destination="au8-Cy-LtG" id="nho-BA-6Kk"/>
                         <outlet property="infoTextview" destination="BPM-g7-G8f" id="5ku-9Z-kEc"/>
+                        <outlet property="infoTextview1" destination="t5K-w1-gnp" id="tef-Wz-fYu"/>
                         <outlet property="lineOneview" destination="PWX-iR-FIg" id="x1t-iu-NdN"/>
                         <outlet property="lineTwoview" destination="64V-SH-eKb" id="z9y-fv-eA7"/>
                         <outlet property="menuBtn" destination="gmH-eu-YEE" id="rfl-P0-5jV"/>
@@ -221,14 +238,15 @@
     </scenes>
     <resources>
         <image name="fastnew" width="27" height="27"/>
+        <image name="imagefade1" width="142" height="41"/>
         <image name="normalnew" width="27" height="27"/>
         <image name="slidercir" width="13" height="13"/>
         <image name="slownew" width="27" height="27"/>
         <image name="unbright" width="32" height="32"/>
         <image name="uninfo" width="32" height="32"/>
-        <image name="unline" width="28" height="9"/>
+        <image name="unline-1" width="28" height="11"/>
         <image name="unselectedfire" width="37" height="32"/>
         <image name="unspeed" width="34" height="32"/>
-        <image name="volume" width="35" height="32"/>
+        <image name="volumee1" width="30" height="30"/>
     </resources>
 </document>
