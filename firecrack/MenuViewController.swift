@@ -480,7 +480,7 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
     
     func SetUpSound() {
         
-        if let path = Bundle.main.path(forResource: "firecrack", ofType: "mp3") {
+        if let path = Bundle.main.path(forResource: "firenew", ofType: "mp3") {
             let filePath = NSURL(fileURLWithPath:path)
             player = try! AVAudioPlayer.init(contentsOf: filePath as URL)
             player.numberOfLoops = -1 //logic for infinite loop

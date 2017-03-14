@@ -406,7 +406,7 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
     
     func SetUpSound() {
         
-        if let path = Bundle.main.path(forResource: "fire", ofType: "mp3") {
+        if let path = Bundle.main.path(forResource: "firenew", ofType: "mp3") {
             let filePath = NSURL(fileURLWithPath:path)
             player = try! AVAudioPlayer.init(contentsOf: filePath as URL)
             player.numberOfLoops = -1 //logic for infinite loop
