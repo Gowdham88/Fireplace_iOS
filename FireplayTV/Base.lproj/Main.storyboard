@@ -227,7 +227,7 @@
         <image name="information" width="356" height="356"/>
         <image name="normalplay" width="50" height="67"/>
         <image name="speed-1" width="253" height="201"/>
-        <image name="unmenu" width="204" height="104"/>
+        <image name="unmenu" width="166" height="63"/>
         <image name="volumeDown" width="148" height="55"/>
         <image name="volumeUp" width="148" height="55"/>
         <image name="volumee" width="306" height="248"/>
