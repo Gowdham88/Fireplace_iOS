@@ -27,9 +27,11 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var normalBtn: CustomFocusButton!
     @IBOutlet var forwardBtn: CustomFocusButton!
     @IBOutlet var imageFade: UIImageView!
-    @IBOutlet var btnhideShow: UIButton!
+//    @IBOutlet var btnhideShow: UIButton!
+    @IBOutlet var fireOnoff: UIView!
     
     
+    @IBOutlet var fireonoffLabel: UILabel!
     @IBOutlet var videoControlpopup: UIView!
     
     
@@ -133,11 +135,12 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
         infoBtn.center = menuBtn.center
         volumeBtn.center = menuBtn.center
         
-        self.viewupDown.isHidden = true
+//        self.viewupDown.isHidden = true
 
         infoPopupview.isHidden = true
         videoControlpopup.isHidden = true
         volumePopup.isHidden = true
+        fireOnoff.isHidden = true
      
         self.SetUpSound()
 //        self.setImageView()
@@ -178,6 +181,8 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func menuPressed(_ sender: UIButton) {
         
+        
+     
 /*************************menu button animation*********************/
         
         if menuBtn.currentImage == #imageLiteral(resourceName: "unmenu"){
@@ -195,9 +200,13 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
                 self.volumeBtn.center = self.volumeBtncenter
                 
             })
+            
+             self.imageFade.alpha = 1
+             self.imageFade.isHidden = false
     
     }
         else {
+            
             
             UIView.animate(withDuration: 0.3, animations: {
 
@@ -206,20 +215,27 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
                 self.infoBtn.alpha = 0
                 self.volumeBtn.alpha = 0
                 
+                
                 self.fastBtn.center = self.menuBtn.center
                 self.fireBtn.center = self.menuBtn.center
                 self.infoBtn.center = self.menuBtn.center
                 self.volumeBtn.center = self.menuBtn.center
-
+                
                 
                 
             })
-            
+           
+
             if menuBtn.isHidden == false {
                 
                 videoControlpopup.isHidden = true
                 infoPopupview.isHidden = true
                 volumePopup.isHidden = true
+                fireOnoff.isHidden = true
+                self.imageFade.alpha = 0
+                self.imageFade.isHidden = true
+                
+                
             }
             
         }
@@ -240,27 +256,42 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
             
             infoPopupview.isHidden = true
             volumePopup.isHidden = true
+            fireOnoff.isHidden = true
             
         } else {
             
             videoControlpopup.isHidden = true
             infoPopupview.isHidden = true
             volumePopup.isHidden = true
+            fireOnoff.isHidden = true
         }
         
     }
     
 
     @IBAction func firePressed(_ sender: UIButton) {
+        
+        if fireOnoff.isHidden == true {
+            
+            fireOnoff.isHidden = false
+            infoPopupview.isHidden = true
+            videoControlpopup.isHidden = true
+            volumePopup.isHidden = true
+            
+        }
+
        
         if player.isPlaying {
             
             player.pause()
+            fireonoffLabel.text = "Off"
+            
             
         } else {
             
             player.numberOfLoops = -1
             player.play()
+            fireonoffLabel.text = "On"
             
         }
         
@@ -276,6 +307,7 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
             infoPopupview.isHidden = false
             videoControlpopup.isHidden = true
             volumePopup.isHidden = true
+            fireOnoff.isHidden = true
             
         } else {
             
@@ -294,6 +326,7 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
             
             videoControlpopup.isHidden = true
             infoPopupview.isHidden = true
+            fireOnoff.isHidden = true
             
             
         } else {
@@ -394,6 +427,7 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
                         self.videoControlpopup.isHidden = true
                         self.infoPopupview.isHidden = true
                         self.volumePopup.isHidden = true
+                        fireOnoff.isHidden = true
                         
                         
                         
