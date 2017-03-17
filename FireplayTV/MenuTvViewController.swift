@@ -27,6 +27,7 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var normalBtn: CustomFocusButton!
     @IBOutlet var forwardBtn: CustomFocusButton!
     @IBOutlet var imageFade: UIImageView!
+    @IBOutlet var btnhideShow: UIButton!
     
     
     @IBOutlet var videoControlpopup: UIView!
@@ -132,7 +133,7 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
         infoBtn.center = menuBtn.center
         volumeBtn.center = menuBtn.center
         
-//        self.viewupDown.isHidden = true
+        self.viewupDown.isHidden = true
 
         infoPopupview.isHidden = true
         videoControlpopup.isHidden = true
@@ -141,13 +142,19 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
         self.SetUpSound()
 //        self.setImageView()
         player.volume = 0.5
+//        
+//        let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(swipedDown(sender:)))
         
-        let tapRecognizer = UITapGestureRecognizer(target: self, action: Selector(("handleTap:")))
         
-        //tapRecognizer.allowedPressTypes = [NSNumber(value: UIPressType.selector.rawValue)]
 
-        self.view.addGestureRecognizer(tapRecognizer)
-        self.videoView.addGestureRecognizer(tapRecognizer)
+//        self.view.addGestureRecognizer(tapRecognizer)
+//        self.videoView.addGestureRecognizer(tapRecognizer)
+        
+//        let swipeDown:UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: Selector(("swipedDown:")))
+//        swipeDown.direction = .down
+//        videoView.addGestureRecognizer(swipeDown)
+        
+        
         
         NotificationCenter.default.addObserver(self, selector: #selector(willEnterForeground), name:NSNotification.Name.UIApplicationWillEnterForeground, object: nil)
    
@@ -374,33 +381,52 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
         
     }
     
-    
-    func handleTap(sender: UITapGestureRecognizer) {
+    @IBAction func btnhideshowPressed(_ sender: UIButton) {
         
-        if self.viewupDown.isHidden {
+                if self.viewupDown.isHidden {
             
-            self.viewupDown.isHidden = false
+                        self.viewupDown.isHidden = false
             
-        } else {
+                    } else {
             
-            self.viewupDown.isHidden = true
-           
-            self.videoControlpopup.isHidden = true
-            self.infoPopupview.isHidden = true
-            self.volumePopup.isHidden = true
+                        self.viewupDown.isHidden = true
             
-            
-            
-        }
+                        self.videoControlpopup.isHidden = true
+                        self.infoPopupview.isHidden = true
+                        self.volumePopup.isHidden = true
+                        
+                        
+                        
+                    }
         
     }
     
-    
-//    func setImageView(view: UIImageView, hidden: Bool) {
-//        UIImageView.transition(with: view, duration: 0.5, options: .transitionCrossDissolve, animations: {() -> Void in
-//            self.imageFade.isHidden = hidden
-//        }, completion: { _ in })
+//    func swipedDown(sender:UITapGestureRecognizer){
+//        NSLog("It worked")
+//        
+//        if self.viewupDown.isHidden {
+//            
+//            self.viewupDown.isHidden = false
+//            
+//        } else {
+//            
+//            self.viewupDown.isHidden = true
+//            
+//            self.videoControlpopup.isHidden = true
+//            self.infoPopupview.isHidden = true
+//            self.volumePopup.isHidden = true
+//            
+//            
+//            
+//        }
+//
 //    }
+//    func handleTap(sender: UITapGestureRecognizer) {
+//        
+//        
+//    }
+    
+    
 
        /**************** sound setup for playing background music ***********/
     
