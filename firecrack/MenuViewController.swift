@@ -37,6 +37,8 @@ class MenuViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var volumePopup: UIView!
     @IBOutlet var volumeSlider: UISlider!
     @IBOutlet var imgaefade1: UIImageView!
+    @IBOutlet var fireOnoff: UIView!
+    @IBOutlet var onoffLabel: UILabel!
     
     
     
@@ -117,6 +119,13 @@ class MenuViewController: UIViewController, UITextFieldDelegate {
         }, completion: { finished in
             self.imgaefade1.isHidden = true
         })
+       /**********************/
+        self.viewupDown.isHidden = false
+        UIView.animate(withDuration: 3, delay:1, options:UIViewAnimationOptions.transitionFlipFromTop, animations: {
+            self.viewupDown.alpha = 0
+        }, completion: { finished in
+            self.viewupDown.isHidden = true
+        })
         
 
       
@@ -142,11 +151,13 @@ class MenuViewController: UIViewController, UITextFieldDelegate {
         
      
         
-        self.viewupDown.isHidden = true
+//        self.viewupDown.isHidden = true
         popViewslider.isHidden = true
         videoContolpopup.isHidden = true
         infoPopup.isHidden = true
         volumePopup.isHidden = true
+        fireOnoff.isHidden = true
+
         
         
         
@@ -250,6 +261,8 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
             popViewslider.isHidden = true
             infoPopup.isHidden = true
             volumePopup.isHidden = true
+            fireOnoff.isHidden = true
+
         }
    toggleButton(button: sender, onImage: #imageLiteral(resourceName: "line-1"), offImage: #imageLiteral(resourceName: "unline-1"))
     
@@ -266,12 +279,16 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
             popViewslider.isHidden = true
             infoPopup.isHidden = true
             volumePopup.isHidden = true
+            fireOnoff.isHidden = true
+
         } else {
             
             videoContolpopup.isHidden = true
              popViewslider.isHidden = true
             infoPopup.isHidden = true
             volumePopup.isHidden = true
+            fireOnoff.isHidden = true
+
         }
         
         
@@ -281,14 +298,32 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
     }
     @IBAction func firePressed(_ sender: UIButton) {
         
+        if fireOnoff.isHidden == true {
+            
+            fireOnoff.isHidden = false
+            infoPopup.isHidden = true
+            popViewslider.isHidden = true
+            videoContolpopup.isHidden = true
+            volumePopup.isHidden = true
+            
+        }
+//        }else {
+//            
+//            fireOnoff.isHidden = true
+
+        
+        
         if player.isPlaying {
             
             player.pause()
-            
+            onoffLabel.textAlignment = .center
+            onoffLabel.text = "Off"
         } else {
             
             player.numberOfLoops = -1
             player.play()
+            onoffLabel.textAlignment = .center
+            onoffLabel.text = "On"
             
         }
        
@@ -305,6 +340,8 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
             popViewslider.isHidden = true
             videoContolpopup.isHidden = true
             volumePopup.isHidden = true
+            fireOnoff.isHidden = true
+
         } else {
             
             infoPopup.isHidden = true
@@ -342,6 +379,8 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
             videoContolpopup.isHidden = true
             infoPopup.isHidden = true
             volumePopup.isHidden = true
+            fireOnoff.isHidden = true
+
         } else {
             
             popViewslider.isHidden = true
@@ -405,6 +444,8 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
             popViewslider.isHidden = true
             videoContolpopup.isHidden = true
             infoPopup.isHidden = true
+            fireOnoff.isHidden = true
+
             
             
         } else {
@@ -431,14 +472,19 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
         if self.viewupDown.isHidden {
             
             self.viewupDown.isHidden = false
-            
+            self.imgaefade1.isHidden = false
+            self.imgaefade1.alpha = 1
+            self.viewupDown.alpha = 1
         } else {
             
             self.viewupDown.isHidden = true
+            self.imgaefade1.isHidden = true
             self.popViewslider.isHidden = true
              self.videoContolpopup.isHidden = true
             self.infoPopup.isHidden = true
             self.volumePopup.isHidden = true
+            self.fireOnoff.isHidden = true
+
             
             
             
