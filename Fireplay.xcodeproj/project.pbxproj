@@ -12,13 +12,13 @@
 		04E3ED091E50389600DFDB61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04E3ED071E50389600DFDB61 /* Main.storyboard */; };
 		3F1438D61E65324C0006A7C2 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F1438D41E65324C0006A7C2 /* Crashlytics.framework */; };
 		3F1438D71E65324C0006A7C2 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F1438D51E65324C0006A7C2 /* Fabric.framework */; };
+		3F22A30C1E7C5FBC00AFF19B /* normal.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3F22A30A1E7C5FAC00AFF19B /* normal.mp4 */; };
+		3F22A30D1E7C5FBE00AFF19B /* fast.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3F22A30B1E7C5FAC00AFF19B /* fast.mp4 */; };
 		3F5D8E441E784AE70056F314 /* firenew.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3F5D8E431E784AE70056F314 /* firenew.mp3 */; };
 		3F5D8E451E784AE70056F314 /* firenew.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3F5D8E431E784AE70056F314 /* firenew.mp3 */; };
 		3F5D8E471E784AF00056F314 /* firenew.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3F5D8E461E784AF00056F314 /* firenew.mp3 */; };
 		3F5D8E481E784AF00056F314 /* firenew.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3F5D8E461E784AF00056F314 /* firenew.mp3 */; };
 		3F62EB901E306CD600B2D659 /* firecrack.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3F62EB8F1E306CD600B2D659 /* firecrack.mp3 */; };
-		3F65B1361E7C405C0024E8B2 /* fast.mov in Resources */ = {isa = PBXBuildFile; fileRef = 3F65B1321E7C40350024E8B2 /* fast.mov */; };
-		3F65B1371E7C405E0024E8B2 /* normal.mov in Resources */ = {isa = PBXBuildFile; fileRef = 3F65B1331E7C40350024E8B2 /* normal.mov */; };
 		3FA745ED1E51695F0066C976 /* VideoPlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA745EC1E51695F0066C976 /* VideoPlay.swift */; };
 		3FA745FC1E516BEF0066C976 /* fire.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3FA745FB1E516BEF0066C976 /* fire.mp3 */; };
 		3FC0F9461E78040D0090D4C7 /* fast.mov in Resources */ = {isa = PBXBuildFile; fileRef = 3FC0F9401E7803F90090D4C7 /* fast.mov */; };
@@ -64,6 +64,8 @@
 		04E3ED0C1E50389600DFDB61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F1438D41E65324C0006A7C2 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		3F1438D51E65324C0006A7C2 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		3F22A30A1E7C5FAC00AFF19B /* normal.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = normal.mp4; sourceTree = "<group>"; };
+		3F22A30B1E7C5FAC00AFF19B /* fast.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = fast.mp4; sourceTree = "<group>"; };
 		3F5D8E431E784AE70056F314 /* firenew.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = firenew.mp3; sourceTree = "<group>"; };
 		3F5D8E461E784AF00056F314 /* firenew.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = firenew.mp3; sourceTree = "<group>"; };
 		3F62EB8F1E306CD600B2D659 /* firecrack.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = firecrack.mp3; sourceTree = "<group>"; };
@@ -140,6 +142,8 @@
 				3F65B1321E7C40350024E8B2 /* fast.mov */,
 				3F65B1331E7C40350024E8B2 /* normal.mov */,
 				3F5D8E431E784AE70056F314 /* firenew.mp3 */,
+				3F22A30A1E7C5FAC00AFF19B /* normal.mp4 */,
+				3F22A30B1E7C5FAC00AFF19B /* fast.mp4 */,
 				3FA745FB1E516BEF0066C976 /* fire.mp3 */,
 				04E3ED031E50389600DFDB61 /* AppDelegate.swift */,
 				609D1C521E6B03040009A59F /* MenuTvViewController.swift */,
@@ -365,8 +369,8 @@
 			files = (
 				3F5D8E481E784AF00056F314 /* firenew.mp3 in Resources */,
 				3FA745FC1E516BEF0066C976 /* fire.mp3 in Resources */,
-				3F65B1361E7C405C0024E8B2 /* fast.mov in Resources */,
-				3F65B1371E7C405E0024E8B2 /* normal.mov in Resources */,
+				3F22A30D1E7C5FBE00AFF19B /* fast.mp4 in Resources */,
+				3F22A30C1E7C5FBC00AFF19B /* normal.mp4 in Resources */,
 				3F5D8E451E784AE70056F314 /* firenew.mp3 in Resources */,
 				609D1C551E6B0C7A0009A59F /* Assets.xcassets in Resources */,
 				04E3ED091E50389600DFDB61 /* Main.storyboard in Resources */,

@@ -73,17 +73,17 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
         
         attributedString.addAttribute(NSLinkAttributeName, value: "https://itunes.apple.com/in/genre/ios/id36?mt=8", range: NSRange(location: 14, length: 33))
         
-        attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-UltraLight", size: 31.0)!, range: NSRange(location: 0, length: 507))
+        attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-UltraLight", size: 34.0)!, range: NSRange(location: 0, length: 507))
         
         attributedString.addAttribute(NSForegroundColorAttributeName, value: UIColor.white, range: NSRange(location: 0, length: 507))
         
-        attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 31.0)!, range:NSRange(location: 0, length: 5))
+        attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 34.0)!, range:NSRange(location: 0, length: 5))
 
-        attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 31.0)!, range:NSRange(location: 16, length: 33))
+        attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 34.0)!, range:NSRange(location: 16, length: 33))
         
-        attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 31.0)!, range:NSRange(location: 93, length: 11))
+        attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 34.0)!, range:NSRange(location: 93, length: 11))
         
-        attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 31.0)!, range:NSRange(location: 471, length: 36))
+        attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 34.0)!, range:NSRange(location: 471, length: 36))
         
         attributedString.addAttribute(NSParagraphStyleAttributeName, value: paragraph, range: NSRange(location: 0, length: 507))
  
@@ -93,17 +93,17 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
         
         let attributedString1 = NSMutableAttributedString(string: "How it Works?\n     Common Room works alongside any of your favorite music apps. Simply start Common Room app first followed by opening your favorite music app to play songs then return back. You can control the volume of the fire crackle as well as turn it on and off via the menu in Common Room. Enjoy!")
         
-        attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-UltraLight", size: 31.0)!, range: NSRange(location: 0, length: 303))
+        attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-UltraLight", size: 34.0)!, range: NSRange(location: 0, length: 303))
         
         attributedString1.addAttribute(NSForegroundColorAttributeName, value: UIColor.white, range: NSRange(location: 0, length: 303))
         
-        attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 31.0)!, range:NSRange(location: 0, length: 13))
+        attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 34.0)!, range:NSRange(location: 0, length: 13))
         
-        attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 31.0)!, range:NSRange(location: 58, length: 21))
+        attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 34.0)!, range:NSRange(location: 58, length: 21))
         
-        attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 31.0)!, range:NSRange(location: 229, length: 9))
+        attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 34.0)!, range:NSRange(location: 229, length: 9))
         
-        attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 31.0)!, range:NSRange(location: 256, length: 12))
+        attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 34.0)!, range:NSRange(location: 256, length: 12))
         
         
         attributedString1.addAttribute(NSParagraphStyleAttributeName, value: paragraph, range: NSRange(location: 0, length: 303))
@@ -169,7 +169,7 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
     func playmyVideo(myString: String) {
         
         let bundle: Bundle = Bundle.main
-        let videoPlayer: String = bundle.path(forResource: myString, ofType: "mov")!
+        let videoPlayer: String = bundle.path(forResource: myString, ofType: "mp4")!
         let movieUrl : NSURL = NSURL.fileURL(withPath: videoPlayer) as NSURL
         
         print(movieUrl)
@@ -178,6 +178,9 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
         
         
     }
+    
+    
+    
     
     @IBAction func menuPressed(_ sender: UIButton) {
         
@@ -285,14 +288,14 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
             
             player.pause()
             fireonoffLabel.text = "Off"
-            
+             fireonoffLabel.textAlignment = .center
             
         } else {
             
             player.numberOfLoops = -1
             player.play()
             fireonoffLabel.text = "On"
-            
+            fireonoffLabel.textAlignment = .center
         }
         
         
