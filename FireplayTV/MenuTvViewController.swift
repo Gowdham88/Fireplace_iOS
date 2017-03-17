@@ -53,6 +53,7 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
     
     var player:AVAudioPlayer = AVAudioPlayer()
     var avPlayer: AVPlayer!
+   
     
     
     override func viewDidLoad() {
@@ -145,13 +146,13 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
         self.SetUpSound()
 //        self.setImageView()
         player.volume = 0.5
-//        
-//        let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(swipedDown(sender:)))
         
+        let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(swipedDown(sender:)))
         
+        tapRecognizer.allowedPressTypes = [NSNumber(value: UIPressType.playPause.rawValue)];
 
 //        self.view.addGestureRecognizer(tapRecognizer)
-//        self.videoView.addGestureRecognizer(tapRecognizer)
+        self.videoView.addGestureRecognizer(tapRecognizer)
         
 //        let swipeDown:UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: Selector(("swipedDown:")))
 //        swipeDown.direction = .down
@@ -165,11 +166,10 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
     
     
     
-    
     func playmyVideo(myString: String) {
         
         let bundle: Bundle = Bundle.main
-        let videoPlayer: String = bundle.path(forResource: myString, ofType: "mp4")!
+        let videoPlayer: String = bundle.path(forResource: myString, ofType: "mov")!
         let movieUrl : NSURL = NSURL.fileURL(withPath: videoPlayer) as NSURL
         
         print(movieUrl)
@@ -435,26 +435,27 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
         
     }
     
-//    func swipedDown(sender:UITapGestureRecognizer){
-//        NSLog("It worked")
-//        
-//        if self.viewupDown.isHidden {
-//            
-//            self.viewupDown.isHidden = false
-//            
-//        } else {
-//            
-//            self.viewupDown.isHidden = true
-//            
-//            self.videoControlpopup.isHidden = true
-//            self.infoPopupview.isHidden = true
-//            self.volumePopup.isHidden = true
-//            
-//            
-//            
-//        }
-//
-//    }
+    
+    func swipedDown(sender:UITapGestureRecognizer){
+        NSLog("It worked")
+        
+        if self.viewupDown.isHidden {
+            
+            self.viewupDown.isHidden = false
+            
+        } else {
+            
+            self.viewupDown.isHidden = true
+            
+            self.videoControlpopup.isHidden = true
+            self.infoPopupview.isHidden = true
+            self.volumePopup.isHidden = true
+            
+            
+            
+        }
+
+    }
 //    func handleTap(sender: UITapGestureRecognizer) {
 //        
 //        

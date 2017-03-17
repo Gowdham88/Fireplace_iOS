@@ -26,6 +26,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="zPD-t5-evi" appends="YES" id="dtt-7u-6mz"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gr3-JI-Xav">
                                 <rect key="frame" x="65" y="62" width="169" height="597"/>
@@ -210,6 +213,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NnG-CB-FSv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="zPD-t5-evi">
+                    <pressTypeMask key="allowedPressTypes" select="YES"/>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-1117" y="506"/>
         </scene>

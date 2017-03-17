@@ -17,11 +17,10 @@
 		3F5D8E471E784AF00056F314 /* firenew.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3F5D8E461E784AF00056F314 /* firenew.mp3 */; };
 		3F5D8E481E784AF00056F314 /* firenew.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3F5D8E461E784AF00056F314 /* firenew.mp3 */; };
 		3F62EB901E306CD600B2D659 /* firecrack.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3F62EB8F1E306CD600B2D659 /* firecrack.mp3 */; };
+		3F65B1361E7C405C0024E8B2 /* fast.mov in Resources */ = {isa = PBXBuildFile; fileRef = 3F65B1321E7C40350024E8B2 /* fast.mov */; };
+		3F65B1371E7C405E0024E8B2 /* normal.mov in Resources */ = {isa = PBXBuildFile; fileRef = 3F65B1331E7C40350024E8B2 /* normal.mov */; };
 		3FA745ED1E51695F0066C976 /* VideoPlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA745EC1E51695F0066C976 /* VideoPlay.swift */; };
 		3FA745FC1E516BEF0066C976 /* fire.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3FA745FB1E516BEF0066C976 /* fire.mp3 */; };
-		3FA745FD1E516C000066C976 /* fast.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3FA745FA1E516BE60066C976 /* fast.mp4 */; };
-		3FA745FE1E516C030066C976 /* slow00.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3FA745F91E516BE00066C976 /* slow00.mp4 */; };
-		3FA746031E516F7E0066C976 /* normal.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3FA745F81E516BDA0066C976 /* normal.mp4 */; };
 		3FC0F9461E78040D0090D4C7 /* fast.mov in Resources */ = {isa = PBXBuildFile; fileRef = 3FC0F9401E7803F90090D4C7 /* fast.mov */; };
 		3FC0F9471E7804110090D4C7 /* normal.mov in Resources */ = {isa = PBXBuildFile; fileRef = 3FC0F9411E7803F90090D4C7 /* normal.mov */; };
 		3FC0F9481E7804140090D4C7 /* slow00.mov in Resources */ = {isa = PBXBuildFile; fileRef = 3FC0F9421E7803F90090D4C7 /* slow00.mov */; };
@@ -68,10 +67,9 @@
 		3F5D8E431E784AE70056F314 /* firenew.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = firenew.mp3; sourceTree = "<group>"; };
 		3F5D8E461E784AF00056F314 /* firenew.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = firenew.mp3; sourceTree = "<group>"; };
 		3F62EB8F1E306CD600B2D659 /* firecrack.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = firecrack.mp3; sourceTree = "<group>"; };
+		3F65B1321E7C40350024E8B2 /* fast.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = fast.mov; sourceTree = "<group>"; };
+		3F65B1331E7C40350024E8B2 /* normal.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = normal.mov; sourceTree = "<group>"; };
 		3FA745EC1E51695F0066C976 /* VideoPlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPlay.swift; sourceTree = "<group>"; };
-		3FA745F81E516BDA0066C976 /* normal.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = normal.mp4; sourceTree = "<group>"; };
-		3FA745F91E516BE00066C976 /* slow00.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = slow00.mp4; sourceTree = "<group>"; };
-		3FA745FA1E516BE60066C976 /* fast.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = fast.mp4; sourceTree = "<group>"; };
 		3FA745FB1E516BEF0066C976 /* fire.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fire.mp3; sourceTree = "<group>"; };
 		3FC0F9401E7803F90090D4C7 /* fast.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = fast.mov; sourceTree = "<group>"; };
 		3FC0F9411E7803F90090D4C7 /* normal.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = normal.mov; sourceTree = "<group>"; };
@@ -139,9 +137,8 @@
 			children = (
 				3F1438D41E65324C0006A7C2 /* Crashlytics.framework */,
 				3F1438D51E65324C0006A7C2 /* Fabric.framework */,
-				3FA745FA1E516BE60066C976 /* fast.mp4 */,
-				3FA745F91E516BE00066C976 /* slow00.mp4 */,
-				3FA745F81E516BDA0066C976 /* normal.mp4 */,
+				3F65B1321E7C40350024E8B2 /* fast.mov */,
+				3F65B1331E7C40350024E8B2 /* normal.mov */,
 				3F5D8E431E784AE70056F314 /* firenew.mp3 */,
 				3FA745FB1E516BEF0066C976 /* fire.mp3 */,
 				04E3ED031E50389600DFDB61 /* AppDelegate.swift */,
@@ -366,12 +363,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FA746031E516F7E0066C976 /* normal.mp4 in Resources */,
 				3F5D8E481E784AF00056F314 /* firenew.mp3 in Resources */,
 				3FA745FC1E516BEF0066C976 /* fire.mp3 in Resources */,
-				3FA745FD1E516C000066C976 /* fast.mp4 in Resources */,
+				3F65B1361E7C405C0024E8B2 /* fast.mov in Resources */,
+				3F65B1371E7C405E0024E8B2 /* normal.mov in Resources */,
 				3F5D8E451E784AE70056F314 /* firenew.mp3 in Resources */,
-				3FA745FE1E516C030066C976 /* slow00.mp4 in Resources */,
 				609D1C551E6B0C7A0009A59F /* Assets.xcassets in Resources */,
 				04E3ED091E50389600DFDB61 /* Main.storyboard in Resources */,
 			);
