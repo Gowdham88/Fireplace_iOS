@@ -12,15 +12,18 @@
 		04E3ED091E50389600DFDB61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04E3ED071E50389600DFDB61 /* Main.storyboard */; };
 		3F1438D61E65324C0006A7C2 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F1438D41E65324C0006A7C2 /* Crashlytics.framework */; };
 		3F1438D71E65324C0006A7C2 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F1438D51E65324C0006A7C2 /* Fabric.framework */; };
-		3F3424E21E5B1D2300738AC0 /* fast.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3F3424DF1E5B1CCC00738AC0 /* fast.mp4 */; };
-		3F3424E31E5B1D2500738AC0 /* normal.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3F3424E01E5B1CCC00738AC0 /* normal.mp4 */; };
-		3F3424E41E5B1D2800738AC0 /* slow00.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3F3424E11E5B1CCC00738AC0 /* slow00.mp4 */; };
+		3F22A30C1E7C5FBC00AFF19B /* normal.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3F22A30A1E7C5FAC00AFF19B /* normal.mp4 */; };
+		3F22A30D1E7C5FBE00AFF19B /* fast.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3F22A30B1E7C5FAC00AFF19B /* fast.mp4 */; };
+		3F5D8E441E784AE70056F314 /* firenew.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3F5D8E431E784AE70056F314 /* firenew.mp3 */; };
+		3F5D8E451E784AE70056F314 /* firenew.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3F5D8E431E784AE70056F314 /* firenew.mp3 */; };
+		3F5D8E471E784AF00056F314 /* firenew.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3F5D8E461E784AF00056F314 /* firenew.mp3 */; };
+		3F5D8E481E784AF00056F314 /* firenew.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3F5D8E461E784AF00056F314 /* firenew.mp3 */; };
 		3F62EB901E306CD600B2D659 /* firecrack.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3F62EB8F1E306CD600B2D659 /* firecrack.mp3 */; };
 		3FA745ED1E51695F0066C976 /* VideoPlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA745EC1E51695F0066C976 /* VideoPlay.swift */; };
 		3FA745FC1E516BEF0066C976 /* fire.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3FA745FB1E516BEF0066C976 /* fire.mp3 */; };
-		3FA745FD1E516C000066C976 /* fast.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3FA745FA1E516BE60066C976 /* fast.mp4 */; };
-		3FA745FE1E516C030066C976 /* slow00.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3FA745F91E516BE00066C976 /* slow00.mp4 */; };
-		3FA746031E516F7E0066C976 /* normal.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3FA745F81E516BDA0066C976 /* normal.mp4 */; };
+		3FC0F9461E78040D0090D4C7 /* fast.mov in Resources */ = {isa = PBXBuildFile; fileRef = 3FC0F9401E7803F90090D4C7 /* fast.mov */; };
+		3FC0F9471E7804110090D4C7 /* normal.mov in Resources */ = {isa = PBXBuildFile; fileRef = 3FC0F9411E7803F90090D4C7 /* normal.mov */; };
+		3FC0F9481E7804140090D4C7 /* slow00.mov in Resources */ = {isa = PBXBuildFile; fileRef = 3FC0F9421E7803F90090D4C7 /* slow00.mov */; };
 		3FD3F28F1E35D1FB00B74A84 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FD3F28D1E35D1FB00B74A84 /* Crashlytics.framework */; };
 		3FD3F2901E35D1FB00B74A84 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FD3F28E1E35D1FB00B74A84 /* Fabric.framework */; };
 		3FE88CCD1E2F34CE0044F19A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE88CCC1E2F34CE0044F19A /* AppDelegate.swift */; };
@@ -31,6 +34,7 @@
 		3FE88CED1E2F34CE0044F19A /* firecrackUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE88CEC1E2F34CE0044F19A /* firecrackUITests.swift */; };
 		3FF397221E56CA7900746811 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF397211E56CA7900746811 /* MenuViewController.swift */; };
 		3FF397241E5701D900746811 /* sliderDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF397231E5701D900746811 /* sliderDesign.swift */; };
+		6041643C1E6EE07300773DCF /* CustomFocusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6041643B1E6EE07200773DCF /* CustomFocusButton.swift */; };
 		609D1C531E6B03040009A59F /* MenuTvViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609D1C521E6B03040009A59F /* MenuTvViewController.swift */; };
 		609D1C551E6B0C7A0009A59F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 609D1C541E6B0C7A0009A59F /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -60,15 +64,18 @@
 		04E3ED0C1E50389600DFDB61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F1438D41E65324C0006A7C2 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		3F1438D51E65324C0006A7C2 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
-		3F3424DF1E5B1CCC00738AC0 /* fast.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = fast.mp4; sourceTree = "<group>"; };
-		3F3424E01E5B1CCC00738AC0 /* normal.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = normal.mp4; sourceTree = "<group>"; };
-		3F3424E11E5B1CCC00738AC0 /* slow00.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = slow00.mp4; sourceTree = "<group>"; };
+		3F22A30A1E7C5FAC00AFF19B /* normal.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = normal.mp4; sourceTree = "<group>"; };
+		3F22A30B1E7C5FAC00AFF19B /* fast.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = fast.mp4; sourceTree = "<group>"; };
+		3F5D8E431E784AE70056F314 /* firenew.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = firenew.mp3; sourceTree = "<group>"; };
+		3F5D8E461E784AF00056F314 /* firenew.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = firenew.mp3; sourceTree = "<group>"; };
 		3F62EB8F1E306CD600B2D659 /* firecrack.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = firecrack.mp3; sourceTree = "<group>"; };
+		3F65B1321E7C40350024E8B2 /* fast.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = fast.mov; sourceTree = "<group>"; };
+		3F65B1331E7C40350024E8B2 /* normal.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = normal.mov; sourceTree = "<group>"; };
 		3FA745EC1E51695F0066C976 /* VideoPlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPlay.swift; sourceTree = "<group>"; };
-		3FA745F81E516BDA0066C976 /* normal.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = normal.mp4; sourceTree = "<group>"; };
-		3FA745F91E516BE00066C976 /* slow00.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = slow00.mp4; sourceTree = "<group>"; };
-		3FA745FA1E516BE60066C976 /* fast.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = fast.mp4; sourceTree = "<group>"; };
 		3FA745FB1E516BEF0066C976 /* fire.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fire.mp3; sourceTree = "<group>"; };
+		3FC0F9401E7803F90090D4C7 /* fast.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = fast.mov; sourceTree = "<group>"; };
+		3FC0F9411E7803F90090D4C7 /* normal.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = normal.mov; sourceTree = "<group>"; };
+		3FC0F9421E7803F90090D4C7 /* slow00.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = slow00.mov; sourceTree = "<group>"; };
 		3FD33DE51E2F4EB200B6FFEA /* firecrack.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = firecrack.entitlements; sourceTree = "<group>"; };
 		3FD3F28D1E35D1FB00B74A84 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		3FD3F28E1E35D1FB00B74A84 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
@@ -86,6 +93,7 @@
 		3FE88CEE1E2F34CE0044F19A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FF397211E56CA7900746811 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		3FF397231E5701D900746811 /* sliderDesign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sliderDesign.swift; sourceTree = "<group>"; };
+		6041643B1E6EE07200773DCF /* CustomFocusButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomFocusButton.swift; sourceTree = "<group>"; };
 		609D1C521E6B03040009A59F /* MenuTvViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTvViewController.swift; sourceTree = "<group>"; };
 		609D1C541E6B0C7A0009A59F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -131,14 +139,17 @@
 			children = (
 				3F1438D41E65324C0006A7C2 /* Crashlytics.framework */,
 				3F1438D51E65324C0006A7C2 /* Fabric.framework */,
-				3FA745FA1E516BE60066C976 /* fast.mp4 */,
-				3FA745F91E516BE00066C976 /* slow00.mp4 */,
-				3FA745F81E516BDA0066C976 /* normal.mp4 */,
+				3F65B1321E7C40350024E8B2 /* fast.mov */,
+				3F65B1331E7C40350024E8B2 /* normal.mov */,
+				3F5D8E431E784AE70056F314 /* firenew.mp3 */,
+				3F22A30A1E7C5FAC00AFF19B /* normal.mp4 */,
+				3F22A30B1E7C5FAC00AFF19B /* fast.mp4 */,
 				3FA745FB1E516BEF0066C976 /* fire.mp3 */,
 				04E3ED031E50389600DFDB61 /* AppDelegate.swift */,
 				609D1C521E6B03040009A59F /* MenuTvViewController.swift */,
 				609D1C541E6B0C7A0009A59F /* Assets.xcassets */,
 				04E3ED071E50389600DFDB61 /* Main.storyboard */,
+				6041643B1E6EE07200773DCF /* CustomFocusButton.swift */,
 				3FA745EC1E51695F0066C976 /* VideoPlay.swift */,
 				04E3ED0C1E50389600DFDB61 /* Info.plist */,
 			);
@@ -173,9 +184,10 @@
 			isa = PBXGroup;
 			children = (
 				3FD33DE51E2F4EB200B6FFEA /* firecrack.entitlements */,
-				3F3424DF1E5B1CCC00738AC0 /* fast.mp4 */,
-				3F3424E01E5B1CCC00738AC0 /* normal.mp4 */,
-				3F3424E11E5B1CCC00738AC0 /* slow00.mp4 */,
+				3FC0F9401E7803F90090D4C7 /* fast.mov */,
+				3F5D8E461E784AF00056F314 /* firenew.mp3 */,
+				3FC0F9411E7803F90090D4C7 /* normal.mov */,
+				3FC0F9421E7803F90090D4C7 /* slow00.mov */,
 				3FE88CCC1E2F34CE0044F19A /* AppDelegate.swift */,
 				04A5F4E71E48C7580003AFC9 /* VideoPlay.swift */,
 				3FF397231E5701D900746811 /* sliderDesign.swift */,
@@ -355,10 +367,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FA746031E516F7E0066C976 /* normal.mp4 in Resources */,
+				3F5D8E481E784AF00056F314 /* firenew.mp3 in Resources */,
 				3FA745FC1E516BEF0066C976 /* fire.mp3 in Resources */,
-				3FA745FD1E516C000066C976 /* fast.mp4 in Resources */,
-				3FA745FE1E516C030066C976 /* slow00.mp4 in Resources */,
+				3F22A30D1E7C5FBE00AFF19B /* fast.mp4 in Resources */,
+				3F22A30C1E7C5FBC00AFF19B /* normal.mp4 in Resources */,
+				3F5D8E451E784AE70056F314 /* firenew.mp3 in Resources */,
 				609D1C551E6B0C7A0009A59F /* Assets.xcassets in Resources */,
 				04E3ED091E50389600DFDB61 /* Main.storyboard in Resources */,
 			);
@@ -368,12 +381,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F3424E21E5B1D2300738AC0 /* fast.mp4 in Resources */,
-				3F3424E31E5B1D2500738AC0 /* normal.mp4 in Resources */,
-				3F3424E41E5B1D2800738AC0 /* slow00.mp4 in Resources */,
 				3FE88CD71E2F34CE0044F19A /* LaunchScreen.storyboard in Resources */,
+				3F5D8E441E784AE70056F314 /* firenew.mp3 in Resources */,
+				3FC0F9461E78040D0090D4C7 /* fast.mov in Resources */,
+				3FC0F9471E7804110090D4C7 /* normal.mov in Resources */,
+				3FC0F9481E7804140090D4C7 /* slow00.mov in Resources */,
 				3F62EB901E306CD600B2D659 /* firecrack.mp3 in Resources */,
 				3FE88CD41E2F34CE0044F19A /* Assets.xcassets in Resources */,
+				3F5D8E471E784AF00056F314 /* firenew.mp3 in Resources */,
 				3FE88CD21E2F34CE0044F19A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -429,6 +444,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FA745ED1E51695F0066C976 /* VideoPlay.swift in Sources */,
+				6041643C1E6EE07300773DCF /* CustomFocusButton.swift in Sources */,
 				04E3ED041E50389600DFDB61 /* AppDelegate.swift in Sources */,
 				609D1C531E6B03040009A59F /* MenuTvViewController.swift in Sources */,
 			);
@@ -569,6 +585,8 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				DEBUG_ACTIVITY_MODE = "";
+				"DEBUG_ACTIVITY_MODE[sdk=iphonesimulator*]" = disable;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -619,6 +637,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				DEBUG_ACTIVITY_MODE = "";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -643,6 +662,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 7NT378UGZ7;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -653,6 +673,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.CZ.CommonroomTV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -661,6 +683,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 7NT378UGZ7;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -671,6 +694,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.CZ.CommonroomTV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

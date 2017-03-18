@@ -16,26 +16,33 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet var videoView: VideoPlay!
     @IBOutlet var viewupDown: UIView!
-    @IBOutlet var menuBtn: UIButton!
-    @IBOutlet var fastBtn: UIButton!
-    @IBOutlet var fireBtn: UIButton!
-    @IBOutlet var infoBtn: UIButton!
-  
+
+    @IBOutlet var menuBtn: CustomFocusButton!
+    @IBOutlet var fireBtn: CustomFocusButton!
+    @IBOutlet var fastBtn: CustomFocusButton!
+    @IBOutlet var infoBtn: CustomFocusButton!
+    @IBOutlet var volumeBtn: CustomFocusButton!
+    @IBOutlet var volumeupBtn: CustomFocusButton!
+    @IBOutlet var volumedownBtn: CustomFocusButton!
+    @IBOutlet var normalBtn: CustomFocusButton!
+    @IBOutlet var forwardBtn: CustomFocusButton!
+    @IBOutlet var imageFade: UIImageView!
+//    @IBOutlet var btnhideShow: UIButton!
+    @IBOutlet var fireOnoff: UIView!
     
+    
+    @IBOutlet var fireonoffLabel: UILabel!
     @IBOutlet var videoControlpopup: UIView!
-    @IBOutlet var slowBtn: UIButton!
-    
-    @IBOutlet var normalBtn: UIButton!
-    @IBOutlet var forwardBtn: UIButton!
     
     
     @IBOutlet var volumePopup: UIView!
-    @IBOutlet var volumeBtn: UIButton!
+
     
     
     @IBOutlet var infoPopupview: UIView!
    
     @IBOutlet var infoTextview: UITextView!
+    @IBOutlet var infoTextview1: UITextView!
     var fastBtncenter: CGPoint!
     var fireBtncenter: CGPoint!
     var infoBtncenter: CGPoint!
@@ -46,6 +53,7 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
     
     var player:AVAudioPlayer = AVAudioPlayer()
     var avPlayer: AVPlayer!
+   
     
     
     override func viewDidLoad() {
@@ -56,27 +64,62 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
         let paragraph = NSMutableParagraphStyle()
         
         paragraph.alignment = .justified
+       
         
-        let attributedString = NSMutableAttributedString(string: "The Common Room Virtual Fireplace App was designed with love by 5x entrepreneur, Arjun Rai. The goal of this is to create the ultimate mobile and relaxing ambience anywhere and anytime. Rai’s passion for fireplaces along with minimalism in art has led him to build several apps and startups over the years since he was a teenager. Common Room is yet another effort to bringing beautiful experiences to everyone...just a bit more relaxing this time around. :) Follow him at twitter.com/arjunraime")
-        
-        attributedString.addAttribute(NSLinkAttributeName, value: "http://arjunrai.me/", range: NSRange(location: 81, length: 10))
-        
-        attributedString.addAttribute(NSLinkAttributeName, value: "https://itunes.apple.com/in/genre/ios/id36?mt=8", range: NSRange(location: 4, length: 33))
-        
-        attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "Helvetica Neue", size: 35.0)!, range: NSRange(location: 0, length: 495))
-        
-        attributedString.addAttribute(NSForegroundColorAttributeName, value: UIColor.white, range: NSRange(location: 0, length: 495))
+        let attributedString = NSMutableAttributedString(string: "About\n      The Common Room Virtual Fireplace App was designed with love by 5x entrepreneur, Arjun Rai. The goal of this is to create the ultimate mobile and relaxing ambience anywhere and anytime. Rai’s passion for fireplaces along with minimalism in art has led him to build several apps and startups over the years since he was a teenager. Common Room is yet another effort to bringing beautiful experiences to everyone...just a bit more relaxing this time around. :) Follow him at twitter.com/arjunraime")
         
         
-        attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "HelveticaNeue-Bold",size: 35.0)!, range:NSRange(location: 4, length: 33))
+        attributedString.addAttribute(NSLinkAttributeName, value: "http://arjunrai.me/", range: NSRange(location: 92, length: 10))
         
-        attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "HelveticaNeue-Bold",size: 35.0)!, range:NSRange(location: 81, length: 9))
+        attributedString.addAttribute(NSLinkAttributeName, value: "https://itunes.apple.com/in/genre/ios/id36?mt=8", range: NSRange(location: 14, length: 33))
         
-        attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "HelveticaNeue-Bold",size: 35.0)!, range:NSRange(location: 473, length: 22))
+        attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-UltraLight", size: 34.0)!, range: NSRange(location: 0, length: 507))
         
-        attributedString.addAttribute(NSParagraphStyleAttributeName, value: paragraph, range: NSRange(location: 0, length: 495))
+        attributedString.addAttribute(NSForegroundColorAttributeName, value: UIColor.white, range: NSRange(location: 0, length: 507))
         
+        attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 34.0)!, range:NSRange(location: 0, length: 5))
+
+        attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 34.0)!, range:NSRange(location: 16, length: 33))
+        
+        attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 34.0)!, range:NSRange(location: 93, length: 11))
+        
+        attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 34.0)!, range:NSRange(location: 471, length: 36))
+        
+        attributedString.addAttribute(NSParagraphStyleAttributeName, value: paragraph, range: NSRange(location: 0, length: 507))
+ 
         infoTextview.attributedText = attributedString
+        
+    /*************************how it works****************/
+        
+        let attributedString1 = NSMutableAttributedString(string: "How it Works?\n     Common Room works alongside any of your favorite music apps. Simply start Common Room app first followed by opening your favorite music app to play songs then return back. You can control the volume of the fire crackle as well as turn it on and off via the menu in Common Room. Enjoy!")
+        
+        attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-UltraLight", size: 34.0)!, range: NSRange(location: 0, length: 303))
+        
+        attributedString1.addAttribute(NSForegroundColorAttributeName, value: UIColor.white, range: NSRange(location: 0, length: 303))
+        
+        attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 34.0)!, range:NSRange(location: 0, length: 13))
+        
+        attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 34.0)!, range:NSRange(location: 58, length: 21))
+        
+        attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 34.0)!, range:NSRange(location: 229, length: 9))
+        
+        attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 34.0)!, range:NSRange(location: 256, length: 12))
+        
+        
+        attributedString1.addAttribute(NSParagraphStyleAttributeName, value: paragraph, range: NSRange(location: 0, length: 303))
+        
+        
+        infoTextview1.attributedText = attributedString1
+      
+        /******************** Image fade ***********************/
+       
+        self.imageFade.isHidden = false
+        UIView.animate(withDuration: 3, delay:1, options:UIViewAnimationOptions.transitionFlipFromTop, animations: {
+            self.imageFade.alpha = 0
+        }, completion: { finished in
+            self.imageFade.isHidden = true
+        })
+
         
         /*******************************************/
 
@@ -93,16 +136,33 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
         infoBtn.center = menuBtn.center
         volumeBtn.center = menuBtn.center
         
+//        self.viewupDown.isHidden = true
+
         infoPopupview.isHidden = true
         videoControlpopup.isHidden = true
         volumePopup.isHidden = true
+        fireOnoff.isHidden = true
      
         self.SetUpSound()
+//        self.setImageView()
         player.volume = 0.5
         
+        let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(swipedDown(sender:)))
         
+        tapRecognizer.allowedPressTypes = [NSNumber(value: UIPressType.playPause.rawValue)];
+
+//        self.view.addGestureRecognizer(tapRecognizer)
+        self.videoView.addGestureRecognizer(tapRecognizer)
+        
+//        let swipeDown:UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: Selector(("swipedDown:")))
+//        swipeDown.direction = .down
+//        videoView.addGestureRecognizer(swipeDown)
+        
+        
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(willEnterForeground), name:NSNotification.Name.UIApplicationWillEnterForeground, object: nil)
+   
     }
-    
     
     
     
@@ -119,7 +179,14 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
         
     }
     
+    
+    
+    
     @IBAction func menuPressed(_ sender: UIButton) {
+        
+        
+     
+/*************************menu button animation*********************/
         
         if menuBtn.currentImage == #imageLiteral(resourceName: "unmenu"){
             
@@ -136,9 +203,13 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
                 self.volumeBtn.center = self.volumeBtncenter
                 
             })
+            
+             self.imageFade.alpha = 1
+             self.imageFade.isHidden = false
     
     }
         else {
+            
             
             UIView.animate(withDuration: 0.3, animations: {
 
@@ -147,26 +218,33 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
                 self.infoBtn.alpha = 0
                 self.volumeBtn.alpha = 0
                 
+                
                 self.fastBtn.center = self.menuBtn.center
                 self.fireBtn.center = self.menuBtn.center
                 self.infoBtn.center = self.menuBtn.center
                 self.volumeBtn.center = self.menuBtn.center
-
+                
                 
                 
             })
-            
+           
+
             if menuBtn.isHidden == false {
                 
                 videoControlpopup.isHidden = true
                 infoPopupview.isHidden = true
                 volumePopup.isHidden = true
+                fireOnoff.isHidden = true
+                self.imageFade.alpha = 0
+                self.imageFade.isHidden = true
+                
+                
             }
             
         }
         
         
-        toggleButton(button: sender, onImage: #imageLiteral(resourceName: "menu"), offImage: #imageLiteral(resourceName: "unmenu") )
+        toggleButton(button: sender, onImage: #imageLiteral(resourceName: "menu"), offImage: #imageLiteral(resourceName: "unmenu"))
 
         
     }
@@ -181,28 +259,43 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
             
             infoPopupview.isHidden = true
             volumePopup.isHidden = true
+            fireOnoff.isHidden = true
             
         } else {
             
             videoControlpopup.isHidden = true
             infoPopupview.isHidden = true
             volumePopup.isHidden = true
+            fireOnoff.isHidden = true
         }
         
     }
     
 
     @IBAction func firePressed(_ sender: UIButton) {
+        
+        if fireOnoff.isHidden == true {
+            
+            fireOnoff.isHidden = false
+            infoPopupview.isHidden = true
+            videoControlpopup.isHidden = true
+            volumePopup.isHidden = true
+            
+        }
+
        
         if player.isPlaying {
             
             player.pause()
+            fireonoffLabel.text = "Off"
+             fireonoffLabel.textAlignment = .center
             
         } else {
             
             player.numberOfLoops = -1
             player.play()
-            
+            fireonoffLabel.text = "On"
+            fireonoffLabel.textAlignment = .center
         }
         
         
@@ -210,11 +303,14 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
 
     @IBAction func infoPressed(_ sender: UIButton) {
         
+        infoPopupview.layer.cornerRadius = 30
+        
         if infoPopupview.isHidden == true {
             
             infoPopupview.isHidden = false
             videoControlpopup.isHidden = true
             volumePopup.isHidden = true
+            fireOnoff.isHidden = true
             
         } else {
             
@@ -233,6 +329,7 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
             
             videoControlpopup.isHidden = true
             infoPopupview.isHidden = true
+            fireOnoff.isHidden = true
             
             
         } else {
@@ -282,10 +379,6 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
     }
 
     
-    @IBAction func slowPressed(_ sender: Any) {
-        
-        playmyVideo(myString: "slow00")
-    }
     
     @IBAction func normalPressed(_ sender: Any) {
         
@@ -323,11 +416,61 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
         }
         
     }
-    /**************** sound setup for playing background music ***********/
+    
+    @IBAction func btnhideshowPressed(_ sender: UIButton) {
+        
+                if self.viewupDown.isHidden {
+            
+                        self.viewupDown.isHidden = false
+            
+                    } else {
+            
+                        self.viewupDown.isHidden = true
+            
+                        self.videoControlpopup.isHidden = true
+                        self.infoPopupview.isHidden = true
+                        self.volumePopup.isHidden = true
+                        fireOnoff.isHidden = true
+                        
+                        
+                        
+                    }
+        
+    }
+    
+    
+    func swipedDown(sender:UITapGestureRecognizer){
+        NSLog("It worked")
+        
+        if self.viewupDown.isHidden {
+            
+            self.viewupDown.isHidden = false
+            
+        } else {
+            
+            self.viewupDown.isHidden = true
+            
+            self.videoControlpopup.isHidden = true
+            self.infoPopupview.isHidden = true
+            self.volumePopup.isHidden = true
+            
+            
+            
+        }
+
+    }
+//    func handleTap(sender: UITapGestureRecognizer) {
+//        
+//        
+//    }
+    
+    
+
+       /**************** sound setup for playing background music ***********/
     
     func SetUpSound() {
         
-        if let path = Bundle.main.path(forResource: "fire", ofType: "mp3") {
+        if let path = Bundle.main.path(forResource: "firenew", ofType: "mp3") {
             let filePath = NSURL(fileURLWithPath:path)
             player = try! AVAudioPlayer.init(contentsOf: filePath as URL)
             player.numberOfLoops = -1 //logic for infinite loop

@@ -66,7 +66,10 @@ class VideoPlay: UIView {
         player.play()
         
         loopVideo(videoPlayer: player)
+        
+
     }
+    
     
     func toggleMute() {
         player.isMuted = !player.isMuted
@@ -84,7 +87,7 @@ class VideoPlay: UIView {
     func loopVideo(videoPlayer: AVPlayer) {
         
         NotificationCenter.default.addObserver(forName: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: nil, queue: nil) { [weak videoPlayer] notification in
-            let t1 = CMTimeMake(5, 100);
+            let t1 = CMTimeMake(0, 100);
             self.player.seek(to: t1)
             videoPlayer?.seek(to: kCMTimeZero)
             self.player.play()
