@@ -37,6 +37,8 @@ class MenuViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var volumePopup: UIView!
     @IBOutlet var volumeSlider: UISlider!
     @IBOutlet var imgaefade1: UIImageView!
+    @IBOutlet var fireOnoff: UIView!
+    @IBOutlet var onoffLabel: UILabel!
     
     
     
@@ -64,24 +66,24 @@ class MenuViewController: UIViewController, UITextFieldDelegate {
         
         paragraph.alignment = .justified
         
-        let attributedString = NSMutableAttributedString(string: "About\n     The Common Room Virtual Fireplace App was designed with love by 5x entrepreneur, Arjun Rai. The goal of this is to create the ultimate mobile and relaxing ambience anywhere and anytime. Rai’s passion for fireplaces along with minimalism in art has led him to build several apps and startups over the years since he was a teenager. Common Room is yet another effort to bringing beautiful experiences to everyone...just a bit more relaxing this time around. :) Follow him at twitter.com/arjunraime")
+        let attributedString = NSMutableAttributedString(string: "About\n      The Common Room Virtual Fireplace App was designed with love by 5x entrepreneur, Arjun Rai. The goal of this is to create the ultimate mobile and relaxing ambience anywhere and anytime. Rai’s passion for fireplaces along with minimalism in art has led him to build several apps and startups over the years since he was a teenager. Common Room is yet another effort to bringing beautiful experiences to everyone...just a bit more relaxing this time around. :) Follow him at twitter.com/arjunraime")
         
         
         attributedString.addAttribute(NSLinkAttributeName, value: "http://arjunrai.me/", range: NSRange(location: 92, length: 10))
         
         attributedString.addAttribute(NSLinkAttributeName, value: "https://itunes.apple.com/in/genre/ios/id36?mt=8", range: NSRange(location: 14, length: 33))
         
-        attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-UltraLight", size: 14.0)!, range: NSRange(location: 0, length: 506))
+        attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-UltraLight", size: 12.0)!, range: NSRange(location: 0, length: 506))
         
         attributedString.addAttribute(NSForegroundColorAttributeName, value: UIColor.white, range: NSRange(location: 0, length: 506))
         
-        attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 14.0)!, range:NSRange(location: 0, length: 5))
+        attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 12.0)!, range:NSRange(location: 0, length: 5))
         
-        attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 14.0)!, range:NSRange(location: 15, length: 33))
+        attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 12.0)!, range:NSRange(location: 15, length: 33))
         
-        attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 14.0)!, range:NSRange(location: 92, length: 11))
+        attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 12.0)!, range:NSRange(location: 92, length: 11))
         
-        attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 14.0)!, range:NSRange(location: 470, length: 36))
+        attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 12.0)!, range:NSRange(location: 470, length: 36))
         
         attributedString.addAttribute(NSParagraphStyleAttributeName, value: paragraph, range: NSRange(location: 0, length: 506))
         
@@ -91,17 +93,17 @@ class MenuViewController: UIViewController, UITextFieldDelegate {
         
         let attributedString1 = NSMutableAttributedString(string: "How it Works?\n       Common Room works alongside any of your favorite music apps. Simply start Common Room app first followed by opening your favorite music app to play songs then return back. You can control the volume of the fire crackle as well as turn it on and off via the menu in Common Room. Enjoy!")
         
-        attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-UltraLight", size: 14.0)!, range: NSRange(location: 0, length: 305))
+        attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-UltraLight", size: 12.0)!, range: NSRange(location: 0, length: 305))
         
         attributedString1.addAttribute(NSForegroundColorAttributeName, value: UIColor.white, range: NSRange(location: 0, length: 305))
         
-        attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 14.0)!, range:NSRange(location: 0, length: 13))
+        attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 12.0)!, range:NSRange(location: 0, length: 13))
         
-        attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 14.0)!, range:NSRange(location: 60, length: 21))
+        attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 12.0)!, range:NSRange(location: 60, length: 21))
         
-        attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 14.0)!, range:NSRange(location: 231, length: 9))
+        attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 12.0)!, range:NSRange(location: 231, length: 9))
         
-        attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 14.0)!, range:NSRange(location: 258, length: 12))
+        attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 12.0)!, range:NSRange(location: 258, length: 12))
         
         
         attributedString1.addAttribute(NSParagraphStyleAttributeName, value: paragraph, range: NSRange(location: 0, length: 305))
@@ -116,6 +118,13 @@ class MenuViewController: UIViewController, UITextFieldDelegate {
             self.imgaefade1.alpha = 0
         }, completion: { finished in
             self.imgaefade1.isHidden = true
+        })
+       /**********************/
+        self.viewupDown.isHidden = false
+        UIView.animate(withDuration: 3, delay:1, options:UIViewAnimationOptions.transitionFlipFromTop, animations: {
+            self.viewupDown.alpha = 0
+        }, completion: { finished in
+            self.viewupDown.isHidden = true
         })
         
 
@@ -142,11 +151,13 @@ class MenuViewController: UIViewController, UITextFieldDelegate {
         
      
         
-        self.viewupDown.isHidden = true
+//        self.viewupDown.isHidden = true
         popViewslider.isHidden = true
         videoContolpopup.isHidden = true
         infoPopup.isHidden = true
         volumePopup.isHidden = true
+        fireOnoff.isHidden = true
+
         
         
         
@@ -253,6 +264,8 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
             popViewslider.isHidden = true
             infoPopup.isHidden = true
             volumePopup.isHidden = true
+            fireOnoff.isHidden = true
+
         }
    toggleButton(button: sender, onImage: #imageLiteral(resourceName: "line-1"), offImage: #imageLiteral(resourceName: "unline-1"))
     
@@ -269,12 +282,16 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
             popViewslider.isHidden = true
             infoPopup.isHidden = true
             volumePopup.isHidden = true
+            fireOnoff.isHidden = true
+
         } else {
             
             videoContolpopup.isHidden = true
              popViewslider.isHidden = true
             infoPopup.isHidden = true
             volumePopup.isHidden = true
+            fireOnoff.isHidden = true
+
         }
         
         
@@ -284,14 +301,32 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
     }
     @IBAction func firePressed(_ sender: UIButton) {
         
+        if fireOnoff.isHidden == true {
+            
+            fireOnoff.isHidden = false
+            infoPopup.isHidden = true
+            popViewslider.isHidden = true
+            videoContolpopup.isHidden = true
+            volumePopup.isHidden = true
+            
+        }
+//        }else {
+//            
+//            fireOnoff.isHidden = true
+
+        
+        
         if player.isPlaying {
             
             player.pause()
-            
+            onoffLabel.textAlignment = .center
+            onoffLabel.text = "Off"
         } else {
             
             player.numberOfLoops = -1
             player.play()
+            onoffLabel.textAlignment = .center
+            onoffLabel.text = "On"
             
         }
        
@@ -308,6 +343,8 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
             popViewslider.isHidden = true
             videoContolpopup.isHidden = true
             volumePopup.isHidden = true
+            fireOnoff.isHidden = true
+
         } else {
             
             infoPopup.isHidden = true
@@ -345,6 +382,8 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
             videoContolpopup.isHidden = true
             infoPopup.isHidden = true
             volumePopup.isHidden = true
+            fireOnoff.isHidden = true
+
         } else {
             
             popViewslider.isHidden = true
@@ -408,6 +447,8 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
             popViewslider.isHidden = true
             videoContolpopup.isHidden = true
             infoPopup.isHidden = true
+            fireOnoff.isHidden = true
+
             
             
         } else {
@@ -434,14 +475,19 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
         if self.viewupDown.isHidden {
             
             self.viewupDown.isHidden = false
-            
+            self.imgaefade1.isHidden = false
+            self.imgaefade1.alpha = 1
+            self.viewupDown.alpha = 1
         } else {
             
             self.viewupDown.isHidden = true
+            self.imgaefade1.isHidden = true
             self.popViewslider.isHidden = true
              self.videoContolpopup.isHidden = true
             self.infoPopup.isHidden = true
             self.volumePopup.isHidden = true
+            self.fireOnoff.isHidden = true
+
             
             
             

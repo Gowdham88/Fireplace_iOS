@@ -27,7 +27,7 @@
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="FL7-Xt-HI4" appends="YES" id="M6T-zR-ZsH"/>
+                                    <outletCollection property="gestureRecognizers" destination="zPD-t5-evi" appends="YES" id="dtt-7u-6mz"/>
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gr3-JI-Xav">
@@ -86,31 +86,43 @@
                                     </button>
                                 </subviews>
                             </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="az4-dD-Vnd">
+                                <rect key="frame" x="250" y="170" width="240" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TkT-To-iFp">
+                                        <rect key="frame" x="36" y="26" width="141" height="58"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                        <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.12939649820327759" green="0.12942153215408325" blue="0.12939104437828064" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image text" translatesAutoresizingMaskIntoConstraints="NO" id="i4C-bt-NRi">
-                                <rect key="frame" x="1370" y="30" width="505" height="130"/>
+                                <rect key="frame" x="1435" y="30" width="450" height="117"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X2M-Gf-i1t" userLabel="Info popup">
-                                <rect key="frame" x="269" y="215" width="1482" height="650"/>
+                                <rect key="frame" x="269" y="170" width="1482" height="706"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l36-zR-1Cf">
-                                        <rect key="frame" x="8" y="18" width="1445" height="322"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="laP-pt-ck3">
+                                        <rect key="frame" x="19" y="404" width="1445" height="294"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="0.0" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l36-zR-1Cf">
+                                        <rect key="frame" x="19" y="8" width="1445" height="369"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         <dataDetectorType key="dataDetectorTypes" link="YES"/>
                                     </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="laP-pt-ck3">
-                                        <rect key="frame" x="0.0" y="355" width="1445" height="274"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="0.69291487068965518" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.68000000000000005" colorSpace="calibratedRGB"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zuC-X7-qPt" userLabel="controlView">
                                 <rect key="frame" x="250" y="297" width="600" height="120"/>
@@ -179,6 +191,8 @@
                     <connections>
                         <outlet property="fastBtn" destination="WH1-sb-ZmB" id="iox-5X-9dG"/>
                         <outlet property="fireBtn" destination="jJx-Ez-hLy" id="R6R-mV-JB9"/>
+                        <outlet property="fireOnoff" destination="az4-dD-Vnd" id="TaO-je-hdT"/>
+                        <outlet property="fireonoffLabel" destination="TkT-To-iFp" id="TpA-UO-cvs"/>
                         <outlet property="forwardBtn" destination="T63-hx-pLn" id="mAq-CB-Xy9"/>
                         <outlet property="imageFade" destination="i4C-bt-NRi" id="hAd-LF-Gr0"/>
                         <outlet property="infoBtn" destination="1FO-V6-miI" id="3nF-iZ-ezi"/>
@@ -197,7 +211,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NnG-CB-FSv" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="FL7-Xt-HI4">
+                <tapGestureRecognizer id="zPD-t5-evi">
                     <pressTypeMask key="allowedPressTypes" select="YES"/>
                 </tapGestureRecognizer>
             </objects>
@@ -211,7 +225,7 @@
         <image name="information" width="356" height="356"/>
         <image name="normalplay" width="50" height="67"/>
         <image name="speed-1" width="253" height="201"/>
-        <image name="unmenu" width="204" height="104"/>
+        <image name="unmenu" width="166" height="63"/>
         <image name="volumeDown" width="148" height="55"/>
         <image name="volumeUp" width="148" height="55"/>
         <image name="volumee" width="306" height="248"/>
