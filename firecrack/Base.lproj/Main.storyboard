@@ -38,7 +38,7 @@
                                         <rect key="frame" x="0.0" y="4" width="50" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.16862745098039217" green="0.16862745098039217" blue="0.16862745098039217" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" image="unline-1"/>
+                                        <state key="normal" image="unline-4"/>
                                         <connections>
                                             <action selector="menupressed:" destination="ROd-Xh-s8q" eventType="touchUpInside" id="B57-ac-t4h"/>
                                         </connections>
@@ -111,39 +111,26 @@
                                 <color key="backgroundColor" red="0.16860893368721008" green="0.16863927245140076" blue="0.16860231757164001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fwk-Kk-aqa">
-                                <rect key="frame" x="87" y="153" width="350" height="35"/>
+                                <rect key="frame" x="87" y="153" width="147" height="35"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VOA-Vh-sA8">
-                                        <rect key="frame" x="26" y="5" width="27" height="27"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="slownew"/>
-                                        <connections>
-                                            <action selector="slowPressed:" destination="ROd-Xh-s8q" eventType="touchUpInside" id="zU1-UW-YHD"/>
-                                        </connections>
-                                    </button>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PWX-iR-FIg">
-                                        <rect key="frame" x="50" y="15" width="113" height="2"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <rect key="frame" x="44" y="16" width="50" height="2"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.36074990034103394" green="0.36080628633499146" blue="0.36073756217956543" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="64V-SH-eKb">
-                                        <rect key="frame" x="186" y="15" width="113" height="2"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.36074990029999998" green="0.3608062863" blue="0.36073756219999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </view>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9vb-ib-v9m">
-                                        <rect key="frame" x="161" y="3" width="27" height="27"/>
+                                        <rect key="frame" x="13" y="7" width="19" height="20"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="normalnew"/>
+                                        <state key="normal" image="normalnew-1"/>
                                         <connections>
                                             <action selector="normalPressed:" destination="ROd-Xh-s8q" eventType="touchUpInside" id="wOf-0q-7qc"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7rx-Bh-GWg">
-                                        <rect key="frame" x="290" y="4" width="40" height="27"/>
+                                        <rect key="frame" x="103" y="7" width="31" height="20"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="fastnew"/>
+                                        <state key="normal" image="fastnew-1"/>
                                         <connections>
                                             <action selector="forwardPressed:" destination="ROd-Xh-s8q" eventType="touchUpInside" id="uuj-Th-XPg"/>
                                         </connections>
@@ -232,12 +219,10 @@
                         <outlet property="infoTextview" destination="BPM-g7-G8f" id="5ku-9Z-kEc"/>
                         <outlet property="infoTextview1" destination="t5K-w1-gnp" id="tef-Wz-fYu"/>
                         <outlet property="lineOneview" destination="PWX-iR-FIg" id="x1t-iu-NdN"/>
-                        <outlet property="lineTwoview" destination="64V-SH-eKb" id="z9y-fv-eA7"/>
                         <outlet property="menuBtn" destination="gmH-eu-YEE" id="rfl-P0-5jV"/>
                         <outlet property="normalBtn" destination="9vb-ib-v9m" id="Umv-cv-1Z4"/>
                         <outlet property="onoffLabel" destination="6Q3-Ld-NUj" id="pla-jj-xpm"/>
                         <outlet property="popViewslider" destination="GGS-dr-e7t" id="ojm-xa-IG8"/>
-                        <outlet property="slowBtn" destination="VOA-Vh-sA8" id="h8u-SS-EJv"/>
                         <outlet property="videoContolpopup" destination="fwk-Kk-aqa" id="DhZ-BW-6VP"/>
                         <outlet property="viewVideo" destination="rrl-ym-k9c" id="ufW-kV-y5g"/>
                         <outlet property="viewupDown" destination="zey-jx-nsY" id="CVR-NB-9J0"/>
@@ -253,14 +238,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="fastnew" width="27" height="27"/>
+        <image name="fastnew-1" width="38" height="30"/>
         <image name="logo123" width="375" height="150"/>
-        <image name="normalnew" width="27" height="27"/>
+        <image name="normalnew-1" width="28" height="30"/>
         <image name="slidercir" width="13" height="13"/>
-        <image name="slownew" width="27" height="27"/>
         <image name="unbright" width="32" height="32"/>
         <image name="uninfo" width="32" height="32"/>
-        <image name="unline-1" width="41" height="21"/>
+        <image name="unline-4" width="26" height="11"/>
         <image name="unselectedfire" width="37" height="32"/>
         <image name="unspeed" width="34" height="32"/>
         <image name="volumee1" width="30" height="30"/>

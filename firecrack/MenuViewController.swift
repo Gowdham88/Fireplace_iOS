@@ -26,8 +26,6 @@ class MenuViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var brightSlider: UISlider!
     @IBOutlet var videoContolpopup: UIView!
     @IBOutlet var lineOneview: UIView!
-    @IBOutlet var lineTwoview: UIView!
-    @IBOutlet var slowBtn: UIButton!
     @IBOutlet var normalBtn: UIButton!
     @IBOutlet var forwardBtn: UIButton!
     @IBOutlet var infoPopup: UIView!
@@ -131,7 +129,7 @@ class MenuViewController: UIViewController, UITextFieldDelegate {
       
        /*******************************************/
         
-        playmyVideo(myString: "normal")
+        playmyVideo(myString: "normalnewer")
         
        
         
@@ -198,7 +196,7 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
     func playmyVideo(myString: String) {
         
         let bundle: Bundle = Bundle.main
-        let videoPlayer: String = bundle.path(forResource: myString, ofType: "mov")!
+        let videoPlayer: String = bundle.path(forResource: myString, ofType: "mp4")!
         let movieUrl : NSURL = NSURL.fileURL(withPath: videoPlayer) as NSURL
         
         print(movieUrl)
@@ -212,7 +210,7 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
     
     @IBAction func menupressed(_ sender: UIButton) {
         
-        if menuBtn.currentImage == #imageLiteral(resourceName: "unline-1"){
+        if menuBtn.currentImage == #imageLiteral(resourceName: "unline-4"){
             UIView.animate(withDuration: 0.3, animations: {
                 self.brightnessBtn.alpha = 1
                 self.fastBtn.alpha = 1
@@ -264,7 +262,7 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
             fireOnoff.isHidden = true
 
         }
-   toggleButton(button: sender, onImage: #imageLiteral(resourceName: "line-1"), offImage: #imageLiteral(resourceName: "unline-1"))
+   toggleButton(button: sender, onImage: #imageLiteral(resourceName: "line-4"), offImage: #imageLiteral(resourceName: "unline-4"))
     
     }
     
@@ -403,18 +401,13 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
     }
    
      
-    @IBAction func slowPressed(_ sender: Any) {
-        
-        playmyVideo(myString: "slow00")
-
-        
-    }
+   
     
     
     
     @IBAction func normalPressed(_ sender: Any) {
  
-        playmyVideo(myString: "normal")
+        playmyVideo(myString: "normalnewer")
  
         
     }
@@ -422,7 +415,7 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
    
     @IBAction func forwardPressed(_ sender: Any) {
         
-        playmyVideo(myString: "fast")
+        playmyVideo(myString: "fastnewerr")
   
     }
     
@@ -503,7 +496,7 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
     func willEnterForeground() {
         // do stuff
         
-        playmyVideo(myString: "normal")
+        playmyVideo(myString: "normalnewer")
     }
 
     
