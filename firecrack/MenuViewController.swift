@@ -203,7 +203,6 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
         
         viewVideo.playVideoWithURL(url: movieUrl)
         
-        
     }
   
      /***************menu animation***************/
