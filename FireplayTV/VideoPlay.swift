@@ -14,9 +14,9 @@ import AVFoundation
 class VideoPlay: UIView {
     
     
-    private var player : AVPlayer!
+    private var player : AVPlayer?
     
-    private var playerLayer : AVPlayerLayer!
+    private var playerLayer : AVPlayerLayer?
     
     init() {
         
@@ -29,6 +29,10 @@ class VideoPlay: UIView {
         super.init(frame: frame)
         self.initializePlayerLayer()
         self.autoresizesSubviews = false
+        
+        
+        
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -42,16 +46,16 @@ class VideoPlay: UIView {
     private func initializePlayerLayer() {
         
         playerLayer = AVPlayerLayer()
-        playerLayer.backgroundColor = UIColor.clear.cgColor
+        playerLayer?.backgroundColor = UIColor.clear.cgColor
         
         
         
-        playerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
+        playerLayer?.videoGravity = AVLayerVideoGravityResizeAspectFill
         
         
-        self.layer.addSublayer(playerLayer)
+        self.layer.addSublayer(playerLayer!)
         
-        playerLayer.frame = UIScreen.main.bounds
+        playerLayer?.frame = UIScreen.main.bounds
         
         
     }
@@ -59,31 +63,31 @@ class VideoPlay: UIView {
     func playVideoWithURL(url: NSURL) {
         
         player = AVPlayer(url: url as URL)
-        player.isMuted = false
+        player?.isMuted = false
         
-        playerLayer.player = player
+        playerLayer?.player = player
         
-        player.play()
+        player?.play()
         
-        loopVideo(videoPlayer: player)
+        loopVideo(videoPlayer: player!)
     }
     
-    func toggleMute() {
-        player.isMuted = !player.isMuted
-    }
-    
-    func isMuted() -> Bool
-    {
-        return player.isMuted
-    }
+//    func toggleMute() {
+//        player?.isMuted = !(player?.isMuted)!
+//    }
+//    
+//    func isMuted() -> Bool
+//    {
+//        return player!.isMuted
+//    }
     
     func loopVideo(videoPlayer: AVPlayer) {
         
         NotificationCenter.default.addObserver(forName: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: nil, queue: nil) { notification in
             let t1 = CMTimeMake(5, 100);
-            self.player.seek(to: t1)
+            self.player?.seek(to: t1)
             videoPlayer.seek(to: kCMTimeZero)
-            self.player.play()
+            self.player?.play()
         }
     }
     

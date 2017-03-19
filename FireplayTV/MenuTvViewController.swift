@@ -48,11 +48,11 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
     var infoBtncenter: CGPoint!
     var volumeBtncenter: CGPoint!
     
-    var avPlayerLayer: AVPlayerLayer!
+    var avPlayerLayer: AVPlayerLayer?
     var paused: Bool = false
     
     var player:AVAudioPlayer = AVAudioPlayer()
-    var avPlayer: AVPlayer!
+    var avPlayer: AVPlayer?
    
     
     
@@ -123,7 +123,7 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
         
         /*******************************************/
 
-       playmyVideo(myString: "normal")
+       playmyVideo(myString: "normalnewest")
         
         
         fastBtncenter = fastBtn.center
@@ -341,7 +341,7 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
     }
     override func viewDidDisappear(_ animated: Bool) {
         
-        avPlayer.pause()
+        avPlayer?.pause()
         player.pause()
         paused = true
     }
@@ -357,7 +357,8 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
     func willEnterForeground() {
         // do stuff
         
-        playmyVideo(myString: "normal")
+        playmyVideo(myString: "normalnewest")
+    
     }
 
     
@@ -382,13 +383,13 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func normalPressed(_ sender: Any) {
         
-        playmyVideo(myString: "normal")
+        playmyVideo(myString: "normalnewest")
     }
     
     
     @IBAction func forwardPressed(_ sender: Any) {
         
-        playmyVideo(myString: "fast")
+        playmyVideo(myString: "fasternew")
     }
     
     
