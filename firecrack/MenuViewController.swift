@@ -492,6 +492,7 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
         
     }
     
+    
     func willEnterForeground() {
         // do stuff
         
