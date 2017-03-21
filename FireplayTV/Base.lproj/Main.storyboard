@@ -24,7 +24,7 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SAy-pe-aMG" customClass="VideoPlay" customModule="FireplayTV" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="zPD-t5-evi" appends="YES" id="dtt-7u-6mz"/>
@@ -186,7 +186,7 @@
                                 <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <connections>
                         <outlet property="fastBtn" destination="WH1-sb-ZmB" id="iox-5X-9dG"/>
@@ -202,7 +202,7 @@
                         <outlet property="menuBtn" destination="zLx-BT-kHz" id="np6-c5-2xl"/>
                         <outlet property="normalBtn" destination="IzN-AZ-G4H" id="NOf-u1-tgw"/>
                         <outlet property="videoControlpopup" destination="zuC-X7-qPt" id="del-Nd-lpq"/>
-                        <outlet property="videoView" destination="SAy-pe-aMG" id="71b-Hb-JQZ"/>
+                        <outlet property="videoView" destination="SAy-pe-aMG" id="6Mk-af-yaw"/>
                         <outlet property="viewupDown" destination="gr3-JI-Xav" id="foM-uO-yhK"/>
                         <outlet property="volumeBtn" destination="eGh-5r-761" id="yRn-ay-7K8"/>
                         <outlet property="volumePopup" destination="lUI-SH-jvG" id="Iwc-Lu-Ssm"/>

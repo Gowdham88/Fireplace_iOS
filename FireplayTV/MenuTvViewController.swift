@@ -14,7 +14,8 @@ import CoreImage
 
 class MenuTvViewController: UIViewController, UITextFieldDelegate {
 
-    @IBOutlet var videoView: VideoPlay!
+   
+    @IBOutlet var videoView: UIView!
     @IBOutlet var viewupDown: UIView!
 
     @IBOutlet var menuBtn: CustomFocusButton!
@@ -47,7 +48,7 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
     var fireBtncenter: CGPoint!
     var infoBtncenter: CGPoint!
     var volumeBtncenter: CGPoint!
-    
+    var playerView = AVPlayer()
     var avPlayerLayer: AVPlayerLayer?
     var paused: Bool = false
     
@@ -123,7 +124,7 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
         
         /*******************************************/
 
-       playmyVideo(myString: "normalnewest")
+      
         
         
         fastBtncenter = fastBtn.center
@@ -154,6 +155,8 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
 //        self.view.addGestureRecognizer(tapRecognizer)
         self.videoView.addGestureRecognizer(tapRecognizer)
         
+        
+        
 //        let swipeDown:UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: Selector(("swipedDown:")))
 //        swipeDown.direction = .down
 //        videoView.addGestureRecognizer(swipeDown)
@@ -166,19 +169,38 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
     
     
     
-    func playmyVideo(myString: String) {
+    override func viewDidAppear(_ animated: Bool) {
+        
+        super.viewDidAppear(true)
         
         let bundle: Bundle = Bundle.main
-        let videoPlayer: String = bundle.path(forResource: myString, ofType: "mp4")!
+        let videoPlayer: String = bundle.path(forResource: "normalnewest", ofType: "mp4")!
         let movieUrl : NSURL = NSURL.fileURL(withPath: videoPlayer) as NSURL
+        //        var fileURL = NSURL(fileURLWithPath: "/Users/Mantas/Desktop/123/123/video-1453562323.mp4.mp4")
+        playerView = AVPlayer(url: movieUrl as URL)
         
-        print(movieUrl)
+        NotificationCenter.default.addObserver(self,selector: #selector(playerItemDidReachEnd),name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,object: self.playerView.currentItem) // Add observer
         
-        videoView.playVideoWithURL(url: movieUrl)
+        //        playerViewController.player = avPlayer
+        
+        //amend the frame of the view
+        //        self.playerViewController.player.frame = CGRectMake(0, 0, 200, 200)
+        //reset the layer's frame, and re-add it to the view
+        var playerLayer=AVPlayerLayer(player: playerView)
+        //        var playerLayer: AVPlayerLayer =   AVPlayerLayer.withPlayer(self.playerView)
+        playerLayer.frame = videoView.bounds
+        videoView.layer.addSublayer(playerLayer)
+        
+        
+        playerView.play()
+        
+        UserDefaults.standard.set("normalnewest", forKey: "video")
+        
+        
         
         
     }
-    
+
     
     
     
@@ -355,10 +377,30 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
     }
     
     func willEnterForeground() {
-        // do stuff
         
-        playmyVideo(myString: "normalnewest")
-    
+        let videoname = UserDefaults.standard.object(forKey: "video")
+        
+        if videoname != nil {
+            
+            let videoURL = UserDefaults.standard.string(forKey: "video")
+            
+            // do stuff
+            let bundle: Bundle = Bundle.main
+            let videoPlayer: String = bundle.path(forResource: videoURL, ofType: "mp4")!
+            let movieUrl : NSURL = NSURL.fileURL(withPath: videoPlayer) as NSURL
+            let videoAssetURL = AVURLAsset(url: movieUrl as URL)
+            let videoAssetItem = AVPlayerItem(asset: videoAssetURL)
+            playerView.replaceCurrentItem(with: videoAssetItem)
+            
+            NotificationCenter.default.addObserver(self,selector: #selector(playerItemDidReachEnd),name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,object: self.playerView.currentItem)
+            
+            playerView.play()
+            
+        }
+        
+        
+
+       
     }
 
     
@@ -383,13 +425,38 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func normalPressed(_ sender: Any) {
         
-        playmyVideo(myString: "normalnewest")
+        let bundle: Bundle = Bundle.main
+        let videoPlayer: String = bundle.path(forResource: "normalnewest", ofType: "mp4")!
+        let movieUrl : NSURL = NSURL.fileURL(withPath: videoPlayer) as NSURL
+        let videoAssetURL = AVURLAsset(url: movieUrl as URL)
+        let videoAssetItem = AVPlayerItem(asset: videoAssetURL)
+        playerView.replaceCurrentItem(with: videoAssetItem)
+        
+        NotificationCenter.default.addObserver(self,selector: #selector(playerItemDidReachEnd),name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,object: self.playerView.currentItem)
+        
+        playerView.play()
+        
+        UserDefaults.standard.set("normalnewest", forKey: "video")
+        
+//        playVideoWithURL.rate = 1.0
     }
     
     
     @IBAction func forwardPressed(_ sender: Any) {
         
-        playmyVideo(myString: "fasternew")
+        let bundle: Bundle = Bundle.main
+        let videoPlayer: String = bundle.path(forResource: "fasternew", ofType: "mp4")!
+        let movieUrl : NSURL = NSURL.fileURL(withPath: videoPlayer) as NSURL
+        let videoAssetURL = AVURLAsset(url: movieUrl as URL)
+        let videoAssetItem = AVPlayerItem(asset: videoAssetURL)
+        playerView.replaceCurrentItem(with: videoAssetItem)
+        
+        NotificationCenter.default.addObserver(self,selector: #selector(playerItemDidReachEnd),name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,object: self.playerView.currentItem)
+        
+        playerView.play()
+        
+        UserDefaults.standard.set("fasternew", forKey: "video")
+        
     }
     
     
@@ -460,6 +527,11 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
         }
 
     }
+    
+    func playerItemDidReachEnd() {
+        self.playerView.seek(to: kCMTimeZero)
+        self.playerView.play()
+    }
 //    func handleTap(sender: UITapGestureRecognizer) {
 //        
 //        
@@ -483,6 +555,7 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
         try!audioSession.setCategory(AVAudioSessionCategoryPlayback, with: AVAudioSessionCategoryOptions.duckOthers)
     }
     
-
+    
+   
 
    }

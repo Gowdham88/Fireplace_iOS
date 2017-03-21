@@ -130,7 +130,7 @@ class MenuViewController: UIViewController, UITextFieldDelegate {
        /*******************************************/
         
         playmyVideo(myString: "normalnewer")
-        
+        UserDefaults.standard.set("normalnewest", forKey: "video")
        
         
     
@@ -407,7 +407,7 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
     @IBAction func normalPressed(_ sender: Any) {
  
         playmyVideo(myString: "normalnewer")
- 
+        UserDefaults.standard.set("normalnewer", forKey: "video")
         
     }
     
@@ -416,6 +416,7 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
         
         playmyVideo(myString: "fastnewerr")
   
+        UserDefaults.standard.set("fastnewerr", forKey: "video")
     }
     
    
@@ -495,8 +496,13 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
     
     func willEnterForeground() {
         // do stuff
+        let videoname = UserDefaults.standard.object(forKey: "video")
         
-        playmyVideo(myString: "normalnewer")
+        if videoname != nil {
+            
+            let videoURL = UserDefaults.standard.string(forKey: "video")
+            playmyVideo(myString: videoURL!)
+        }
     }
 
     
