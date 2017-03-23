@@ -51,6 +51,7 @@ class MenuViewController: UIViewController, UITextFieldDelegate {
     
     var avPlayerLayer: AVPlayerLayer!
     var paused: Bool = false
+    var menubool : Bool = false
     
     var player:AVAudioPlayer = AVAudioPlayer()
     var avPlayer: AVPlayer!
@@ -120,9 +121,12 @@ class MenuViewController: UIViewController, UITextFieldDelegate {
        /**********************/
         self.viewupDown.isHidden = false
         UIView.animate(withDuration: 3, delay:1, options:UIViewAnimationOptions.transitionFlipFromTop, animations: {
-            self.viewupDown.alpha = 0
-        }, completion: { finished in
+                    }, completion: { finished in
+                        
+                        if (self.menubool) {
             self.viewupDown.isHidden = true
+                            
+                        }
         })
         
 
@@ -208,6 +212,8 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
      /***************menu animation***************/
     
     @IBAction func menupressed(_ sender: UIButton) {
+        
+        menubool = true
         
         if menuBtn.currentImage == #imageLiteral(resourceName: "unline-4"){
             UIView.animate(withDuration: 0.3, animations: {
