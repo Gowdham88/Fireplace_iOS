@@ -34,7 +34,9 @@ class MenuViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var volumeBtn: UIButton!
     @IBOutlet var volumePopup: UIView!
     @IBOutlet var volumeSlider: UISlider!
+//    @IBOutlet var imgaefade1: UIImageView!
     @IBOutlet var imgaefade1: UIImageView!
+   
     @IBOutlet var fireOnoff: UIView!
     @IBOutlet var onoffLabel: UILabel!
     @IBOutlet var fireMusic: UIButton!
@@ -82,7 +84,7 @@ class MenuViewController: UIViewController, UITextFieldDelegate {
         
         attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 12.0)!, range:NSRange(location: 0, length: 5))
         
-        attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 12.0)!, range:NSRange(location: 15, length: 33))
+        attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 12.0)!, range:NSRange(location: 15, length: 34))
         
         attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 12.0)!, range:NSRange(location: 92, length: 11))
         
@@ -175,7 +177,9 @@ class MenuViewController: UIViewController, UITextFieldDelegate {
         fireOnoff.isHidden = true
         firemusicView.isHidden = true
 
-        
+//        imgaefade1.setbackground = UIColor.clear
+//        imgaefade1.backgroundColor = UIColor.clear
+//        imgaefade1.opaque = NO
         
         
         let deviceBrightness = UIScreen.main.brightness
@@ -237,15 +241,16 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
         
         NotificationCenter.default.addObserver(self,selector: #selector(playerItemDidReachEnd),name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,object: self.playerView.currentItem) // Add observer
         
-        //        playerViewController.player = avPlayer
-        
-        //amend the frame of the view
-        //        self.playerViewController.player.frame = CGRectMake(0, 0, 200, 200)
-        //reset the layer's frame, and re-add it to the view
-        var playerLayer=AVPlayerLayer(player: playerView)
-        //        var playerLayer: AVPlayerLayer =   AVPlayerLayer.withPlayer(self.playerView)
+                var playerLayer=AVPlayerLayer(player: playerView)
+//        self.avPlayerLayer.playerView = AVLayerVideoGravityResizeAspectFill
+        playerLayer.videoGravity = AVLayerVideoGravityResize
+
         playerLayer.frame = viewVideo.bounds
+//        self.playerLayer.frame = self.videoPreviewLayer.bounds
+
         viewVideo.layer.addSublayer(playerLayer)
+
+       
         
         
         playerView.play()
@@ -479,7 +484,8 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
         playerView.replaceCurrentItem(with: videoAssetItem)
         
         NotificationCenter.default.addObserver(self,selector: #selector(playerItemDidReachEnd),name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,object: self.playerView.currentItem)
-        
+//        playerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
+
         playerView.play()
         
         UserDefaults.standard.set("normalnewer", forKey: "video")
@@ -498,7 +504,8 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
         playerView.replaceCurrentItem(with: videoAssetItem)
         
         NotificationCenter.default.addObserver(self,selector: #selector(playerItemDidReachEnd),name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,object: self.playerView.currentItem)
-        
+//        playerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
+
         playerView.play()
         
         UserDefaults.standard.set("fastnewerr", forKey: "video")

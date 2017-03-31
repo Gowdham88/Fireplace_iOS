@@ -61,9 +61,13 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
     var playerView = AVPlayer()
     var avPlayerLayer: AVPlayerLayer?
     var paused: Bool = false
+    var play: Bool = true
+    var isPlaying: Bool = true
     
     var player:AVAudioPlayer = AVAudioPlayer()
     var avPlayer: AVPlayer?
+    var audioStuffed = false
+
    
     
     
@@ -322,12 +326,25 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
             
         }
 
-       
+//        if audioStuffed == true && player.isPlaying
+//        {
+//            player.pause()
+//            fireonoffLabel.text = "Off"
+//            fireonoffLabel.textAlignment = .center
+//        } else if audioStuffed == true && player.isPlaying == false
+//        {
+//            player.play()
+//            player.numberOfLoops = -1
+//            fireonoffLabel.text = "On"
+//            fireonoffLabel.textAlignment = .center
+//        }
+//       
         if player.isPlaying {
             
             player.pause()
             fireonoffLabel.text = "Off"
              fireonoffLabel.textAlignment = .center
+//            UserDefaults.standard.set(true, forKey: "SwitchState")
             
         } else {
             
@@ -335,6 +352,8 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
             player.play()
             fireonoffLabel.text = "On"
             fireonoffLabel.textAlignment = .center
+//            UserDefaults.standard.set(true, forKey: "playingstate")
+//            UserDefaults.standard.set(false, forKey: "SwitchState")
         }
         
         
@@ -435,8 +454,27 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
             try!audioSession.setCategory(AVAudioSessionCategoryPlayback, with: AVAudioSessionCategoryOptions.duckOthers)
             
         }
+        
+        
+//            let defaults = UserDefaults.standard.object
+//            
+//            if (UserDefaults.standard.string(forKey: "SwitchState") != nil) {
+//                player.pause()
+//       
+//    }
+//        
+//        let playingg = UserDefaults.standard.object
+//        
+//        if (UserDefaults.standard.string(forKey: "playingstate") != nil) {
+//            player.play()
+////            player = defaults.bool(forKey: "SwitchState")
+//            player.numberOfLoops = -1
+//            
+//            
+//        }
 
-       
+        
+        
     }
 
     @IBAction func musicBtnpressed(_ sender: UIButton) {
@@ -498,7 +536,9 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
         
     }
     
+   
     @IBAction func music3(_ sender: UIButton) {
+    
         
         let path = Bundle.main.path(forResource: "fire3", ofType: "mp3")
         let filePath = NSURL(fileURLWithPath:path!)

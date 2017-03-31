@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dM2-Lp-xGz">
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dM2-Lp-xGz">
     <device id="appleTV" orientation="landscape">
         <adaptation id="light"/>
     </device>
     <dependencies>
         <deployment identifier="tvOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -125,7 +125,6 @@
                                         </state>
                                         <connections>
                                             <action selector="music1:" destination="dM2-Lp-xGz" eventType="primaryActionTriggered" id="JHy-lL-4Bp"/>
-                                            <action selector="music3:" destination="dM2-Lp-xGz" eventType="primaryActionTriggered" id="dVo-WS-iDE"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aCe-lX-BRl" customClass="CustomFocusButton" customModule="FireplayTV" customModuleProvider="target">
@@ -146,12 +145,15 @@
                                         <state key="normal" title="Music 3" image="music3">
                                             <color key="titleColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="music3:" destination="dM2-Lp-xGz" eventType="primaryActionTriggered" id="Ama-Y3-Bea"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.12939649819999999" green="0.12942153219999999" blue="0.12939104439999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image text" translatesAutoresizingMaskIntoConstraints="NO" id="i4C-bt-NRi">
-                                <rect key="frame" x="1435" y="30" width="450" height="117"/>
+                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image text" translatesAutoresizingMaskIntoConstraints="NO" id="i4C-bt-NRi">
+                                <rect key="frame" x="1435" y="31" width="450" height="106"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X2M-Gf-i1t" userLabel="Info popup">
@@ -276,9 +278,9 @@
     <resources>
         <image name="firecrack" width="145" height="145"/>
         <image name="forwardpl" width="100" height="80"/>
-        <image name="image text" width="1255" height="283"/>
-        <image name="information" width="356" height="356"/>
-        <image name="music-player-1" width="197" height="207"/>
+        <image name="image text" width="1197" height="272"/>
+        <image name="information" width="360" height="359"/>
+        <image name="music-player-1" width="183" height="207"/>
         <image name="music1" width="153" height="35"/>
         <image name="music2" width="160" height="36"/>
         <image name="music3" width="160" height="36"/>
@@ -287,6 +289,6 @@
         <image name="unmenu" width="166" height="63"/>
         <image name="volumeDown" width="148" height="55"/>
         <image name="volumeUp" width="148" height="55"/>
-        <image name="volumee" width="306" height="248"/>
+        <image name="volumee" width="310" height="249"/>
     </resources>
 </document>
