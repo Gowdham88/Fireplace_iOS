@@ -38,9 +38,13 @@ class MenuViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var imgaefade1: UIImageView!
    
     @IBOutlet var fireOnoff: UIView!
-    @IBOutlet var onoffLabel: UILabel!
-    @IBOutlet var fireMusic: UIButton!
-    @IBOutlet var firemusicView: UIView!
+    @IBOutlet var onoffLabel: UIButton!
+//    @IBOutlet var onoffLabel: UILabel!
+//    @IBOutlet var fireMusic: UIButton!
+//    @IBOutlet var firemusicView: UIView!
+    @IBOutlet var music01: UIButton!
+    @IBOutlet var music03: UIButton!
+    @IBOutlet var music02: UIButton!
     
     
     
@@ -49,7 +53,7 @@ class MenuViewController: UIViewController, UITextFieldDelegate {
     var fireBtncenter: CGPoint!
     var infoBtncenter: CGPoint!
     var volumeBtncenter: CGPoint!
-    var fireMusiccenter: CGPoint!
+//    var fireMusiccenter: CGPoint!
     
     var appBrightness = CGFloat()
     let prefs = UserDefaults.standard
@@ -150,14 +154,16 @@ class MenuViewController: UIViewController, UITextFieldDelegate {
 //        playmyVideo(myString: "normalnewer")
         UserDefaults.standard.set("normalnewer", forKey: "video")
        
-        
+        let defaults = UserDefaults.standard
+        let isHidden = defaults.bool(forKey: "InstructionsButtonIsHidden")
+
     
         brightnessBtncenter = brightnessBtn.center
         fastBtncenter = fastBtn.center
         fireBtncenter = fireBtn.center
         infoBtncenter = infoBtn.center
         volumeBtncenter = volumeBtn.center
-        fireMusiccenter = fireMusic.center
+//        fireMusiccenter = fireMusic.center
 
        
         brightnessBtn.center = menuBtn.center
@@ -165,7 +171,7 @@ class MenuViewController: UIViewController, UITextFieldDelegate {
         fireBtn.center = menuBtn.center
         infoBtn.center = menuBtn.center
         volumeBtn.center = menuBtn.center
-        fireMusic.center = menuBtn.center
+//        fireMusic.center = menuBtn.center
         
      
         
@@ -175,7 +181,7 @@ class MenuViewController: UIViewController, UITextFieldDelegate {
         infoPopup.isHidden = true
         volumePopup.isHidden = true
         fireOnoff.isHidden = true
-        firemusicView.isHidden = true
+//        firemusicView.isHidden = true
 
 //        imgaefade1.setbackground = UIColor.clear
 //        imgaefade1.backgroundColor = UIColor.clear
@@ -276,7 +282,7 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
                 self.fireBtn.alpha = 1
                 self.infoBtn.alpha = 1
                 self.volumeBtn.alpha = 1
-                self.fireMusic.alpha = 1
+//                self.fireMusic.alpha = 1
                 
                 
                 self.brightnessBtn.center = self.brightnessBtncenter
@@ -284,7 +290,7 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
                 self.fireBtn.center = self.fireBtncenter
                 self.infoBtn.center = self.infoBtncenter
                 self.volumeBtn.center = self.volumeBtncenter
-                self.fireMusic.center = self.fireMusiccenter
+//                self.fireMusic.center = self.fireMusiccenter
                 
                 
             })
@@ -298,7 +304,7 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
                 self.fireBtn.alpha = 0
                 self.infoBtn.alpha = 0
                 self.volumeBtn.alpha = 0
-                self.fireMusic.alpha = 0
+//                self.fireMusic.alpha = 0
                 
                 
                 
@@ -307,7 +313,7 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
                 self.fireBtn.center = self.menuBtn.center
                 self.infoBtn.center = self.menuBtn.center
                 self.volumeBtn.center = self.menuBtn.center
-                self.fireMusic.center = self.menuBtn.center
+//                self.fireMusic.center = self.menuBtn.center
 
             })
             
@@ -323,7 +329,7 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
             infoPopup.isHidden = true
             volumePopup.isHidden = true
             fireOnoff.isHidden = true
-            firemusicView.isHidden = true
+//            firemusicView.isHidden = true
 
         }
    toggleButton(button: sender, onImage: #imageLiteral(resourceName: "line-4"), offImage: #imageLiteral(resourceName: "unline-4"))
@@ -342,7 +348,7 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
             infoPopup.isHidden = true
             volumePopup.isHidden = true
             fireOnoff.isHidden = true
-            firemusicView.isHidden = true
+//            firemusicView.isHidden = true
 
         } else {
             
@@ -351,7 +357,7 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
             infoPopup.isHidden = true
             volumePopup.isHidden = true
             fireOnoff.isHidden = true
-            firemusicView.isHidden = true
+//            firemusicView.isHidden = true
 
         }
         
@@ -369,32 +375,49 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
             popViewslider.isHidden = true
             videoContolpopup.isHidden = true
             volumePopup.isHidden = true
-            firemusicView.isHidden = true
+//            firemusicView.isHidden = true
             
-        }
-//        }else {
-//            
-//            fireOnoff.isHidden = true
-
         
+        }else {
+            
+            fireOnoff.isHidden = true
+
+        }
+        
+        
+        toggleButton(button: sender, onImage: #imageLiteral(resourceName: "selectedfire "), offImage: #imageLiteral(resourceName: "unselectedfire"))
+    }
+    
+    @IBAction func fireCrackonoff(_ sender: UIButton) {
         
         if player.isPlaying {
             
             player.pause()
-            onoffLabel.textAlignment = .center
-            onoffLabel.text = "Off"
+            
+
+            onoffLabel.setTitle("off", for: .normal)
+            let sounddefaults = UserDefaults.standard
+            
+            sounddefaults.set(true, forKey: "soundMute")
+
+
+
         } else {
             
             player.numberOfLoops = -1
             player.play()
-            onoffLabel.textAlignment = .center
-            onoffLabel.text = "On"
+            let sounddefaults = UserDefaults.standard
+            
+            sounddefaults.set(false, forKey: "soundMute")
+
+            onoffLabel.setTitle("on", for: .normal)
+
             
         }
-       
-        toggleButton(button: sender, onImage: #imageLiteral(resourceName: "selectedfire "), offImage: #imageLiteral(resourceName: "unselectedfire"))
+
+        
+        
     }
-    
    
     @IBAction func infoPressed(_ sender: UIButton) {
         infoPopup.layer.cornerRadius = 10.0
@@ -406,7 +429,7 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
             videoContolpopup.isHidden = true
             volumePopup.isHidden = true
             fireOnoff.isHidden = true
-            firemusicView.isHidden = true
+//            firemusicView.isHidden = true
 
         } else {
             
@@ -446,7 +469,7 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
             infoPopup.isHidden = true
             volumePopup.isHidden = true
             fireOnoff.isHidden = true
-            firemusicView.isHidden = true
+//            firemusicView.isHidden = true
 
         } else {
             
@@ -520,27 +543,27 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
    
     }
     
-    @IBAction func fireBtnpressed(_ sender: Any) {
-        
-        if self.firemusicView.isHidden == true {
-            
-            
-            firemusicView.isHidden = false
-            volumePopup.isHidden = true
-            popViewslider.isHidden = true
-            videoContolpopup.isHidden = true
-            infoPopup.isHidden = true
-            fireOnoff.isHidden = true
-            
-            
-        } else {
-            
-            firemusicView.isHidden = true
-        }
-        
-        
-    }
-    
+//    @IBAction func fireBtnpressed(_ sender: Any) {
+//        
+//        if self.firemusicView.isHidden == true {
+//            
+//            
+////            firemusicView.isHidden = false
+//            volumePopup.isHidden = true
+//            popViewslider.isHidden = true
+//            videoContolpopup.isHidden = true
+//            infoPopup.isHidden = true
+//            fireOnoff.isHidden = true
+//            
+//            
+//        } else {
+//            
+//            firemusicView.isHidden = true
+//        }
+//        
+//        
+//    }
+//    
 
     @IBAction func volumeControl(_ sender: UIButton) {
         
@@ -551,7 +574,7 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
             videoContolpopup.isHidden = true
             infoPopup.isHidden = true
             fireOnoff.isHidden = true
-            firemusicView.isHidden = true
+//            firemusicView.isHidden = true
 
             
             
@@ -591,7 +614,7 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
             self.infoPopup.isHidden = true
             self.volumePopup.isHidden = true
             self.fireOnoff.isHidden = true
-            self.firemusicView.isHidden = true
+//            self.firemusicView.isHidden = true
 
             
             
@@ -653,6 +676,21 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
             try!audioSession.setCategory(AVAudioSessionCategoryPlayback, with: AVAudioSessionCategoryOptions.duckOthers)
             
         }
+        
+        let sounddefaults = UserDefaults.standard
+        let isMute = sounddefaults.bool(forKey: "soundMute")
+        
+        
+        
+        if isMute {
+            player.pause()
+            
+        } else{
+            player.play()
+            player.numberOfLoops = -1
+        }
+
+        
     }
 
     @IBAction func music1(_ sender: UIButton) {
@@ -671,7 +709,14 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
 
         
         UserDefaults.standard.set("fire1", forKey: "music")
+         toggleButton(button: music01, onImage: #imageLiteral(resourceName: "tick-1"), offImage: #imageLiteral(resourceName: "untick-1"))
+        toggleButton(button: music02, onImage: #imageLiteral(resourceName: "untick-1"), offImage: #imageLiteral(resourceName: "untick-1"))
         
+   toggleButton(button: music03, onImage: #imageLiteral(resourceName: "untick-1"), offImage: #imageLiteral(resourceName: "untick-1"))
+        let defaults = UserDefaults.standard
+        defaults.set(true, forKey: "InstructionsButtonIsHidden")
+
+    
     }
     
     @IBAction func music2(_ sender: UIButton) {
@@ -689,7 +734,13 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
         
         
         UserDefaults.standard.set("fire2", forKey: "music")
-
+        toggleButton(button: music02, onImage: #imageLiteral(resourceName: "tick-1"), offImage: #imageLiteral(resourceName: "untick-1"))
+        toggleButton(button: music03, onImage: #imageLiteral(resourceName: "untick-1"), offImage: #imageLiteral(resourceName: "untick-1"))
+        toggleButton(button: music01, onImage: #imageLiteral(resourceName: "untick-1"), offImage: #imageLiteral(resourceName: "untick-1"))
+  
+        let defaults = UserDefaults.standard
+        defaults.set(true, forKey: "InstructionsButtonIsHidden")
+    
     }
     @IBAction func music3(_ sender: UIButton) {
         let path = Bundle.main.path(forResource: "fire3", ofType: "mp3")
@@ -706,12 +757,18 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
         
         
         UserDefaults.standard.set("fire3", forKey: "music")
-
+        toggleButton(button: music03, onImage: #imageLiteral(resourceName: "tick-1"), offImage: #imageLiteral(resourceName: "untick-1"))
+        toggleButton(button: music02, onImage: #imageLiteral(resourceName: "untick-1"), offImage: #imageLiteral(resourceName: "untick-1"))
+        toggleButton(button: music01, onImage: #imageLiteral(resourceName: "untick-1"), offImage: #imageLiteral(resourceName: "untick-1"))
+        
+        let defaults = UserDefaults.standard
+        defaults.set(true, forKey: "InstructionsButtonIsHidden")
+    
     }
     override func viewDidDisappear(_ animated: Bool) {
        
         
-/********************************/
+        /********************************/
         
         avPlayer.pause()
         player.pause()

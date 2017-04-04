@@ -28,15 +28,18 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var normalBtn: CustomFocusButton!
     @IBOutlet var forwardBtn: CustomFocusButton!
     @IBOutlet var imageFade: UIImageView!
-    @IBOutlet var musicBtn: CustomFocusButton!
+//    @IBOutlet var musicBtn: CustomFocusButton!
     @IBOutlet var music1Btn: CustomFocusButton!
     @IBOutlet var music2Btn: CustomFocusButton!
     @IBOutlet var music3Btn: CustomFocusButton!
     
 //    @IBOutlet var btnhideShow: UIButton!
-    @IBOutlet var fireOnoff: UIView!
+//    @IBOutlet var fireOnoff: UIView!
 //    @IBOutlet var musicBtn: CustomFocusButton!
+//    @IBOutlet var fireOnoff: CustomFocusButton!
+    @IBOutlet var fireOnoff: UIView!
     
+    @IBOutlet var fireCrackingOnoffsound: CustomFocusButton!
     
     @IBOutlet var musicView: UIView!
     
@@ -137,6 +140,16 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
 
         
         /*******************************************/
+        
+        
+        
+        
+        let defaults = UserDefaults.standard
+        let isHidden = defaults.bool(forKey: "InstructionsButtonIsHidden")
+        
+        
+       
+
 
       
         
@@ -145,13 +158,13 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
         fireBtncenter = fireBtn.center
         infoBtncenter = infoBtn.center
         volumeBtncenter = volumeBtn.center
-        musiccenter = musicBtn.center
+//        musiccenter = musicBtn.center
         
         fastBtn.center = menuBtn.center
         fireBtn.center = menuBtn.center
         infoBtn.center = menuBtn.center
         volumeBtn.center = menuBtn.center
-        musicBtn.center = menuBtn.center
+//        musicBtn.center = menuBtn.center
         
 //        self.viewupDown.isHidden = true
 
@@ -159,7 +172,7 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
         videoControlpopup.isHidden = true
         volumePopup.isHidden = true
         fireOnoff.isHidden = true
-        musicView.isHidden = true
+//        musicView.isHidden = true
      
         self.SetUpSound()
 //        self.setImageView()
@@ -230,14 +243,14 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
                 self.fireBtn.alpha = 1
                 self.infoBtn.alpha = 1
                 self.volumeBtn.alpha = 1
-                self.musicBtn.alpha = 1
+//                self.musicBtn.alpha = 1
                 
                 
                 self.fastBtn.center = self.fastBtncenter
                 self.fireBtn.center = self.fireBtncenter
                 self.infoBtn.center = self.infoBtncenter
                 self.volumeBtn.center = self.volumeBtncenter
-                self.musicBtn.center = self.musiccenter
+//                self.musicBtn.center = self.musiccenter
                 
             })
             
@@ -254,14 +267,14 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
                 self.fireBtn.alpha = 0
                 self.infoBtn.alpha = 0
                 self.volumeBtn.alpha = 0
-                self.musicBtn.alpha = 0
+//                self.musicBtn.alpha = 0
                 
                 
                 self.fastBtn.center = self.menuBtn.center
                 self.fireBtn.center = self.menuBtn.center
                 self.infoBtn.center = self.menuBtn.center
                 self.volumeBtn.center = self.menuBtn.center
-                self.musicBtn.center = self.menuBtn.center
+//                self.musicBtn.center = self.menuBtn.center
                 
                 
                 
@@ -274,7 +287,7 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
                 infoPopupview.isHidden = true
                 volumePopup.isHidden = true
                 fireOnoff.isHidden = true
-                musicView.isHidden = true
+//                musicView.isHidden = true
                 self.imageFade.alpha = 0
                 self.imageFade.isHidden = true
                 
@@ -300,7 +313,7 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
             infoPopupview.isHidden = true
             volumePopup.isHidden = true
             fireOnoff.isHidden = true
-            musicView.isHidden = true
+//            musicView.isHidden = true
             
         } else {
             
@@ -308,7 +321,7 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
             infoPopupview.isHidden = true
             volumePopup.isHidden = true
             fireOnoff.isHidden = true
-            musicView.isHidden = true
+//            musicView.isHidden = true
         }
         
     }
@@ -322,7 +335,11 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
             infoPopupview.isHidden = true
             videoControlpopup.isHidden = true
             volumePopup.isHidden = true
-            musicView.isHidden = true
+//            musicView.isHidden = true
+            
+        } else {
+            
+             fireOnoff.isHidden = true
             
         }
 
@@ -339,23 +356,35 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
 //            fireonoffLabel.textAlignment = .center
 //        }
 //       
+        
+        
+    }
+    @IBAction func firecrackingOnoff(_ sender: UIButton) {
+        
         if player.isPlaying {
             
             player.pause()
-            fireonoffLabel.text = "Off"
-             fireonoffLabel.textAlignment = .center
-//            UserDefaults.standard.set(true, forKey: "SwitchState")
+
+            fireCrackingOnoffsound.setTitle("off", for: .normal)
+
+            let sounddefaults = UserDefaults.standard
+            
+            sounddefaults.set(true, forKey: "soundMute")
+            
+
+
             
         } else {
             
             player.numberOfLoops = -1
             player.play()
-            fireonoffLabel.text = "On"
-            fireonoffLabel.textAlignment = .center
-//            UserDefaults.standard.set(true, forKey: "playingstate")
-//            UserDefaults.standard.set(false, forKey: "SwitchState")
+
+            fireCrackingOnoffsound.setTitle("on", for: .normal)
+            let sounddefaults = UserDefaults.standard
+            
+            sounddefaults.set(false, forKey: "soundMute")
         }
-        
+ 
         
     }
 
@@ -369,7 +398,7 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
             videoControlpopup.isHidden = true
             volumePopup.isHidden = true
             fireOnoff.isHidden = true
-            musicView.isHidden = true
+//            musicView.isHidden = true
             
         } else {
             
@@ -389,7 +418,7 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
             videoControlpopup.isHidden = true
             infoPopupview.isHidden = true
             fireOnoff.isHidden = true
-            musicView.isHidden = true
+//            musicView.isHidden = true
             
             
         } else {
@@ -454,46 +483,18 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
             try!audioSession.setCategory(AVAudioSessionCategoryPlayback, with: AVAudioSessionCategoryOptions.duckOthers)
             
         }
+        let sounddefaults = UserDefaults.standard
+        let isMute = sounddefaults.bool(forKey: "soundMute")
         
         
-//            let defaults = UserDefaults.standard.object
-//            
-//            if (UserDefaults.standard.string(forKey: "SwitchState") != nil) {
-//                player.pause()
-//       
-//    }
-//        
-//        let playingg = UserDefaults.standard.object
-//        
-//        if (UserDefaults.standard.string(forKey: "playingstate") != nil) {
-//            player.play()
-////            player = defaults.bool(forKey: "SwitchState")
-//            player.numberOfLoops = -1
-//            
-//            
-//        }
-
         
-        
-    }
-
-    @IBAction func musicBtnpressed(_ sender: UIButton) {
-        
-        if musicView.isHidden == true {
+        if isMute {
+           player.pause()
             
-            musicView.isHidden = false
-            volumePopup.isHidden = true
-            videoControlpopup.isHidden = true
-            infoPopupview.isHidden = true
-            fireOnoff.isHidden = true
-
-        } else {
-            
-            musicView.isHidden = true
-
-            
+        } else{
+            player.play()
+            player.numberOfLoops = -1
         }
-        
         
     }
     
@@ -515,7 +516,14 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
         
         
         UserDefaults.standard.set("fire1", forKey: "music")
+        toggleButton(button: music1Btn, onImage: #imageLiteral(resourceName: "ticktv"), offImage: #imageLiteral(resourceName: "unticktv-2"))
+        toggleButton(button: music2Btn, onImage: #imageLiteral(resourceName: "unticktv-2"), offImage: #imageLiteral(resourceName: "unticktv-2"))
         
+        toggleButton(button: music3Btn, onImage: #imageLiteral(resourceName: "unticktv-2"), offImage: #imageLiteral(resourceName: "unticktv-2"))
+        let defaults = UserDefaults.standard
+        defaults.set(true, forKey: "InstructionsButtonIsHidden")
+        
+       
     }
     
     @IBAction func music2(_ sender: UIButton) {
@@ -534,6 +542,13 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
         
         UserDefaults.standard.set("fire2", forKey: "music")
         
+        toggleButton(button: music2Btn, onImage: #imageLiteral(resourceName: "ticktv"), offImage: #imageLiteral(resourceName: "unticktv-2"))
+
+        toggleButton(button: music1Btn, onImage: #imageLiteral(resourceName: "unticktv-2"), offImage: #imageLiteral(resourceName: "unticktv-2"))
+        
+        toggleButton(button: music3Btn, onImage: #imageLiteral(resourceName: "unticktv-2"), offImage: #imageLiteral(resourceName: "unticktv-2"))
+        let defaults = UserDefaults.standard
+        defaults.set(true, forKey: "InstructionsButtonIsHidden")
     }
     
    
@@ -551,10 +566,19 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
         let audioSession = AVAudioSession.sharedInstance()
         try!audioSession.setCategory(AVAudioSessionCategoryPlayback, with: AVAudioSessionCategoryOptions.duckOthers)
         
+        toggleButton(button: music2Btn, onImage: #imageLiteral(resourceName: "unticktv-2"), offImage: #imageLiteral(resourceName: "unticktv-2"))
         
+        toggleButton(button: music1Btn, onImage: #imageLiteral(resourceName: "unticktv-2"), offImage: #imageLiteral(resourceName: "unticktv-2"))
+        
+        toggleButton(button: music3Btn, onImage: #imageLiteral(resourceName: "ticktv"), offImage: #imageLiteral(resourceName: "unticktv-2"))
         
         UserDefaults.standard.set("fire3", forKey: "music")
         
+        
+        
+       
+        let defaults = UserDefaults.standard
+        defaults.set(true, forKey: "InstructionsButtonIsHidden")
     }
     
       

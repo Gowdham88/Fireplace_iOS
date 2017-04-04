@@ -31,7 +31,7 @@
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zey-jx-nsY">
-                                <rect key="frame" x="25" y="19" width="50" height="285"/>
+                                <rect key="frame" x="25" y="19" width="50" height="249"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gmH-eu-YEE">
@@ -44,7 +44,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Okl-WT-N3M">
-                                        <rect key="frame" x="0.0" y="126" width="50" height="40"/>
+                                        <rect key="frame" x="0.0" y="88" width="50" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.16862745098039217" green="0.16862745098039217" blue="0.16862745098039217" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" image="unbright"/>
@@ -62,7 +62,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZvD-Dw-86u">
-                                        <rect key="frame" x="0.0" y="164" width="50" height="40"/>
+                                        <rect key="frame" x="0.0" y="126" width="50" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.16862745098039217" green="0.16862745098039217" blue="0.16862745098039217" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" image="unspeed"/>
@@ -71,7 +71,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JRB-Ds-kox">
-                                        <rect key="frame" x="0.0" y="204" width="50" height="40"/>
+                                        <rect key="frame" x="0.0" y="166" width="50" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.16862745098039217" green="0.16862745098039217" blue="0.16862745098039217" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" image="uninfo"/>
@@ -80,7 +80,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nqg-Jz-iue">
-                                        <rect key="frame" x="0.0" y="243" width="50" height="40"/>
+                                        <rect key="frame" x="0.0" y="205" width="50" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.16862745100000001" green="0.16862745100000001" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" image="volumee1"/>
@@ -88,19 +88,10 @@
                                             <action selector="volumeControl:" destination="ROd-Xh-s8q" eventType="touchUpInside" id="JwO-dl-Rgc"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mSD-MW-mYy">
-                                        <rect key="frame" x="0.0" y="87" width="50" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.16862745100000001" green="0.16862745100000001" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" image="music-player"/>
-                                        <connections>
-                                            <action selector="fireBtnpressed:" destination="ROd-Xh-s8q" eventType="touchUpInside" id="Ezy-XY-NHs"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GGS-dr-e7t">
-                                <rect key="frame" x="87" y="147" width="350" height="35"/>
+                                <rect key="frame" x="87" y="108" width="350" height="35"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="PVy-hk-ArH" customClass="sliderDesign" customModule="Common_Room" customModuleProvider="target">
@@ -120,7 +111,7 @@
                                 <color key="backgroundColor" red="0.16860893368721008" green="0.16863927245140076" blue="0.16860231757164001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fwk-Kk-aqa">
-                                <rect key="frame" x="87" y="186" width="147" height="35"/>
+                                <rect key="frame" x="87" y="147" width="147" height="35"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PWX-iR-FIg">
@@ -148,7 +139,7 @@
                                 <color key="backgroundColor" red="0.16860893369999999" green="0.16863927249999999" blue="0.1686023176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WdS-Rn-cXQ">
-                                <rect key="frame" x="87" y="266" width="350" height="35"/>
+                                <rect key="frame" x="87" y="227" width="350" height="35"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Va1-Aa-VSv" customClass="sliderDesign" customModule="Common_Room" customModuleProvider="target">
@@ -168,61 +159,70 @@
                                 <color key="backgroundColor" red="0.16860893369999999" green="0.16863927249999999" blue="0.1686023176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bJU-td-hfR">
-                                <rect key="frame" x="87" y="68" width="77" height="35"/>
+                                <rect key="frame" x="87" y="68" width="300" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Q3-Ld-NUj">
-                                        <rect key="frame" x="17" y="7" width="42" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="on" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Q3-Ld-NUj">
+                                        <rect key="frame" x="250" y="7" width="42" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                </subviews>
-                                <color key="backgroundColor" red="0.16860893368721008" green="0.16863927245140076" blue="0.16860231757164001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dqt-M4-O8A">
-                                <rect key="frame" x="87" y="107" width="200" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oOZ-hV-Iqw">
-                                        <rect key="frame" x="10" y="6" width="50" height="24"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xSP-W7-8iL">
+                                        <rect key="frame" x="247" y="1" width="46" height="33"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                        <state key="normal" title="Music 1">
-                                            <color key="titleColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.73725490196078436" green="0.74509803921568629" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="on">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="music1:" destination="ROd-Xh-s8q" eventType="touchUpInside" id="s5v-Nh-ldU"/>
+                                            <action selector="fireCrackonoff:" destination="ROd-Xh-s8q" eventType="touchUpInside" id="puD-9R-KKX"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jtj-ul-vjV">
-                                        <rect key="frame" x="76" y="6" width="49" height="24"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jtj-ul-vjV">
+                                        <rect key="frame" x="80" y="1" width="75" height="33"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                        <state key="normal" title="Music 2">
+                                        <color key="backgroundColor" red="0.77647058823529413" green="0.74509803921568629" blue="0.75294117647058822" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" image="untick-1">
                                             <color key="titleColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="music2:" destination="ROd-Xh-s8q" eventType="touchUpInside" id="UQb-sa-EJ8"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6HB-xa-3my">
-                                        <rect key="frame" x="140" y="6" width="50" height="24"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6HB-xa-3my">
+                                        <rect key="frame" x="160" y="1" width="75" height="33"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                        <state key="normal" title="Music 3">
+                                        <color key="backgroundColor" red="0.73725490196078436" green="0.74509803921568629" blue="0.75294117647058822" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" image="untick-1">
                                             <color key="titleColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="music3:" destination="ROd-Xh-s8q" eventType="touchUpInside" id="Cra-8R-ZBx"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oOZ-hV-Iqw">
+                                        <rect key="frame" x="0.0" y="1" width="75" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.73725490196078436" green="0.74509803921568629" blue="0.75294117647058822" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" image="untick-1">
+                                            <color key="titleColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="music1:" destination="ROd-Xh-s8q" eventType="touchUpInside" id="s5v-Nh-ldU"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dqt-M4-O8A">
+                                        <rect key="frame" x="240" y="-2" width="2" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.73725490196078436" green="0.74509803921568629" blue="0.75294117647058822" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
                                 </subviews>
-                                <color key="backgroundColor" red="0.16860893368721008" green="0.16863927245140076" blue="0.16860231757164001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image text1-2" translatesAutoresizingMaskIntoConstraints="NO" id="GeT-71-WNU">
-                                <rect key="frame" x="380" y="8" width="176" height="36"/>
+                                <rect key="frame" x="384" y="11" width="172" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="au8-Cy-LtG">
@@ -260,9 +260,7 @@
                         <outlet property="brightnessBtn" destination="Okl-WT-N3M" id="O7t-bT-AEY"/>
                         <outlet property="fastBtn" destination="ZvD-Dw-86u" id="Etc-bu-4Fq"/>
                         <outlet property="fireBtn" destination="u8y-lR-I0n" id="lVI-GV-UAz"/>
-                        <outlet property="fireMusic" destination="mSD-MW-mYy" id="C0x-hE-PFL"/>
                         <outlet property="fireOnoff" destination="bJU-td-hfR" id="NkS-Mx-Q3W"/>
-                        <outlet property="firemusicView" destination="Dqt-M4-O8A" id="OsY-1C-0IQ"/>
                         <outlet property="forwardBtn" destination="7rx-Bh-GWg" id="hVA-1u-QFT"/>
                         <outlet property="imgaefade1" destination="GeT-71-WNU" id="Ddo-o2-ETJ"/>
                         <outlet property="infoBtn" destination="JRB-Ds-kox" id="YaR-H8-zhK"/>
@@ -271,8 +269,11 @@
                         <outlet property="infoTextview1" destination="t5K-w1-gnp" id="tef-Wz-fYu"/>
                         <outlet property="lineOneview" destination="PWX-iR-FIg" id="x1t-iu-NdN"/>
                         <outlet property="menuBtn" destination="gmH-eu-YEE" id="rfl-P0-5jV"/>
+                        <outlet property="music01" destination="oOZ-hV-Iqw" id="QUt-vq-r7j"/>
+                        <outlet property="music02" destination="jtj-ul-vjV" id="rrt-7k-Asx"/>
+                        <outlet property="music03" destination="6HB-xa-3my" id="aa2-ni-igB"/>
                         <outlet property="normalBtn" destination="9vb-ib-v9m" id="Umv-cv-1Z4"/>
-                        <outlet property="onoffLabel" destination="6Q3-Ld-NUj" id="pla-jj-xpm"/>
+                        <outlet property="onoffLabel" destination="xSP-W7-8iL" id="P1D-BU-ovQ"/>
                         <outlet property="popViewslider" destination="GGS-dr-e7t" id="ojm-xa-IG8"/>
                         <outlet property="videoContolpopup" destination="fwk-Kk-aqa" id="DhZ-BW-6VP"/>
                         <outlet property="viewVideo" destination="rrl-ym-k9c" id="ufW-kV-y5g"/>
@@ -291,7 +292,6 @@
     <resources>
         <image name="fastnew-1" width="38" height="30"/>
         <image name="image text1-2" width="366" height="74"/>
-        <image name="music-player" width="33" height="32"/>
         <image name="normalnew-1" width="28" height="30"/>
         <image name="slidercir" width="13" height="13"/>
         <image name="unbright" width="35" height="32"/>
@@ -299,6 +299,7 @@
         <image name="unline-4" width="26" height="11"/>
         <image name="unselectedfire" width="37" height="32"/>
         <image name="unspeed" width="35" height="32"/>
+        <image name="untick-1" width="25" height="25"/>
         <image name="volumee1" width="36" height="33"/>
     </resources>
 </document>
