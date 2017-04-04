@@ -16,7 +16,6 @@
 		3F15DDC81E8ABF7700EF8807 /* fire2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3F15DDC51E8ABF7700EF8807 /* fire2.mp3 */; };
 		3F15DDC91E8ABF7700EF8807 /* fire3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3F15DDC61E8ABF7700EF8807 /* fire3.mp3 */; };
 		3F1657A11E8E45EA003C2DC5 /* 11111.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1657A01E8E45EA003C2DC5 /* 11111.png */; };
-		3F1657A31E8E6EB3003C2DC5 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F1657A21E8E6EB3003C2DC5 /* Info.plist */; };
 		3F230B8A1E7FEB9E0022401E /* dubfaster.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3F230B871E7FEABD0022401E /* dubfaster.mp4 */; };
 		3F230B8B1E7FEBA20022401E /* dubnormal.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3F230B861E7FEABD0022401E /* dubnormal.mp4 */; };
 		3F230B8C1E7FEBAA0022401E /* dubfaster.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3F230B871E7FEABD0022401E /* dubfaster.mp4 */; };
@@ -324,7 +323,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = Paramesh;
 				TargetAttributes = {
 					04E3ED001E50389500DFDB61 = {
@@ -418,7 +417,6 @@
 				3FEC27D81E8AA1C300B3AE55 /* fire1.mp3 in Resources */,
 				3F234FD51E815ED50093329D /* fastnewerr.mp4 in Resources */,
 				3F230B8B1E7FEBA20022401E /* dubnormal.mp4 in Resources */,
-				3F1657A31E8E6EB3003C2DC5 /* Info.plist in Resources */,
 				3F230B8A1E7FEB9E0022401E /* dubfaster.mp4 in Resources */,
 				3FE88CD41E2F34CE0044F19A /* Assets.xcassets in Resources */,
 				3F31F8171E7E52DE00740719 /* Main.storyboard in Resources */,
