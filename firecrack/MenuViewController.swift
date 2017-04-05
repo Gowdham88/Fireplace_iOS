@@ -64,10 +64,10 @@ class MenuViewController: UIViewController, UITextFieldDelegate {
     var player:AVAudioPlayer = AVAudioPlayer()
     var avPlayer: AVPlayer!
     var playerView = AVPlayer()
-    var videotype : String?
+    var videotype : String = "1"
     var videoselectNormal : String?
     var videoSelectFast : String?
-    var speedtype : String?
+    var speedtype : String = "normals"
     
 
     override func viewDidLoad() {
@@ -632,7 +632,7 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
         
         self.videotype = "1"
         
-       if videotype == "normals" {
+       if speedtype == "normals" {
         
         
         
@@ -682,7 +682,7 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
     
         
         self.videotype = "2"
-        if videotype == "fasts" {
+        if speedtype == "normals" {
             
         
         let bundle: Bundle = Bundle.main
