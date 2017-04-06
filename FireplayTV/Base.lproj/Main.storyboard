@@ -44,7 +44,7 @@
                                             <action selector="menuPressed:" destination="dM2-Lp-xGz" eventType="primaryActionTriggered" id="k1A-65-Qik"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJx-Ez-hLy" customClass="CustomFocusButton" customModule="FireplayTV" customModuleProvider="target">
+                                    <button opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJx-Ez-hLy" customClass="CustomFocusButton" customModule="FireplayTV" customModuleProvider="target">
                                         <rect key="frame" x="7" y="103" width="156" height="130"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
@@ -54,7 +54,7 @@
                                             <action selector="firePressed:" destination="dM2-Lp-xGz" eventType="primaryActionTriggered" id="0fy-2j-xbg"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WH1-sb-ZmB" customClass="CustomFocusButton" customModule="FireplayTV" customModuleProvider="target">
+                                    <button opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WH1-sb-ZmB" customClass="CustomFocusButton" customModule="FireplayTV" customModuleProvider="target">
                                         <rect key="frame" x="7" y="233" width="156" height="115"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
@@ -64,7 +64,7 @@
                                             <action selector="fastPressed:" destination="dM2-Lp-xGz" eventType="primaryActionTriggered" id="zj2-0h-8QT"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1FO-V6-miI" customClass="CustomFocusButton" customModule="FireplayTV" customModuleProvider="target">
+                                    <button opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1FO-V6-miI" customClass="CustomFocusButton" customModule="FireplayTV" customModuleProvider="target">
                                         <rect key="frame" x="7" y="345" width="156" height="115"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
@@ -74,7 +74,7 @@
                                             <action selector="infoPressed:" destination="dM2-Lp-xGz" eventType="primaryActionTriggered" id="xxT-LS-Fz4"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGh-5r-761" userLabel="volume Btn" customClass="CustomFocusButton" customModule="FireplayTV" customModuleProvider="target">
+                                    <button opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGh-5r-761" userLabel="volume Btn" customClass="CustomFocusButton" customModule="FireplayTV" customModuleProvider="target">
                                         <rect key="frame" x="7" y="459" width="156" height="115"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
@@ -84,15 +84,17 @@
                                             <action selector="volumePressed:" destination="dM2-Lp-xGz" eventType="primaryActionTriggered" id="Wec-bs-3nK"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r98-5E-3ba" userLabel="volume Btn" customClass="CustomFocusButton" customModule="FireplayTV" customModuleProvider="target">
+                                    <button opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r98-5E-3ba" userLabel="videoBtn" customClass="CustomFocusButton" customModule="FireplayTV" customModuleProvider="target">
                                         <rect key="frame" x="7" y="574" width="156" height="115"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
                                         <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                         <state key="normal" image="video-player1"/>
+                                        <connections>
+                                            <action selector="videoSelectBtnpressed:" destination="dM2-Lp-xGz" eventType="primaryActionTriggered" id="25A-N9-vRY"/>
+                                        </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="az4-dD-Vnd">
                                 <rect key="frame" x="241" y="180" width="837" height="108"/>
@@ -239,21 +241,27 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gNQ-ui-jsK" userLabel="volumeControl">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gNQ-ui-jsK" userLabel="videoSelect">
                                 <rect key="frame" x="250" y="649" width="454" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T21-uL-zik">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T21-uL-zik" customClass="CustomFocusButton" customModule="FireplayTV" customModuleProvider="target">
                                         <rect key="frame" x="264" y="1" width="143" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                         <state key="normal" image="video unselect1"/>
+                                        <connections>
+                                            <action selector="videoTwo:" destination="dM2-Lp-xGz" eventType="primaryActionTriggered" id="fPx-Nb-ny6"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dlh-3O-Ihr">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dlh-3O-Ihr" customClass="CustomFocusButton" customModule="FireplayTV" customModuleProvider="target">
                                         <rect key="frame" x="42" y="1" width="133" height="99"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                         <state key="normal" image="video unselect1"/>
+                                        <connections>
+                                            <action selector="oneVideo:" destination="dM2-Lp-xGz" eventType="primaryActionTriggered" id="YLu-Hg-rlm"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
@@ -278,6 +286,10 @@
                         <outlet property="music3Btn" destination="XcB-qd-U6p" id="tc9-8X-OVJ"/>
                         <outlet property="normalBtn" destination="IzN-AZ-G4H" id="NOf-u1-tgw"/>
                         <outlet property="videoControlpopup" destination="zuC-X7-qPt" id="del-Nd-lpq"/>
+                        <outlet property="videoFirst" destination="Dlh-3O-Ihr" id="a6C-nV-mKk"/>
+                        <outlet property="videoSecond" destination="T21-uL-zik" id="Dqz-cP-LdW"/>
+                        <outlet property="videoSelect" destination="r98-5E-3ba" id="6h7-od-BzQ"/>
+                        <outlet property="videoSelectview" destination="gNQ-ui-jsK" id="sMn-Ps-B6a"/>
                         <outlet property="videoView" destination="SAy-pe-aMG" id="6Mk-af-yaw"/>
                         <outlet property="viewupDown" destination="gr3-JI-Xav" id="foM-uO-yhK"/>
                         <outlet property="volumeBtn" destination="eGh-5r-761" id="yRn-ay-7K8"/>
