@@ -224,7 +224,33 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
         playerView.play()
         
         UserDefaults.standard.set("normalnewest", forKey: "video")
+        toggleButton(button: videoFirst, onImage:  #imageLiteral(resourceName: "video select1"), offImage:  #imageLiteral(resourceName: "video unselect1"))
+        toggleButton(button: videoSecond, onImage: #imageLiteral(resourceName: "video unselect1"), offImage: #imageLiteral(resourceName: "video unselect1"))
+        let defaults = UserDefaults.standard
+        defaults.set(true, forKey: "InstructionsButtonIsHidden")
+
+        /***********************************************/
+        let path = Bundle.main.path(forResource: "fire1", ofType: "mp3")
+        let filePath = NSURL(fileURLWithPath:path!)
+        player = try! AVAudioPlayer.init(contentsOf: filePath as URL)
+        player.numberOfLoops = -1 //logic for infinite loop
+        player.prepareToPlay()
+        player.play()
         
+        
+        let audioSession = AVAudioSession.sharedInstance()
+        try!audioSession.setCategory(AVAudioSessionCategoryPlayback, with: AVAudioSessionCategoryOptions.duckOthers)
+        
+        
+        
+        UserDefaults.standard.set("fire1", forKey: "music")
+        toggleButton(button: music1Btn, onImage: #imageLiteral(resourceName: "music select-4"), offImage: #imageLiteral(resourceName: "music unselect-4"))
+        toggleButton(button: music2Btn, onImage: #imageLiteral(resourceName: "music unselect-4"), offImage: #imageLiteral(resourceName: "music unselect-4"))
+        
+        toggleButton(button: music3Btn, onImage: #imageLiteral(resourceName: "music unselect-4"), offImage: #imageLiteral(resourceName: "music unselect-4"))
+//        let defaults = UserDefaults.standard
+        defaults.set(true, forKey: "InstructionsButtonIsHidden")
+
         
         
         
@@ -654,10 +680,10 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
         
         
         UserDefaults.standard.set("fire1", forKey: "music")
-        toggleButton(button: music1Btn, onImage: #imageLiteral(resourceName: "ticktv"), offImage: #imageLiteral(resourceName: "unticktv-2"))
-        toggleButton(button: music2Btn, onImage: #imageLiteral(resourceName: "unticktv-2"), offImage: #imageLiteral(resourceName: "unticktv-2"))
+        toggleButton(button: music1Btn, onImage: #imageLiteral(resourceName: "music select-4"), offImage: #imageLiteral(resourceName: "music unselect-4"))
+        toggleButton(button: music2Btn, onImage: #imageLiteral(resourceName: "music unselect-4"), offImage: #imageLiteral(resourceName: "music unselect-4"))
         
-        toggleButton(button: music3Btn, onImage: #imageLiteral(resourceName: "unticktv-2"), offImage: #imageLiteral(resourceName: "unticktv-2"))
+        toggleButton(button: music3Btn, onImage: #imageLiteral(resourceName: "music unselect-4"), offImage: #imageLiteral(resourceName: "music unselect-4"))
         let defaults = UserDefaults.standard
         defaults.set(true, forKey: "InstructionsButtonIsHidden")
         
@@ -680,11 +706,11 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
         
         UserDefaults.standard.set("fire2", forKey: "music")
         
-        toggleButton(button: music2Btn, onImage: #imageLiteral(resourceName: "ticktv"), offImage: #imageLiteral(resourceName: "unticktv-2"))
+        toggleButton(button: music2Btn, onImage: #imageLiteral(resourceName: "music select-4"), offImage: #imageLiteral(resourceName: "music unselect-4"))
 
-        toggleButton(button: music1Btn, onImage: #imageLiteral(resourceName: "unticktv-2"), offImage: #imageLiteral(resourceName: "unticktv-2"))
+        toggleButton(button: music1Btn, onImage: #imageLiteral(resourceName: "music unselect-4"), offImage:#imageLiteral(resourceName: "music unselect-4") )
         
-        toggleButton(button: music3Btn, onImage: #imageLiteral(resourceName: "unticktv-2"), offImage: #imageLiteral(resourceName: "unticktv-2"))
+        toggleButton(button: music3Btn, onImage: #imageLiteral(resourceName: "music unselect-4"), offImage: #imageLiteral(resourceName: "music unselect-4"))
         let defaults = UserDefaults.standard
         defaults.set(true, forKey: "InstructionsButtonIsHidden")
     }
@@ -704,11 +730,11 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
         let audioSession = AVAudioSession.sharedInstance()
         try!audioSession.setCategory(AVAudioSessionCategoryPlayback, with: AVAudioSessionCategoryOptions.duckOthers)
         
-        toggleButton(button: music2Btn, onImage: #imageLiteral(resourceName: "unticktv-2"), offImage: #imageLiteral(resourceName: "unticktv-2"))
+        toggleButton(button: music2Btn, onImage: #imageLiteral(resourceName: "music unselect-4"), offImage: #imageLiteral(resourceName: "music unselect-4"))
         
-        toggleButton(button: music1Btn, onImage: #imageLiteral(resourceName: "unticktv-2"), offImage: #imageLiteral(resourceName: "unticktv-2"))
+        toggleButton(button: music1Btn, onImage: #imageLiteral(resourceName: "music unselect-4"), offImage: #imageLiteral(resourceName: "music unselect-4"))
         
-        toggleButton(button: music3Btn, onImage: #imageLiteral(resourceName: "ticktv"), offImage: #imageLiteral(resourceName: "unticktv-2"))
+        toggleButton(button: music3Btn, onImage: #imageLiteral(resourceName: "music select-4"), offImage: #imageLiteral(resourceName: "music unselect-4"))
         
         UserDefaults.standard.set("fire3", forKey: "music")
         
@@ -902,7 +928,7 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
     
     func SetUpSound() {
         
-        if let path = Bundle.main.path(forResource: "firenew", ofType: "mp3") {
+        if let path = Bundle.main.path(forResource: "fire1", ofType: "mp3") {
             let filePath = NSURL(fileURLWithPath:path)
             player = try! AVAudioPlayer.init(contentsOf: filePath as URL)
             player.numberOfLoops = -1 //logic for infinite loop
