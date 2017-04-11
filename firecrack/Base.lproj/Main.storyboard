@@ -124,12 +124,12 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PWX-iR-FIg">
-                                        <rect key="frame" x="44" y="14" width="50" height="2"/>
+                                        <rect key="frame" x="44" y="16" width="50" height="2"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.36074990034103394" green="0.36080628633499146" blue="0.36073756217956543" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9vb-ib-v9m">
-                                        <rect key="frame" x="13" y="5" width="19" height="20"/>
+                                        <rect key="frame" x="13" y="7" width="19" height="20"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="normalnew-1"/>
                                         <connections>
@@ -137,7 +137,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7rx-Bh-GWg">
-                                        <rect key="frame" x="103" y="5" width="31" height="20"/>
+                                        <rect key="frame" x="103" y="7" width="31" height="20"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="fastnew-1"/>
                                         <connections>
@@ -167,8 +167,8 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.16860893369999999" green="0.16863927249999999" blue="0.1686023176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image text1-3" translatesAutoresizingMaskIntoConstraints="NO" id="GeT-71-WNU">
-                                <rect key="frame" x="438" y="15" width="112" height="20"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imagefade1-2" translatesAutoresizingMaskIntoConstraints="NO" id="GeT-71-WNU">
+                                <rect key="frame" x="441" y="14" width="112" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EcJ-aU-N83">
@@ -184,7 +184,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8FJ-xd-45E">
-                                        <rect key="frame" x="75" y="4" width="27" height="27"/>
+                                        <rect key="frame" x="82" y="4" width="27" height="27"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="video unselect"/>
                                         <connections>
@@ -312,12 +312,12 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RAW-E6-gJE" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="Ncs-Y4-oHg"/>
             </objects>
-            <point key="canvasLocation" x="-15.845070422535212" y="375"/>
+            <point key="canvasLocation" x="-16.901408450704224" y="375"/>
         </scene>
     </scenes>
     <resources>
         <image name="fastnew-1" width="38" height="30"/>
-        <image name="image text1-3" width="358" height="64"/>
+        <image name="imagefade1-2" width="175" height="43"/>
         <image name="music unselect" width="27" height="27"/>
         <image name="normalnew-1" width="28" height="30"/>
         <image name="slidercir" width="13" height="13"/>
