@@ -37,7 +37,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zLx-BT-kHz" customClass="CustomFocusButton" customModule="FireplayTV" customModuleProvider="target">
                                         <rect key="frame" x="5" y="3" width="161" height="82"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="0.4745851293103448" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="0.2701631322400323" colorSpace="calibratedRGB"/>
                                         <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                         <state key="normal" image="unmenu"/>
                                         <connections>
@@ -314,7 +314,7 @@
         <image name="music unselect-4" width="66" height="72"/>
         <image name="normalplay" width="50" height="67"/>
         <image name="speed-1" width="253" height="201"/>
-        <image name="unmenu" width="166" height="63"/>
+        <image name="unmenu" width="204" height="104"/>
         <image name="video unselect1" width="50" height="51"/>
         <image name="video-player1" width="80" height="69"/>
         <image name="volumeDown" width="148" height="55"/>

@@ -224,7 +224,7 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
         playerView.play()
         
         UserDefaults.standard.set("normalnewest", forKey: "video")
-        toggleButton(button: videoFirst, onImage:  #imageLiteral(resourceName: "video select1"), offImage:  #imageLiteral(resourceName: "video unselect1"))
+        toggleButton(button: videoFirst, onImage:  #imageLiteral(resourceName: "video select1"), offImage:  #imageLiteral(resourceName: "video select1"))
         toggleButton(button: videoSecond, onImage: #imageLiteral(resourceName: "video unselect1"), offImage: #imageLiteral(resourceName: "video unselect1"))
         let defaults = UserDefaults.standard
         defaults.set(true, forKey: "InstructionsButtonIsHidden")
@@ -244,7 +244,7 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
         
         
         UserDefaults.standard.set("fire1", forKey: "music")
-        toggleButton(button: music1Btn, onImage: #imageLiteral(resourceName: "music select-4"), offImage: #imageLiteral(resourceName: "music unselect-4"))
+        toggleButton(button: music1Btn, onImage: #imageLiteral(resourceName: "music select-4"), offImage: #imageLiteral(resourceName: "music select-4"))
         toggleButton(button: music2Btn, onImage: #imageLiteral(resourceName: "music unselect-4"), offImage: #imageLiteral(resourceName: "music unselect-4"))
         
         toggleButton(button: music3Btn, onImage: #imageLiteral(resourceName: "music unselect-4"), offImage: #imageLiteral(resourceName: "music unselect-4"))
@@ -496,7 +496,7 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
             
             
         }
-        toggleButton(button: videoFirst, onImage:  #imageLiteral(resourceName: "video select1"), offImage:  #imageLiteral(resourceName: "video unselect1"))
+        toggleButton(button: videoFirst, onImage:  #imageLiteral(resourceName: "video select1"), offImage:  #imageLiteral(resourceName: "video select1"))
         toggleButton(button: videoSecond, onImage: #imageLiteral(resourceName: "video unselect1"), offImage: #imageLiteral(resourceName: "video unselect1"))
         let defaults = UserDefaults.standard
         defaults.set(true, forKey: "InstructionsButtonIsHidden")
@@ -542,7 +542,7 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
             
         }
         toggleButton(button: videoFirst, onImage: #imageLiteral(resourceName: "video unselect1"), offImage: #imageLiteral(resourceName: "video unselect1"))
-        toggleButton(button: videoSecond, onImage: #imageLiteral(resourceName: "video select1"), offImage: #imageLiteral(resourceName: "video unselect1"))
+        toggleButton(button: videoSecond, onImage: #imageLiteral(resourceName: "video select1"), offImage: #imageLiteral(resourceName: "video select1"))
         let defaults = UserDefaults.standard
         defaults.set(true, forKey: "InstructionsButtonIsHidden")
 
@@ -680,13 +680,13 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
         
         
         UserDefaults.standard.set("fire1", forKey: "music")
-        toggleButton(button: music1Btn, onImage: #imageLiteral(resourceName: "music select-4"), offImage: #imageLiteral(resourceName: "music unselect-4"))
+        toggleButton(button: music1Btn, onImage: #imageLiteral(resourceName: "music select-4"), offImage: #imageLiteral(resourceName: "music select-4"))
         toggleButton(button: music2Btn, onImage: #imageLiteral(resourceName: "music unselect-4"), offImage: #imageLiteral(resourceName: "music unselect-4"))
         
         toggleButton(button: music3Btn, onImage: #imageLiteral(resourceName: "music unselect-4"), offImage: #imageLiteral(resourceName: "music unselect-4"))
         let defaults = UserDefaults.standard
         defaults.set(true, forKey: "InstructionsButtonIsHidden")
-        
+        fireCrackingOnoffsound.setTitle("on", for: .normal)
        
     }
     
@@ -706,13 +706,15 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
         
         UserDefaults.standard.set("fire2", forKey: "music")
         
-        toggleButton(button: music2Btn, onImage: #imageLiteral(resourceName: "music select-4"), offImage: #imageLiteral(resourceName: "music unselect-4"))
+        toggleButton(button: music2Btn, onImage: #imageLiteral(resourceName: "music select-4"), offImage: #imageLiteral(resourceName: "music select-4"))
 
         toggleButton(button: music1Btn, onImage: #imageLiteral(resourceName: "music unselect-4"), offImage:#imageLiteral(resourceName: "music unselect-4") )
         
         toggleButton(button: music3Btn, onImage: #imageLiteral(resourceName: "music unselect-4"), offImage: #imageLiteral(resourceName: "music unselect-4"))
         let defaults = UserDefaults.standard
         defaults.set(true, forKey: "InstructionsButtonIsHidden")
+        
+        fireCrackingOnoffsound.setTitle("on", for: .normal)
     }
     
    
@@ -734,7 +736,7 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
         
         toggleButton(button: music1Btn, onImage: #imageLiteral(resourceName: "music unselect-4"), offImage: #imageLiteral(resourceName: "music unselect-4"))
         
-        toggleButton(button: music3Btn, onImage: #imageLiteral(resourceName: "music select-4"), offImage: #imageLiteral(resourceName: "music unselect-4"))
+        toggleButton(button: music3Btn, onImage: #imageLiteral(resourceName: "music select-4"), offImage: #imageLiteral(resourceName: "music select-4"))
         
         UserDefaults.standard.set("fire3", forKey: "music")
         
@@ -743,6 +745,9 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
        
         let defaults = UserDefaults.standard
         defaults.set(true, forKey: "InstructionsButtonIsHidden")
+        
+        fireCrackingOnoffsound.setTitle("on", for: .normal)
+        
     }
     
       

@@ -60,6 +60,7 @@ class MenuViewController: UIViewController, UITextFieldDelegate {
     var avPlayerLayer: AVPlayerLayer!
     var paused: Bool = false
     var menubool : Bool = false
+//    var soundbool : Bool = false
     
     var player:AVAudioPlayer = AVAudioPlayer()
     var avPlayer: AVPlayer!
@@ -68,6 +69,7 @@ class MenuViewController: UIViewController, UITextFieldDelegate {
     var videoselectNormal : String?
     var videoSelectFast : String?
     var speedtype : String = "normals"
+    
     
 
     override func viewDidLoad() {
@@ -104,7 +106,7 @@ class MenuViewController: UIViewController, UITextFieldDelegate {
 //        
 //        /*************************how it works****************/
 //        
-        let attributedString1 = NSMutableAttributedString(string: "How it Works?\n       Common Room works alongside any of your favorite music apps. Simply start Common Room app first followed by opening your favorite music app to play songs then return back. You can control the volume of the fire crackle as well as turn it on and off via the menu in Common Room. Enjoy!")
+        let attributedString1 = NSMutableAttributedString(string: "\nHow it Works?\n       Common Room works alongside any of your favorite music apps. Simply start Common Room app first followed by opening your favorite music app to play songs then return back. You can control the volume of the fire crackle as well as turn it on and off via the menu in Common Room. Enjoy!")
         
 //        attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-UltraLight", size: 12.0)!, range: NSRange(location: 0, length: 305))
 //        
@@ -181,17 +183,17 @@ class MenuViewController: UIViewController, UITextFieldDelegate {
             
             attributedString.addAttribute(NSLinkAttributeName, value: "https://itunes.apple.com/in/genre/ios/id36?mt=8", range: NSRange(location: 14, length: 33))
             
-            attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-UltraLight", size: 12.2)!, range: NSRange(location: 0, length: 506))
+            attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-UltraLight", size: 11.15)!, range: NSRange(location: 0, length: 506))
             
             attributedString.addAttribute(NSForegroundColorAttributeName, value: UIColor.white, range: NSRange(location: 0, length: 507))
             
-            attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 12.2)!, range:NSRange(location: 0, length: 5))
+            attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 11.15)!, range:NSRange(location: 0, length: 5))
             
-            attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 12.2)!, range:NSRange(location: 15, length: 34))
+            attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 11.15)!, range:NSRange(location: 15, length: 34))
             
-            attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 12.2)!, range:NSRange(location: 92, length: 11))
+            attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 11.15)!, range:NSRange(location: 92, length: 11))
             
-            attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 12.2)!, range:NSRange(location: 470, length: 37))
+            attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 11.15)!, range:NSRange(location: 470, length: 37))
             
             attributedString.addAttribute(NSParagraphStyleAttributeName, value: paragraph, range: NSRange(location: 0, length: 507))
             
@@ -201,17 +203,17 @@ class MenuViewController: UIViewController, UITextFieldDelegate {
             
             
             
-            attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-UltraLight", size: 12.2)!, range: NSRange(location: 0, length: 305))
+            attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-UltraLight", size: 11.15)!, range: NSRange(location: 0, length: 305))
             
             attributedString1.addAttribute(NSForegroundColorAttributeName, value: UIColor.white, range: NSRange(location: 0, length: 305))
             
-            attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 12.2)!, range:NSRange(location: 0, length: 13))
+            attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 11.15)!, range:NSRange(location: 0, length: 14))
             
-            attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 12.2)!, range:NSRange(location: 60, length: 21))
+            attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 11.15)!, range:NSRange(location: 61, length: 21))
             
-            attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 12.2)!, range:NSRange(location: 231, length: 9))
+            attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 11.15)!, range:NSRange(location: 232, length: 9))
             
-            attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 12.2)!, range:NSRange(location: 258, length: 12))
+            attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 11.15)!, range:NSRange(location: 259, length: 12))
             
             
             attributedString1.addAttribute(NSParagraphStyleAttributeName, value: paragraph, range: NSRange(location: 0, length: 305))
@@ -514,7 +516,7 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
         playerView.play()
         
         UserDefaults.standard.set("normalnewer", forKey: "video")
-        toggleButton(button: videoFirst, onImage: #imageLiteral(resourceName: "video select"), offImage: #imageLiteral(resourceName: "video unselect"))
+        toggleButton(button: videoFirst, onImage: #imageLiteral(resourceName: "video select"), offImage: #imageLiteral(resourceName: "video select"))
         toggleButton(button: videoSecond, onImage: #imageLiteral(resourceName: "video unselect"), offImage: #imageLiteral(resourceName: "video unselect"))
         let defaults = UserDefaults.standard
         defaults.set(true, forKey: "InstructionsButtonIsHidden")
@@ -536,7 +538,7 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
         
         
         UserDefaults.standard.set("fire1", forKey: "music")
-        toggleButton(button: music01, onImage: #imageLiteral(resourceName: "music select"), offImage:  #imageLiteral(resourceName: "music unselect"))
+        toggleButton(button: music01, onImage: #imageLiteral(resourceName: "music select"), offImage:  #imageLiteral(resourceName: "music select"))
         toggleButton(button: music02, onImage: #imageLiteral(resourceName: "music unselect"), offImage: #imageLiteral(resourceName: "music unselect"))
         
         toggleButton(button: music03, onImage: #imageLiteral(resourceName: "music unselect"), offImage: #imageLiteral(resourceName: "music unselect"))
@@ -945,7 +947,7 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
         
         
         }
-        toggleButton(button: videoFirst, onImage: #imageLiteral(resourceName: "video select"), offImage: #imageLiteral(resourceName: "video unselect"))
+        toggleButton(button: videoFirst, onImage: #imageLiteral(resourceName: "video select"), offImage: #imageLiteral(resourceName: "video select"))
         toggleButton(button: videoSecond, onImage: #imageLiteral(resourceName: "video unselect"), offImage: #imageLiteral(resourceName: "video unselect"))
         let defaults = UserDefaults.standard
         defaults.set(true, forKey: "InstructionsButtonIsHidden")
@@ -990,7 +992,7 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
 
         }
         toggleButton(button: videoFirst, onImage: #imageLiteral(resourceName: "video unselect"), offImage: #imageLiteral(resourceName: "video unselect"))
-        toggleButton(button: videoSecond, onImage: #imageLiteral(resourceName: "video select"), offImage: #imageLiteral(resourceName: "video unselect"))
+        toggleButton(button: videoSecond, onImage: #imageLiteral(resourceName: "video select"), offImage: #imageLiteral(resourceName: "video select"))
         let defaults = UserDefaults.standard
         defaults.set(true, forKey: "InstructionsButtonIsHidden")
     }
@@ -1131,26 +1133,33 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
 
     @IBAction func music1(_ sender: UIButton) {
         
-        let path = Bundle.main.path(forResource: "fire1", ofType: "mp3")
-        let filePath = NSURL(fileURLWithPath:path!)
-        player = try! AVAudioPlayer.init(contentsOf: filePath as URL)
-        player.numberOfLoops = -1 //logic for infinite loop
-        player.prepareToPlay()
-        player.play()
+        
+            let path = Bundle.main.path(forResource: "fire1", ofType: "mp3")
+            let filePath = NSURL(fileURLWithPath:path!)
+            player = try! AVAudioPlayer.init(contentsOf: filePath as URL)
+            player.numberOfLoops = -1 //logic for infinite loop
+            player.prepareToPlay()
+            player.play()
+            
+            
+            let audioSession = AVAudioSession.sharedInstance()
+            try!audioSession.setCategory(AVAudioSessionCategoryPlayback, with: AVAudioSessionCategoryOptions.duckOthers)
+            
+            UserDefaults.standard.set("fire1", forKey: "music")
+            toggleButton(button: music01, onImage: #imageLiteral(resourceName: "music select"), offImage:  #imageLiteral(resourceName: "music select"))
+            toggleButton(button: music02, onImage: #imageLiteral(resourceName: "music unselect"), offImage: #imageLiteral(resourceName: "music unselect"))
+            
+            toggleButton(button: music03, onImage: #imageLiteral(resourceName: "music unselect"), offImage: #imageLiteral(resourceName: "music unselect"))
+            let defaults = UserDefaults.standard
+            defaults.set(true, forKey: "InstructionsButtonIsHidden")
+            let sounddefaults = UserDefaults.standard
+//            player.pause()
+            onoffLabel.setTitle("on", for: .normal)
+        
+            sounddefaults.set(true, forKey: "soundMute")
         
         
-        let audioSession = AVAudioSession.sharedInstance()
-        try!audioSession.setCategory(AVAudioSessionCategoryPlayback, with: AVAudioSessionCategoryOptions.duckOthers)
-        
-
-        
-        UserDefaults.standard.set("fire1", forKey: "music")
-        toggleButton(button: music01, onImage: #imageLiteral(resourceName: "music select"), offImage:  #imageLiteral(resourceName: "music unselect"))
-        toggleButton(button: music02, onImage: #imageLiteral(resourceName: "music unselect"), offImage: #imageLiteral(resourceName: "music unselect"))
-        
-        toggleButton(button: music03, onImage: #imageLiteral(resourceName: "music unselect"), offImage: #imageLiteral(resourceName: "music unselect"))
-        let defaults = UserDefaults.standard
-        defaults.set(true, forKey: "InstructionsButtonIsHidden")
+     
 
     
     }
@@ -1170,14 +1179,19 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
         
         
         UserDefaults.standard.set("fire2", forKey: "music")
-        toggleButton(button: music02, onImage: #imageLiteral(resourceName: "music select"), offImage: #imageLiteral(resourceName: "music unselect"))
+        toggleButton(button: music02, onImage: #imageLiteral(resourceName: "music select"), offImage: #imageLiteral(resourceName: "music select"))
         toggleButton(button: music03, onImage: #imageLiteral(resourceName: "music unselect"), offImage: #imageLiteral(resourceName: "music unselect"))
         toggleButton(button: music01, onImage: #imageLiteral(resourceName: "music unselect"), offImage: #imageLiteral(resourceName: "music unselect"))
   
         let defaults = UserDefaults.standard
         defaults.set(true, forKey: "InstructionsButtonIsHidden")
+        let sounddefaults = UserDefaults.standard
+        
+        sounddefaults.set(true, forKey: "soundMute")
+        onoffLabel.setTitle("on", for: .normal)
     
     }
+    
     @IBAction func music3(_ sender: UIButton) {
         let path = Bundle.main.path(forResource: "fire3", ofType: "mp3")
         let filePath = NSURL(fileURLWithPath:path!)
@@ -1193,14 +1207,20 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
         
         
         UserDefaults.standard.set("fire3", forKey: "music")
-        toggleButton(button: music03, onImage: #imageLiteral(resourceName: "music select"), offImage: #imageLiteral(resourceName: "music unselect"))
+        toggleButton(button: music03, onImage: #imageLiteral(resourceName: "music select"), offImage: #imageLiteral(resourceName: "music select"))
         toggleButton(button: music02, onImage: #imageLiteral(resourceName: "music unselect"), offImage: #imageLiteral(resourceName: "music unselect"))
         toggleButton(button: music01, onImage: #imageLiteral(resourceName: "music unselect"), offImage: #imageLiteral(resourceName: "music unselect"))
         
         let defaults = UserDefaults.standard
         defaults.set(true, forKey: "InstructionsButtonIsHidden")
+        let sounddefaults = UserDefaults.standard
+        
+        sounddefaults.set(true, forKey: "soundMute")
+        onoffLabel.setTitle("on", for: .normal)
+
     
     }
+    
     override func viewDidDisappear(_ animated: Bool) {
        
         
