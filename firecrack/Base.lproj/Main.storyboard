@@ -167,8 +167,8 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.16860893369999999" green="0.16863927249999999" blue="0.1686023176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fadeImage" translatesAutoresizingMaskIntoConstraints="NO" id="GeT-71-WNU">
-                                <rect key="frame" x="887" y="9" width="127" height="44"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fadeImage" translatesAutoresizingMaskIntoConstraints="NO" id="GeT-71-WNU">
+                                <rect key="frame" x="755" y="14" width="243" height="74"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EcJ-aU-N83">
