@@ -159,15 +159,8 @@
 			children = (
 				3F1438D41E65324C0006A7C2 /* Crashlytics.framework */,
 				3F1438D51E65324C0006A7C2 /* Fabric.framework */,
-				3F5D8E431E784AE70056F314 /* firenew.mp3 */,
-				3F15DDC41E8ABF7700EF8807 /* fire1.mp3 */,
-				3F15DDC51E8ABF7700EF8807 /* fire2.mp3 */,
-				3F15DDC61E8ABF7700EF8807 /* fire3.mp3 */,
-				3FA745FB1E516BEF0066C976 /* fire.mp3 */,
-				3F82663A1E951D0D00979536 /* newvideofast.mp4 */,
-				3F82663B1E951D0D00979536 /* newvideonormal.mp4 */,
-				3F7DEBB41E7D81F600B47795 /* fasternew.mp4 */,
-				3F7DEBB51E7D81F600B47795 /* normalnewest.mp4 */,
+				3F3504961E9E4A4600954699 /* Audio */,
+				3F3504971E9E4A5F00954699 /* Video */,
 				04E3ED031E50389600DFDB61 /* AppDelegate.swift */,
 				609D1C521E6B03040009A59F /* MenuTvViewController.swift */,
 				609D1C541E6B0C7A0009A59F /* Assets.xcassets */,
@@ -177,6 +170,52 @@
 				04E3ED0C1E50389600DFDB61 /* Info.plist */,
 			);
 			path = FireplayTV;
+			sourceTree = "<group>";
+		};
+		3F3504941E9E4A0100954699 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				3F5D8E461E784AF00056F314 /* firenew.mp3 */,
+				3FEC27D51E8AA1C300B3AE55 /* fire1.mp3 */,
+				3FEC27D61E8AA1C300B3AE55 /* fire2.mp3 */,
+				3FEC27D71E8AA1C300B3AE55 /* fire3.mp3 */,
+			);
+			name = Audio;
+			sourceTree = "<group>";
+		};
+		3F3504951E9E4A2100954699 /* video */ = {
+			isa = PBXGroup;
+			children = (
+				3F8266331E94F98700979536 /* videonews.mp4 */,
+				3F8266281E94BE3600979536 /* newvideonormal.mp4 */,
+				3F8266291E94BE4100979536 /* newvideofast.mp4 */,
+				3F230B8E1E7FF0390022401E /* fastnewerr.mp4 */,
+				3F230B8F1E7FF0390022401E /* normalnewer.mp4 */,
+			);
+			name = video;
+			sourceTree = "<group>";
+		};
+		3F3504961E9E4A4600954699 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				3F5D8E431E784AE70056F314 /* firenew.mp3 */,
+				3F15DDC41E8ABF7700EF8807 /* fire1.mp3 */,
+				3F15DDC51E8ABF7700EF8807 /* fire2.mp3 */,
+				3F15DDC61E8ABF7700EF8807 /* fire3.mp3 */,
+				3FA745FB1E516BEF0066C976 /* fire.mp3 */,
+			);
+			name = Audio;
+			sourceTree = "<group>";
+		};
+		3F3504971E9E4A5F00954699 /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				3F82663A1E951D0D00979536 /* newvideofast.mp4 */,
+				3F82663B1E951D0D00979536 /* newvideonormal.mp4 */,
+				3F7DEBB41E7D81F600B47795 /* fasternew.mp4 */,
+				3F7DEBB51E7D81F600B47795 /* normalnewest.mp4 */,
+			);
+			name = Video;
 			sourceTree = "<group>";
 		};
 		3FE88CC01E2F34CE0044F19A = {
@@ -206,16 +245,9 @@
 		3FE88CCB1E2F34CE0044F19A /* firecrack */ = {
 			isa = PBXGroup;
 			children = (
+				3F3504941E9E4A0100954699 /* Audio */,
+				3F3504951E9E4A2100954699 /* video */,
 				3FD33DE51E2F4EB200B6FFEA /* firecrack.entitlements */,
-				3F5D8E461E784AF00056F314 /* firenew.mp3 */,
-				3FEC27D51E8AA1C300B3AE55 /* fire1.mp3 */,
-				3FEC27D61E8AA1C300B3AE55 /* fire2.mp3 */,
-				3F8266331E94F98700979536 /* videonews.mp4 */,
-				3F8266281E94BE3600979536 /* newvideonormal.mp4 */,
-				3F8266291E94BE4100979536 /* newvideofast.mp4 */,
-				3FEC27D71E8AA1C300B3AE55 /* fire3.mp3 */,
-				3F230B8E1E7FF0390022401E /* fastnewerr.mp4 */,
-				3F230B8F1E7FF0390022401E /* normalnewer.mp4 */,
 				3FE88CCC1E2F34CE0044F19A /* AppDelegate.swift */,
 				04A5F4E71E48C7580003AFC9 /* VideoPlay.swift */,
 				3F1657A01E8E45EA003C2DC5 /* 11111.png */,
