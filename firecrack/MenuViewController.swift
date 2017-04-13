@@ -183,17 +183,17 @@ class MenuViewController: UIViewController, UITextFieldDelegate {
             
             attributedString.addAttribute(NSLinkAttributeName, value: "https://itunes.apple.com/in/genre/ios/id36?mt=8", range: NSRange(location: 14, length: 33))
             
-            attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-UltraLight", size: 11.15)!, range: NSRange(location: 0, length: 506))
+            attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-UltraLight", size: 11.5)!, range: NSRange(location: 0, length: 506))
             
             attributedString.addAttribute(NSForegroundColorAttributeName, value: UIColor.white, range: NSRange(location: 0, length: 507))
             
-            attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 11.15)!, range:NSRange(location: 0, length: 5))
+            attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 11.5)!, range:NSRange(location: 0, length: 5))
+        
+            attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 11.5)!, range:NSRange(location: 15, length: 34))
             
-            attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 11.15)!, range:NSRange(location: 15, length: 34))
+            attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 11.5)!, range:NSRange(location: 92, length: 11))
             
-            attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 11.15)!, range:NSRange(location: 92, length: 11))
-            
-            attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 11.15)!, range:NSRange(location: 470, length: 37))
+            attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 11.5)!, range:NSRange(location: 470, length: 37))
             
             attributedString.addAttribute(NSParagraphStyleAttributeName, value: paragraph, range: NSRange(location: 0, length: 507))
             
@@ -203,17 +203,17 @@ class MenuViewController: UIViewController, UITextFieldDelegate {
             
             
             
-            attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-UltraLight", size: 11.15)!, range: NSRange(location: 0, length: 306))
+            attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-UltraLight", size: 11.5)!, range: NSRange(location: 0, length: 306))
             
             attributedString1.addAttribute(NSForegroundColorAttributeName, value: UIColor.white, range: NSRange(location: 0, length: 306))
             
-            attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 11.15)!, range:NSRange(location: 0, length: 15))
+            attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 11.5)!, range:NSRange(location: 0, length: 15))
             
-            attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 11.15)!, range:NSRange(location: 62, length: 21))
+            attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 11.5)!, range:NSRange(location: 62, length: 21))
             
-            attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 11.15)!, range:NSRange(location: 233, length: 8))
+            attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 11.5)!, range:NSRange(location: 233, length: 8))
             
-            attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 11.15)!, range:NSRange(location: 260, length: 11))
+            attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 11.5)!, range:NSRange(location: 260, length: 11))
             
             
             attributedString1.addAttribute(NSParagraphStyleAttributeName, value: paragraph, range: NSRange(location: 0, length: 305))
@@ -231,17 +231,17 @@ class MenuViewController: UIViewController, UITextFieldDelegate {
             
             attributedString.addAttribute(NSLinkAttributeName, value: "https://itunes.apple.com/in/genre/ios/id36?mt=8", range: NSRange(location: 14, length: 33))
             
-            attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-UltraLight", size: 12.0)!, range: NSRange(location: 0, length: 506))
+            attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-UltraLight", size: 13.0)!, range: NSRange(location: 0, length: 506))
             
             attributedString.addAttribute(NSForegroundColorAttributeName, value: UIColor.white, range: NSRange(location: 0, length: 507))
             
-            attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 12.0)!, range:NSRange(location: 0, length: 5))
+            attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 13.0)!, range:NSRange(location: 0, length: 5))
             
-            attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 12.0)!, range:NSRange(location: 15, length: 34))
+            attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 13.0)!, range:NSRange(location: 15, length: 34))
             
-            attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 12.0)!, range:NSRange(location: 92, length: 11))
+            attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 13.0)!, range:NSRange(location: 92, length: 11))
             
-            attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 12.0)!, range:NSRange(location: 470, length: 37))
+            attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 13.0)!, range:NSRange(location: 470, length: 37))
             
             attributedString.addAttribute(NSParagraphStyleAttributeName, value: paragraph, range: NSRange(location: 0, length: 507))
             
@@ -251,17 +251,17 @@ class MenuViewController: UIViewController, UITextFieldDelegate {
             
             
             
-            attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-UltraLight", size: 12.0)!, range: NSRange(location: 0, length: 306))
+            attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-UltraLight", size: 13.0)!, range: NSRange(location: 0, length: 306))
             
             attributedString1.addAttribute(NSForegroundColorAttributeName, value: UIColor.white, range: NSRange(location: 0, length: 306))
             
-            attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 12.0)!, range:NSRange(location: 0, length: 13))
+            attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 13.0)!, range:NSRange(location: 0, length: 13))
             
-            attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 12.0)!, range:NSRange(location: 61, length: 21))
+            attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 13.0)!, range:NSRange(location: 61, length: 21))
             
-            attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 12.0)!, range:NSRange(location: 232, length: 9))
+            attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 13.0)!, range:NSRange(location: 232, length: 9))
             
-            attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 12.0)!, range:NSRange(location: 259, length: 12))
+            attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 13.0)!, range:NSRange(location: 259, length: 12))
             
             
             attributedString1.addAttribute(NSParagraphStyleAttributeName, value: paragraph, range: NSRange(location: 0, length: 305))
@@ -383,17 +383,21 @@ class MenuViewController: UIViewController, UITextFieldDelegate {
         })
        /**********************/
         self.menuBtn.isHidden = false
+        
         UIView.animate(withDuration: 2, delay:0.5, options:UIViewAnimationOptions.transitionFlipFromTop, animations: {
 
-            self.menuBtn.alpha = 0
-     
+        
+//            UIView.animate(withDuration: TimeInterval(2), delay: 0.5, options: UIViewAnimationOptions.allowUserInteraction, animations:  {
 
+                self.menuBtn.alpha = 0
         }, completion: { finished in
                      
                         if (self.menubool) {
             
             self.menuBtn.isHidden = true
-
+//            self.menuBtn.removeFromSuperview()
+                
+           
                         }
            
         })
@@ -556,9 +560,12 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
     @IBAction func menupressed(_ sender: UIButton) {
         
         menubool = true
-        
+     
         if menuBtn.currentImage == #imageLiteral(resourceName: "unline-4"){
+
             UIView.animate(withDuration: 0.3, animations: {
+//                self.menubool = true
+
                 self.brightnessBtn.alpha = 1
                 self.fastBtn.alpha = 1
                 self.fireBtn.alpha = 1
@@ -609,6 +616,8 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
         
         
         if menuBtn.isHidden == false {
+//            menubool = true
+
             
             videoContolpopup.isHidden = true
             popViewslider.isHidden = true
@@ -1034,7 +1043,8 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
     func handleTap(sender: UITapGestureRecognizer) {
         
         if self.viewupDown.isHidden {
-            
+//            self.menubool = true
+
             self.viewupDown.isHidden = false
             self.imgaefade1.isHidden = false
             self.imgaefade1.alpha = 1
