@@ -604,7 +604,7 @@
 				);
 				INFOPLIST_FILE = FireplayTV/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.CZ.CommonroomTV;
+				PRODUCT_BUNDLE_IDENTIFIER = com.arjunrai.commonroomfireplace;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				SWIFT_VERSION = 3.0;
@@ -625,7 +625,7 @@
 				);
 				INFOPLIST_FILE = FireplayTV/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.CZ.CommonroomTV;
+				PRODUCT_BUNDLE_IDENTIFIER = com.arjunrai.commonroomfireplace;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				SWIFT_VERSION = 3.0;
@@ -743,7 +743,7 @@
 				INFOPLIST_FILE = firecrack/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.CZ.CommonroomTV;
+				PRODUCT_BUNDLE_IDENTIFIER = com.arjunrai.commonroomfireplace;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -764,7 +764,7 @@
 				INFOPLIST_FILE = firecrack/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.CZ.CommonroomTV;
+				PRODUCT_BUNDLE_IDENTIFIER = com.arjunrai.commonroomfireplace;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
