@@ -60,6 +60,7 @@ class MenuViewController: UIViewController, UITextFieldDelegate {
     var avPlayerLayer: AVPlayerLayer!
     var paused: Bool = false
     var menubool : Bool = false
+//    var soundbool : Bool = false
     
     var player:AVAudioPlayer = AVAudioPlayer()
     var avPlayer: AVPlayer!
@@ -68,6 +69,7 @@ class MenuViewController: UIViewController, UITextFieldDelegate {
     var videoselectNormal : String?
     var videoSelectFast : String?
     var speedtype : String = "normals"
+    
     
 
     override func viewDidLoad() {
@@ -82,47 +84,294 @@ class MenuViewController: UIViewController, UITextFieldDelegate {
         let attributedString = NSMutableAttributedString(string: "About\n      The Common Room Virtual Fireplace App was designed with love by 5x entrepreneur, Arjun Rai. The goal of this is to create the ultimate mobile and relaxing ambience anywhere and anytime. Rai’s passion for fireplaces along with minimalism in art has led him to build several apps and startups over the years since he was a teenager. Common Room is yet another effort to bringing beautiful experiences to everyone...just a bit more relaxing this time around. :) Follow him at twitter.com/arjunraime")
         
         
-        attributedString.addAttribute(NSLinkAttributeName, value: "http://arjunrai.me/", range: NSRange(location: 92, length: 10))
+//        attributedString.addAttribute(NSLinkAttributeName, value: "http://arjunrai.me/", range: NSRange(location: 92, length: 10))
+//        
+//        attributedString.addAttribute(NSLinkAttributeName, value: "https://itunes.apple.com/in/genre/ios/id36?mt=8", range: NSRange(location: 14, length: 33))
+//        
+//        attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-UltraLight", size: 12.0)!, range: NSRange(location: 0, length: 506))
+//        
+//        attributedString.addAttribute(NSForegroundColorAttributeName, value: UIColor.white, range: NSRange(location: 0, length: 507))
+//        
+//        attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 12.0)!, range:NSRange(location: 0, length: 5))
+//        
+//        attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 12.0)!, range:NSRange(location: 15, length: 34))
+//        
+//        attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 12.0)!, range:NSRange(location: 92, length: 11))
+//        
+//        attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 12.0)!, range:NSRange(location: 470, length: 37))
+//        
+//        attributedString.addAttribute(NSParagraphStyleAttributeName, value: paragraph, range: NSRange(location: 0, length: 506))
+//        
+//        infoTextview.attributedText = attributedString
+//        
+//        /*************************how it works****************/
+//        
+        let attributedString1 = NSMutableAttributedString(string: "\nHow it Works?\n       Common Room works alongside any of your favorite music apps. Simply start Common Room app first followed by opening your favorite music app to play songs then return back. You can control the volume of the fire crackle as well as turn it on and off via the menu in Common Room. Enjoy!")
         
-        attributedString.addAttribute(NSLinkAttributeName, value: "https://itunes.apple.com/in/genre/ios/id36?mt=8", range: NSRange(location: 14, length: 33))
-        
-        attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-UltraLight", size: 12.0)!, range: NSRange(location: 0, length: 506))
-        
-        attributedString.addAttribute(NSForegroundColorAttributeName, value: UIColor.white, range: NSRange(location: 0, length: 506))
-        
-        attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 12.0)!, range:NSRange(location: 0, length: 5))
-        
-        attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 12.0)!, range:NSRange(location: 15, length: 34))
-        
-        attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 12.0)!, range:NSRange(location: 92, length: 11))
-        
-        attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 12.0)!, range:NSRange(location: 470, length: 36))
-        
-        attributedString.addAttribute(NSParagraphStyleAttributeName, value: paragraph, range: NSRange(location: 0, length: 506))
-        
-        infoTextview.attributedText = attributedString
-        
-        /*************************how it works****************/
-        
-        let attributedString1 = NSMutableAttributedString(string: "How it Works?\n       Common Room works alongside any of your favorite music apps. Simply start Common Room app first followed by opening your favorite music app to play songs then return back. You can control the volume of the fire crackle as well as turn it on and off via the menu in Common Room. Enjoy!")
-        
-        attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-UltraLight", size: 12.0)!, range: NSRange(location: 0, length: 305))
-        
-        attributedString1.addAttribute(NSForegroundColorAttributeName, value: UIColor.white, range: NSRange(location: 0, length: 305))
-        
-        attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 12.0)!, range:NSRange(location: 0, length: 13))
-        
-        attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 12.0)!, range:NSRange(location: 60, length: 21))
-        
-        attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 12.0)!, range:NSRange(location: 231, length: 9))
-        
-        attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 12.0)!, range:NSRange(location: 258, length: 12))
+//        attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-UltraLight", size: 12.0)!, range: NSRange(location: 0, length: 305))
+//        
+//        attributedString1.addAttribute(NSForegroundColorAttributeName, value: UIColor.white, range: NSRange(location: 0, length: 305))
+//        
+//        attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 12.0)!, range:NSRange(location: 0, length: 13))
+//        
+//        attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 12.0)!, range:NSRange(location: 60, length: 21))
+//        
+//        attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 12.0)!, range:NSRange(location: 231, length: 9))
+//        
+//        attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 12.0)!, range:NSRange(location: 258, length: 12))
+//        
+//        
+//        attributedString1.addAttribute(NSParagraphStyleAttributeName, value: paragraph, range: NSRange(location: 0, length: 305))
+//        
+//        
+//        infoTextview1.attributedText = attributedString1
         
         
-        attributedString1.addAttribute(NSParagraphStyleAttributeName, value: paragraph, range: NSRange(location: 0, length: 305))
+        
+        let screenSize = self.view.frame.height
+        
+//        if screenSize <= 568.0 {
+//            
+//            attributedString.addAttribute(NSLinkAttributeName, value: "http://arjunrai.me/", range: NSRange(location: 92, length: 10))
+//            
+//            attributedString.addAttribute(NSLinkAttributeName, value: "https://itunes.apple.com/in/genre/ios/id36?mt=8", range: NSRange(location: 14, length: 33))
+//            
+//            attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-UltraLight", size: 9.0)!, range: NSRange(location: 0, length: 506))
+//            
+//            attributedString.addAttribute(NSForegroundColorAttributeName, value: UIColor.white, range: NSRange(location: 0, length: 507))
+//            
+//            attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 9.0)!, range:NSRange(location: 0, length: 5))
+//            
+//            attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 9.0)!, range:NSRange(location: 15, length: 34))
+//            
+//            attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 9.0)!, range:NSRange(location: 92, length: 11))
+//            
+//            attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 9.0)!, range:NSRange(location: 470, length: 37))
+//            
+//            attributedString.addAttribute(NSParagraphStyleAttributeName, value: paragraph, range: NSRange(location: 0, length: 507))
+//            
+//            infoTextview.attributedText = attributedString
+//            
+//            
+//            
+//            
+//            
+//            attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-UltraLight", size: 9.0)!, range: NSRange(location: 0, length: 305))
+//            
+//            attributedString1.addAttribute(NSForegroundColorAttributeName, value: UIColor.white, range: NSRange(location: 0, length: 305))
+//            
+//            attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 9.0)!, range:NSRange(location: 0, length: 13))
+//            
+//            attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 9.0)!, range:NSRange(location: 60, length: 21))
+//            
+//            attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 9.0)!, range:NSRange(location: 231, length: 9))
+//            
+//            attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 9.0)!, range:NSRange(location: 258, length: 12))
+//            
+//            
+//            attributedString1.addAttribute(NSParagraphStyleAttributeName, value: paragraph, range: NSRange(location: 0, length: 305))
+//            
+//            
+//            infoTextview1.attributedText = attributedString1
+
+//    }
+    
+            
+         if screenSize <= 667 {
+            
+            attributedString.addAttribute(NSLinkAttributeName, value: "http://arjunrai.me/", range: NSRange(location: 92, length: 10))
+            
+            attributedString.addAttribute(NSLinkAttributeName, value: "https://itunes.apple.com/in/genre/ios/id36?mt=8", range: NSRange(location: 14, length: 33))
+            
+            attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-UltraLight", size: 11.5)!, range: NSRange(location: 0, length: 506))
+            
+            attributedString.addAttribute(NSForegroundColorAttributeName, value: UIColor.white, range: NSRange(location: 0, length: 507))
+            
+            attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 11.5)!, range:NSRange(location: 0, length: 5))
+        
+            attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 11.5)!, range:NSRange(location: 15, length: 34))
+            
+            attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 11.5)!, range:NSRange(location: 92, length: 11))
+            
+            attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 11.5)!, range:NSRange(location: 470, length: 37))
+            
+            attributedString.addAttribute(NSParagraphStyleAttributeName, value: paragraph, range: NSRange(location: 0, length: 507))
+            
+            infoTextview.attributedText = attributedString
+            
+            
+            
+            
+            
+            attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-UltraLight", size: 11.5)!, range: NSRange(location: 0, length: 306))
+            
+            attributedString1.addAttribute(NSForegroundColorAttributeName, value: UIColor.white, range: NSRange(location: 0, length: 306))
+            
+            attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 11.5)!, range:NSRange(location: 0, length: 15))
+            
+            attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 11.5)!, range:NSRange(location: 62, length: 21))
+            
+            attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 11.5)!, range:NSRange(location: 233, length: 8))
+            
+            attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 11.5)!, range:NSRange(location: 260, length: 11))
+            
+            
+            attributedString1.addAttribute(NSParagraphStyleAttributeName, value: paragraph, range: NSRange(location: 0, length: 305))
+            
+            
+            infoTextview1.attributedText = attributedString1
+            
+            
+            // iPhones //
+            //            infoTextview1.font = UIFont(name: "AvenirNext-Medium", size: 12.0)
+        
+        } else if screenSize <= 750.0 {
+            
+            attributedString.addAttribute(NSLinkAttributeName, value: "http://arjunrai.me/", range: NSRange(location: 92, length: 10))
+            
+            attributedString.addAttribute(NSLinkAttributeName, value: "https://itunes.apple.com/in/genre/ios/id36?mt=8", range: NSRange(location: 14, length: 33))
+            
+            attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-UltraLight", size: 13.0)!, range: NSRange(location: 0, length: 506))
+            
+            attributedString.addAttribute(NSForegroundColorAttributeName, value: UIColor.white, range: NSRange(location: 0, length: 507))
+            
+            attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 13.0)!, range:NSRange(location: 0, length: 5))
+            
+            attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 13.0)!, range:NSRange(location: 15, length: 34))
+            
+            attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 13.0)!, range:NSRange(location: 92, length: 11))
+            
+            attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 13.0)!, range:NSRange(location: 470, length: 37))
+            
+            attributedString.addAttribute(NSParagraphStyleAttributeName, value: paragraph, range: NSRange(location: 0, length: 507))
+            
+            infoTextview.attributedText = attributedString
+
+            
+            
+            
+            
+            attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-UltraLight", size: 13.0)!, range: NSRange(location: 0, length: 306))
+            
+            attributedString1.addAttribute(NSForegroundColorAttributeName, value: UIColor.white, range: NSRange(location: 0, length: 306))
+            
+            attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 13.0)!, range:NSRange(location: 0, length: 13))
+            
+            attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 13.0)!, range:NSRange(location: 61, length: 21))
+            
+            attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 13.0)!, range:NSRange(location: 232, length: 9))
+            
+            attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 13.0)!, range:NSRange(location: 259, length: 12))
+            
+            
+            attributedString1.addAttribute(NSParagraphStyleAttributeName, value: paragraph, range: NSRange(location: 0, length: 305))
+            
+            
+            infoTextview1.attributedText = attributedString1
+
+
+            // iPhones //
+//            infoTextview1.font = UIFont(name: "AvenirNext-Medium", size: 12.0)
+//        } else if screenSize <= 1080.0 {
+//            
+//            attributedString.addAttribute(NSLinkAttributeName, value: "http://arjunrai.me/", range: NSRange(location: 92, length: 10))
+//            
+//            attributedString.addAttribute(NSLinkAttributeName, value: "https://itunes.apple.com/in/genre/ios/id36?mt=8", range: NSRange(location: 14, length: 33))
+//            
+//            attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-UltraLight", size: 28.0)!, range: NSRange(location: 0, length: 506))
+//            
+//            attributedString.addAttribute(NSForegroundColorAttributeName, value: UIColor.white, range: NSRange(location: 0, length: 507))
+//            
+//            attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 28.0)!, range:NSRange(location: 0, length: 5))
+//            
+//            attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 28.0)!, range:NSRange(location: 15, length: 34))
+//            
+//            attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 28.0)!, range:NSRange(location: 92, length: 11))
+//            
+//            attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 28.0)!, range:NSRange(location: 470, length: 37))
+//            
+//            attributedString.addAttribute(NSParagraphStyleAttributeName, value: paragraph, range: NSRange(location: 0, length: 507))
+//            
+//            infoTextview.attributedText = attributedString
+//            
+//            
+//            
+//            
+//            attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-UltraLight", size: 28.0)!, range: NSRange(location: 0, length: 305))
+//            
+//            attributedString1.addAttribute(NSForegroundColorAttributeName, value: UIColor.white, range: NSRange(location: 0, length: 305))
+//            
+//            attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 28.0)!, range:NSRange(location: 0, length: 13))
+//            
+//            attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 28.0)!, range:NSRange(location: 60, length: 21))
+//            
+//            attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 28.0)!, range:NSRange(location: 231, length: 9))
+//            
+//            attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 28.0)!, range:NSRange(location: 258, length: 12))
+//            
+//            
+//            attributedString1.addAttribute(NSParagraphStyleAttributeName, value: paragraph, range: NSRange(location: 0, length: 305))
+//            
+//            
+//            infoTextview1.attributedText = attributedString1
+//            
+//
+//            
+            
+            
+            
+        } else {
         
         
-        infoTextview1.attributedText = attributedString1
+            // iPads //
+//            infoTextview1.font = UIFont(name: "AvenirNext-Medium", size: 18.0)
+            
+            attributedString.addAttribute(NSLinkAttributeName, value: "http://arjunrai.me/", range: NSRange(location: 92, length: 10))
+            
+            attributedString.addAttribute(NSLinkAttributeName, value: "https://itunes.apple.com/in/genre/ios/id36?mt=8", range: NSRange(location: 14, length: 33))
+            
+            attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-UltraLight", size: 21.0)!, range: NSRange(location: 0, length: 506))
+            
+            attributedString.addAttribute(NSForegroundColorAttributeName, value: UIColor.white, range: NSRange(location: 0, length: 507))
+            
+            attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 21.0)!, range:NSRange(location: 0, length: 5))
+            
+            attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 21.0)!, range:NSRange(location: 15, length: 34))
+            
+            attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 21.0)!, range:NSRange(location: 92, length: 11))
+            
+            attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 21.0)!, range:NSRange(location: 470, length: 37))
+            
+            attributedString.addAttribute(NSParagraphStyleAttributeName, value: paragraph, range: NSRange(location: 0, length: 507))
+            
+            infoTextview.attributedText = attributedString
+
+            
+            
+            
+            attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-UltraLight", size: 21.0)!, range: NSRange(location: 0, length: 306))
+            
+            attributedString1.addAttribute(NSForegroundColorAttributeName, value: UIColor.white, range: NSRange(location: 0, length: 306))
+            
+            attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 21.0)!, range:NSRange(location: 0, length: 14))
+            
+            attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 21.0)!, range:NSRange(location: 61, length: 21))
+            
+            attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 21.0)!, range:NSRange(location: 232, length: 9))
+            
+            attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 21.0)!, range:NSRange(location: 259, length: 12))
+            
+            
+            attributedString1.addAttribute(NSParagraphStyleAttributeName, value: paragraph, range: NSRange(location: 0, length: 305))
+            
+            
+            infoTextview1.attributedText = attributedString1
+
+            
+            
+            
+           
+        }
         
         /******************** Image fade ***********************/
         
@@ -134,17 +383,21 @@ class MenuViewController: UIViewController, UITextFieldDelegate {
         })
        /**********************/
         self.menuBtn.isHidden = false
+        
         UIView.animate(withDuration: 2, delay:0.5, options:UIViewAnimationOptions.transitionFlipFromTop, animations: {
 
-            self.menuBtn.alpha = 0
-     
+        
+//            UIView.animate(withDuration: TimeInterval(2), delay: 0.5, options: UIViewAnimationOptions.allowUserInteraction, animations:  {
 
+                self.menuBtn.alpha = 0
         }, completion: { finished in
                      
                         if (self.menubool) {
             
             self.menuBtn.isHidden = true
-
+//            self.menuBtn.removeFromSuperview()
+                
+           
                         }
            
         })
@@ -270,7 +523,35 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
         playerView.play()
         
         UserDefaults.standard.set("normalnewer", forKey: "video")
+        toggleButton(button: videoFirst, onImage: #imageLiteral(resourceName: "video select"), offImage: #imageLiteral(resourceName: "video select"))
+        toggleButton(button: videoSecond, onImage: #imageLiteral(resourceName: "video unselect"), offImage: #imageLiteral(resourceName: "video unselect"))
+        let defaults = UserDefaults.standard
+        defaults.set(true, forKey: "InstructionsButtonIsHidden")
         
+        
+        /*************************************************/
+        
+        let path = Bundle.main.path(forResource: "fire1", ofType: "mp3")
+        let filePath = NSURL(fileURLWithPath:path!)
+        player = try! AVAudioPlayer.init(contentsOf: filePath as URL)
+        player.numberOfLoops = -1 //logic for infinite loop
+        player.prepareToPlay()
+        player.play()
+        
+        
+        let audioSession = AVAudioSession.sharedInstance()
+        try!audioSession.setCategory(AVAudioSessionCategoryPlayback, with: AVAudioSessionCategoryOptions.duckOthers)
+        
+        
+        
+        UserDefaults.standard.set("fire1", forKey: "music")
+        toggleButton(button: music01, onImage: #imageLiteral(resourceName: "music select"), offImage:  #imageLiteral(resourceName: "music select"))
+        toggleButton(button: music02, onImage: #imageLiteral(resourceName: "music unselect"), offImage: #imageLiteral(resourceName: "music unselect"))
+        
+        toggleButton(button: music03, onImage: #imageLiteral(resourceName: "music unselect"), offImage: #imageLiteral(resourceName: "music unselect"))
+//        let defaults = UserDefaults.standard
+        defaults.set(true, forKey: "InstructionsButtonIsHidden")
+
         
         
         
@@ -282,9 +563,12 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
     @IBAction func menupressed(_ sender: UIButton) {
         
         menubool = true
-        
+     
         if menuBtn.currentImage == #imageLiteral(resourceName: "unline-4"){
+
             UIView.animate(withDuration: 0.3, animations: {
+//                self.menubool = true
+
                 self.brightnessBtn.alpha = 1
                 self.fastBtn.alpha = 1
                 self.fireBtn.alpha = 1
@@ -335,6 +619,8 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
         
         
         if menuBtn.isHidden == false {
+//            menubool = true
+
             
             videoContolpopup.isHidden = true
             popViewslider.isHidden = true
@@ -673,7 +959,7 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
         
         
         }
-        toggleButton(button: videoFirst, onImage: #imageLiteral(resourceName: "video select"), offImage: #imageLiteral(resourceName: "video unselect"))
+        toggleButton(button: videoFirst, onImage: #imageLiteral(resourceName: "video select"), offImage: #imageLiteral(resourceName: "video select"))
         toggleButton(button: videoSecond, onImage: #imageLiteral(resourceName: "video unselect"), offImage: #imageLiteral(resourceName: "video unselect"))
         let defaults = UserDefaults.standard
         defaults.set(true, forKey: "InstructionsButtonIsHidden")
@@ -718,7 +1004,7 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
 
         }
         toggleButton(button: videoFirst, onImage: #imageLiteral(resourceName: "video unselect"), offImage: #imageLiteral(resourceName: "video unselect"))
-        toggleButton(button: videoSecond, onImage: #imageLiteral(resourceName: "video select"), offImage: #imageLiteral(resourceName: "video unselect"))
+        toggleButton(button: videoSecond, onImage: #imageLiteral(resourceName: "video select"), offImage: #imageLiteral(resourceName: "video select"))
         let defaults = UserDefaults.standard
         defaults.set(true, forKey: "InstructionsButtonIsHidden")
     }
@@ -760,7 +1046,8 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
     func handleTap(sender: UITapGestureRecognizer) {
         
         if self.viewupDown.isHidden {
-            
+//            self.menubool = true
+
             self.viewupDown.isHidden = false
             self.imgaefade1.isHidden = false
             self.imgaefade1.alpha = 1
@@ -859,26 +1146,33 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
 
     @IBAction func music1(_ sender: UIButton) {
         
-        let path = Bundle.main.path(forResource: "fire1", ofType: "mp3")
-        let filePath = NSURL(fileURLWithPath:path!)
-        player = try! AVAudioPlayer.init(contentsOf: filePath as URL)
-        player.numberOfLoops = -1 //logic for infinite loop
-        player.prepareToPlay()
-        player.play()
+        
+            let path = Bundle.main.path(forResource: "fire1", ofType: "mp3")
+            let filePath = NSURL(fileURLWithPath:path!)
+            player = try! AVAudioPlayer.init(contentsOf: filePath as URL)
+            player.numberOfLoops = -1 //logic for infinite loop
+            player.prepareToPlay()
+            player.play()
+            
+            
+            let audioSession = AVAudioSession.sharedInstance()
+            try!audioSession.setCategory(AVAudioSessionCategoryPlayback, with: AVAudioSessionCategoryOptions.duckOthers)
+            
+            UserDefaults.standard.set("fire1", forKey: "music")
+            toggleButton(button: music01, onImage: #imageLiteral(resourceName: "music select"), offImage:  #imageLiteral(resourceName: "music select"))
+            toggleButton(button: music02, onImage: #imageLiteral(resourceName: "music unselect"), offImage: #imageLiteral(resourceName: "music unselect"))
+            
+            toggleButton(button: music03, onImage: #imageLiteral(resourceName: "music unselect"), offImage: #imageLiteral(resourceName: "music unselect"))
+            let defaults = UserDefaults.standard
+            defaults.set(true, forKey: "InstructionsButtonIsHidden")
+            let sounddefaults = UserDefaults.standard
+//            player.pause()
+            onoffLabel.setTitle("on", for: .normal)
+        
+            sounddefaults.set(true, forKey: "soundMute")
         
         
-        let audioSession = AVAudioSession.sharedInstance()
-        try!audioSession.setCategory(AVAudioSessionCategoryPlayback, with: AVAudioSessionCategoryOptions.duckOthers)
-        
-
-        
-        UserDefaults.standard.set("fire1", forKey: "music")
-        toggleButton(button: music01, onImage: #imageLiteral(resourceName: "tick-1"), offImage: #imageLiteral(resourceName: "untick-1"))
-        toggleButton(button: music02, onImage: #imageLiteral(resourceName: "untick-1"), offImage: #imageLiteral(resourceName: "untick-1"))
-        
-        toggleButton(button: music03, onImage: #imageLiteral(resourceName: "untick-1"), offImage: #imageLiteral(resourceName: "untick-1"))
-        let defaults = UserDefaults.standard
-        defaults.set(true, forKey: "InstructionsButtonIsHidden")
+     
 
     
     }
@@ -898,14 +1192,19 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
         
         
         UserDefaults.standard.set("fire2", forKey: "music")
-        toggleButton(button: music02, onImage: #imageLiteral(resourceName: "tick-1"), offImage: #imageLiteral(resourceName: "untick-1"))
-        toggleButton(button: music03, onImage: #imageLiteral(resourceName: "untick-1"), offImage: #imageLiteral(resourceName: "untick-1"))
-        toggleButton(button: music01, onImage: #imageLiteral(resourceName: "untick-1"), offImage: #imageLiteral(resourceName: "untick-1"))
+        toggleButton(button: music02, onImage: #imageLiteral(resourceName: "music select"), offImage: #imageLiteral(resourceName: "music select"))
+        toggleButton(button: music03, onImage: #imageLiteral(resourceName: "music unselect"), offImage: #imageLiteral(resourceName: "music unselect"))
+        toggleButton(button: music01, onImage: #imageLiteral(resourceName: "music unselect"), offImage: #imageLiteral(resourceName: "music unselect"))
   
         let defaults = UserDefaults.standard
         defaults.set(true, forKey: "InstructionsButtonIsHidden")
+        let sounddefaults = UserDefaults.standard
+        
+        sounddefaults.set(true, forKey: "soundMute")
+        onoffLabel.setTitle("on", for: .normal)
     
     }
+    
     @IBAction func music3(_ sender: UIButton) {
         let path = Bundle.main.path(forResource: "fire3", ofType: "mp3")
         let filePath = NSURL(fileURLWithPath:path!)
@@ -921,14 +1220,20 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
         
         
         UserDefaults.standard.set("fire3", forKey: "music")
-        toggleButton(button: music03, onImage: #imageLiteral(resourceName: "tick-1"), offImage: #imageLiteral(resourceName: "untick-1"))
-        toggleButton(button: music02, onImage: #imageLiteral(resourceName: "untick-1"), offImage: #imageLiteral(resourceName: "untick-1"))
-        toggleButton(button: music01, onImage: #imageLiteral(resourceName: "untick-1"), offImage: #imageLiteral(resourceName: "untick-1"))
+        toggleButton(button: music03, onImage: #imageLiteral(resourceName: "music select"), offImage: #imageLiteral(resourceName: "music select"))
+        toggleButton(button: music02, onImage: #imageLiteral(resourceName: "music unselect"), offImage: #imageLiteral(resourceName: "music unselect"))
+        toggleButton(button: music01, onImage: #imageLiteral(resourceName: "music unselect"), offImage: #imageLiteral(resourceName: "music unselect"))
         
         let defaults = UserDefaults.standard
         defaults.set(true, forKey: "InstructionsButtonIsHidden")
+        let sounddefaults = UserDefaults.standard
+        
+        sounddefaults.set(true, forKey: "soundMute")
+        onoffLabel.setTitle("on", for: .normal)
+
     
     }
+    
     override func viewDidDisappear(_ animated: Bool) {
        
         
@@ -956,7 +1261,7 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
     
     func SetUpSound() {
         
-        if let path = Bundle.main.path(forResource: "firenew", ofType: "mp3") {
+        if let path = Bundle.main.path(forResource: "fire1", ofType: "mp3") {
             let filePath = NSURL(fileURLWithPath:path)
             player = try! AVAudioPlayer.init(contentsOf: filePath as URL)
             player.numberOfLoops = -1 //logic for infinite loop
