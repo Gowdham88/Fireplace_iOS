@@ -376,15 +376,26 @@ class MenuViewController: UIViewController, UITextFieldDelegate {
         /******************** Image fade ***********************/
         
         self.imgaefade1.isHidden = false
-        UIView.animate(withDuration: 2, delay:0.5, options:UIViewAnimationOptions.transitionFlipFromTop, animations: {
+
+        //UIView.animate(withDuration: 2, delay:0.5, options:UIViewAnimationOptions.transitionFlipFromTop, animations: {
+
+        UIView.animate(withDuration: 2, delay:0.5, options:UIViewAnimationOptions.allowUserInteraction, animations: {
+
             self.imgaefade1.alpha = 0
+
         }, completion: { finished in
+
+             if (self.menubool) {
             self.imgaefade1.isHidden = true
+
+            }
         })
        /**********************/
         self.menuBtn.isHidden = false
         
-        UIView.animate(withDuration: 2, delay:0.5, options:UIViewAnimationOptions.transitionFlipFromTop, animations: {
+        //UIView.animate(withDuration: 2, delay:0.5, options:UIViewAnimationOptions.transitionFlipFromTop, animations: {
+
+        UIView.animate(withDuration: 2, delay:0.5, options:UIViewAnimationOptions.allowUserInteraction, animations: {
 
         
 //            UIView.animate(withDuration: TimeInterval(2), delay: 0.5, options: UIViewAnimationOptions.allowUserInteraction, animations:  {
@@ -1271,6 +1282,41 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
         
         let audioSession = AVAudioSession.sharedInstance()
         try!audioSession.setCategory(AVAudioSessionCategoryPlayback, with: AVAudioSessionCategoryOptions.duckOthers)
+    }
+
+
+    /**************** touchesBegan ***********/
+
+    var viewTouched = true
+
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+
+        print("Touched")
+
+        view.layer.removeAllAnimations()
+
+        if viewTouched == true {
+
+            viewTouched = false
+
+            self.imgaefade1.alpha = 1
+            self.menuBtn.alpha = 1
+
+            self.imgaefade1.isHidden = false
+            self.menuBtn.isHidden = false
+
+        } else {
+
+            viewTouched = true
+
+            self.imgaefade1.alpha = 0
+            self.menuBtn.alpha = 0
+            
+            self.imgaefade1.isHidden = true
+            self.menuBtn.isHidden = true
+            
+        }
+        
     }
 
     
