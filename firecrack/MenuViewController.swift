@@ -12,6 +12,10 @@ import AVFoundation
 import CoreImage
 
 
+var player:AVAudioPlayer = AVAudioPlayer()
+var avPlayer: AVPlayer!
+var playerView = AVPlayer()
+
 
 class MenuViewController: UIViewController, UITextFieldDelegate {
 
@@ -64,9 +68,6 @@ class MenuViewController: UIViewController, UITextFieldDelegate {
     var menubool : Bool = false
 //    var soundbool : Bool = false
     
-    var player:AVAudioPlayer = AVAudioPlayer()
-    var avPlayer: AVPlayer!
-    var playerView = AVPlayer()
     var videotype : String = "1"
     var videoselectNormal : String?
     var videoSelectFast : String?
@@ -379,6 +380,7 @@ class MenuViewController: UIViewController, UITextFieldDelegate {
         /******************** Image fade ***********************/
         
         self.imgaefade1.isHidden = false
+
         UIView.animate(withDuration: 2, delay:0.5, options:UIViewAnimationOptions.allowUserInteraction, animations: {
 
             self.imgaefade1.alpha = 0
@@ -388,6 +390,7 @@ class MenuViewController: UIViewController, UITextFieldDelegate {
             if (self.menubool) {
 
             self.imgaefade1.isHidden = true
+            self.viewupDown.isHidden = true
 
             }
         })
@@ -406,6 +409,7 @@ class MenuViewController: UIViewController, UITextFieldDelegate {
                         if (self.menubool) {
             
             self.menuBtn.isHidden = true
+            self.viewupDown.isHidden = true
 
 //            self.menuBtn.removeFromSuperview()
                 
@@ -520,7 +524,7 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
         let movieUrl : NSURL = NSURL.fileURL(withPath: videoPlayer) as NSURL
         playerView = AVPlayer(url: movieUrl as URL)
         
-        NotificationCenter.default.addObserver(self,selector: #selector(playerItemDidReachEnd),name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,object: self.playerView.currentItem) // Add observer
+        NotificationCenter.default.addObserver(self,selector: #selector(playerItemDidReachEnd),name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,object: playerView.currentItem) // Add observer
         
         var playerLayer=AVPlayerLayer(player: playerView)
         playerLayer.videoGravity = AVLayerVideoGravityResize
@@ -563,6 +567,8 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
         toggleButton(button: music03, onImage: #imageLiteral(resourceName: "music unselect"), offImage: #imageLiteral(resourceName: "music unselect"))
 //        let defaults = UserDefaults.standard
         defaults.set(true, forKey: "InstructionsButtonIsHidden")
+         let sounddefaults = UserDefaults.standard
+        sounddefaults.set(false, forKey: "soundMute")
 
         
         
@@ -724,11 +730,12 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
             
             player.numberOfLoops = -1
             player.play()
+           
+
+            onoffLabel.setTitle("on", for: .normal)
             let sounddefaults = UserDefaults.standard
             
             sounddefaults.set(false, forKey: "soundMute")
-
-            onoffLabel.setTitle("on", for: .normal)
 
             
         }
@@ -852,7 +859,7 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
         let videoAssetItem = AVPlayerItem(asset: videoAssetURL)
         playerView.replaceCurrentItem(with: videoAssetItem)
         
-        NotificationCenter.default.addObserver(self,selector: #selector(playerItemDidReachEnd),name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,object: self.playerView.currentItem)
+        NotificationCenter.default.addObserver(self,selector: #selector(playerItemDidReachEnd),name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,object: playerView.currentItem)
 //        playerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
 
         playerView.play()
@@ -867,7 +874,7 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
             let videoAssetItem = AVPlayerItem(asset: videoAssetURL)
             playerView.replaceCurrentItem(with: videoAssetItem)
             
-            NotificationCenter.default.addObserver(self,selector: #selector(playerItemDidReachEnd),name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,object: self.playerView.currentItem)
+            NotificationCenter.default.addObserver(self,selector: #selector(playerItemDidReachEnd),name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,object: playerView.currentItem)
             //        playerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
             
             playerView.play()
@@ -891,7 +898,7 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
         let videoAssetItem = AVPlayerItem(asset: videoAssetURL)
         playerView.replaceCurrentItem(with: videoAssetItem)
         
-        NotificationCenter.default.addObserver(self,selector: #selector(playerItemDidReachEnd),name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,object: self.playerView.currentItem)
+        NotificationCenter.default.addObserver(self,selector: #selector(playerItemDidReachEnd),name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,object: playerView.currentItem)
 //        playerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
 
         playerView.play()
@@ -908,7 +915,7 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
             let videoAssetItem = AVPlayerItem(asset: videoAssetURL)
             playerView.replaceCurrentItem(with: videoAssetItem)
             
-            NotificationCenter.default.addObserver(self,selector: #selector(playerItemDidReachEnd),name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,object: self.playerView.currentItem)
+            NotificationCenter.default.addObserver(self,selector: #selector(playerItemDidReachEnd),name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,object: playerView.currentItem)
             //        playerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
             
             playerView.play()
@@ -944,7 +951,7 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
         let videoAssetItem = AVPlayerItem(asset: videoAssetURL)
         playerView.replaceCurrentItem(with: videoAssetItem)
         
-        NotificationCenter.default.addObserver(self,selector: #selector(playerItemDidReachEnd),name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,object: self.playerView.currentItem)
+        NotificationCenter.default.addObserver(self,selector: #selector(playerItemDidReachEnd),name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,object: playerView.currentItem)
         //        playerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
         
         playerView.play()
@@ -959,7 +966,7 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
         let videoAssetItem = AVPlayerItem(asset: videoAssetURL)
         playerView.replaceCurrentItem(with: videoAssetItem)
         
-        NotificationCenter.default.addObserver(self,selector: #selector(playerItemDidReachEnd),name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,object: self.playerView.currentItem)
+        NotificationCenter.default.addObserver(self,selector: #selector(playerItemDidReachEnd),name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,object: playerView.currentItem)
         //        playerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
         
         playerView.play()
@@ -993,7 +1000,7 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
         let videoAssetItem = AVPlayerItem(asset: videoAssetURL)
         playerView.replaceCurrentItem(with: videoAssetItem)
         
-        NotificationCenter.default.addObserver(self,selector: #selector(playerItemDidReachEnd),name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,object: self.playerView.currentItem)
+        NotificationCenter.default.addObserver(self,selector: #selector(playerItemDidReachEnd),name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,object: playerView.currentItem)
         //        playerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
         
         playerView.play()
@@ -1008,7 +1015,7 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
             let videoAssetItem = AVPlayerItem(asset: videoAssetURL)
             playerView.replaceCurrentItem(with: videoAssetItem)
             
-            NotificationCenter.default.addObserver(self,selector: #selector(playerItemDidReachEnd),name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,object: self.playerView.currentItem)
+            NotificationCenter.default.addObserver(self,selector: #selector(playerItemDidReachEnd),name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,object: playerView.currentItem)
             //        playerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
             
             playerView.play()
@@ -1124,7 +1131,7 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
             let videoAssetItem = AVPlayerItem(asset: videoAssetURL)
             playerView.replaceCurrentItem(with: videoAssetItem)
             
-            NotificationCenter.default.addObserver(self,selector: #selector(playerItemDidReachEnd),name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,object: self.playerView.currentItem)
+            NotificationCenter.default.addObserver(self,selector: #selector(playerItemDidReachEnd),name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,object: playerView.currentItem)
             
             playerView.play()
             
@@ -1189,11 +1196,11 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
             toggleButton(button: music03, onImage: #imageLiteral(resourceName: "music unselect"), offImage: #imageLiteral(resourceName: "music unselect"))
             let defaults = UserDefaults.standard
             defaults.set(true, forKey: "InstructionsButtonIsHidden")
-            let sounddefaults = UserDefaults.standard
+//            let sounddefaults = UserDefaults.standard
 //            player.pause()
             onoffLabel.setTitle("on", for: .normal)
         
-            sounddefaults.set(true, forKey: "soundMute")
+//            sounddefaults.set(true, forKey: "soundMute")
         
         
      
@@ -1222,9 +1229,9 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
   
         let defaults = UserDefaults.standard
         defaults.set(true, forKey: "InstructionsButtonIsHidden")
-        let sounddefaults = UserDefaults.standard
-        
-        sounddefaults.set(true, forKey: "soundMute")
+//        let sounddefaults = UserDefaults.standard
+//        
+//        sounddefaults.set(true, forKey: "soundMute")
         onoffLabel.setTitle("on", for: .normal)
     
     }
@@ -1250,9 +1257,9 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
         
         let defaults = UserDefaults.standard
         defaults.set(true, forKey: "InstructionsButtonIsHidden")
-        let sounddefaults = UserDefaults.standard
-        
-        sounddefaults.set(true, forKey: "soundMute")
+//        let sounddefaults = UserDefaults.standard
+//        
+//        sounddefaults.set(true, forKey: "soundMute")
         onoffLabel.setTitle("on", for: .normal)
 
     
@@ -1276,8 +1283,8 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
         
     }
     func playerItemDidReachEnd() {
-        self.playerView.seek(to: kCMTimeZero)
-        self.playerView.play()
+        playerView.seek(to: kCMTimeZero)
+        playerView.play()
     }
 
 
@@ -1296,6 +1303,7 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
         let audioSession = AVAudioSession.sharedInstance()
         try!audioSession.setCategory(AVAudioSessionCategoryPlayback, with: AVAudioSessionCategoryOptions.duckOthers)
     }
+
 
     /**************** touchesBegan ***********/
 
@@ -1342,6 +1350,7 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
 */
 
      if viewTouched == true {
+        print("1")
 
      viewTouched = false
      viewupDown.isHidden = false
@@ -1354,6 +1363,8 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
 
 
      } else {
+
+        print("2")
 
      viewTouched = true
     viewupDown.isHidden = true
