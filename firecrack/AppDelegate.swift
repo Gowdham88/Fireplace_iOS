@@ -9,12 +9,15 @@
 import UIKit
 import Fabric
 import Crashlytics
+import AVKit
+import AVFoundation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var prefs = UserDefaults.standard
+    //var player = AVAudioPlayer()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
@@ -23,12 +26,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
+
+
     func applicationWillResignActive(_ application: UIApplication) {
 
         if let brightvalue = prefs.value(forKey: "DeviceBrightness") {
 
             UIScreen.main.brightness = brightvalue as! CGFloat
-            
+
+            var error:NSError?
+
+
+            if ((player.rate != 0) && (error == nil)) {
+
+                // player is playing
+                print("Player playing")
+            }else {
+                print("Player not playing")
+
+                player.play()
+                //notplaying
+            }
+
         }
 
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -40,7 +59,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if let brightvalue = prefs.value(forKey: "DeviceBrightness") {
 
             UIScreen.main.brightness = brightvalue as! CGFloat
-            
+
+            player.pause()
+
         }
 
         //UIScreen.main.brightness = CGFloat(0)
@@ -48,6 +69,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
     }
+
 
     func applicationWillEnterForeground(_ application: UIApplication) {
 
