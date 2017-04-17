@@ -562,6 +562,8 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
         toggleButton(button: music03, onImage: #imageLiteral(resourceName: "music unselect"), offImage: #imageLiteral(resourceName: "music unselect"))
 //        let defaults = UserDefaults.standard
         defaults.set(true, forKey: "InstructionsButtonIsHidden")
+         let sounddefaults = UserDefaults.standard
+        sounddefaults.set(false, forKey: "soundMute")
 
         
         
@@ -723,11 +725,12 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
             
             player.numberOfLoops = -1
             player.play()
+           
+
+            onoffLabel.setTitle("on", for: .normal)
             let sounddefaults = UserDefaults.standard
             
             sounddefaults.set(false, forKey: "soundMute")
-
-            onoffLabel.setTitle("on", for: .normal)
 
             
         }
@@ -1176,11 +1179,11 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
             toggleButton(button: music03, onImage: #imageLiteral(resourceName: "music unselect"), offImage: #imageLiteral(resourceName: "music unselect"))
             let defaults = UserDefaults.standard
             defaults.set(true, forKey: "InstructionsButtonIsHidden")
-            let sounddefaults = UserDefaults.standard
+//            let sounddefaults = UserDefaults.standard
 //            player.pause()
             onoffLabel.setTitle("on", for: .normal)
         
-            sounddefaults.set(true, forKey: "soundMute")
+//            sounddefaults.set(true, forKey: "soundMute")
         
         
      
@@ -1209,9 +1212,9 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
   
         let defaults = UserDefaults.standard
         defaults.set(true, forKey: "InstructionsButtonIsHidden")
-        let sounddefaults = UserDefaults.standard
-        
-        sounddefaults.set(true, forKey: "soundMute")
+//        let sounddefaults = UserDefaults.standard
+//        
+//        sounddefaults.set(true, forKey: "soundMute")
         onoffLabel.setTitle("on", for: .normal)
     
     }
@@ -1237,9 +1240,9 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
         
         let defaults = UserDefaults.standard
         defaults.set(true, forKey: "InstructionsButtonIsHidden")
-        let sounddefaults = UserDefaults.standard
-        
-        sounddefaults.set(true, forKey: "soundMute")
+//        let sounddefaults = UserDefaults.standard
+//        
+//        sounddefaults.set(true, forKey: "soundMute")
         onoffLabel.setTitle("on", for: .normal)
 
     
