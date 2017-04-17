@@ -52,8 +52,6 @@ class MenuViewController: UIViewController, UITextFieldDelegate {
     var infoBtncenter: CGPoint!
     var volumeBtncenter: CGPoint!
     var videoselectcenter:CGPoint!
-    var viewTouched = true
-    var animationCompleted = true
 
     
     var appBrightness = CGFloat()
@@ -372,21 +370,22 @@ class MenuViewController: UIViewController, UITextFieldDelegate {
             
             
             
-
+           
         }
-
-
+        
         /******************** Image fade ***********************/
         
         self.imgaefade1.isHidden = false
+
+        //UIView.animate(withDuration: 2, delay:0.5, options:UIViewAnimationOptions.transitionFlipFromTop, animations: {
+
         UIView.animate(withDuration: 2, delay:0.5, options:UIViewAnimationOptions.allowUserInteraction, animations: {
 
             self.imgaefade1.alpha = 0
 
         }, completion: { finished in
 
-            if (self.menubool) {
-
+             if (self.menubool) {
             self.imgaefade1.isHidden = true
 
             }
@@ -394,19 +393,19 @@ class MenuViewController: UIViewController, UITextFieldDelegate {
        /**********************/
         self.menuBtn.isHidden = false
         
+        //UIView.animate(withDuration: 2, delay:0.5, options:UIViewAnimationOptions.transitionFlipFromTop, animations: {
+
         UIView.animate(withDuration: 2, delay:0.5, options:UIViewAnimationOptions.allowUserInteraction, animations: {
 
         
 //            UIView.animate(withDuration: TimeInterval(2), delay: 0.5, options: UIViewAnimationOptions.allowUserInteraction, animations:  {
 
-            self.menuBtn.alpha = 0
-
+                self.menuBtn.alpha = 0
         }, completion: { finished in
                      
                         if (self.menubool) {
             
             self.menuBtn.isHidden = true
-
 //            self.menuBtn.removeFromSuperview()
                 
            
@@ -446,7 +445,7 @@ class MenuViewController: UIViewController, UITextFieldDelegate {
         
      
         
-       self.viewupDown.isHidden = false
+//       self.viewupDown.isHidden = true
         popViewslider.isHidden = true
         videoContolpopup.isHidden = true
         infoPopup.isHidden = true
@@ -563,6 +562,8 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
         toggleButton(button: music03, onImage: #imageLiteral(resourceName: "music unselect"), offImage: #imageLiteral(resourceName: "music unselect"))
 //        let defaults = UserDefaults.standard
         defaults.set(true, forKey: "InstructionsButtonIsHidden")
+         let sounddefaults = UserDefaults.standard
+        sounddefaults.set(false, forKey: "soundMute")
 
         
         
@@ -724,11 +725,12 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
             
             player.numberOfLoops = -1
             player.play()
+           
+
+            onoffLabel.setTitle("on", for: .normal)
             let sounddefaults = UserDefaults.standard
             
             sounddefaults.set(false, forKey: "soundMute")
-
-            onoffLabel.setTitle("on", for: .normal)
 
             
         }
@@ -1056,44 +1058,32 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
     
     
     func handleTap(sender: UITapGestureRecognizer) {
+        
+        if self.viewupDown.isHidden {
+//            self.menubool = true
 
-        print("viewTouched: \(viewTouched)")
+            self.viewupDown.isHidden = false
+            self.imgaefade1.isHidden = false
+            self.imgaefade1.alpha = 1
+            self.menuBtn.alpha = 1
+        } else {
+            
+            self.viewupDown.isHidden = true
+            self.imgaefade1.isHidden = true
+            self.popViewslider.isHidden = true
+             self.videoContolpopup.isHidden = true
+            self.infoPopup.isHidden = true
+            self.volumePopup.isHidden = true
+            self.fireOnoff.isHidden = true
+            self.videoSelectview.isHidden = true
 
+//            self.firemusicView.isHidden = true
 
-
-//
-//        if self.viewupDown.isHidden {
-//
-//
-//            //viewTouched = false
-//
-//            self.viewupDown.isHidden = false
-//            self.imgaefade1.isHidden = false
-//            self.menuBtn.isHidden = false
-//            self.imgaefade1.alpha = 1
-//            self.menuBtn.alpha = 1
-//
-//
-//        } else {
-//
-//            //viewTouched = true
-//
-//            self.viewupDown.isHidden = true
-//            //self.menuBtn.isHidden = true
-//            self.imgaefade1.isHidden = true
-//            self.popViewslider.isHidden = true
-//            self.videoContolpopup.isHidden = true
-//            self.infoPopup.isHidden = true
-//            self.volumePopup.isHidden = true
-//            self.fireOnoff.isHidden = true
-//            self.videoSelectview.isHidden = true
-//
-//            //            self.firemusicView.isHidden = true
-//
-//        }
-//
-
-
+            
+            
+            
+        }
+        
     }
 
     override func viewDidLayoutSubviews()  {
@@ -1189,11 +1179,11 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
             toggleButton(button: music03, onImage: #imageLiteral(resourceName: "music unselect"), offImage: #imageLiteral(resourceName: "music unselect"))
             let defaults = UserDefaults.standard
             defaults.set(true, forKey: "InstructionsButtonIsHidden")
-            let sounddefaults = UserDefaults.standard
+//            let sounddefaults = UserDefaults.standard
 //            player.pause()
             onoffLabel.setTitle("on", for: .normal)
         
-            sounddefaults.set(true, forKey: "soundMute")
+//            sounddefaults.set(true, forKey: "soundMute")
         
         
      
@@ -1222,9 +1212,9 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
   
         let defaults = UserDefaults.standard
         defaults.set(true, forKey: "InstructionsButtonIsHidden")
-        let sounddefaults = UserDefaults.standard
-        
-        sounddefaults.set(true, forKey: "soundMute")
+//        let sounddefaults = UserDefaults.standard
+//        
+//        sounddefaults.set(true, forKey: "soundMute")
         onoffLabel.setTitle("on", for: .normal)
     
     }
@@ -1250,9 +1240,9 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
         
         let defaults = UserDefaults.standard
         defaults.set(true, forKey: "InstructionsButtonIsHidden")
-        let sounddefaults = UserDefaults.standard
-        
-        sounddefaults.set(true, forKey: "soundMute")
+//        let sounddefaults = UserDefaults.standard
+//        
+//        sounddefaults.set(true, forKey: "soundMute")
         onoffLabel.setTitle("on", for: .normal)
 
     
@@ -1297,86 +1287,40 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
         try!audioSession.setCategory(AVAudioSessionCategoryPlayback, with: AVAudioSessionCategoryOptions.duckOthers)
     }
 
+
     /**************** touchesBegan ***********/
 
+    var viewTouched = true
 
-     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
 
-     print("Touched")
+        print("Touched")
 
-        print("viewTouched: \(viewTouched)")
+        view.layer.removeAllAnimations()
 
-     view.layer.removeAllAnimations()
+        if viewTouched == true {
 
-        /*
-         if self.viewupDown.isHidden {
+            viewTouched = false
 
+            self.imgaefade1.alpha = 1
+            self.menuBtn.alpha = 1
 
-         //viewTouched = false
+            self.imgaefade1.isHidden = false
+            self.menuBtn.isHidden = false
 
-         self.viewupDown.isHidden = false
-         self.imgaefade1.isHidden = false
-         self.menuBtn.isHidden = false
-         self.imgaefade1.alpha = 1
-         self.menuBtn.alpha = 1
+        } else {
 
+            viewTouched = true
 
-         } else {
+            self.imgaefade1.alpha = 0
+            self.menuBtn.alpha = 0
+            
+            self.imgaefade1.isHidden = true
+            self.menuBtn.isHidden = true
+            
+        }
+        
+    }
 
-         //viewTouched = true
-
-         self.viewupDown.isHidden = true
-         //self.menuBtn.isHidden = true
-         self.imgaefade1.isHidden = true
-         self.popViewslider.isHidden = true
-         self.videoContolpopup.isHidden = true
-         self.infoPopup.isHidden = true
-         self.volumePopup.isHidden = true
-         self.fireOnoff.isHidden = true
-         self.videoSelectview.isHidden = true
-
-         //            self.firemusicView.isHidden = true
-         
-         }
-         
-*/
-
-     if viewTouched == true {
-
-     viewTouched = false
-     viewupDown.isHidden = false
-
-     self.imgaefade1.alpha = 1
-     self.menuBtn.alpha = 1
-
-     self.imgaefade1.isHidden = false
-     self.menuBtn.isHidden = false
-
-
-     } else {
-
-     viewTouched = true
-    viewupDown.isHidden = true
-
-     self.imgaefade1.alpha = 0
-     self.menuBtn.alpha = 0
-
-     self.imgaefade1.isHidden = true
-     self.menuBtn.isHidden = true
-
-        self.imgaefade1.isHidden = true
-        self.popViewslider.isHidden = true
-        self.videoContolpopup.isHidden = true
-        self.infoPopup.isHidden = true
-        self.volumePopup.isHidden = true
-        self.fireOnoff.isHidden = true
-        self.videoSelectview.isHidden = true
-
-
-     }
-
-     }
-
-
-
+    
 }
