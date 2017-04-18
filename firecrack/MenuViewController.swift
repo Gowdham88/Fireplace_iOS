@@ -78,6 +78,7 @@ class MenuViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+
         /***************** info popup link detection***********/
         
         let paragraph = NSMutableParagraphStyle()
@@ -1388,6 +1389,5 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
 
      }
 
-
-
+   
 }

@@ -23,10 +23,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         Fabric.with([Crashlytics.self])
         // Override point for customization after application launch.
+
+        registerforDeviceLockNotification()
+
+
         return true
     }
-
-
 
     func applicationWillResignActive(_ application: UIApplication) {
 
@@ -41,6 +43,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
                 // player is playing
                 print("Player playing")
+
             }else {
                 print("Player not playing")
 
@@ -54,13 +57,79 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
     }
 
+
+
+    func registerforDeviceLockNotification() {
+        //Screen lock notifications
+        CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(),     //center
+            Unmanaged.passUnretained(self).toOpaque(),     // observer
+            displayStatusChangedCallback,     // callback
+            "com.apple.springboard.lockcomplete" as CFString,     // event name
+            nil,     // object
+            .deliverImmediately)
+        CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(),     //center
+            Unmanaged.passUnretained(self).toOpaque(),     // observer
+            displayStatusChangedCallback,     // callback
+            "com.apple.springboard.lockstate" as CFString,    // event name
+            nil,     // object
+            .deliverImmediately)
+    }
+
+    private let displayStatusChangedCallback: CFNotificationCallback = { _, cfObserver, cfName, _, _ in
+
+        guard let lockState = cfName?.rawValue as String? else {
+            return
+        }
+
+        let catcher = Unmanaged<AppDelegate>.fromOpaque(UnsafeRawPointer(OpaquePointer(cfObserver)!)).takeUnretainedValue()
+        catcher.displayStatusChanged(lockState)
+    }
+    var myvalue = 0
+
+    private func displayStatusChanged(_ lockState: String) {
+
+
+        myvalue += 1
+        // the "com.apple.springboard.lockcomplete" notification will always come after the "com.apple.springboard.lockstate" notification
+        print("Darwin notification NAME = \(lockState)")
+        if (lockState == "com.apple.springboard.lockcomplete") {
+
+
+            player.pause()
+            print("DEVICE LOCKED")
+
+        } else {
+
+            if myvalue == 2 {
+
+                print("1. LOCK STATUS CHANGED")
+
+            } else if myvalue == 3 {
+
+                myvalue = 0
+                print("2. LOCK STATUS CHANGED - Audio will play")
+                player.play()
+
+            }
+
+        }
+    }
+    
+    
+
+
+
+
+
+
     func applicationDidEnterBackground(_ application: UIApplication) {
 
         if let brightvalue = prefs.value(forKey: "DeviceBrightness") {
 
             UIScreen.main.brightness = brightvalue as! CGFloat
 
-            player.pause()
+            //player.pause()
+            // registerforDeviceLockNotification()
 
         }
 
