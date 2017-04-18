@@ -388,7 +388,7 @@ class MenuViewController: UIViewController, UITextFieldDelegate {
 
         }, completion: { finished in
 
-            if (self.menubool) {
+            if (self.menubool == false) {
 
             self.imgaefade1.isHidden = true
             self.viewupDown.isHidden = true
@@ -407,7 +407,7 @@ class MenuViewController: UIViewController, UITextFieldDelegate {
 
         }, completion: { finished in
                      
-                        if (self.menubool) {
+                        if (self.menubool == false) {
             
             self.menuBtn.isHidden = true
             self.viewupDown.isHidden = true
@@ -1353,28 +1353,30 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
      if viewTouched == true {
         print("1")
 
-     viewTouched = false
-     viewupDown.isHidden = false
+        menubool = true
+        viewTouched = false
+        viewupDown.isHidden = false
 
-     self.imgaefade1.alpha = 1
-     self.menuBtn.alpha = 1
+        self.imgaefade1.alpha = 1
+        self.menuBtn.alpha = 1
 
-     self.imgaefade1.isHidden = false
-     self.menuBtn.isHidden = false
+        self.imgaefade1.isHidden = false
+        self.menuBtn.isHidden = false
 
 
      } else {
 
         print("2")
 
-     viewTouched = true
-    viewupDown.isHidden = true
+        menubool = false
+        viewTouched = true
+        viewupDown.isHidden = true
 
-     self.imgaefade1.alpha = 0
-     self.menuBtn.alpha = 0
+        self.imgaefade1.alpha = 0
+        self.menuBtn.alpha = 0
 
-     self.imgaefade1.isHidden = true
-     self.menuBtn.isHidden = true
+        self.imgaefade1.isHidden = true
+        self.menuBtn.isHidden = true
 
         self.imgaefade1.isHidden = true
         self.popViewslider.isHidden = true
