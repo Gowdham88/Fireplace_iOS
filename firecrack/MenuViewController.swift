@@ -8,6 +8,7 @@
 
 import UIKit
 import AVKit
+//import AudioKit
 import AVFoundation
 import CoreImage
 
@@ -66,13 +67,14 @@ class MenuViewController: UIViewController, UITextFieldDelegate {
     var avPlayerLayer: AVPlayerLayer!
     var paused: Bool = false
     var menubool : Bool = false
+    var volume : Bool = false
 //    var soundbool : Bool = false
     
     var videotype : String = "1"
     var videoselectNormal : String?
     var videoSelectFast : String?
     var speedtype : String = "normals"
-    
+//    var reproductor = AVAudioPlayer()
     
 
     override func viewDidLoad() {
@@ -479,6 +481,16 @@ class MenuViewController: UIViewController, UITextFieldDelegate {
             
             brightSlider.value = Float(UIScreen.main.brightness)
         }
+        
+//        let volumeURL = prefs.value(forKey: "volumeValue")
+//        
+//        if volumeURL != nil {
+//            
+//            let volumePref = UserDefaults.standard.string(forKey: "volumeValue")
+//            player.volume = volumeSlider.value;
+//            
+//        }
+
         self.SetUpSound()
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(sender:)))
@@ -1054,8 +1066,12 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
     }
     
     @IBAction func volumeSlidercontroller(_ sender: UISlider) {
-        
-        player.volume = volumeSlider.value;
+
+//        
+//        player.volume = Float(volumeSlider.value)
+//        sliderLabel.text = "\(currentValue)"
+        player.volume = volumeSlider.value
+        print(volumeSlider.value)
         
     }
     
@@ -1148,6 +1164,7 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
             let path = Bundle.main.path(forResource: musicURL, ofType: "mp3")
             let filePath = NSURL(fileURLWithPath:path!)
             player = try! AVAudioPlayer.init(contentsOf: filePath as URL)
+            player.volume = volumeSlider.value
             player.numberOfLoops = -1 //logic for infinite loop
             player.prepareToPlay()
             player.play()
@@ -1172,6 +1189,16 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
         }
 
         
+        
+//        let volumePref = UserDefaults.standard
+            let volumeURL = UserDefaults.standard
+            let volumeControl = volumeURL.bool(forKey: "volumeValue")
+       
+            player.volume = volumeSlider.value;
+            
+        
+        
+        
     }
     
     
@@ -1182,6 +1209,7 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
             let path = Bundle.main.path(forResource: "fire1", ofType: "mp3")
             let filePath = NSURL(fileURLWithPath:path!)
             player = try! AVAudioPlayer.init(contentsOf: filePath as URL)
+            player.volume = volumeSlider.value
             player.numberOfLoops = -1 //logic for infinite loop
             player.prepareToPlay()
             player.play()
@@ -1197,6 +1225,7 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
             toggleButton(button: music03, onImage: #imageLiteral(resourceName: "music unselect"), offImage: #imageLiteral(resourceName: "music unselect"))
             let defaults = UserDefaults.standard
             defaults.set(true, forKey: "InstructionsButtonIsHidden")
+        
 //            let sounddefaults = UserDefaults.standard
 //            player.pause()
             onoffLabel.setTitle("on", for: .normal)
@@ -1213,6 +1242,7 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
         let path = Bundle.main.path(forResource: "fire2", ofType: "mp3")
         let filePath = NSURL(fileURLWithPath:path!)
         player = try! AVAudioPlayer.init(contentsOf: filePath as URL)
+        player.volume = volumeSlider.value
         player.numberOfLoops = -1 //logic for infinite loop
         player.prepareToPlay()
         player.play()
@@ -1230,6 +1260,8 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
   
         let defaults = UserDefaults.standard
         defaults.set(true, forKey: "InstructionsButtonIsHidden")
+        UserDefaults.standard.set(true, forKey: "volumeValue")
+
 //        let sounddefaults = UserDefaults.standard
 //        
 //        sounddefaults.set(true, forKey: "soundMute")
@@ -1241,6 +1273,7 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
         let path = Bundle.main.path(forResource: "fire3", ofType: "mp3")
         let filePath = NSURL(fileURLWithPath:path!)
         player = try! AVAudioPlayer.init(contentsOf: filePath as URL)
+        player.volume = volumeSlider.value
         player.numberOfLoops = -1 //logic for infinite loop
         player.prepareToPlay()
         player.play()
@@ -1258,6 +1291,8 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
         
         let defaults = UserDefaults.standard
         defaults.set(true, forKey: "InstructionsButtonIsHidden")
+        UserDefaults.standard.set(true, forKey: "volumeValue")
+
 //        let sounddefaults = UserDefaults.standard
 //        
 //        sounddefaults.set(true, forKey: "soundMute")
@@ -1296,6 +1331,7 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
         if let path = Bundle.main.path(forResource: "fire1", ofType: "mp3") {
             let filePath = NSURL(fileURLWithPath:path)
             player = try! AVAudioPlayer.init(contentsOf: filePath as URL)
+            player.volume = volumeSlider.value
             player.numberOfLoops = -1 //logic for infinite loop
             player.prepareToPlay() 
             player.play()

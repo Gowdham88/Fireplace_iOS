@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ROd-Xh-s8q">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ROd-Xh-s8q">
     <device id="retina4_0" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
@@ -167,28 +167,28 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.16860893369999999" green="0.16863927249999999" blue="0.1686023176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logoIOS-1" translatesAutoresizingMaskIntoConstraints="NO" id="GeT-71-WNU">
-                                <rect key="frame" x="417" y="14" width="132" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image text1@1x-1" translatesAutoresizingMaskIntoConstraints="NO" id="GeT-71-WNU">
+                                <rect key="frame" x="415" y="11" width="132" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EcJ-aU-N83">
-                                <rect key="frame" x="87" y="263" width="126" height="35"/>
+                                <rect key="frame" x="87" y="265" width="126" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="62V-RB-f2T">
-                                        <rect key="frame" x="17" y="4" width="27" height="27"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="video unselect"/>
-                                        <connections>
-                                            <action selector="oneVideo:" destination="ROd-Xh-s8q" eventType="touchUpInside" id="E43-mF-Doh"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8FJ-xd-45E">
-                                        <rect key="frame" x="82" y="4" width="27" height="27"/>
+                                        <rect key="frame" x="84" y="6" width="22" height="22"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="video unselect"/>
                                         <connections>
                                             <action selector="videoTwo:" destination="ROd-Xh-s8q" eventType="touchUpInside" id="1fh-Mk-bcr"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="62V-RB-f2T">
+                                        <rect key="frame" x="17" y="6" width="22" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="video unselect"/>
+                                        <connections>
+                                            <action selector="oneVideo:" destination="ROd-Xh-s8q" eventType="touchUpInside" id="E43-mF-Doh"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -317,7 +317,7 @@
     </scenes>
     <resources>
         <image name="fastnew-1" width="38" height="30"/>
-        <image name="logoIOS-1" width="155" height="37"/>
+        <image name="image text1@1x-1" width="1197" height="272"/>
         <image name="music unselect" width="27" height="27"/>
         <image name="normalnew-1" width="28" height="30"/>
         <image name="slidercir" width="13" height="13"/>
