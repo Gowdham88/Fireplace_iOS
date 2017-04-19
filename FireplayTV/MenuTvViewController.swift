@@ -67,6 +67,7 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
     var videoselectNormal : String?
     var videoSelectFast : String?
     var speedtype : String = "normals"
+    var volumeControl : Float = 0.5
     
    
     
@@ -669,10 +670,11 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
         let path = Bundle.main.path(forResource: "fire1", ofType: "mp3")
         let filePath = NSURL(fileURLWithPath:path!)
         player = try! AVAudioPlayer.init(contentsOf: filePath as URL)
+        
         player.numberOfLoops = -1 //logic for infinite loop
         player.prepareToPlay()
         player.play()
-        
+        player.volume = volumeControl
         
         let audioSession = AVAudioSession.sharedInstance()
         try!audioSession.setCategory(AVAudioSessionCategoryPlayback, with: AVAudioSessionCategoryOptions.duckOthers)
@@ -694,9 +696,11 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
         let path = Bundle.main.path(forResource: "fire2", ofType: "mp3")
         let filePath = NSURL(fileURLWithPath:path!)
         player = try! AVAudioPlayer.init(contentsOf: filePath as URL)
+        player.volume = player.volume
         player.numberOfLoops = -1 //logic for infinite loop
         player.prepareToPlay()
         player.play()
+         player.volume = volumeControl
         
         
         let audioSession = AVAudioSession.sharedInstance()
@@ -724,10 +728,11 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
         let path = Bundle.main.path(forResource: "fire3", ofType: "mp3")
         let filePath = NSURL(fileURLWithPath:path!)
         player = try! AVAudioPlayer.init(contentsOf: filePath as URL)
+        player.volume = player.volume
         player.numberOfLoops = -1 //logic for infinite loop
         player.prepareToPlay()
         player.play()
-        
+         player.volume = volumeControl
         
         let audioSession = AVAudioSession.sharedInstance()
         try!audioSession.setCategory(AVAudioSessionCategoryPlayback, with: AVAudioSessionCategoryOptions.duckOthers)
@@ -854,7 +859,8 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
     
             player.volume = player.volume + 0.1
             print(player.volume)
-        
+            volumeControl = player.volume
+            
         }
         
             
@@ -868,6 +874,7 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
         
             player.volume = player.volume - 0.1
             print(player.volume)
+            volumeControl = player.volume
             
         }
         
