@@ -167,7 +167,7 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.16860893369999999" green="0.16863927249999999" blue="0.1686023176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image text1@1x-1" translatesAutoresizingMaskIntoConstraints="NO" id="GeT-71-WNU">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="common logo" translatesAutoresizingMaskIntoConstraints="NO" id="GeT-71-WNU">
                                 <rect key="frame" x="415" y="11" width="132" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -316,8 +316,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="common logo" width="998" height="211"/>
         <image name="fastnew-1" width="38" height="30"/>
-        <image name="image text1@1x-1" width="1197" height="272"/>
         <image name="music unselect" width="27" height="27"/>
         <image name="normalnew-1" width="28" height="30"/>
         <image name="slidercir" width="13" height="13"/>
