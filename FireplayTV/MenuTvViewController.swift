@@ -195,10 +195,10 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
 //        swipeDown.direction = .down
 //        videoView.addGestureRecognizer(swipeDown)
         
-        do {
-            try AVAudioSession.sharedInstance().overrideOutputAudioPort(AVAudioSessionPortOverride.speaker)
-        } catch _ {
-        }
+//        do {
+//            try AVAudioSession.sharedInstance().overrideOutputAudioPort(AVAudioSessionPortOverride.speaker)
+//        } catch _ {
+//        }
 
         
         NotificationCenter.default.addObserver(self, selector: #selector(willEnterForeground), name:NSNotification.Name.UIApplicationWillEnterForeground, object: nil)
@@ -245,10 +245,10 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
         
         let audioSession = AVAudioSession.sharedInstance()
         try!audioSession.setCategory(AVAudioSessionCategoryPlayback, with: AVAudioSessionCategoryOptions.duckOthers)
-        do {
-            try AVAudioSession.sharedInstance().overrideOutputAudioPort(AVAudioSessionPortOverride.speaker)
-        } catch _ {
-        }
+//        do {
+//            try AVAudioSession.sharedInstance().overrideOutputAudioPort(AVAudioSessionPortOverride.speaker)
+//        } catch _ {
+//        }
 
         
         
@@ -654,10 +654,10 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
             
             let audioSession = AVAudioSession.sharedInstance()
             try!audioSession.setCategory(AVAudioSessionCategoryPlayback, with: AVAudioSessionCategoryOptions.duckOthers)
-            do {
-                try AVAudioSession.sharedInstance().overrideOutputAudioPort(AVAudioSessionPortOverride.speaker)
-            } catch _ {
-            }
+//            do {
+//                try AVAudioSession.sharedInstance().overrideOutputAudioPort(AVAudioSessionPortOverride.speaker)
+//            } catch _ {
+//            }
 
             
         }
@@ -692,10 +692,10 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
         
         let audioSession = AVAudioSession.sharedInstance()
         try!audioSession.setCategory(AVAudioSessionCategoryPlayback, with: AVAudioSessionCategoryOptions.duckOthers)
-        do {
-            try AVAudioSession.sharedInstance().overrideOutputAudioPort(AVAudioSessionPortOverride.speaker)
-        } catch _ {
-        }
+//        do {
+//            try AVAudioSession.sharedInstance().overrideOutputAudioPort(AVAudioSessionPortOverride.speaker)
+//        } catch _ {
+//        }
 
         
         
@@ -724,10 +724,10 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
         
         let audioSession = AVAudioSession.sharedInstance()
         try!audioSession.setCategory(AVAudioSessionCategoryPlayback, with: AVAudioSessionCategoryOptions.duckOthers)
-        do {
-            try AVAudioSession.sharedInstance().overrideOutputAudioPort(AVAudioSessionPortOverride.speaker)
-        } catch _ {
-        }
+//        do {
+//            try AVAudioSession.sharedInstance().overrideOutputAudioPort(AVAudioSessionPortOverride.speaker)
+//        } catch _ {
+//        }
 
         
         
@@ -760,10 +760,10 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
         
         let audioSession = AVAudioSession.sharedInstance()
         try!audioSession.setCategory(AVAudioSessionCategoryPlayback, with: AVAudioSessionCategoryOptions.duckOthers)
-        do {
-            try AVAudioSession.sharedInstance().overrideOutputAudioPort(AVAudioSessionPortOverride.speaker)
-        } catch _ {
-        }
+//        do {
+//            try AVAudioSession.sharedInstance().overrideOutputAudioPort(AVAudioSessionPortOverride.speaker)
+//        } catch _ {
+//        }
 
         
         toggleButton(button: music2Btn, onImage: #imageLiteral(resourceName: "music unselect-4"), offImage: #imageLiteral(resourceName: "music unselect-4"))
@@ -979,10 +979,10 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
         
         let audioSession = AVAudioSession.sharedInstance()
         try!audioSession.setCategory(AVAudioSessionCategoryPlayback, with: AVAudioSessionCategoryOptions.duckOthers)
-        do {
-            try AVAudioSession.sharedInstance().overrideOutputAudioPort(AVAudioSessionPortOverride.speaker)
-        } catch _ {
-        }
+//        do {
+//            try AVAudioSession.sharedInstance().overrideOutputAudioPort(AVAudioSessionPortOverride.speaker)
+//        } catch _ {
+//        }
 
     }
     
