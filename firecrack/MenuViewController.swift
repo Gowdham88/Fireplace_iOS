@@ -49,6 +49,7 @@ class MenuViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var videoSelectview: UIView!
     @IBOutlet var videoFirst: UIButton!
     @IBOutlet var videoSecond: UIButton!
+    @IBOutlet var imagefadeView: UIView!
 
     
     var brightnessBtncenter: CGPoint!
@@ -252,17 +253,17 @@ class MenuViewController: UIViewController, UITextFieldDelegate {
 
         /******************** Image fade ***********************/
         
-        self.imgaefade1.isHidden = false
+        self.imagefadeView.isHidden = false
 
         UIView.animate(withDuration: 2, delay:0.5, options:UIViewAnimationOptions.allowUserInteraction, animations: {
 
-            self.imgaefade1.alpha = 0
+            self.imagefadeView.alpha = 0
 
         }, completion: { finished in
 
             if (self.menubool == false) {
 
-            self.imgaefade1.isHidden = true
+            self.imagefadeView.isHidden = true
             self.viewupDown.isHidden = true
 
             }
@@ -1293,10 +1294,10 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
         viewTouched = false
         viewupDown.isHidden = false
 
-        self.imgaefade1.alpha = 1
+        self.imagefadeView.alpha = 1
         self.menuBtn.alpha = 1
 
-        self.imgaefade1.isHidden = false
+        self.imagefadeView.isHidden = false
         self.menuBtn.isHidden = false
 
 
@@ -1308,13 +1309,13 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
         viewTouched = true
         viewupDown.isHidden = true
 
-        self.imgaefade1.alpha = 0
+        self.imagefadeView.alpha = 0
         self.menuBtn.alpha = 0
 
-        self.imgaefade1.isHidden = true
+        self.imagefadeView.isHidden = true
         self.menuBtn.isHidden = true
 
-        self.imgaefade1.isHidden = true
+        self.imagefadeView.isHidden = true
         self.popViewslider.isHidden = true
         self.videoContolpopup.isHidden = true
         self.infoPopup.isHidden = true
