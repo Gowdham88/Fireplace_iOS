@@ -49,8 +49,11 @@ class MenuViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var videoSelectview: UIView!
     @IBOutlet var videoFirst: UIButton!
     @IBOutlet var videoSecond: UIButton!
-    @IBOutlet var imagefadeView: UIView!
-
+//    @IBOutlet var imagefadeView: UIView!
+//    @IBOutlet var logoCommon: UILabel!
+//
+//    @IBOutlet var logoModern: UILabel!
+    @IBOutlet var newLogofade: UIImageView!
     
     var brightnessBtncenter: CGPoint!
     var fastBtncenter: CGPoint!
@@ -81,9 +84,113 @@ class MenuViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+//        let paragraph1 = NSMutableParagraphStyle()
+//        
+//        paragraph1.alignment = .justified
+//        
+//        
+//        let attributedStringLabel = NSMutableAttributedString(string: "Common Room")
+//        
+//        logoCommon.attributedText = attributedStringLabel
+//     
+//        
+//        
+//        let screenSize1 = self.view.frame.height
+//        
+//        
+//        if screenSize1 <= 667 {
+//        
+//        
+//            attributedStringLabel.addAttribute(NSForegroundColorAttributeName, value: UIColor.white, range: NSRange(location: 0, length: 11))
+//            
+//            attributedStringLabel.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 11)!, range:NSRange(location: 0, length: 11))
+//          
+//        
+//        
+//        } else if screenSize1 <= 750.0 {
+//            
+//            
+//            attributedStringLabel.addAttribute(NSForegroundColorAttributeName, value: UIColor.white, range: NSRange(location: 0, length: 11))
+//            
+//            attributedStringLabel.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 11)!, range:NSRange(location: 0, length: 11))
+//            
+//            
+//            
+//        } else {
+//            
+//            attributedStringLabel.addAttribute(NSForegroundColorAttributeName, value: UIColor.white, range: NSRange(location: 0, length: 11))
+//            
+//            attributedStringLabel.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 15)!, range:NSRange(location: 0, length: 11))
+//            
+//            
+//            
+//        }
+//        
+//        
+//        
+//        logoCommon.attributedText = attributedStringLabel
+//        
+//        
+////        n modern fireplace logoModern
+//        
+//        
+//        
+//        let attributedStringLabe2 = NSMutableAttributedString(string: "modern fireplace")
+//        
+//        logoModern.attributedText = attributedStringLabe2
+//        
+//        
+//        
+//        let screenSize2 = self.view.frame.height
+//        
+//        
+//        if screenSize2 <= 667 {
+//            
+//            
+//            attributedStringLabe2.addAttribute(NSForegroundColorAttributeName, value: UIColor.white, range: NSRange(location: 0, length: 16))
+//            
+//            attributedStringLabe2.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 7)!, range:NSRange(location: 0, length: 16))
+//            
+//            
+//            
+//        } else if screenSize2 <= 750.0 {
+//            
+//            
+//            attributedStringLabe2.addAttribute(NSForegroundColorAttributeName, value: UIColor.white, range: NSRange(location: 0, length: 16))
+//            
+//            attributedStringLabe2.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 7)!, range:NSRange(location: 0, length: 16))
+//            
+//            
+//            
+//        } else {
+//            
+//            attributedStringLabe2.addAttribute(NSForegroundColorAttributeName, value: UIColor.white, range: NSRange(location: 0, length: 16))
+//            
+//            attributedStringLabe2.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 9)!, range:NSRange(location: 0, length: 16))
+//            
+//            
+//            
+//        }
+//        
+//        
+//        
+//        logoModern.attributedText = attributedStringLabe2
+//
+        
+
+        
+        
+//        let attributedStringLabel1 = NSMutableAttributedString(String: "Common Room")
+//        
+//        logoCommon.attributedText = attributedStringLabel
+
+        
+        
 
         /***************** info popup link detection***********/
         
+        
+      
         let paragraph = NSMutableParagraphStyle()
         
         paragraph.alignment = .justified
@@ -250,20 +357,23 @@ class MenuViewController: UIViewController, UITextFieldDelegate {
 
         }
 
+        
+
+        
 
         /******************** Image fade ***********************/
         
-        self.imagefadeView.isHidden = false
+        self.newLogofade.isHidden = false
 
         UIView.animate(withDuration: 2, delay:0.5, options:UIViewAnimationOptions.allowUserInteraction, animations: {
 
-            self.imagefadeView.alpha = 0
+            self.newLogofade.alpha = 0
 
         }, completion: { finished in
 
             if (self.menubool == false) {
 
-            self.imagefadeView.isHidden = true
+            self.newLogofade.isHidden = true
             self.viewupDown.isHidden = true
 
             }
@@ -1294,10 +1404,10 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
         viewTouched = false
         viewupDown.isHidden = false
 
-        self.imagefadeView.alpha = 1
+        self.newLogofade.alpha = 1
         self.menuBtn.alpha = 1
 
-        self.imagefadeView.isHidden = false
+        self.newLogofade.isHidden = false
         self.menuBtn.isHidden = false
 
 
@@ -1309,13 +1419,13 @@ func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterR
         viewTouched = true
         viewupDown.isHidden = true
 
-        self.imagefadeView.alpha = 0
+        self.newLogofade.alpha = 0
         self.menuBtn.alpha = 0
 
-        self.imagefadeView.isHidden = true
+        self.newLogofade.isHidden = true
         self.menuBtn.isHidden = true
 
-        self.imagefadeView.isHidden = true
+        self.newLogofade.isHidden = true
         self.popViewslider.isHidden = true
         self.videoContolpopup.isHidden = true
         self.infoPopup.isHidden = true
