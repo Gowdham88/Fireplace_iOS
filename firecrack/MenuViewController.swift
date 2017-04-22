@@ -209,7 +209,55 @@ class MenuViewController: UIViewController, UITextFieldDelegate {
         let screenSize = self.view.frame.height
         
         
-         if screenSize <= 667 {
+        if screenSize <= 320 {
+            
+            
+            attributedString.addAttribute(NSLinkAttributeName, value: "http://arjunrai.me/", range: NSRange(location: 91, length: 10))
+            
+            attributedString.addAttribute(NSLinkAttributeName, value: "http://commonroomfireplace.com/", range: NSRange(location: 16, length: 32))
+            
+            attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-UltraLight", size: 10)!, range: NSRange(location: 0, length: 506))
+            
+            attributedString.addAttribute(NSForegroundColorAttributeName, value: UIColor.white, range: NSRange(location: 0, length: 506))
+            
+            attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 10)!, range:NSRange(location: 0, length: 5))
+            
+            attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 10)!, range:NSRange(location: 16, length: 33))
+            
+            attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 10)!, range:NSRange(location: 92, length: 10))
+            
+            attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 10)!, range:NSRange(location: 470, length: 36))
+            
+            attributedString.addAttribute(NSParagraphStyleAttributeName, value: paragraph, range: NSRange(location: 0, length: 506))
+            
+            infoTextview.attributedText = attributedString
+            
+            
+            
+            
+            
+            attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-UltraLight", size: 10)!, range: NSRange(location: 0, length: 306))
+            
+            attributedString1.addAttribute(NSForegroundColorAttributeName, value: UIColor.white, range: NSRange(location: 0, length: 306))
+            
+            attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 10)!, range:NSRange(location: 0, length: 15))
+            
+            attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 10)!, range:NSRange(location: 62, length: 21))
+            
+            attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 10)!, range:NSRange(location: 233, length: 8))
+            
+            attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 10)!, range:NSRange(location: 260, length: 11))
+            
+            
+            attributedString1.addAttribute(NSParagraphStyleAttributeName, value: paragraph, range: NSRange(location: 0, length: 305))
+            
+            
+            infoTextview1.attributedText = attributedString1
+            
+
+        
+        
+    } else if screenSize <= 375 {
             
             attributedString.addAttribute(NSLinkAttributeName, value: "http://arjunrai.me/", range: NSRange(location: 91, length: 10))
             
@@ -257,7 +305,7 @@ class MenuViewController: UIViewController, UITextFieldDelegate {
             // iPhones //
             //            infoTextview1.font = UIFont(name: "AvenirNext-Medium", size: 12.0)
         
-        } else if screenSize <= 750.0 {
+        } else if screenSize <= 414 {
             
             attributedString.addAttribute(NSLinkAttributeName, value: "http://arjunrai.me/", range: NSRange(location: 91, length: 10))
             
@@ -287,7 +335,7 @@ class MenuViewController: UIViewController, UITextFieldDelegate {
             
             attributedString1.addAttribute(NSForegroundColorAttributeName, value: UIColor.white, range: NSRange(location: 0, length: 306))
             
-            attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 13.0)!, range:NSRange(location: 0, length: 13))
+            attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 13.0)!, range:NSRange(location: 0, length: 15))
             
             attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 13.0)!, range:NSRange(location: 61, length: 21))
             
@@ -304,7 +352,7 @@ class MenuViewController: UIViewController, UITextFieldDelegate {
 
             
             
-        } else {
+        } else  if screenSize <= 768 {
         
         
             // iPads //
@@ -355,6 +403,55 @@ class MenuViewController: UIViewController, UITextFieldDelegate {
             
             
 
+         } else if screenSize <= 1024 {
+            
+            
+            // iPads //
+            //            infoTextview1.font = UIFont(name: "AvenirNext-Medium", size: 18.0)
+            
+            attributedString.addAttribute(NSLinkAttributeName, value: "http://arjunrai.me/", range: NSRange(location: 91, length: 10))
+            
+            attributedString.addAttribute(NSLinkAttributeName, value: "http://commonroomfireplace.com/", range: NSRange(location: 16, length: 32))
+            
+            attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-UltraLight", size: 28.0)!, range: NSRange(location: 0, length: 506))
+            
+            attributedString.addAttribute(NSForegroundColorAttributeName, value: UIColor.white, range: NSRange(location: 0, length: 506))
+            
+            attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 28.0)!, range:NSRange(location: 0, length: 5))
+            
+            attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 28.0)!, range:NSRange(location: 16, length: 33))
+            
+            attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 28.0)!, range:NSRange(location: 92, length: 10))
+            
+            attributedString.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 28.0)!, range:NSRange(location: 470, length: 36))
+            
+            attributedString.addAttribute(NSParagraphStyleAttributeName, value: paragraph, range: NSRange(location: 0, length: 506))
+            
+            infoTextview.attributedText = attributedString
+            
+            
+            
+            
+            attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-UltraLight", size: 28.0)!, range: NSRange(location: 0, length: 306))
+            
+            attributedString1.addAttribute(NSForegroundColorAttributeName, value: UIColor.white, range: NSRange(location: 0, length: 306))
+            
+            attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 28.0)!, range:NSRange(location: 0, length: 14))
+            
+            attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 28.0)!, range:NSRange(location: 61, length: 21))
+            
+            attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 28.0)!, range:NSRange(location: 232, length: 9))
+            
+            attributedString1.addAttribute(NSFontAttributeName, value: UIFont(name: "AvenirNext-Medium",size: 28.0)!, range:NSRange(location: 259, length: 12))
+            
+            
+            attributedString1.addAttribute(NSParagraphStyleAttributeName, value: paragraph, range: NSRange(location: 0, length: 305))
+            
+            
+            infoTextview1.attributedText = attributedString1
+            
+            
+            
         }
 
         
