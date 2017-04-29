@@ -60,7 +60,7 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
     var isPlaying: Bool = true
     
     var player:AVAudioPlayer = AVAudioPlayer()
-    var avPlayer: AVPlayer?
+    //var avPlayer: AVPlayer?
     var audioStuffed = false
     
     var videotype : String = "1"
@@ -69,12 +69,97 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
     var speedtype : String = "normals"
     var volumeControl : Float = 0.5
     
-   
+   var activeFlame = "normalnewest"
+    var activefireSound = "fire1"
     
-    
+    func appDidBecomeActive(_ notification: Notification) {
+
+        print("did become active notification")
+
+        let bundle: Bundle = Bundle.main
+        let videoPlayer: String = bundle.path(forResource: activeFlame, ofType: "mp4")!
+        let movieUrl : NSURL = NSURL.fileURL(withPath: videoPlayer) as NSURL
+
+        playerView = AVPlayer(url: movieUrl as URL)
+
+        NotificationCenter.default.addObserver(self,selector: #selector(playerItemDidReachEnd),name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,object: self.playerView.currentItem)
+        // Add observer
+
+        var playerLayer = AVPlayerLayer(player: playerView)
+
+        playerLayer.frame = videoView.bounds
+        videoView.layer.addSublayer(playerLayer)
+
+        playerView.play()
+
+        UserDefaults.standard.set(activeFlame, forKey: "video")
+
+
+        let defaults = UserDefaults.standard
+        defaults.set(true, forKey: "InstructionsButtonIsHidden")
+
+        /***********************************************/
+        let path = Bundle.main.path(forResource: activefireSound, ofType: "mp3")
+        let filePath = NSURL(fileURLWithPath:path!)
+        player = try! AVAudioPlayer.init(contentsOf: filePath as URL)
+        player.numberOfLoops = -1 //logic for infinite loop
+        player.prepareToPlay()
+        player.play()
+        player.volume = volumeControl
+
+
+
+        let audioSession = AVAudioSession.sharedInstance()
+        try!audioSession.setCategory(AVAudioSessionCategoryPlayback, with: AVAudioSessionCategoryOptions.duckOthers)
+        //        do {
+        //            try AVAudioSession.sharedInstance().overrideOutputAudioPort(AVAudioSessionPortOverride.speaker)
+        //        } catch _ {
+        //        }
+
+
+
+
+        UserDefaults.standard.set(activefireSound, forKey: "music")
+
+        //        let defaults = UserDefaults.standard
+        defaults.set(true, forKey: "InstructionsButtonIsHidden")
+
+        
+        let sounddefaults = UserDefaults.standard
+        sounddefaults.set(false, forKey: "soundMute")
+
+
+
+    }
+
+    func appWillEnterForeground(_ notification: Notification) {
+
+        print("will enter foreground notification")
+
+
+
+    }
+
+    func appDidEnterBackground(_ notification: Notification) {
+
+        print("Did enter Background notification")
+
+        //avPlayer?.pause()
+        // player.pause()
+
+        playerView.pause()
+        paused = true
+
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        NotificationCenter.default.addObserver(self, selector: #selector(self.appDidBecomeActive), name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.appWillEnterForeground), name: NSNotification.Name.UIApplicationWillEnterForeground, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.appDidEnterBackground), name: NSNotification.Name.UIApplicationDidEnterBackground, object: nil)
+
+
         /***************** info popup link detection***********/
         
         let paragraph = NSMutableParagraphStyle()
@@ -149,12 +234,7 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
         let defaults = UserDefaults.standard
         let isHidden = defaults.bool(forKey: "InstructionsButtonIsHidden")
         
-        
-       
 
-
-      
-        
         
         fastBtncenter = fastBtn.center
         fireBtncenter = fireBtn.center
@@ -222,73 +302,23 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
    
     }
     
-    
-    
+
     override func viewDidAppear(_ animated: Bool) {
-        
         super.viewDidAppear(true)
-        
-        let bundle: Bundle = Bundle.main
-        let videoPlayer: String = bundle.path(forResource: "normalnewest", ofType: "mp4")!
-        let movieUrl : NSURL = NSURL.fileURL(withPath: videoPlayer) as NSURL
-       
-        playerView = AVPlayer(url: movieUrl as URL)
-        
-        NotificationCenter.default.addObserver(self,selector: #selector(playerItemDidReachEnd),name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,object: self.playerView.currentItem) // Add observer
-        
-        
-        var playerLayer=AVPlayerLayer(player: playerView)
-        
-        playerLayer.frame = videoView.bounds
-        videoView.layer.addSublayer(playerLayer)
-        
-        
-        playerView.play()
-        
-        UserDefaults.standard.set("normalnewest", forKey: "video")
+
+        print("Viewdidappear")
+
         toggleButton(button: videoFirst, onImage:  #imageLiteral(resourceName: "video select1"), offImage:  #imageLiteral(resourceName: "video select1"))
         toggleButton(button: videoSecond, onImage: #imageLiteral(resourceName: "video unselect1"), offImage: #imageLiteral(resourceName: "video unselect1"))
-        let defaults = UserDefaults.standard
-        defaults.set(true, forKey: "InstructionsButtonIsHidden")
 
-        /***********************************************/
-        let path = Bundle.main.path(forResource: "fire1", ofType: "mp3")
-        let filePath = NSURL(fileURLWithPath:path!)
-        player = try! AVAudioPlayer.init(contentsOf: filePath as URL)
-        player.numberOfLoops = -1 //logic for infinite loop
-        player.prepareToPlay()
-        player.play()
-        player.volume = volumeControl
-        
-        
-        
-        let audioSession = AVAudioSession.sharedInstance()
-        try!audioSession.setCategory(AVAudioSessionCategoryPlayback, with: AVAudioSessionCategoryOptions.duckOthers)
-//        do {
-//            try AVAudioSession.sharedInstance().overrideOutputAudioPort(AVAudioSessionPortOverride.speaker)
-//        } catch _ {
-//        }
-
-        
-        
-        
-        UserDefaults.standard.set("fire1", forKey: "music")
         toggleButton(button: music1Btn, onImage: #imageLiteral(resourceName: "music select-4"), offImage: #imageLiteral(resourceName: "music select-4"))
         toggleButton(button: music2Btn, onImage: #imageLiteral(resourceName: "music unselect-4"), offImage: #imageLiteral(resourceName: "music unselect-4"))
-        
         toggleButton(button: music3Btn, onImage: #imageLiteral(resourceName: "music unselect-4"), offImage: #imageLiteral(resourceName: "music unselect-4"))
-//        let defaults = UserDefaults.standard
-        defaults.set(true, forKey: "InstructionsButtonIsHidden")
 
-        
-        
-        
     }
 
-    
     /*************************menu button animation*********************/
-  
-    
+
     @IBAction func menuPressed(_ sender: UIButton) {
         
         
@@ -430,8 +460,9 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
         
         
     }
+
     @IBAction func firecrackingOnoff(_ sender: UIButton) {
-        
+
         if player.isPlaying {
             
             player.pause()
@@ -482,7 +513,27 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
         
     }
     
-    
+    func firevideoPlay(flamename: String) {
+
+        activeFlame = flamename
+
+        let bundle: Bundle = Bundle.main
+        let videoPlayer: String = bundle.path(forResource: activeFlame, ofType: "mp4")!
+        let movieUrl : NSURL = NSURL.fileURL(withPath: videoPlayer) as NSURL
+        let videoAssetURL = AVURLAsset(url: movieUrl as URL)
+        let videoAssetItem = AVPlayerItem(asset: videoAssetURL)
+        playerView.replaceCurrentItem(with: videoAssetItem)
+
+        NotificationCenter.default.addObserver(self,selector: #selector(playerItemDidReachEnd),name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,object: self.playerView.currentItem)
+        //        playerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
+
+        playerView.play()
+
+        UserDefaults.standard.set(activeFlame, forKey: "video")
+
+
+    }
+
     @IBAction func oneVideo(_ sender: Any) {
         
         self.videotype = "1"
@@ -490,109 +541,55 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
         if speedtype == "normals" {
             
             
-            
-            let bundle: Bundle = Bundle.main
-            let videoPlayer: String = bundle.path(forResource: "normalnewest", ofType: "mp4")!
-            let movieUrl : NSURL = NSURL.fileURL(withPath: videoPlayer) as NSURL
-            let videoAssetURL = AVURLAsset(url: movieUrl as URL)
-            let videoAssetItem = AVPlayerItem(asset: videoAssetURL)
-            playerView.replaceCurrentItem(with: videoAssetItem)
-            
-            NotificationCenter.default.addObserver(self,selector: #selector(playerItemDidReachEnd),name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,object: self.playerView.currentItem)
-            //        playerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
-            
-            playerView.play()
-            
-            UserDefaults.standard.set("normalnewest", forKey: "video")
-            
+            firevideoPlay(flamename: "normalnewest")
+
         } else {
-            let bundle: Bundle = Bundle.main
-            let videoPlayer: String = bundle.path(forResource: "fasternew", ofType: "mp4")!
-            let movieUrl : NSURL = NSURL.fileURL(withPath: videoPlayer) as NSURL
-            let videoAssetURL = AVURLAsset(url: movieUrl as URL)
-            let videoAssetItem = AVPlayerItem(asset: videoAssetURL)
-            playerView.replaceCurrentItem(with: videoAssetItem)
-            
-            NotificationCenter.default.addObserver(self,selector: #selector(playerItemDidReachEnd),name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,object: self.playerView.currentItem)
-            //        playerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
-            
-            playerView.play()
-            
-            
-            
-            UserDefaults.standard.set("fasternew", forKey: "video")
-            
-            
-            
+
+            firevideoPlay(flamename: "fasternew")
+
+
         }
+
         toggleButton(button: videoFirst, onImage:  #imageLiteral(resourceName: "video select1"), offImage:  #imageLiteral(resourceName: "video select1"))
         toggleButton(button: videoSecond, onImage: #imageLiteral(resourceName: "video unselect1"), offImage: #imageLiteral(resourceName: "video unselect1"))
         let defaults = UserDefaults.standard
         defaults.set(true, forKey: "InstructionsButtonIsHidden")
    
         
-        
     }
-    
-    
+
     @IBAction func videoTwo(_ sender: Any) {
         
         self.videotype = "2"
         if speedtype == "normals" {
             
-            
-            let bundle: Bundle = Bundle.main
-            let videoPlayer: String = bundle.path(forResource: "newvideonormal", ofType: "mp4")!
-            let movieUrl : NSURL = NSURL.fileURL(withPath: videoPlayer) as NSURL
-            let videoAssetURL = AVURLAsset(url: movieUrl as URL)
-            let videoAssetItem = AVPlayerItem(asset: videoAssetURL)
-            playerView.replaceCurrentItem(with: videoAssetItem)
-            
-            NotificationCenter.default.addObserver(self,selector: #selector(playerItemDidReachEnd),name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,object: self.playerView.currentItem)
-            //        playerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
-            
-            playerView.play()
-            UserDefaults.standard.set("newvideonormal", forKey: "video")
-            
+
+            firevideoPlay(flamename: "newvideonormal")
+
+
         } else {
-            
-            let bundle: Bundle = Bundle.main
-            let videoPlayer: String = bundle.path(forResource: "newvideofast", ofType: "mp4")!
-            let movieUrl : NSURL = NSURL.fileURL(withPath: videoPlayer) as NSURL
-            let videoAssetURL = AVURLAsset(url: movieUrl as URL)
-            let videoAssetItem = AVPlayerItem(asset: videoAssetURL)
-            playerView.replaceCurrentItem(with: videoAssetItem)
-            
-            NotificationCenter.default.addObserver(self,selector: #selector(playerItemDidReachEnd),name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,object: self.playerView.currentItem)
-            //        playerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
-            
-            playerView.play()
-            UserDefaults.standard.set("newvideofast", forKey: "video")
-            
+
+            firevideoPlay(flamename: "newvideofast")
+
+
         }
         toggleButton(button: videoFirst, onImage: #imageLiteral(resourceName: "video unselect1"), offImage: #imageLiteral(resourceName: "video unselect1"))
         toggleButton(button: videoSecond, onImage: #imageLiteral(resourceName: "video select1"), offImage: #imageLiteral(resourceName: "video select1"))
         let defaults = UserDefaults.standard
         defaults.set(true, forKey: "InstructionsButtonIsHidden")
 
-        
-        
-        
     }
     
     @IBAction func volumePressed(_ sender: Any) {
+
         if self.volumePopup.isHidden == true {
             
             volumePopup.isHidden = false
-            
             videoControlpopup.isHidden = true
             infoPopupview.isHidden = true
             fireOnoff.isHidden = true
             videoSelectview.isHidden = true
 
-//            musicView.isHidden = true
-            
-            
         } else {
             
             volumePopup.isHidden = true
@@ -600,6 +597,7 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
         }
 
     }
+
     @IBAction func videoSelectBtnpressed(_ sender: Any) {
         
         if self.videoSelectview.isHidden == true {
@@ -615,16 +613,12 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
             
             videoSelectview.isHidden = true
 
-        
-        
     }
         
     }
+
     override func viewDidDisappear(_ animated: Bool) {
-        
-        avPlayer?.pause()
-        player.pause()
-        paused = true
+
     }
     
     override func viewDidLayoutSubviews()  {
@@ -636,7 +630,7 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
     }
     
     func willEnterForeground() {
-        
+
         let videoname = UserDefaults.standard.object(forKey: "video")
         
         if videoname != nil {
@@ -709,53 +703,59 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
             player.volume = volumeControl
             
         }
-        
-        
-        
-        
-        
-
-        
-        
+                
     }
         
-    
-    @IBAction func music1(_ sender: UIButton) {
-        
-       
-        
-        let path = Bundle.main.path(forResource: "fire1", ofType: "mp3")
+    func setupFiresound(activefireSound: String) {
+
+        let path = Bundle.main.path(forResource: activefireSound, ofType: "mp3")
         let filePath = NSURL(fileURLWithPath:path!)
         player = try! AVAudioPlayer.init(contentsOf: filePath as URL)
-        
+
         player.numberOfLoops = -1 //logic for infinite loop
         player.prepareToPlay()
         player.play()
         player.volume = volumeControl
-        
+
         let audioSession = AVAudioSession.sharedInstance()
         try!audioSession.setCategory(AVAudioSessionCategoryPlayback, with: AVAudioSessionCategoryOptions.duckOthers)
-//        do {
-//            try AVAudioSession.sharedInstance().overrideOutputAudioPort(AVAudioSessionPortOverride.speaker)
-//        } catch _ {
-//        }
+        //        do {
+        //            try AVAudioSession.sharedInstance().overrideOutputAudioPort(AVAudioSessionPortOverride.speaker)
+        //        } catch _ {
+        //        }
 
-        
-        
-        
-        UserDefaults.standard.set("fire1", forKey: "music")
+
+
+
+        UserDefaults.standard.set(activefireSound, forKey: "music")
         toggleButton(button: music1Btn, onImage: #imageLiteral(resourceName: "music select-4"), offImage: #imageLiteral(resourceName: "music select-4"))
         toggleButton(button: music2Btn, onImage: #imageLiteral(resourceName: "music unselect-4"), offImage: #imageLiteral(resourceName: "music unselect-4"))
-        
+
         toggleButton(button: music3Btn, onImage: #imageLiteral(resourceName: "music unselect-4"), offImage: #imageLiteral(resourceName: "music unselect-4"))
         let defaults = UserDefaults.standard
         defaults.set(true, forKey: "InstructionsButtonIsHidden")
         fireCrackingOnoffsound.setTitle("on", for: .normal)
+
+
+    }
+
+    @IBAction func music1(_ sender: UIButton) {
+        
        
+        activefireSound = "fire1"
+
+        setupFiresound(activefireSound: activefireSound)
+
     }
     
     @IBAction func music2(_ sender: UIButton) {
-        let path = Bundle.main.path(forResource: "fire2", ofType: "mp3")
+
+        activefireSound = "fire2"
+
+        setupFiresound(activefireSound: activefireSound)
+
+
+        let path = Bundle.main.path(forResource: activefireSound, ofType: "mp3")
         let filePath = NSURL(fileURLWithPath:path!)
         player = try! AVAudioPlayer.init(contentsOf: filePath as URL)
         player.volume = player.volume
@@ -775,7 +775,7 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
         
         
         
-        UserDefaults.standard.set("fire2", forKey: "music")
+        UserDefaults.standard.set(activefireSound, forKey: "music")
         
         toggleButton(button: music2Btn, onImage: #imageLiteral(resourceName: "music select-4"), offImage: #imageLiteral(resourceName: "music select-4"))
 
@@ -791,8 +791,9 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
    
     @IBAction func music3(_ sender: UIButton) {
     
-        
-        let path = Bundle.main.path(forResource: "fire3", ofType: "mp3")
+        activefireSound = "fire3"
+
+        let path = Bundle.main.path(forResource: activefireSound, ofType: "mp3")
         let filePath = NSURL(fileURLWithPath:path!)
         player = try! AVAudioPlayer.init(contentsOf: filePath as URL)
         player.volume = player.volume
@@ -815,7 +816,7 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
         
         toggleButton(button: music3Btn, onImage: #imageLiteral(resourceName: "music select-4"), offImage: #imageLiteral(resourceName: "music select-4"))
         
-        UserDefaults.standard.set("fire3", forKey: "music")
+        UserDefaults.standard.set(activefireSound, forKey: "music")
         
         
         
@@ -834,11 +835,14 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
     }
     
     func toggleButton(button: UIButton, onImage: UIImage, offImage: UIImage ){
-        
+
+
         if button.currentImage == offImage{
+
             
             button.setImage(onImage, for: .normal)
-        }else{
+
+        } else {
             
             button.setImage(offImage, for: .normal)
         }
@@ -846,40 +850,22 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
     }
 
     
-    
+
     @IBAction func normalPressed(_ sender: Any) {
+
         speedtype = "normals"
+
         if videotype == "1" {
-       
-        let bundle: Bundle = Bundle.main
-        let videoPlayer: String = bundle.path(forResource: "normalnewest", ofType: "mp4")!
-        let movieUrl : NSURL = NSURL.fileURL(withPath: videoPlayer) as NSURL
-        let videoAssetURL = AVURLAsset(url: movieUrl as URL)
-        let videoAssetItem = AVPlayerItem(asset: videoAssetURL)
-        playerView.replaceCurrentItem(with: videoAssetItem)
-        
-        NotificationCenter.default.addObserver(self,selector: #selector(playerItemDidReachEnd),name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,object: self.playerView.currentItem)
-        
-        playerView.play()
-        
-        UserDefaults.standard.set("normalnewest", forKey: "video")
-        
-//        playVideoWithURL.rate = 1.0
-   
+
+            activeFlame = "normalnewest"
+
+            firevideoPlay(flamename: activeFlame)
+
         } else {
-            
-            let bundle: Bundle = Bundle.main
-            let videoPlayer: String = bundle.path(forResource: "newvideonormal", ofType: "mp4")!
-            let movieUrl : NSURL = NSURL.fileURL(withPath: videoPlayer) as NSURL
-            let videoAssetURL = AVURLAsset(url: movieUrl as URL)
-            let videoAssetItem = AVPlayerItem(asset: videoAssetURL)
-            playerView.replaceCurrentItem(with: videoAssetItem)
-            
-            NotificationCenter.default.addObserver(self,selector: #selector(playerItemDidReachEnd),name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,object: self.playerView.currentItem)
-            //        playerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
-            
-            playerView.play()
-            UserDefaults.standard.set("newvideonormal", forKey: "video")
+
+            activeFlame = "newvideonormal"
+
+            firevideoPlay(flamename: activeFlame)
 
         }
         }
@@ -890,37 +876,16 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
         
         if videotype == "1" {
         
-        
-        let bundle: Bundle = Bundle.main
-        let videoPlayer: String = bundle.path(forResource: "fasternew", ofType: "mp4")!
-        let movieUrl : NSURL = NSURL.fileURL(withPath: videoPlayer) as NSURL
-        let videoAssetURL = AVURLAsset(url: movieUrl as URL)
-        let videoAssetItem = AVPlayerItem(asset: videoAssetURL)
-        playerView.replaceCurrentItem(with: videoAssetItem)
-        
-        NotificationCenter.default.addObserver(self,selector: #selector(playerItemDidReachEnd),name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,object: self.playerView.currentItem)
-        
-        playerView.play()
-        
-        UserDefaults.standard.set("fasternew", forKey: "video")
-        
-        } else {
-            
-            let bundle: Bundle = Bundle.main
-            let videoPlayer: String = bundle.path(forResource: "newvideofast", ofType: "mp4")!
-            let movieUrl : NSURL = NSURL.fileURL(withPath: videoPlayer) as NSURL
-            let videoAssetURL = AVURLAsset(url: movieUrl as URL)
-            let videoAssetItem = AVPlayerItem(asset: videoAssetURL)
-            playerView.replaceCurrentItem(with: videoAssetItem)
-            
-            NotificationCenter.default.addObserver(self,selector: #selector(playerItemDidReachEnd),name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,object: self.playerView.currentItem)
-            //        playerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
-            
-            playerView.play()
-            
-            UserDefaults.standard.set("newvideofast", forKey: "video")
+            activeFlame = "fasternew"
 
-            
+            firevideoPlay(flamename: activeFlame)
+
+        } else {
+
+            activeFlame = "newvideofast"
+
+            firevideoPlay(flamename: activeFlame)
+
         }
 }
     
@@ -981,6 +946,7 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
     
     
     func swipedDown(sender:UITapGestureRecognizer){
+
         NSLog("It worked")
         
         if self.viewupDown.isHidden {
@@ -990,14 +956,11 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
         } else {
             
             self.viewupDown.isHidden = true
-            
             self.videoControlpopup.isHidden = true
             self.infoPopupview.isHidden = true
             self.volumePopup.isHidden = true
             self.musicView.isHidden = true
-            
-            
-            
+
         }
 
     }
