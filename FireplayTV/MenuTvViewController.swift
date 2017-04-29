@@ -105,7 +105,9 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
  
         infoTextview.attributedText = attributedString
         
+        
     /*************************how it works****************/
+        
         
         let attributedString1 = NSMutableAttributedString(string: "How it Works?\n     Common Room works alongside any of your favorite music apps. Simply start Common Room app first followed by opening your favorite music app to play songs then return back. You can control the volume of the fire crackle as well as turn it on and off via the menu in Common Room. Enjoy!")
         
@@ -126,8 +128,10 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
         
         
         infoTextview1.attributedText = attributedString1
+        
       
         /******************** Image fade ***********************/
+        
        
         self.imageFade.isHidden = false
         UIView.animate(withDuration: 3, delay:1, options:UIViewAnimationOptions.transitionFlipFromTop, animations: {
@@ -180,7 +184,20 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
      
         self.SetUpSound()
 //        self.setImageView()
-        player.volume = 0.5
+        let volumedefaults = UserDefaults.standard
+        
+        let musicvol = UserDefaults.standard.object(forKey: "music")
+        
+        if musicvol != nil {
+            
+            let volumeSound = volumedefaults.float(forKey: "volumeSaving")
+            player.volume = volumeSound
+            
+        } else {
+            
+            player.volume = volumeControl
+            
+        }
         
         let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(swipedDown(sender:)))
         
@@ -241,6 +258,8 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
         player.numberOfLoops = -1 //logic for infinite loop
         player.prepareToPlay()
         player.play()
+        player.volume = volumeControl
+        
         
         
         let audioSession = AVAudioSession.sharedInstance()
@@ -650,6 +669,7 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
                 player.numberOfLoops = -1 //logic for infinite loop
                 player.prepareToPlay()
                 player.play()
+                player.volume = volumeControl
             
             
             let audioSession = AVAudioSession.sharedInstance()
@@ -673,6 +693,29 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
             player.play()
             player.numberOfLoops = -1
         }
+        
+        
+        let volumedefaults = UserDefaults.standard
+        
+        let musicvol = UserDefaults.standard.object(forKey: "music")
+        
+        if musicvol != nil {
+            
+            let volumeSound = volumedefaults.float(forKey: "volumeSaving")
+            player.volume = volumeSound
+            
+        } else {
+            
+            player.volume = volumeControl
+            
+        }
+        
+        
+        
+        
+        
+
+        
         
     }
         
@@ -756,7 +799,7 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
         player.numberOfLoops = -1 //logic for infinite loop
         player.prepareToPlay()
         player.play()
-         player.volume = volumeControl
+        player.volume = volumeControl
         
         let audioSession = AVAudioSession.sharedInstance()
         try!audioSession.setCategory(AVAudioSessionCategoryPlayback, with: AVAudioSessionCategoryOptions.duckOthers)
@@ -889,6 +932,9 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
             player.volume = player.volume + 0.1
             print(player.volume)
             volumeControl = player.volume
+            let volumedefaults = UserDefaults.standard
+            volumedefaults.set(volumeControl, forKey: "volumeSaving")
+           
             
         }
         
@@ -904,6 +950,8 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
             player.volume = player.volume - 0.1
             print(player.volume)
             volumeControl = player.volume
+            let volumedefaults = UserDefaults.standard
+            volumedefaults.set(volumeControl, forKey: "volumeSaving")
             
         }
         
@@ -975,6 +1023,7 @@ class MenuTvViewController: UIViewController, UITextFieldDelegate {
             player.numberOfLoops = -1 //logic for infinite loop
             player.prepareToPlay()
             player.play()
+            player.volume = volumeControl
         }
         
         let audioSession = AVAudioSession.sharedInstance()
